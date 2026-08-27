@@ -1,0 +1,47 @@
+{
+  "_comment": [
+    "번역 흔들림을 막는 사전입니다. 두 곳에서 쓰입니다.",
+    "  protect : 절대 번역하지 않고 원문 그대로 둘 고유명사 (모델명·제품명·기술명)",
+    "  terms   : 항상 이 한국어로 통일할 일반 용어",
+    "매일 다르게 번역되면('확산 모델'/'디퓨전 모델'/'diffusion') 검색이 깨집니다.",
+    "새 모델이 나오면 protect에 이름만 추가하세요."
+  ],
+
+  "protect": [
+    "Sora", "Veo", "Kling", "Runway", "Gen-4", "Gen-5", "Luma", "Ray", "Dream Machine",
+    "Pika", "Hailuo", "MiniMax", "Seedance", "Seedream", "LTX", "Wan", "HunyuanVideo",
+    "CogVideoX", "Open-Sora", "Midjourney", "FLUX", "Stable Diffusion", "SDXL",
+    "Imagen", "DALL-E", "Nano Banana", "Qwen-Image", "Z-Image", "Ideogram", "Recraft",
+    "Krea", "Firefly", "GPT-Image", "Topaz",
+    "ComfyUI", "LoRA", "ControlNet", "IPAdapter", "AnimateDiff", "VAE", "CLIP",
+    "Hugging Face", "Civitai", "Replicate", "fal.ai", "diffusers", "Banodoco",
+    "OpenAI", "Google DeepMind", "Anthropic", "Stability AI", "Black Forest Labs",
+    "Lightricks", "ByteDance", "Alibaba", "Tencent", "Adobe", "NVIDIA",
+    "Apache 2.0", "MIT", "GitHub", "arXiv"
+  ],
+
+  "terms": {
+    "diffusion model": "확산 모델",
+    "text-to-video": "텍스트-투-비디오",
+    "image-to-video": "이미지-투-비디오",
+    "text-to-image": "텍스트-투-이미지",
+    "checkpoint": "체크포인트",
+    "weights": "가중치",
+    "open weights": "오픈 웨이트",
+    "open-source": "오픈소스",
+    "inference": "추론",
+    "fine-tuning": "파인튜닝",
+    "workflow": "워크플로우",
+    "prompt": "프롬프트",
+    "seed": "시드",
+    "benchmark": "벤치마크",
+    "frame": "프레임",
+    "upscaling": "업스케일링",
+    "keyframe": "키프레임",
+    "consistency": "일관성",
+    "latency": "지연 시간",
+    "context window": "컨텍스트 윈도우",
+    "release notes": "릴리스 노트",
+    "quantization": "양자화"
+  }
+}

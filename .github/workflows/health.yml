@@ -1,0 +1,23 @@
+# 주 1회 소스 전수 검사. 죽은 피드를 몇 주 뒤에 알아채는 상황을 막는다.
+# 실패해도 브리핑에는 영향이 없다 — 알려주는 게 목적이다.
+name: 소스 헬스체크
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"     # 매주 월요일 09:00 KST
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 전체 소스 호출
+        # 실패 소스가 있으면 종료 코드 1이 나오고 워크플로가 빨간색이 된다.
+        # 그게 알림이다. 액션 탭에서 어느 소스인지 바로 보인다.
+        run: python scripts/check_sources.py --all

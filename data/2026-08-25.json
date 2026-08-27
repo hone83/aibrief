@@ -1,0 +1,1127 @@
+{
+  "date_kst": "2026-08-25",
+  "generated_at": "2026-08-25T21:36:09.567454+09:00",
+  "window_start": "2026-08-24T07:00:00+09:00",
+  "window_end": "2026-08-25T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "topics": [
+        "video",
+        "image",
+        "industry"
+      ],
+      "published": "2026-08-24T12:00:00+00:00",
+      "summary_raw": "GPT‑5.6 is now available in Kiro, helping developers plan, build, review, and test software with better price-performance.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "OpenAI, Kiro에 가성비 높인 GPT-5.6 출시",
+      "summary_ko": "OpenAI가 Kiro 플랫폼에 GPT-5.6을 새로 제공합니다. 개발자는 향상된 가성비로 소프트웨어 기획, 개발, 검토, 테스트 작업을 수행할 수 있습니다.",
+      "bullets": [
+        "Kiro 플랫폼 내 GPT-5.6 제공",
+        "개발 작업의 가격 대 성능비 개선",
+        "기획부터 테스트까지 소프트웨어 개발 지원"
+      ],
+      "category": "major_update",
+      "score": 0.6203,
+      "cluster_id": 17,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T21:00:00+09:00",
+      "uid": "df015003760c",
+      "domain": "openai.com"
+    },
+    {
+      "title": "FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors",
+      "url": "https://arxiv.org/abs/2608.23549v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "image"
+      ],
+      "published": "2026-08-24T17:51:33+00:00",
+      "summary_raw": "Rendering views using 3D scene representations such as Gaussian Splatting (3DGS), Neural Radiance Fields (NeRF), meshes, or even point clouds produces artifacts when input views are sparse or target views lie far from the input. Recent work mitigates these artifacts using diffusion-based generative priors, but is specialized to individual representations and require custom architectures or extensive retraining. We present FixAnything, a single model for fixing a wide range of rendering artifacts. It does so by repurposing a pretrained video generative model, leveraging its implicit multi-view ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "FixAnything, 비디오 생성 사전 학습으로 3D 렌더링 결함 수정",
+      "summary_ko": "입력 뷰가 부족하거나 거리가 멀 때 발생하던 3DGS, NeRF 등의 렌더링 결함을 해결하는 FixAnything 모델이 공개되었습니다. 사전 학습된 비디오 생성 모델의 암묵적 다중 뷰 특성을 활용하여 추가 재학습이나 별도 아키텍처 없이 결함을 수정합니다.",
+      "bullets": [
+        "3DGS·NeRF 등의 렌더링 결함 수정",
+        "사전 학습 비디오 모델의 암묵적 뷰 활용",
+        "추가 재학습 없이 단일 모델로 적용"
+      ],
+      "category": "benchmark",
+      "score": 0.6122,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T02:51:33+09:00",
+      "uid": "91919fb6ab06",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "GeoWAM: Visual Geometry World Action Models for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2608.23486v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "image"
+      ],
+      "published": "2026-08-24T16:49:53+00:00",
+      "summary_raw": "World action models (WAMs) have recently gained increasing attention as a framework for jointly modeling scene evolution and ego actions in autonomous driving. Most existing WAMs learn scene dynamics in pixel space by combining a video-generation backbone for future-observation prediction with an action head for ego-trajectory prediction. Pixels, however, provide only an indirect representation of these dynamics: they entangle geometry and motion with appearance, texture, and illumination, forcing the model to infer three-dimensional transformations from two-dimensional observations. We argue ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "자율주행을 위한 시각 지오메트리 월드 액션 모델 GeoWAM 발표",
+      "summary_ko": "자율주행 환경에서 씬 변화와 차량 행동을 동시에 모델링하는 GeoWAM이 등장했습니다. 기존 비디오 생성 기반 모델이 2D 픽셀 상에서 텍스처와 조명을 복잡하게 추론하던 방식에서 벗어나 3D 변환을 직접 반영하는 구조를 제안합니다.",
+      "bullets": [
+        "자율주행 씬 변화와 이동 궤적 동시 모델링",
+        "2D 픽셀 표현의 정밀도 한계 극복",
+        "3D 변환 정합성 중심의 액션 모델 구축"
+      ],
+      "category": "benchmark",
+      "score": 0.5884,
+      "cluster_id": 5,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T01:49:53+09:00",
+      "uid": "415ba66a7a51",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "I've gotta be doing something wrong... resolution 0.5, 10 seconds crash",
+      "url": "https://reddit.com/r/comfyui/comments/1vx3kc7/ive_gotta_be_doing_something_wrong_resolution_05",
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-24T13:56:50+00:00",
+      "summary_raw": "I have a 50-70 TI 16 GB of RAM and the PC itself has 128 GB of ddr5. I'm running this on comfy UI through Ubuntu through terminal and launching using a script. The template is the standard Minimax H3 ref-2va that is included with comfy UI. I can't get past 0.5 resolution and like seven or six seconds. Or 0.4 resolution and about 9 seconds when using Sage attention and easy cache nodes. But I hear others who get 12 and 13 seconds on 0.5 resolution using the same card supposedly. Is there something I'm supposed to be doing different to get past the 0.4 resolution and 9 seconds or 0.5 resolution ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "ComfyUI 기반 MiniMax 비디오 생성 시 메모리 오류 문제 제기",
+      "summary_ko": "ComfyUI 환경에서 MiniMax 워크플로우를 사용할 때 낮은 해상도와 짧은 길이에서도 시스템이 튕기는 현상이 공유되었습니다. 동일 그래픽 카드를 사용하는 다른 이용자 대비 성능이 떨어지는 문제의 원인을 커뮤니티에 문의하고 있습니다.",
+      "bullets": [
+        "Ubuntu 및 ComfyUI 환경 생성 오류",
+        "Sage attention 및 노드 적용 후 충돌",
+        "동일 그래픽 카드 대비 설정 문제 확인 요구"
+      ],
+      "category": "model_release",
+      "score": 0.5851,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T22:56:50+09:00",
+      "uid": "390b6ff1563b",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds",
+      "url": "https://arxiv.org/abs/2608.23383v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T15:31:12+00:00",
+      "summary_raw": "Video generation is progressing beyond isolated clips toward long-form narratives and interactive worlds, requiring models to preserve identities, follow user controls, and remain stable over extended rollouts. We present JoyAI-Echo-1.5, a unified audio-visual generation system with two purpose-built variants. The long-video variant introduces composable cross-shot memory that aggregates visual evidence across multiple prior shots and speaker cues derived from speech-filtered full-shot audio, enabling persistent character appearance and voice identity across flexible combinations of text, imag",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "장기 시각·음향 생성 모델 JoyAI-Echo-1.5 공개",
+      "summary_ko": "장편 서사와 상호작용형 환경 생성을 위한 통합 오디오-비디오 모델 JoyAI-Echo-1.5가 발표되었습니다. 크로스 샷 메모리 및 스피커 큐를 도입하여 복잡한 조건에서도 캐릭터 외형과 목소리 일관성을 유지합니다.",
+      "bullets": [
+        "JoyAI-Echo-1.5 오디오-비디오 모델 발표",
+        "크로스 샷 메모리로 캐릭터 외형 유지",
+        "스피커 큐 기술을 통한 목소리 일관성 확보"
+      ],
+      "category": "benchmark",
+      "score": 0.5594,
+      "cluster_id": 7,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T00:31:12+09:00",
+      "uid": "487c88b41247",
+      "domain": "arxiv.org"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "topics": [
+        "video",
+        "image",
+        "industry"
+      ],
+      "published": "2026-08-24T12:00:00+00:00",
+      "summary_raw": "GPT‑5.6 is now available in Kiro, helping developers plan, build, review, and test software with better price-performance.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "OpenAI, Kiro에 가성비 높인 GPT-5.6 출시",
+      "summary_ko": "OpenAI가 Kiro 플랫폼에 GPT-5.6을 새로 제공합니다. 개발자는 향상된 가성비로 소프트웨어 기획, 개발, 검토, 테스트 작업을 수행할 수 있습니다.",
+      "bullets": [
+        "Kiro 플랫폼 내 GPT-5.6 제공",
+        "개발 작업의 가격 대 성능비 개선",
+        "기획부터 테스트까지 소프트웨어 개발 지원"
+      ],
+      "category": "major_update",
+      "score": 0.6203,
+      "cluster_id": 17,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T21:00:00+09:00",
+      "uid": "df015003760c",
+      "domain": "openai.com"
+    },
+    {
+      "title": "FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors",
+      "url": "https://arxiv.org/abs/2608.23549v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "image"
+      ],
+      "published": "2026-08-24T17:51:33+00:00",
+      "summary_raw": "Rendering views using 3D scene representations such as Gaussian Splatting (3DGS), Neural Radiance Fields (NeRF), meshes, or even point clouds produces artifacts when input views are sparse or target views lie far from the input. Recent work mitigates these artifacts using diffusion-based generative priors, but is specialized to individual representations and require custom architectures or extensive retraining. We present FixAnything, a single model for fixing a wide range of rendering artifacts. It does so by repurposing a pretrained video generative model, leveraging its implicit multi-view ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "FixAnything, 비디오 생성 사전 학습으로 3D 렌더링 결함 수정",
+      "summary_ko": "입력 뷰가 부족하거나 거리가 멀 때 발생하던 3DGS, NeRF 등의 렌더링 결함을 해결하는 FixAnything 모델이 공개되었습니다. 사전 학습된 비디오 생성 모델의 암묵적 다중 뷰 특성을 활용하여 추가 재학습이나 별도 아키텍처 없이 결함을 수정합니다.",
+      "bullets": [
+        "3DGS·NeRF 등의 렌더링 결함 수정",
+        "사전 학습 비디오 모델의 암묵적 뷰 활용",
+        "추가 재학습 없이 단일 모델로 적용"
+      ],
+      "category": "benchmark",
+      "score": 0.6122,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T02:51:33+09:00",
+      "uid": "91919fb6ab06",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "GeoWAM: Visual Geometry World Action Models for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2608.23486v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "image"
+      ],
+      "published": "2026-08-24T16:49:53+00:00",
+      "summary_raw": "World action models (WAMs) have recently gained increasing attention as a framework for jointly modeling scene evolution and ego actions in autonomous driving. Most existing WAMs learn scene dynamics in pixel space by combining a video-generation backbone for future-observation prediction with an action head for ego-trajectory prediction. Pixels, however, provide only an indirect representation of these dynamics: they entangle geometry and motion with appearance, texture, and illumination, forcing the model to infer three-dimensional transformations from two-dimensional observations. We argue ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "자율주행을 위한 시각 지오메트리 월드 액션 모델 GeoWAM 발표",
+      "summary_ko": "자율주행 환경에서 씬 변화와 차량 행동을 동시에 모델링하는 GeoWAM이 등장했습니다. 기존 비디오 생성 기반 모델이 2D 픽셀 상에서 텍스처와 조명을 복잡하게 추론하던 방식에서 벗어나 3D 변환을 직접 반영하는 구조를 제안합니다.",
+      "bullets": [
+        "자율주행 씬 변화와 이동 궤적 동시 모델링",
+        "2D 픽셀 표현의 정밀도 한계 극복",
+        "3D 변환 정합성 중심의 액션 모델 구축"
+      ],
+      "category": "benchmark",
+      "score": 0.5884,
+      "cluster_id": 5,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T01:49:53+09:00",
+      "uid": "415ba66a7a51",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "I've gotta be doing something wrong... resolution 0.5, 10 seconds crash",
+      "url": "https://reddit.com/r/comfyui/comments/1vx3kc7/ive_gotta_be_doing_something_wrong_resolution_05",
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-24T13:56:50+00:00",
+      "summary_raw": "I have a 50-70 TI 16 GB of RAM and the PC itself has 128 GB of ddr5. I'm running this on comfy UI through Ubuntu through terminal and launching using a script. The template is the standard Minimax H3 ref-2va that is included with comfy UI. I can't get past 0.5 resolution and like seven or six seconds. Or 0.4 resolution and about 9 seconds when using Sage attention and easy cache nodes. But I hear others who get 12 and 13 seconds on 0.5 resolution using the same card supposedly. Is there something I'm supposed to be doing different to get past the 0.4 resolution and 9 seconds or 0.5 resolution ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "ComfyUI 기반 MiniMax 비디오 생성 시 메모리 오류 문제 제기",
+      "summary_ko": "ComfyUI 환경에서 MiniMax 워크플로우를 사용할 때 낮은 해상도와 짧은 길이에서도 시스템이 튕기는 현상이 공유되었습니다. 동일 그래픽 카드를 사용하는 다른 이용자 대비 성능이 떨어지는 문제의 원인을 커뮤니티에 문의하고 있습니다.",
+      "bullets": [
+        "Ubuntu 및 ComfyUI 환경 생성 오류",
+        "Sage attention 및 노드 적용 후 충돌",
+        "동일 그래픽 카드 대비 설정 문제 확인 요구"
+      ],
+      "category": "model_release",
+      "score": 0.5851,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T22:56:50+09:00",
+      "uid": "390b6ff1563b",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds",
+      "url": "https://arxiv.org/abs/2608.23383v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T15:31:12+00:00",
+      "summary_raw": "Video generation is progressing beyond isolated clips toward long-form narratives and interactive worlds, requiring models to preserve identities, follow user controls, and remain stable over extended rollouts. We present JoyAI-Echo-1.5, a unified audio-visual generation system with two purpose-built variants. The long-video variant introduces composable cross-shot memory that aggregates visual evidence across multiple prior shots and speaker cues derived from speech-filtered full-shot audio, enabling persistent character appearance and voice identity across flexible combinations of text, imag",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "장기 시각·음향 생성 모델 JoyAI-Echo-1.5 공개",
+      "summary_ko": "장편 서사와 상호작용형 환경 생성을 위한 통합 오디오-비디오 모델 JoyAI-Echo-1.5가 발표되었습니다. 크로스 샷 메모리 및 스피커 큐를 도입하여 복잡한 조건에서도 캐릭터 외형과 목소리 일관성을 유지합니다.",
+      "bullets": [
+        "JoyAI-Echo-1.5 오디오-비디오 모델 발표",
+        "크로스 샷 메모리로 캐릭터 외형 유지",
+        "스피커 큐 기술을 통한 목소리 일관성 확보"
+      ],
+      "category": "benchmark",
+      "score": 0.5594,
+      "cluster_id": 7,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T00:31:12+09:00",
+      "uid": "487c88b41247",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "EchoWM: Open and Enterable Omnimodal World Models",
+      "url": "https://arxiv.org/abs/2608.23189v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T12:39:59+00:00",
+      "summary_raw": "We present EchoWM, an omnimodal world model for enterable generative media that responds to continuous navigation while jointly generating 720p video, environmental sound, music and speech. We organize interaction around camera intent: in first-person scenes, it specifies observer motion, while in third-person scenes, camera--character dynamics are learned from data without view-specific controllers. Discrete commands and continuous poses are mapped to a shared metric-scale relative 6-DoF trajectory, with dataset-level calibration preserving motion magnitude across heterogeneous data. To joint",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "720p 비디오와 오디오를 동시 생성하는 EchoWM 모델 공개",
+      "summary_ko": "연속적인 내비게이션에 반응하여 720p 비디오, 환경음, 음악, 음성을 함께 생성하는 인터랙티브 월드 모델 EchoWM이 발표되었습니다. 카메라 의도를 기반으로 1인칭 및 3인칭 시점의 동적 변화를 6-DoF 궤적으로 변환해 관제합니다.",
+      "bullets": [
+        "720p 비디오·오디오·음악·음성 동시 생성",
+        "카메라 6-DoF 궤적 기반 반응형 상호작용",
+        "1인칭·3인칭 시점 동적 변화 자율 학습"
+      ],
+      "category": "benchmark",
+      "score": 0.5012,
+      "cluster_id": 16,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T21:39:59+09:00",
+      "uid": "4dbdfb909135",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "Loopy: Seamless Video Loop Generation via Anchored Looping Shift of Positional Embedding",
+      "url": "https://arxiv.org/abs/2608.23090v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T10:56:27+00:00",
+      "summary_raw": "Looping videos are essential for practical applications such as web graphics, game development, and social media. However, existing approaches typically fail to generate high-quality looping videos due to the neglect of how video generation models perceive temporal order and how this relates to the looping behavior. In this work, we are the first to reveal that position embedding at different attention layers within DiT exhibits varying levels of positional control, with the most pronounced layer acting as an anchor. We formulate this anchored layer as the reference point of the looping video,",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "Loopy, 위치 임베딩 조절로 자연스러운 루프 비디오 생성",
+      "summary_ko": "연구진이 DiT 내 위치 임베딩의 시각적 순서 인지를 활용한 루프 비디오 생성 기술 Loopy를 발표했습니다. 특정 어텐션 레이어를 기준점으로 삼는 앵커링 기술로 고품질의 반복 영상을 만들어냅니다.",
+      "bullets": [
+        "루프 비디오 생성 기술 Loopy 개발",
+        "DiT 위치 임베딩의 시간 순서 인지 활용",
+        "앵커 레이어 설정으로 자연스러운 반복 구현"
+      ],
+      "category": "benchmark",
+      "score": 0.469,
+      "cluster_id": 19,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T19:56:27+09:00",
+      "uid": "49676c37d2e3",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "From Generation to Simulation: How Far Are World Models from Being True Simulators?",
+      "url": "https://arxiv.org/abs/2608.23070v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T10:16:05+00:00",
+      "summary_raw": "With the rapid progress of diffusion models and large-scale video generation, generative world models are increasingly expected to replace traditional simulators, including physics engines, game engines, and reinforcement-learning environments. Yet the remaining distance from generation to simulation lacks a systematic assessment. We present a capability-based study using an external yardstick: eight capabilities of a traditional simulator, namely asset construction, physics engine, interaction, controllability, stability, state feedback, diversity, and evaluation metrics. We trace three main ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "생성형 월드 모델과 전통적 시뮬레이터 간의 격차 분석",
+      "summary_ko": "확산 모델과 대규모 비디오 생성의 발전으로 생성형 월드 모델이 전통적인 물리 엔진 및 게임 엔진을 대체할 것이라는 기대가 높아지고 있습니다. 이에 따라 자산 생성, 물리 엔진, 제어 가능성 등 8가지 핵심 기능을 기준으로 기존 시뮬레이터와의 격차를 체계적으로 평가한 연구가 공개되었습니다.",
+      "bullets": [
+        "월드 모델의 시뮬레이터 대체 가능성 연구",
+        "물리 엔진 및 제어 가능성 등 8개 기능 기준 평가",
+        "생성 기술에서 시뮬레이션으로의 발전 단계 분석"
+      ],
+      "category": "benchmark",
+      "score": 0.457,
+      "cluster_id": 20,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T19:16:05+09:00",
+      "uid": "f7c8ca998f3b",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "Direct, Parallel, or Sequential? A Comparative Study of Training-Free Multi-Subject Image-to-Video Generation",
+      "url": "https://arxiv.org/abs/2608.22819v1",
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T05:30:48+00:00",
+      "summary_raw": "Text-conditioned image-to-video (I2V) generation has advanced rapidly, yet generating videos with multiple subjects remains challenging. A model must simultaneously preserve the appearance of each subject, assign distinct motions, and maintain coherent spatial and temporal interactions. This paper presents a systematic study of three representative paradigms for training-free multi-subject I2V generation: direct, parallel, and sequential generation. Direct generation applies a pretrained I2V model to the complete reference image and prompt, requiring all subjects and motions to be synthesized ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "paper"
+      },
+      "title_ko": "무학습 다중 주체 이미지-투-비디오 생성 패러다임 비교 연구",
+      "summary_ko": "텍스트 조건부 이미지-투-비디오 기술의 발전에도 불구하고 다중 주체가 등장하는 영상 생성은 여전히 어려운 과제입니다. 본 논문은 별도 학습이 필요 없는 다중 주체 영상 생성의 세 가지 패러다임인 직접, 병렬, 순차 생성을 체계적으로 비교 연구했습니다. 모델은 각 주체의 외형과 독자적 움직임, 공간·시간적 상호작용의 일관성을 동시에 유지해야 합니다.",
+      "bullets": [
+        "다중 주체 영상 생성의 3가지 무학습 패러다임 비교",
+        "주체별 외형·움직임 및 공간·시간적 일관성 유지 분석",
+        "직접·병렬·순차 생성 방식의 체계적 평가 진행"
+      ],
+      "category": "benchmark",
+      "score": 0.3805,
+      "cluster_id": 22,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T14:30:48+09:00",
+      "uid": "d44e7162c874",
+      "domain": "arxiv.org"
+    },
+    {
+      "title": "Made the thing where you ruin iconic movie scenes, MiniMax H3 on an RTX 3080 10GB, 20 steps, 2x NomosUni upscale",
+      "url": "https://reddit.com/r/comfyui/comments/1vx26fm/made_the_thing_where_you_ruin_iconic_movie_scenes",
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-24T13:01:30+00:00",
+      "summary_raw": "Setup, pushed my system right to the limit, any more and it OOM : - H3 Ref2VA default workflow in ComfyUI, no lora - RTX 3080 10GB, 32GB RAM - Render: 0.5–0.6 MP, 20 steps, scheduler simple, about 25 min per clip - Upscale: 2xNomosUni_span_multijpg, 2× to 1080p - References per scene: one photo of my face + one film still for the set - Recorded my own lines and fed them as audio references, also got audio ref for the actors Honestly though, the best part was driving all of this through the ComfyUI MCP. I never even had to open ComfyUI. I could iterate really fast, and keep going from my phone ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "RTX 3080 기반 ComfyUI 영상 제작 및 MCP 활용 사례",
+      "summary_ko": "RTX 3080 10GB 환경에서 MiniMax H3 및 ComfyUI를 사용해 영화 장면 재구성 워크플로우를 진행한 사례가 공유되었다. 이미지 및 오디오 레퍼런스를 활용해 클립당 약 25분의 렌더링 시간을 거쳐 1080p 업스케일링을 완료했다. 제작자는 ComfyUI MCP를 활용해 인터페이스를 직접 열지 않고도 빠르게 작업할 수 있었다고 밝혔다.",
+      "bullets": [
+        "RTX 3080 10GB 한계까지 활용",
+        "클립당 20스텝으로 약 25분 소요",
+        "ComfyUI MCP로 빠른 작업 가능"
+      ],
+      "category": "workflow",
+      "score": 0.367,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-24T22:01:30+09:00",
+      "uid": "96290dcd041f",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "ComfyUI v0.33.4",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.33.4",
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-24T19:57:19+00:00",
+      "summary_raw": "ComfyUI v0.33.4",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "repo": "comfyanonymous/ComfyUI",
+        "kind": "release"
+      },
+      "title_ko": "ComfyUI v0.33.4 버전 출시",
+      "summary_ko": "ComfyUI의 v0.33.4 신규 버전이 공개되었습니다. 이번 업데이트에 대한 상세 내용은 공식 GitHub 릴리스 노트를 통해 확인할 수 있습니다.",
+      "bullets": [
+        "ComfyUI v0.33.4 신규 업데이트 배포"
+      ],
+      "category": "opensource",
+      "score": 0.3223,
+      "cluster_id": 3,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T04:57:19+09:00",
+      "uid": "9190499c888b",
+      "domain": "github.com"
+    },
+    {
+      "title": "Can't resize a save video node?",
+      "url": "https://reddit.com/r/comfyui/comments/1vxez61/cant_resize_a_save_video_node",
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-24T20:46:27+00:00",
+      "summary_raw": "Has anyone experienced this? Its driving me nuts. i cant resize a node which makes no sense, because the size of the node is very dependent on how zoomed in i am, how my workflow is laid out, etc. &#32; submitted by &#32; /u/maxiedaniels [link] &#32; [comments]",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "ComfyUI 비디오 저장 노드 크기 조절 불가 문제 제기",
+      "summary_ko": "ComfyUI에서 비디오 저장 노드의 크기를 조절할 수 없어 불편을 겪는 사용자 의견이 제기되었다. 노드 크기가 화면 확대 수준 및 워크플로우 레이아웃과 밀접하게 연관되어 있어 작업에 차질이 발생한다는 지적이다.",
+      "bullets": [
+        "비디오 저장 노드 크기 변경 불가",
+        "워크플로우 레이아웃 구성에 불편"
+      ],
+      "category": "workflow",
+      "score": 0.1979,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T05:46:27+09:00",
+      "uid": "50bbfeede157",
+      "domain": "reddit.com"
+    }
+  ],
+  "tldr": [
+    "OpenAI가 Kiro에 가성비를 높인 GPT-5.6을 출시했습니다.",
+    "ComfyUI v0.33.4 최신 버전이 공식 출시되었습니다.",
+    "720p 비디오와 오디오를 동시 생성하는 EchoWM 모델이 공개되었습니다."
+  ],
+  "dropped": [
+    {
+      "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+      "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Trump bought SpaceX shares two weeks after blockbuster IPO",
+      "url": "https://techcrunch.com/2026/08/24/trump-bought-spacex-shares-two-weeks-after-blockbuster-ipo",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Amjad Masad, CEO and co-founder of Replit, joins the Disrupt Stage at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/08/24/amjad-masad-ceo-and-co-founder-of-replit-joins-the-disrupt-stage-at-techcrunch-disrupt-2026",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
+      "url": "https://neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Instinct’s powerful AI assistant is raising privacy and security concerns",
+      "url": "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
+      "url": "https://arstechnica.com/tech-policy/2026/08/nvidia-senior-manager-linked-to-supermicro-scheme-smuggling-ai-servers-to-china",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
+      "url": "https://picomq.com/",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics",
+      "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Could we dredge the Netherlands without fossil fuels? (2018)",
+      "url": "https://solar.lowtechmagazine.com/2018/08/could-we-dredge-the-netherlands-without-fossil-fuels",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+      "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: A techno machine in one HTML file, with verifiable renders",
+      "url": "https://ssx360.github.io/rack-02?src=hn",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "What's new in Emacs 31.1",
+      "url": "https://masteringemacs.org/article/whats-new-in-emacs-311",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Ask HN: Why do corporate failures always seem to punish the wrong people?",
+      "url": "https://news.ycombinator.com/item?id=49418675",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
+      "url": "https://theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The Future Belongs to the Weird",
+      "url": "https://essays.georgestrakhov.com/weird",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Former OC actor Ben McKenzie on crusade to take down 'stupid' cryptocurrency",
+      "url": "https://rnz.co.nz/life/people/celebrity/former-oc-actor-ben-mckenzie-on-crusade-to-take-down-stupid-cryptocurrency",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 281
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 1270
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 5046
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 956
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 818
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 370
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2651
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 2,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 496
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 4595
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 179
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 8499
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1145,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 279
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 894
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 54
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 3076
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1813
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 290
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 7,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1021
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2934
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 39,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 2528
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 592
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 887
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 264
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 849,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 375
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2556
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 124,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1304
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 262,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 5106
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 241
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 3,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 982
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 632
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1324
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 265
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 150
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 7,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 197
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 363
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    }
+  ],
+  "stats": {
+    "collected": 2843,
+    "in_window": 40,
+    "screened": 24,
+    "clustered": 24,
+    "merged": 0,
+    "sources_total": 43,
+    "sources_ok": 22,
+    "translate_engine": "gemini",
+    "translate_status": "번역 6/6건 · 캐시 6건",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 16
+    }
+  }
+}

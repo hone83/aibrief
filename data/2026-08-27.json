@@ -1,0 +1,1461 @@
+{
+  "date_kst": "2026-08-27",
+  "generated_at": "2026-08-27T11:48:20.772709+09:00",
+  "window_start": "2026-08-26T07:00:00+09:00",
+  "window_end": "2026-08-27T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "LTX-2 v1.3.0",
+      "url": "https://github.com/Lightricks/LTX-2/releases/tag/v1.3.0",
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-26T11:21:24+00:00",
+      "summary_raw": "Added DFR can finish 4K in a tiled spatial epilogue instead of denoising the full canvas in stage 2. --spatial-upscalings 2 keeps stage 2 at half resolution and upscales in that epilogue, which is the path for better-quality 4K (use 3840x2176 ; 3840x2160 is not on the size grid). Default --spatial-upscalings 1 is unchanged. Added ltx_pipelines.dfr_mgpu , a multi-GPU DFR runner with the same flags as ltx_pipelines.dfr_pipeline . Added keyframe-aware diffusion-VAE decoding, which sharpens detail at the frames a generator anchored on. Pass keyframe latents into VideoDecoder.decode_video(..., keyf",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "Lightricks/LTX-2",
+        "kind": "release"
+      },
+      "title_ko": "Lightricks, LTX-2 v1.3.0 공개",
+      "summary_ko": "Lightricks가 비디오 생성 모델 LTX-2의 v1.3.0 업데이트를 공개했습니다. 타일 분할 방식을 적용해 4K 생성 품질을 개선하고 다중 GPU 지원 기능을 추가했습니다. 또한 키프레임 기반 VAE 디코딩을 도입해 세부 묘사를 선명하게 개선했습니다.",
+      "bullets": [
+        "4K 업스케일링 품질 및 타일 분할 방식 개선",
+        "다중 GPU DFR 실행 파이프라인 추가",
+        "키프레임 기반 확산-VAE 디코딩 지원"
+      ],
+      "category": "model_release",
+      "score": 1.3996,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T20:21:24+09:00",
+      "uid": "a138bab46675",
+      "domain": "github.com"
+    },
+    {
+      "title": "ComfyUI v0.34.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.0",
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T02:09:08+00:00",
+      "summary_raw": "What's Changed Fix minimax music not working on non dynamic vram. by @comfyanonymous in #15588 Add MiniMaxH3AddGuide for anchoring image and audio guides at any frame by @drozbay in #15439 chore(openapi): sync shared API contract from cloud@94d0f1b by @comfy-pr-bot in #15041 Bump comfyui-frontend-package to 1.49.6 by @comfy-pr-bot in #15526 Speedup Gemma4 text generation (CORE-371) by @kijai in #15054 Update embedded docs to v0.5.10 by @comfyui-wiki in #15613 Fix thinking handling by @kijai in #15611 Enable dynamic vram by default on ROCm 7.14 and higher. by @comfyanonymous in #15633 [Partner ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "comfyanonymous/ComfyUI",
+        "kind": "release"
+      },
+      "title_ko": "ComfyUI v0.34.0 정식 출시",
+      "summary_ko": "ComfyUI v0.34.0 버전이 새롭게 출시되었습니다. MiniMax 관련 신규 기능 추가 및 오류 수정과 함께 Gemma4 텍스트 생성 속도가 향상되었습니다. 아울러 ROCm 7.14 이상 환경에서 동적 VRAM 설정이 기본 활성화됩니다.",
+      "bullets": [
+        "MiniMax 프레임 가이드 기능 추가 및 오류 수정",
+        "Gemma4 텍스트 생성 속도 개선",
+        "ROCm 7.14 이상 동적 VRAM 기본 활성화"
+      ],
+      "category": "major_update",
+      "score": 0.8798,
+      "cluster_id": 2,
+      "related": [
+        {
+          "title": "ComfyUI v0.34.1",
+          "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.1",
+          "source": "ComfyUI (GitHub Releases)",
+          "tier": "T1"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T11:09:08+09:00",
+      "uid": "2121b49a3b89",
+      "domain": "github.com"
+    },
+    {
+      "title": "Anyone have a link to download DasiwaMinimaxH3_dasiwaREF2VAHybridV1.safetensors? Seems it's been wiped off the internet in the past few hours",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vywq24/anyone_have_a_link_to_download_dasiwaminimaxh3",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T13:12:10+00:00",
+      "summary_raw": "It's the 11.68 GB model, SHA256: 7c37baf06ca3628ed5f3f7f46274222a50a127d1906a166f8f064771fc48d498. Was going to download it and test it out with my workflow but when I went to download it today on CivitAI and Huggingface I get a 404 error. Seems it was deleted by the uploader for some reason or another",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Dasiwa MiniMax H3 모델 파일 삭제",
+      "summary_ko": "DasiwaMinimaxH3 관련 safetensors 모델 파일이 주요 플랫폼에서 삭제되었습니다. Civitai와 Hugging Face 모두에서 404 오류가 발생하며 다운로드가 불가능한 상태입니다. 업로더가 해당 파일을 삭제한 것으로 보입니다.",
+      "bullets": [
+        "11.68GB 크기의 모델 파일 다운로드 불가",
+        "Civitai 및 Hugging Face에서 404 오류 발생",
+        "업로더에 의해 파일이 삭제된 것으로 추정"
+      ],
+      "category": "opensource",
+      "score": 0.869,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T22:12:10+09:00",
+      "uid": "b0d3de432613",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Lipsync Music Video - Minimax H3 + Workflow",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vylo9l/lipsync_music_video_minimax_h3_workflow",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T03:33:24+00:00",
+      "summary_raw": "Reference workflow with FL2VA + REF2VA Lora @ 1.4MP, 20 STEPS. Using sparse attention and 4B Qwen text encoder instead of 32B, total render time is 3-4 hours on a 5090. You can get very good results with 1MP + 8 STEPS with a turbo lora which would only take 20-30 minutes. Workflow The workflow is not easy to understand, but I upload it for reference. The video is made of 14x 15 second clips stitched together. This way prevents degradation but makes it so that there is clothing drift between clips. This can easily be fixed by using clothing references if you care. Each clip will need its own pr",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 기반 립싱크 워크플로우 공개",
+      "summary_ko": "MiniMax H3와 LoRA를 활용한 립싱크 뮤직비디오 제작 워크플로우가 공유되었습니다. 15초 분량의 클립 14개를 이어 붙여 화질 저하를 방지하는 방식으로 제작되었습니다. 희소 어텐션과 4B 텍스트 인코더를 적용해 렌더링을 진행했습니다.",
+      "bullets": [
+        "15초 클립 14개 연결해 화질 저하 방지",
+        "RTX 5090 기준 3~4시간 렌더링 소요",
+        "터보 LoRA 적용 시 20~30분 내 생성 가능"
+      ],
+      "category": "workflow",
+      "score": 0.7445,
+      "cluster_id": 4,
+      "related": [
+        {
+          "title": "DiffusionOPSD - new distillation method by Bytedance. Loras for Z-image-Turbo and SD-3.5M released.",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vz6g5n/diffusionopsd_new_distillation_method_by",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Did MiniMax H3 fix the R2V weights?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vz2hzt/did_minimax_h3_fix_the_r2v_weights",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3: Portable character consistency via reference identity",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyymwj/minimax_h3_portable_character_consistency_via",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "MiniMax H3 Acc FL2VA & REF2VA LoRAs By Wan Team",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyvtou/minimax_h3_acc_fl2va_ref2va_loras_by_wan_team",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Nodes for utilizing Minimax H3 as an image generator?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyq4kl/nodes_for_utilizing_minimax_h3_as_an_image",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Storytelling with Minimax H3 - Alicia of the Stars - First show",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyp3a7/storytelling_with_minimax_h3_alicia_of_the_stars",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T12:33:24+09:00",
+      "uid": "764991245fcc",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "LTX 2.3 sometimes works amazing, without any edits",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vyv5ed/ltx_23_sometimes_works_amazing_without_any_edits",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-26T12:04:21+00:00",
+      "summary_raw": "No specific glitches. Single prompt. Looks pretty real without any glitches over the drift. Definitely going to benchmark the scenarios.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "LTX 2.3, 단일 프롬프트로 그래픽 오류 없는 영상 생성 가능",
+      "summary_ko": "별도의 편집이나 글리치 없이 단일 프롬프트만으로 실제와 같은 영상을 생성할 수 있는 사례가 공유되었다. 향후 다양한 시나리오에 대한 벤치마크 평가가 진행될 예정이다.",
+      "bullets": [
+        "단일 프롬프트만으로 오류 없는 결과물 생성",
+        "드리프트 상의 오류 없이 사실적인 비주얼 구현",
+        "향후 다양한 시나리오 기반 벤치마크 예정"
+      ],
+      "category": "benchmark",
+      "score": 0.6972,
+      "cluster_id": 13,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T21:04:21+09:00",
+      "uid": "73da8db51f93",
+      "domain": "reddit.com"
+    }
+  ],
+  "cards": [
+    {
+      "title": "LTX-2 v1.3.0",
+      "url": "https://github.com/Lightricks/LTX-2/releases/tag/v1.3.0",
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-26T11:21:24+00:00",
+      "summary_raw": "Added DFR can finish 4K in a tiled spatial epilogue instead of denoising the full canvas in stage 2. --spatial-upscalings 2 keeps stage 2 at half resolution and upscales in that epilogue, which is the path for better-quality 4K (use 3840x2176 ; 3840x2160 is not on the size grid). Default --spatial-upscalings 1 is unchanged. Added ltx_pipelines.dfr_mgpu , a multi-GPU DFR runner with the same flags as ltx_pipelines.dfr_pipeline . Added keyframe-aware diffusion-VAE decoding, which sharpens detail at the frames a generator anchored on. Pass keyframe latents into VideoDecoder.decode_video(..., keyf",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "Lightricks/LTX-2",
+        "kind": "release"
+      },
+      "title_ko": "Lightricks, LTX-2 v1.3.0 공개",
+      "summary_ko": "Lightricks가 비디오 생성 모델 LTX-2의 v1.3.0 업데이트를 공개했습니다. 타일 분할 방식을 적용해 4K 생성 품질을 개선하고 다중 GPU 지원 기능을 추가했습니다. 또한 키프레임 기반 VAE 디코딩을 도입해 세부 묘사를 선명하게 개선했습니다.",
+      "bullets": [
+        "4K 업스케일링 품질 및 타일 분할 방식 개선",
+        "다중 GPU DFR 실행 파이프라인 추가",
+        "키프레임 기반 확산-VAE 디코딩 지원"
+      ],
+      "category": "model_release",
+      "score": 1.3996,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T20:21:24+09:00",
+      "uid": "a138bab46675",
+      "domain": "github.com"
+    },
+    {
+      "title": "ComfyUI v0.34.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.0",
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T02:09:08+00:00",
+      "summary_raw": "What's Changed Fix minimax music not working on non dynamic vram. by @comfyanonymous in #15588 Add MiniMaxH3AddGuide for anchoring image and audio guides at any frame by @drozbay in #15439 chore(openapi): sync shared API contract from cloud@94d0f1b by @comfy-pr-bot in #15041 Bump comfyui-frontend-package to 1.49.6 by @comfy-pr-bot in #15526 Speedup Gemma4 text generation (CORE-371) by @kijai in #15054 Update embedded docs to v0.5.10 by @comfyui-wiki in #15613 Fix thinking handling by @kijai in #15611 Enable dynamic vram by default on ROCm 7.14 and higher. by @comfyanonymous in #15633 [Partner ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "comfyanonymous/ComfyUI",
+        "kind": "release"
+      },
+      "title_ko": "ComfyUI v0.34.0 정식 출시",
+      "summary_ko": "ComfyUI v0.34.0 버전이 새롭게 출시되었습니다. MiniMax 관련 신규 기능 추가 및 오류 수정과 함께 Gemma4 텍스트 생성 속도가 향상되었습니다. 아울러 ROCm 7.14 이상 환경에서 동적 VRAM 설정이 기본 활성화됩니다.",
+      "bullets": [
+        "MiniMax 프레임 가이드 기능 추가 및 오류 수정",
+        "Gemma4 텍스트 생성 속도 개선",
+        "ROCm 7.14 이상 동적 VRAM 기본 활성화"
+      ],
+      "category": "major_update",
+      "score": 0.8798,
+      "cluster_id": 2,
+      "related": [
+        {
+          "title": "ComfyUI v0.34.1",
+          "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.1",
+          "source": "ComfyUI (GitHub Releases)",
+          "tier": "T1"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T11:09:08+09:00",
+      "uid": "2121b49a3b89",
+      "domain": "github.com"
+    },
+    {
+      "title": "Anyone have a link to download DasiwaMinimaxH3_dasiwaREF2VAHybridV1.safetensors? Seems it's been wiped off the internet in the past few hours",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vywq24/anyone_have_a_link_to_download_dasiwaminimaxh3",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T13:12:10+00:00",
+      "summary_raw": "It's the 11.68 GB model, SHA256: 7c37baf06ca3628ed5f3f7f46274222a50a127d1906a166f8f064771fc48d498. Was going to download it and test it out with my workflow but when I went to download it today on CivitAI and Huggingface I get a 404 error. Seems it was deleted by the uploader for some reason or another",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Dasiwa MiniMax H3 모델 파일 삭제",
+      "summary_ko": "DasiwaMinimaxH3 관련 safetensors 모델 파일이 주요 플랫폼에서 삭제되었습니다. Civitai와 Hugging Face 모두에서 404 오류가 발생하며 다운로드가 불가능한 상태입니다. 업로더가 해당 파일을 삭제한 것으로 보입니다.",
+      "bullets": [
+        "11.68GB 크기의 모델 파일 다운로드 불가",
+        "Civitai 및 Hugging Face에서 404 오류 발생",
+        "업로더에 의해 파일이 삭제된 것으로 추정"
+      ],
+      "category": "opensource",
+      "score": 0.869,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T22:12:10+09:00",
+      "uid": "b0d3de432613",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Lipsync Music Video - Minimax H3 + Workflow",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vylo9l/lipsync_music_video_minimax_h3_workflow",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T03:33:24+00:00",
+      "summary_raw": "Reference workflow with FL2VA + REF2VA Lora @ 1.4MP, 20 STEPS. Using sparse attention and 4B Qwen text encoder instead of 32B, total render time is 3-4 hours on a 5090. You can get very good results with 1MP + 8 STEPS with a turbo lora which would only take 20-30 minutes. Workflow The workflow is not easy to understand, but I upload it for reference. The video is made of 14x 15 second clips stitched together. This way prevents degradation but makes it so that there is clothing drift between clips. This can easily be fixed by using clothing references if you care. Each clip will need its own pr",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 기반 립싱크 워크플로우 공개",
+      "summary_ko": "MiniMax H3와 LoRA를 활용한 립싱크 뮤직비디오 제작 워크플로우가 공유되었습니다. 15초 분량의 클립 14개를 이어 붙여 화질 저하를 방지하는 방식으로 제작되었습니다. 희소 어텐션과 4B 텍스트 인코더를 적용해 렌더링을 진행했습니다.",
+      "bullets": [
+        "15초 클립 14개 연결해 화질 저하 방지",
+        "RTX 5090 기준 3~4시간 렌더링 소요",
+        "터보 LoRA 적용 시 20~30분 내 생성 가능"
+      ],
+      "category": "workflow",
+      "score": 0.7445,
+      "cluster_id": 4,
+      "related": [
+        {
+          "title": "DiffusionOPSD - new distillation method by Bytedance. Loras for Z-image-Turbo and SD-3.5M released.",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vz6g5n/diffusionopsd_new_distillation_method_by",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Did MiniMax H3 fix the R2V weights?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vz2hzt/did_minimax_h3_fix_the_r2v_weights",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3: Portable character consistency via reference identity",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyymwj/minimax_h3_portable_character_consistency_via",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "MiniMax H3 Acc FL2VA & REF2VA LoRAs By Wan Team",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyvtou/minimax_h3_acc_fl2va_ref2va_loras_by_wan_team",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Nodes for utilizing Minimax H3 as an image generator?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyq4kl/nodes_for_utilizing_minimax_h3_as_an_image",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Storytelling with Minimax H3 - Alicia of the Stars - First show",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vyp3a7/storytelling_with_minimax_h3_alicia_of_the_stars",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T12:33:24+09:00",
+      "uid": "764991245fcc",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "LTX 2.3 sometimes works amazing, without any edits",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vyv5ed/ltx_23_sometimes_works_amazing_without_any_edits",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-26T12:04:21+00:00",
+      "summary_raw": "No specific glitches. Single prompt. Looks pretty real without any glitches over the drift. Definitely going to benchmark the scenarios.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "LTX 2.3, 단일 프롬프트로 그래픽 오류 없는 영상 생성 가능",
+      "summary_ko": "별도의 편집이나 글리치 없이 단일 프롬프트만으로 실제와 같은 영상을 생성할 수 있는 사례가 공유되었다. 향후 다양한 시나리오에 대한 벤치마크 평가가 진행될 예정이다.",
+      "bullets": [
+        "단일 프롬프트만으로 오류 없는 결과물 생성",
+        "드리프트 상의 오류 없이 사실적인 비주얼 구현",
+        "향후 다양한 시나리오 기반 벤치마크 예정"
+      ],
+      "category": "benchmark",
+      "score": 0.6972,
+      "cluster_id": 13,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T21:04:21+09:00",
+      "uid": "73da8db51f93",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Organize your Comfy outputs automatically with SmartGallery DAM’s new asset clustering (Free & Open Source)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vyvsll/organize_your_comfy_outputs_automatically_with",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-26T12:33:12+00:00",
+      "summary_raw": "Hey everyone, back with another update on SmartGallery DAM: Smart Asset Clustering is now live to automate your media organization If you generate a lot in ComfyUI, you know the problem. Hundreds of renders pile up as you tweak seeds, prompts, LoRA weights and checkpoints, and your output folder turns into a wall of near identical thumbnails. Smart Asset Clustering reads the generation recipe embedded in each file and automatically groups your renders, no manual tagging required, in two ways: Architecture Clustering : groups everything that shares the exact same node structure and workflow, ig",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI 결과물 자동 정돈 'SmartGallery DAM' 출시",
+      "summary_ko": "ComfyUI 이용자의 출력 폴더를 자동으로 정리해 주는 오픈소스 도구 SmartGallery DAM에 스마트 에셋 클러스터링 기능이 추가되었다. 이미지 내 생성 레시피 정보를 읽어 노드 구조와 워크플로우가 동일한 결과물을 자동으로 그룹화한다.",
+      "bullets": [
+        "ComfyUI 생성 파일 내 레시피 정보 읽어 자동 분류",
+        "수동 태그 작업 없이 동일 워크플로우 결과물 그룹화",
+        "무료로 사용할 수 있는 오픈소스 도구"
+      ],
+      "category": "opensource",
+      "score": 0.3698,
+      "cluster_id": 0,
+      "related": [
+        {
+          "title": "Submit by 9/1 to the Comfy H3 Sync Sound Challenge! RTX 5090 Grand Prize",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vzb3z9/submit_by_91_to_the_comfy_h3_sync_sound_challenge",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T21:33:12+09:00",
+      "uid": "7142218cc07e",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Day 3 of testing MiniMax H3 locally in ComfyUI: multiple reference images + adding a new object through text only",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vz54jj/day_3_of_testing_minimax_h3_locally_in_comfyui",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T18:19:26+00:00",
+      "summary_raw": "Continuing my local MiniMax H3 Reference-to-Video experiments. For this test I used separate reference images for the: character convenience store background car skateboard But I deliberately didn't provide a reference image for the Slurpee cup . The cup was described only in the prompt: a transparent plastic cup with blue liquid and a straw. H3 was able to add it to the scene without much trouble while still following the other reference images. Hardware / setup: RTX 5070 Ti + 32GB RAM MiniMax H3 + Turbo LoRA Generation: [09:07&lt;00:00, 68.43s/it] I was mainly testing how far you can split v",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 로컬 테스트: 텍스트 기반 개체 추가 성공",
+      "summary_ko": "ComfyUI 환경에서 MiniMax H3와 Turbo LoRA를 활용한 로컬 테스트 3일 차 결과가 공개되었다. 여러 참조 이미지를 사용하는 동시에 프롬프트 묘사만으로 참조 이미지가 없는 새 개체를 영상에 성공적으로 추가했다.",
+      "bullets": [
+        "RTX 5070 Ti 및 32GB RAM 환경에서 로컬 실행",
+        "여러 참조 이미지와 텍스트 프롬프트 병행 테스트",
+        "참조 이미지 없는 새 개체를 텍스트만으로 추가"
+      ],
+      "category": "minor",
+      "score": 0.3452,
+      "cluster_id": 6,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-27T03:19:26+09:00",
+      "uid": "e04ed786e749",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "RECREATING MEMORIES FROM SCRAPS.",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vz1v31/recreating_memories_from_scraps",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-26T16:24:12+00:00",
+      "summary_raw": "A few photos, voice clips and a waybackmachine archive photo of the hotel rooms at that time. Minimax H3. All local.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 활용 단서 기반 기억 재현 사례 공개",
+      "summary_ko": "사진 수 장과 음성 클립, 텍스트 기반 과거 웹페이지 아카이브 자료를 조합하여 당시의 호텔 객실 기억을 재현한 프로젝트가 공개되었다. 모든 생성 과정은 MiniMax H3를 통해 로컬 환경에서 진행되었다.",
+      "bullets": [
+        "사진·음성·웹 아카이브 자료 활용",
+        "MiniMax H3 모델 기반 영상 재현",
+        "전 과정 로컬 환경에서 생성"
+      ],
+      "category": "minor",
+      "score": 0.3303,
+      "cluster_id": 9,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-27T01:24:12+09:00",
+      "uid": "62a75513f284",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Fibo 1.5 - few-step distillation + improved realism",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vysxif/fibo_15_fewstep_distillation_improved_realism",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image"
+      ],
+      "published": "2026-08-26T10:12:00+00:00",
+      "summary_raw": "https://huggingface.co/briaai/Fibo-1.5 https://preview.redd.it/t2ynrmfc2plh1.png?width=1024&amp;format=png&amp;auto=webp&amp;s=08ccbb4c43d3c8509bad812ea4b76bec2ae1fede &quot;FIBO model family is the first open-source, JSON-native image generation models trained exclusively on long structured captions. Fibo sets a new standard for controllability, predictability, and disentanglement by implementing the new VGL - Visual GenAI Language paradigm ⚡ Fibo 1.5 — few-step distillation + improved realism and textures for FIBO — produced by DMD + DMD-R distillation of the original FIBO . It generates in ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Fibo 1.5 공개, 적은 단계 증류로 사실감 향상",
+      "summary_ko": "구조화된 캡션 기반의 오픈소스 이미지 생성 모델 Fibo 1.5가 공개되었습니다. DMD 및 DMD-R 증류 기법을 적용하여 사실감과 텍스처를 크게 개선했습니다.",
+      "bullets": [
+        "긴 구조화 프롬프트 학습 모델",
+        "VGL 언어 패러다임 적용",
+        "DMD 증류로 높은 사실감 구현"
+      ],
+      "category": "opensource",
+      "score": 0.3243,
+      "cluster_id": 15,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T19:12:00+09:00",
+      "uid": "d28cbb4ec879",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Best and fastest way to generate HD-quality MiniMax videos?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vynprw/best_and_fastest_way_to_generate_hdquality",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-26T05:15:42+00:00",
+      "summary_raw": "I’ve tried Turbo LoRAs, and they’re great for speed, but they significantly reduce quality. At 544p–720p, the results of these turbo loras can look closer to 380p. Faces look acceptable when close to the camera, but become heavily distorted as the subject moves farther away. The upscalers I’ve tested either add too much processing time or introduce excessive sharpening and saturation. Any a solution that doesn’t require a BF16 checkpoint, 20 steps, a 10-minute generation time, or an extremely expensive GPU?",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "HD급 MiniMax 비디오 고속 생성 방법 탐색",
+      "summary_ko": "사용자들이 MiniMax 비디오의 화질 저하 없이 빠르게 생성할 수 있는 방법을 논의하고 있습니다. 기존 Turbo LoRA는 속도가 빠르지만 렌더링 품질과 피사체 유지력에 한계가 있는 것으로 나타났습니다.",
+      "bullets": [
+        "Turbo LoRA 사용 시 화질 저하 발생",
+        "원거리 피사체 윤곽 일관성 감소",
+        "고비용 GPU 없이 고화질 구현 모색"
+      ],
+      "category": "minor",
+      "score": 0.2757,
+      "cluster_id": 3,
+      "related": [
+        {
+          "title": "Even though H3 is CFG distilled, guidance values greater than 1 do have a noticable effect on prompt adherence and quality, especially at lower resolution.",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vz8ib6/even_though_h3_is_cfg_distilled_guidance_values",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T14:15:42+09:00",
+      "uid": "44d44f02ace5",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "QueryStory wants you to believe what AI is telling you",
+      "url": "https://techcrunch.com/2026/08/26/querystory-wants-you-to-believe-what-ai-is-telling-you",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "industry"
+      ],
+      "published": "2026-08-26T13:00:00+00:00",
+      "summary_raw": "The startup came out of stealth with $6 million in seed funding and a plan to use LLMs and cybersecurity know-how to make AI queries coherent.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "QueryStory, 600만 달러 투자 유치하며 공식 출범",
+      "summary_ko": "AI 스타트업 QueryStory가 600만 달러 규모의 시드 투자금을 유치하며 스텔스 상태를 벗어났습니다. 거대언어모델과 사이버 보안 기술을 결합하여 AI 쿼리의 일관성을 높이는 솔루션을 제공합니다.",
+      "bullets": [
+        "600만 달러 규모 시드 투자 유치",
+        "사이버 보안 기술 기반 결합",
+        "AI 쿼리의 응답 일관성 향상"
+      ],
+      "category": "workflow",
+      "score": 0.1039,
+      "cluster_id": 11,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T22:00:00+09:00",
+      "uid": "18fb21f6df20",
+      "domain": "techcrunch.com"
+    },
+    {
+      "title": "Arga Labs is building a better way to train enterprise AI agents",
+      "url": "https://techcrunch.com/2026/08/26/arga-is-building-a-better-way-to-train-enterprise-ai-agents",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "industry"
+      ],
+      "published": "2026-08-26T12:55:28+00:00",
+      "summary_raw": "Arga has raised $10 million in a seed funding round that was led by General Catalyst, with participation from Box Group, Emergence, Gradient and SV Angel.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "Arga Labs, 기업용 AI 에이전트 학습 위해 1,000만 달러 유치",
+      "summary_ko": "Arga Labs가 기업용 AI 에이전트 학습 솔루션 구축을 위해 1,000만 달러의 시드 투자를 유치했습니다. 이번 투자 라운드는 General Catalyst가 주도했습니다.",
+      "bullets": [
+        "1,000만 달러 규모 시드 투자 완료",
+        "General Catalyst 투자 주도",
+        "기업용 AI 에이전트 학습 향상 목표"
+      ],
+      "category": "industry",
+      "score": 0.0878,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T21:55:28+09:00",
+      "uid": "038853b2471e",
+      "domain": "techcrunch.com"
+    }
+  ],
+  "tldr": [
+    "Lightricks가 비디오 생성 모델 LTX-2 v1.3.0을 공개했습니다.",
+    "생성 AI 워크플로우 도구인 ComfyUI v0.34.0이 정식 출시되었습니다.",
+    "Dasiwa에서 MiniMax H3 모델 파일이 삭제 조치되었습니다."
+  ],
+  "dropped": [
+    {
+      "title": "Nvidia is about to be a hundred-billion-dollar-a-quarter company",
+      "url": "https://theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Anthropic continues compute-gobbling streak in $45B deal with Nscale",
+      "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI’s rogue AI model incident was worse than we thought",
+      "url": "https://theverge.com/ai-artificial-intelligence/985385/openais-rogue-ai-model-hugging-face-cybersecurity-incident-reports-metr",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "AI agents meant to replace Meta workers made “large-scale, disruptive actions”",
+      "url": "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Deadpool Adventure",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vz7dzr/deadpool_adventure",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Google’s Gemini has a branding problem, and so does the rest of AI",
+      "url": "https://techcrunch.com/2026/08/26/googles-gemini-has-a-branding-problem-and-so-does-the-rest-of-ai",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "How do we explain OpenAI’s executive exodus?",
+      "url": "https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text",
+      "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI releases its official report on the Hugging Face breach",
+      "url": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "GlucoFM: Foundation model for continuous glucose monitoring",
+      "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring",
+      "source": "Google Research Blog",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
+      "url": "https://arxiv.org/abs/2608.26105v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "An ongoing 3D-printer AGPL violation",
+      "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela",
+      "url": "https://hotosm.org/en/news/comaps-the-offline-app-that-guided-rescuers-without-a-signal-in-the-venezuela-response",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Intelligent transcription with Gemini 3.5 Transcribe",
+      "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe",
+      "source": "Google DeepMind Blog",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Google’s new AI transcription edits out your &#8216;ums&#8217; and &#8216;ahs&#8217;",
+      "url": "https://theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "FDA approves first in class targeted therapy for metastatic pancreatic cancer",
+      "url": "https://fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "4DGS-WAM: Bridging Past and Future with an Object-Centric World Action Model based on 4D Gaussian Splatting",
+      "url": "https://arxiv.org/abs/2608.25956v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
+      "url": "https://risklytics.ai/",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Tim Curry has died",
+      "url": "https://theguardian.com/film/2026/aug/26/tim-curry-dies-rocky-horror-show-stephen-king-it-legend-film",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "When Composition Doesn't Add Up: Humans Identifying Defects in AI-Generated Images",
+      "url": "https://arxiv.org/abs/2608.25933v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Radar makes podcasts searchable — and usable by AI agents",
+      "url": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Code World Model: Coding Agent as World Brain",
+      "url": "https://arxiv.org/abs/2608.25927v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Ex-Meta scientists want to bring visual AI to the factory floor",
+      "url": "https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Bill Gates wants to see a robot tax and ‘Human Reserved’ jobs to mitigate harms from AI",
+      "url": "https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Orchestration is the new challenge for CX in the age of AI agents",
+      "url": "https://venturebeat.com/orchestration/orchestration-is-the-new-challenge-for-cx-in-the-age-of-ai-agents",
+      "source": "VentureBeat AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model",
+      "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: How much of Hacker News is about AI?",
+      "url": "https://hnstats.com/",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Robot brain builders are pushing out of their GPT-2 era",
+      "url": "https://techcrunch.com/2026/08/26/robot-brain-builders-are-pushing-out-of-their-gpt-2-era",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "11,000-year-old sculpture of man riding a leopard found in Turkey",
+      "url": "https://thehistoryblog.com/archives/76809",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses",
+      "url": "https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Just say something people want",
+      "url": "https://gkogan.co/say-something-people-want",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "IBM's new Granite 4.2 models ride the wave of interest in local LLMs",
+      "url": "https://arstechnica.com/ai/2026/08/ibms-new-granite-4-2-models-ride-the-wave-of-interest-in-local-llms",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Bill Gates is deeply worried about AI, and he’s no longer staying quiet",
+      "url": "https://theverge.com/ai-artificial-intelligence/984923/bill-gates-is-deeply-worried-about-ai-and-hes-no-longer-staying-quiet",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Runable hits $21M to bet AI agents can go from building businesses to growing them",
+      "url": "https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Learning never stops: How AI makes learning continuous",
+      "url": "https://openai.com/index/learning-never-stops",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+      "url": "https://arxiv.org/abs/2608.25479v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "VGA-BenchV2: An Expanded Unified Benchmark and Multi-Model Framework for Evaluating Video Aesthetics and Generation Quality",
+      "url": "https://arxiv.org/abs/2608.25452v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation",
+      "url": "https://arxiv.org/abs/2608.25386v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Ref2V - H3 - really loving how H3 handles complex prompts even at 15 seconds.",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vyn0bk/ref2v_h3_really_loving_how_h3_handles_complex",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "India’s Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
+      "url": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Analyzing student votes across AI models for college essay help",
+      "url": "https://studyarena.com/blog/chatgpt-vs-claude-vs-gemini-college-essays-2026",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Robotics startup Generalist reaches $3B valuation, sources say",
+      "url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI loses a top data center exec as stream of high-profile departures continues",
+      "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The Hugging Face incident and the road ahead",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "How loveholidays is making everyone a builder with Codex",
+      "url": "https://openai.com/index/loveholidays",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+      "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+      "url": "https://github.com/swimmingbrain/texbrain",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · 404",
+      "elapsed_ms": 103
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 10건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 438
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 1210
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 804
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 695
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 359
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 2건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 538
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 3,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 496
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 107건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 1074
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-yhztP4lpcWEU8XF5MRnq1B&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 157
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 1건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 868
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1153,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 317
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 10건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 318
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 80
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 188
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1764
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 282
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 722
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 798
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 40,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 415
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1147
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 837
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 206
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 851,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 408
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 9건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 404
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 124,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1261
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 258,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 5556
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 248
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 237
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 8,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 981
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1566
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 2,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 302
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 114
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 7,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 152
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 249
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행",
+      "elapsed_ms": 0
+    }
+  ],
+  "stats": {
+    "collected": 2836,
+    "in_window": 73,
+    "screened": 25,
+    "clustered": 16,
+    "merged": 9,
+    "sources_total": 43,
+    "sources_ok": 21,
+    "translate_engine": "gemini",
+    "translate_status": "번역 12/12건 · 캐시 0건",
+    "tldr_status": "3줄",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 39,
+      "논문 · 코드 미공개": 7,
+      "내용 없음": 2
+    }
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "items": [
+    {
+      "title": "Introducing Runway Gen-5: a new frontier for video generation",
+      "url": "https://runwayml.com/news/gen-5?utm_source=twitter",
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T01:00:00+00:00",
+      "summary_raw": "Gen-5 delivers 20-second clips at 1080p with improved motion coherence."
+    },
+    {
+      "title": "Runway launches Gen-5 video model",
+      "url": "https://techcrunch.com/2026/08/24/runway-gen-5/",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "industry"
+      ],
+      "published": "2026-08-24T02:00:00+00:00",
+      "summary_raw": ""
+    },
+    {
+      "title": "Runway Gen-5 is here — everything new",
+      "url": "https://www.theverge.com/2026/8/24/runway-gen-5",
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T02:30:00+00:00",
+      "summary_raw": ""
+    },
+    {
+      "title": "Runway Gen 5 First Look and Real Tests",
+      "url": "https://www.youtube.com/watch?v=abc123&t=30s",
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T04:00:00+00:00",
+      "signal": "high",
+      "summary_raw": "I ran ten shots through Gen-5 against Kling and Veo."
+    },
+    {
+      "title": "Runway Gen-5 released",
+      "url": "https://news.ycombinator.com/item?id=99887766",
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T03:00:00+00:00",
+      "extra": {
+        "points": 420,
+        "comments": 180
+      }
+    },
+    {
+      "title": "Wan2.2 v2.2.3 release: 30% faster inference, LoRA training scripts",
+      "url": "https://github.com/Wan-Video/Wan2.2/releases/tag/v2.2.3",
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-24T06:00:00+00:00",
+      "summary_raw": "Open weights under Apache 2.0.",
+      "extra": {
+        "kind": "release"
+      }
+    },
+    {
+      "title": "FLUX.2 Kontext now available on Replicate",
+      "url": "https://replicate.com/blog/flux-2-kontext",
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "topics": [
+        "tools",
+        "image"
+      ],
+      "published": "2026-08-24T08:00:00+00:00",
+      "summary_raw": "Run FLUX.2 Kontext with a single API call."
+    },
+    {
+      "title": "Consistent characters across shots: a full ComfyUI workflow",
+      "url": "https://www.youtube.com/watch?v=xyz789",
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-24T10:00:00+00:00",
+      "signal": "high",
+      "summary_raw": "Free local pipeline using Wan and ControlNet."
+    },
+    {
+      "title": "Kling 2.8 vs Veo 3.5 vs Seedance 2: head-to-head on motion",
+      "url": "https://www.youtube.com/watch?v=cmp001",
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T12:00:00+00:00",
+      "signal": "high",
+      "summary_raw": "Same prompts, same seeds, side by side."
+    },
+    {
+      "title": "Getty and Stability settlement reshapes training-data licensing",
+      "url": "https://arstechnica.com/ai/2026/08/getty-stability/",
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "topics": [
+        "industry"
+      ],
+      "published": "2026-08-24T13:00:00+00:00",
+      "summary_raw": "The copyright case concludes with a licensing framework."
+    },
+    {
+      "title": "ComfyUI v0.9.0",
+      "url": "https://github.com/comfyanonymous/ComfyUI/releases/tag/v0.9.0",
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-24T15:00:00+00:00",
+      "summary_raw": "New subgraph nodes and faster VAE decoding.",
+      "extra": {
+        "kind": "release"
+      }
+    },
+    {
+      "title": "IPAdapter for video: how temporal conditioning actually works",
+      "url": "https://www.youtube.com/watch?v=lv555",
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision",
+      "tier": "T4",
+      "topics": [
+        "tools",
+        "image"
+      ],
+      "published": "2026-08-24T16:00:00+00:00",
+      "signal": "high",
+      "summary_raw": "A deep dive into the node internals."
+    },
+    {
+      "title": "Midjourney V8 release notes: style references get finer control",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/v8-notes",
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "topics": [
+        "image"
+      ],
+      "published": "2026-08-24T17:00:00+00:00",
+      "summary_raw": ""
+    },
+    {
+      "title": "Top 10 Best AI Tools You Won't Believe Are Free!!!",
+      "url": "https://toolify.ai/top-10-ai-tools",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-24T07:00:00+00:00",
+      "summary_raw": ""
+    },
+    {
+      "title": "Sign up now — free credits for our new AI generator!!",
+      "url": "https://example-promo.com/signup",
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-24T09:00:00+00:00",
+      "ad_filter": "strict",
+      "summary_raw": ""
+    },
+    {
+      "title": "Quarterly earnings beat expectations at a logistics firm",
+      "url": "https://venturebeat.com/2026/08/24/logistics/",
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "topics": [
+        "industry"
+      ],
+      "published": "2026-08-24T11:00:00+00:00",
+      "summary_raw": ""
+    },
+    {
+      "title": "Old news about Kling 2.7 from two days ago",
+      "url": "https://example.com/old",
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-22T01:00:00+00:00",
+      "summary_raw": ""
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 820
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 410
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1200
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "RuntimeError: 레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 300
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "RuntimeError: HTML 파서 미구현 (2주차 예정)",
+      "elapsed_ms": 5
+    }
+  ]
+}

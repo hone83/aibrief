@@ -1,0 +1,71 @@
+# 매일 한 번 브리핑을 만들어 커밋하고 메일로 보낸다.
+# public 저장소에서는 이 실행이 전부 무료이고, 실행 로그는 누구나 볼 수 있다.
+# 따라서 로그에 응답 원문을 출력하지 않는다 (run.py는 건수만 찍는다).
+name: 데일리 브리핑
+
+on:
+  schedule:
+    # cron은 항상 UTC로 해석된다. 22:20 UTC = 07:20 KST.
+    # 08:00 발행이 목표인데 40분 일찍 도는 이유:
+    # GitHub의 정시 cron은 혼잡할 때 수 분에서 수십 분까지 밀린다.
+    - cron: "20 22 * * *"
+  workflow_dispatch:        # 액션 탭에서 수동 실행 버튼
+
+# 워크플로가 저장소에 커밋을 하려면 쓰기 권한이 필요하다.
+# 기본값은 읽기 전용이라 이 줄이 없으면 push가 403으로 실패한다.
+permissions:
+  contents: write
+
+concurrency:
+  # 이전 실행이 아직 돌고 있으면 새 실행이 기다리게 한다.
+  # 두 실행이 동시에 커밋하면 push가 충돌한다.
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip      # 매번 pip install을 새로 하지 않도록 캐시
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 브리핑 생성 및 발송
+        env:
+          # Settings → Secrets and variables → Actions 에서 등록한 값들.
+          # 여기 적힌 이름만 보이고, 실제 값은 로그에서 자동으로 가려진다.
+          # 번역 엔진 키. scoring.yaml에서 고른 엔진의 것만 있으면 된다.
+          # 없으면 번역만 건너뛰고 원문으로 발행된다 — 브리핑은 멈추지 않는다.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python run.py
+
+      - name: 결과 커밋
+        run: |
+          git config user.name  "brief-bot"
+          git config user.email "brief-bot@users.noreply.github.com"
+          # 첫 실행이라 폴더가 아직 없을 수 있다. 없는 경로를 add하면 에러가 난다.
+          mkdir -p data docs
+          git add -A data docs
+          # 변경이 없으면 commit이 실패 코드를 뱉는다.
+          # 그건 정상 상황이므로 워크플로를 실패로 만들지 않는다.
+          git diff --staged --quiet || git commit -m "brief: $(date -u +%Y-%m-%d)"
+          # 내가 설정 파일을 고쳐 push한 직후에 이 실행이 끝나면, 저장소가 이미
+          # 한 발 앞서 있어서 그냥 push하면 거부당한다. 최신 내용을 받아 그 위에
+          # 내 커밋을 얹은 뒤 보낸다.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

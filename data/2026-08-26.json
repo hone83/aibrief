@@ -1,0 +1,1298 @@
+{
+  "date_kst": "2026-08-26",
+  "generated_at": "2026-08-26T11:43:33.022915+09:00",
+  "window_start": "2026-08-25T07:00:00+09:00",
+  "window_end": "2026-08-26T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "Wan 3.0 in ComfyUI: Native 30-Second Video with Omni-Reference Control",
+      "url": "https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second",
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-25T01:54:23+00:00",
+      "summary_raw": "Alibaba's new video generation model brings 30-second single-pass generation, up to 20 reference assets, and instruction-driven video editing to your workflow.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "discovered_feed": "https://blog.comfy.org/feed"
+      },
+      "title_ko": "Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시",
+      "summary_ko": "Alibaba가 단일 패스로 30초 비디오를 생성하는 Wan 3.0 모델을 공개했다. 최대 20개의 레퍼런스 자산 지원 및 프롬프트 기반 비디오 편집 기능을 ComfyUI 워크플로우에서 제공한다.",
+      "bullets": [
+        "단일 패스로 30초 비디오 생성",
+        "최대 20개 레퍼런스 자산 활용",
+        "지시문 기반 비디오 편집 지원"
+      ],
+      "category": "model_release",
+      "score": 1.0144,
+      "cluster_id": 17,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T10:54:23+09:00",
+      "uid": "20b66cdc544a",
+      "domain": "blog.comfy.org"
+    },
+    {
+      "title": "Face Detailer With PerRowMasking",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy7l8y/face_detailer_with_perrowmasking",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-25T18:10:32+00:00",
+      "summary_raw": "https://pastebin.com/ecZEDLSt First Video with Face Detailer, second without. You need https://github.com/Carasibana/ComfyUI-H3-FaceRefine and also ComfyUI-H3-NativeAudioLock from https://github.com/Shrek3OnVH5/MiniMax-H3-NativeAudio-MusicVideo-Workflow/tree/master/custom_nodes",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI용 Face Detailer 신규 커스텀 노드 공개",
+      "summary_ko": "PerRowMasking 기능을 지원하는 Face Detailer 워크플로우 관련 노드가 공개됐다. 영상 비교 결과와 함께 필요한 파이프라인 커스텀 노드 링크가 제공된다.",
+      "bullets": [
+        "PerRowMasking 기능 적용",
+        "ComfyUI-H3 커스텀 노드 활용"
+      ],
+      "category": "opensource",
+      "score": 0.9766,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T03:10:32+09:00",
+      "uid": "c561023871b8",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Not Another Minimax Post - Jib Mix Krea 2 - v4 Habanero - Free Forever",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy88fg/not_another_minimax_post_jib_mix_krea_2_v4",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-25T18:32:43+00:00",
+      "summary_raw": "Focusing on photorealism and improving the look of fantasy styles: https://civitai.com/models/2799984/jib-mix-krea-2 I would like to make it a LoRA also, but I am having some technical difficulties making a difference lora with Krea 2 models.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시",
+      "summary_ko": "실사감과 판타지 스타일 표현력을 높인 Jib Mix Krea 2 - v4 Habanero 모델이 Civitai에 무료로 공개됐다. 제작자는 Krea 2 모델 기반의 LoRA 제작 과정에서 기술적 어려움이 있다고 밝혔다.",
+      "bullets": [
+        "실사감 및 판타지 스타일 향상",
+        "Civitai 통해 영구 무료 배포",
+        "Krea 2 기반 LoRA 제작 진행 중"
+      ],
+      "category": "major_update",
+      "score": 0.927,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T03:32:43+09:00",
+      "uid": "ca9a6219c40a",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T07:00:00+00:00",
+      "summary_raw": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상",
+      "summary_ko": "OpenAI가 연산 속도와 전력 효율을 극대화한 자체 AI 추론 칩 Jalapeño의 초기 결과를 발표했다. 이 칩은 최신 모델 운용 시 지연 시간을 줄이고 처리량을 크게 높인 것이 특징이다.",
+      "bullets": [
+        "OpenAI의 자체 추론 전용 칩",
+        "전력 효율 및 추론 속도 향상",
+        "지연 시간 감소와 처리량 증대"
+      ],
+      "category": "major_update",
+      "score": 0.4382,
+      "cluster_id": 12,
+      "related": [
+        {
+          "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show",
+          "source": "TechCrunch AI",
+          "tier": "T3"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T16:00:00+09:00",
+      "uid": "9ad99bb5f40a",
+      "domain": "openai.com"
+    },
+    {
+      "title": "David Sacks Predicts the Regulatory Capture Playbook to Ban Open Source ...",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy3pby/david_sacks_predicts_the_regulatory_capture",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-25T15:52:58+00:00",
+      "summary_raw": "",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "데이비드 삭스, 오픈소스 규제 시도 예측",
+      "summary_ko": "데이비드 삭스가 오픈소스를 금지하기 위한 규제 포획 시나리오를 예측한 내용이 공유되었습니다. r/StableDiffusion 커뮤니티에서 관련 논의가 이어지고 있습니다.",
+      "bullets": [
+        "데이비드 삭스의 규제 예측 논의",
+        "오픈소스 금지 시도 가능성 제기",
+        "r/StableDiffusion 커뮤니티 공유"
+      ],
+      "category": "opensource",
+      "score": 0.3705,
+      "cluster_id": 5,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T00:52:58+09:00",
+      "uid": "ca8c1cc86f65",
+      "domain": "reddit.com"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Wan 3.0 in ComfyUI: Native 30-Second Video with Omni-Reference Control",
+      "url": "https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second",
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-25T01:54:23+00:00",
+      "summary_raw": "Alibaba's new video generation model brings 30-second single-pass generation, up to 20 reference assets, and instruction-driven video editing to your workflow.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "discovered_feed": "https://blog.comfy.org/feed"
+      },
+      "title_ko": "Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시",
+      "summary_ko": "Alibaba가 단일 패스로 30초 비디오를 생성하는 Wan 3.0 모델을 공개했다. 최대 20개의 레퍼런스 자산 지원 및 프롬프트 기반 비디오 편집 기능을 ComfyUI 워크플로우에서 제공한다.",
+      "bullets": [
+        "단일 패스로 30초 비디오 생성",
+        "최대 20개 레퍼런스 자산 활용",
+        "지시문 기반 비디오 편집 지원"
+      ],
+      "category": "model_release",
+      "score": 1.0144,
+      "cluster_id": 17,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T10:54:23+09:00",
+      "uid": "20b66cdc544a",
+      "domain": "blog.comfy.org"
+    },
+    {
+      "title": "Face Detailer With PerRowMasking",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy7l8y/face_detailer_with_perrowmasking",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-08-25T18:10:32+00:00",
+      "summary_raw": "https://pastebin.com/ecZEDLSt First Video with Face Detailer, second without. You need https://github.com/Carasibana/ComfyUI-H3-FaceRefine and also ComfyUI-H3-NativeAudioLock from https://github.com/Shrek3OnVH5/MiniMax-H3-NativeAudio-MusicVideo-Workflow/tree/master/custom_nodes",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI용 Face Detailer 신규 커스텀 노드 공개",
+      "summary_ko": "PerRowMasking 기능을 지원하는 Face Detailer 워크플로우 관련 노드가 공개됐다. 영상 비교 결과와 함께 필요한 파이프라인 커스텀 노드 링크가 제공된다.",
+      "bullets": [
+        "PerRowMasking 기능 적용",
+        "ComfyUI-H3 커스텀 노드 활용"
+      ],
+      "category": "opensource",
+      "score": 0.9766,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T03:10:32+09:00",
+      "uid": "c561023871b8",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Not Another Minimax Post - Jib Mix Krea 2 - v4 Habanero - Free Forever",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy88fg/not_another_minimax_post_jib_mix_krea_2_v4",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-25T18:32:43+00:00",
+      "summary_raw": "Focusing on photorealism and improving the look of fantasy styles: https://civitai.com/models/2799984/jib-mix-krea-2 I would like to make it a LoRA also, but I am having some technical difficulties making a difference lora with Krea 2 models.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시",
+      "summary_ko": "실사감과 판타지 스타일 표현력을 높인 Jib Mix Krea 2 - v4 Habanero 모델이 Civitai에 무료로 공개됐다. 제작자는 Krea 2 모델 기반의 LoRA 제작 과정에서 기술적 어려움이 있다고 밝혔다.",
+      "bullets": [
+        "실사감 및 판타지 스타일 향상",
+        "Civitai 통해 영구 무료 배포",
+        "Krea 2 기반 LoRA 제작 진행 중"
+      ],
+      "category": "major_update",
+      "score": 0.927,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T03:32:43+09:00",
+      "uid": "ca9a6219c40a",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T07:00:00+00:00",
+      "summary_raw": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상",
+      "summary_ko": "OpenAI가 연산 속도와 전력 효율을 극대화한 자체 AI 추론 칩 Jalapeño의 초기 결과를 발표했다. 이 칩은 최신 모델 운용 시 지연 시간을 줄이고 처리량을 크게 높인 것이 특징이다.",
+      "bullets": [
+        "OpenAI의 자체 추론 전용 칩",
+        "전력 효율 및 추론 속도 향상",
+        "지연 시간 감소와 처리량 증대"
+      ],
+      "category": "major_update",
+      "score": 0.4382,
+      "cluster_id": 12,
+      "related": [
+        {
+          "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show",
+          "source": "TechCrunch AI",
+          "tier": "T3"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T16:00:00+09:00",
+      "uid": "9ad99bb5f40a",
+      "domain": "openai.com"
+    },
+    {
+      "title": "David Sacks Predicts the Regulatory Capture Playbook to Ban Open Source ...",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy3pby/david_sacks_predicts_the_regulatory_capture",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-25T15:52:58+00:00",
+      "summary_raw": "",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "데이비드 삭스, 오픈소스 규제 시도 예측",
+      "summary_ko": "데이비드 삭스가 오픈소스를 금지하기 위한 규제 포획 시나리오를 예측한 내용이 공유되었습니다. r/StableDiffusion 커뮤니티에서 관련 논의가 이어지고 있습니다.",
+      "bullets": [
+        "데이비드 삭스의 규제 예측 논의",
+        "오픈소스 금지 시도 가능성 제기",
+        "r/StableDiffusion 커뮤니티 공유"
+      ],
+      "category": "opensource",
+      "score": 0.3705,
+      "cluster_id": 5,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T00:52:58+09:00",
+      "uid": "ca8c1cc86f65",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Anima Turbo v1.1 is released",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy2455/anima_turbo_v11_is_released",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T14:54:30+00:00",
+      "summary_raw": "In case you didn't see: I just noticed a newer version of Anima Turbo (1.1) was released: huggingface: https://huggingface.co/circlestone-labs/Anima civitai: https://civitai.red/models/2458426/anima T he model is made and licensed under the CircleStone Labs Non-Commercial License I actually have lately very frustrating experience with Anima lately. I used it at release (but stopped with anime generation for a while) and now when revisiting it and i had underwhelming results (even with the aesthetic model) so i decided to retry Turbo (might as well) instead if the difference isn't that big. Tha",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "오픈소스 Anima Turbo v1.1 모델 공개",
+      "summary_ko": "Anima Turbo의 신규 버전인 1.1이 Hugging Face와 Civitai를 통해 배포되었다. 해당 모델은 CircleStone Labs의 비상업적 라이선스가 적용된다.",
+      "bullets": [
+        "Hugging Face·Civitai에 배포",
+        "CircleStone Labs 라이선스 적용",
+        "비상업적 용도로 모델 제공"
+      ],
+      "category": "opensource",
+      "score": 0.3622,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T23:54:30+09:00",
+      "uid": "4ffd839653f8",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Overhaul SLA, huge improvement. added many new options and changed defaults",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy1aij/overhaul_sla_huge_improvement_added_many_new",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T14:23:07+00:00",
+      "summary_raw": "Update for SLA Node - Pull v1.3.8 EDIT: Pushed correct files now. Added customizable dense steps, 0 is step 1 and is (default to first step). massively improves composition and prompt adherence. Changed default dense last steps to 1, cleans up the image big time. Added dense backend selector. Comfy_kitchen, pytorch, all sage modes. this is what comfy uses on dense steps. SLA still displaces against pytorch. (Default Comfy_kitchen) Added a disable FP16 accumulation option to ensure max quality as SLA gets no benefit from it. (Default True) Added a stabilize motion option, helps to reduce ghosti",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "SLA 노드 v1.3.8 업데이트, 구도·프롬프트 준수율 대폭 개선",
+      "summary_ko": "SLA 노드 v1.3.8 업데이트가 배포되었습니다. 밀도 제어 단계 설정과 백엔드 선택 기능이 추가되어 구도와 프롬프트 준수율, 이미지 품질이 향상되었습니다. 모션 안정화 및 FP16 비활성화 옵션도 추가되었습니다.",
+      "bullets": [
+        "밀도 단계 조절로 프롬프트 반영 향상",
+        "기본 밀도 단계 변경으로 품질 개선",
+        "Comfy_kitchen 등 백엔드 선택 추가"
+      ],
+      "category": "major_update",
+      "score": 0.3368,
+      "cluster_id": 11,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T23:23:07+09:00",
+      "uid": "0f3963cc8de4",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "On MiniMax built in characters and environments (not a list)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy361r/on_minimax_built_in_characters_and_environments",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-08-25T15:33:35+00:00",
+      "summary_raw": "There is a giant effort underway to look for what characters are buried in MiniMax. There are a lot. I’ve been doing my own hunting, so I built a simple IMDB scrapper to help make lists of characters from movies and TV shows. Here are some things I’ve discovered: If the “character” is really built in, you don’t need to even mention the actor’s name. “George Costanza from Seinfeld” and “George Costanza played by Jason Alexander from Seinfeld” are essentially the same. If you have to name the actor with the character, it’s just using what it knows about the actor to fill in that spot. If MinimMa",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax 내장 캐릭터 및 환경 학습 특징 분석 결과 공개",
+      "summary_ko": "MiniMax 모델에 학습된 영화 및 TV 프로그램 캐릭터 분석 결과가 공유되었습니다. 모델 내에 완전히 구축된 캐릭터는 배우 이름을 함께 입력하지 않고 캐릭터 이름만으로도 구현이 가능합니다. 배우 이름을 명시해야 하는 경우는 모델이 배우 정보를 활용해 채우는 방식입니다.",
+      "bullets": [
+        "MiniMax 내장 캐릭터 탐색 진행",
+        "배우 이름 없이 캐릭터명만으로 생성",
+        "배우 입력 시 기존 정보 활용해 생성"
+      ],
+      "category": "minor",
+      "score": 0.3245,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T00:33:35+09:00",
+      "uid": "ebc3acadd836",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "We Open Sourced World Generation",
+      "url": "https://youtube.com/watch?v=eJuYBNrD8HI",
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T15:36:05+00:00",
+      "summary_raw": "You can now turn a single image, or just a text prompt, into a fully explorable 3D world. Locally. For free. If you like my work, please consider supporting me on Patreon: https://www.patreon.com/Mickmumpitz Follow me on Twitter: https://twitter.com/mickmumpitz You can find the FREE WORKFLOWS here: https://www.patreon.com/Mickmumpitz/posts/167647096 INSTALLATION GUIDE ComfyUI: https://mickmumpitz.ai/posts/comfyui-getting-153738117?l=de-DE You can find the ADVANCED WORKFLOW, GUIDE & EXAMPLE FILES here: https://www.patreon.com/Mickmumpitz/posts/167646149 We spent weeks building a pipeline that t",
+      "signal": "high",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "kind": "video"
+      },
+      "title_ko": "텍스트와 이미지로 3D 공간을 생성하는 오픈소스 기술 공개",
+      "summary_ko": "단일 이미지나 텍스트 프롬프트만으로 탐색 가능한 3D 공간을 생성하는 파이프라인이 오픈소스로 공개되었습니다. 로컬 환경에서 무료로 실행할 수 있습니다. ComfyUI용 워크플로우와 설치 가이드가 함께 제공됩니다.",
+      "bullets": [
+        "이미지와 프롬프트로 3D 공간 생성",
+        "로컬 환경에서 무료로 실행 가능",
+        "ComfyUI 워크플로우 및 가이드 제공"
+      ],
+      "category": "opensource",
+      "score": 0.3155,
+      "cluster_id": 7,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T00:36:05+09:00",
+      "uid": "a939420c05fc",
+      "domain": "youtube.com"
+    },
+    {
+      "title": "Krea2 Turbo Distill 4 step LoRA - new checkpoint (chk26K) released (cuts 4-step error vs. the 8-step Turbo teacher by 46%, improves texture and detail vs previous checkpoints)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vxtizs/krea2_turbo_distill_4_step_lora_new_checkpoint",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-25T08:05:59+00:00",
+      "summary_raw": "Krea 2 Turbo — 4-Step Distillation LoRA (work in progress) A LoRA for Krea 2 Turbo that reduces the minimum usable step count from 8 to 4. This is an update release , following up from my previous posts where you can find full details: Initial , Previous: here , and here Headline for this update: chk00026000 removes 46% of the prediction error a plain 4-step run has against the 8-step teacher, where chk00014000 removed 44% and chk00010000 40% — all measured on the same enlarged held-out set (100 prompts across every trained resolution). Measured against each other rather than against the no-Lo",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Krea2 Turbo용 4스텝 증류 LoRA 신규 체크포인트 공개",
+      "summary_ko": "Krea 2 Turbo의 최소 사용 가능 스텝 수를 8에서 4로 줄이는 LoRA의 신규 체크포인트(chk26K)가 공개되었습니다. 이번 업데이트는 8스텝 교사 모델 대비 4스텝 실행 시 발생하는 예측 오차를 46% 감소시키고 질감과 세부 묘사를 개선했습니다.",
+      "bullets": [
+        "최소 사용 스텝 수 8에서 4로 감소",
+        "8스텝 교사 모델 대비 오차 46% 감소",
+        "이전 체크포인트 대비 질감 및 디테일 개선"
+      ],
+      "category": "benchmark",
+      "score": 0.2549,
+      "cluster_id": 15,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T17:05:59+09:00",
+      "uid": "ae37cb1c74a1",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Comparing H3 models with music reference",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vxsq13/comparing_h3_models_with_music_reference",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-08-25T07:17:51+00:00",
+      "summary_raw": "Using reference workflow. All are int8 pruned, 0.6MP turbo 4-step (my GPU is on life support and drops off the PCIe bus if I demand more from it) Anyway, making random music clips is probably my favorite use of this model. I’ve found the ref2va has an uncanny intuition for feeling the atmosphere of songs, and syncing the video with incredible precision. But yes, the quality (specifically motion) is much worse than fl2va. I was curious how exactly they compared, as well as some “in between” compromises discovered by the community. The LoRA seems closer to ref, while the hybrid weights are close",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "H3 모델 음악 참조 성능 비교 분석 및 워크플로우 공유",
+      "summary_ko": "커뮤니티를 통해 H3 모델들의 음악 참조 워크플로우 비교 결과가 공유되었다. ref2va는 비디오와 음악의 싱크 조절 능력이 뛰어나지만, 동작 품질 면에서는 fl2va에 비해 다소 떨어진다는 평가다.",
+      "bullets": [
+        "int8 4단계 워크플로우 비교",
+        "ref2va의 우수한 비디오 싱크 능력",
+        "fl2va 대비 떨어지는 동작 품질"
+      ],
+      "category": "workflow",
+      "score": 0.2509,
+      "cluster_id": 3,
+      "related": [
+        {
+          "title": "Made a music video using local H3 for a Suno song",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1vy855b/made_a_music_video_using_local_h3_for_a_suno_song",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-08-25T16:17:51+09:00",
+      "uid": "067fd781498c",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Stability AI, maker of image generator Stable Diffusion, raises $76 million in fresh funding",
+      "url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "image",
+        "industry"
+      ],
+      "published": "2026-08-25T19:03:47+00:00",
+      "summary_raw": "The company's new fundraising total now stands at $232 million.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "Stability AI, 7,600만 달러 규모 신규 투자 유치 성공",
+      "summary_ko": "Stable Diffusion 개발사인 Stability AI가 7,600만 달러의 신규 자금을 조달했다. 이번 투자를 포함해 회사의 누적 투자 유치 금액은 총 2억 3,200만 달러에 달한다.",
+      "bullets": [
+        "7,600만 달러 신규 자금 조달",
+        "누적 투자금 2억 3,200만 달러",
+        "Stable Diffusion 개발사 소식"
+      ],
+      "category": "industry",
+      "score": 0.2027,
+      "cluster_id": 1,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-26T04:03:47+09:00",
+      "uid": "75979cc45734",
+      "domain": "techcrunch.com"
+    }
+  ],
+  "tldr": [
+    "알리바바가 ComfyUI를 지원하는 Wan 3.0 비디오 모델을 출시했습니다.",
+    "ComfyUI용 Face Detailer 신규 커스텀 노드가 새롭게 공개되었습니다.",
+    "실사풍과 판타지 스타일을 개선한 Jib Mix Krea 2 모델이 출시되었습니다."
+  ],
+  "dropped": [
+    {
+      "title": "XCancel also down, at least for time being",
+      "url": "https://news.ycombinator.com/item?id=49440786",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "World humanoid robot games show runners breaking records, bursting into flames",
+      "url": "https://arstechnica.com/ai/2026/08/world-humanoid-robot-games-show-runners-breaking-records-bursting-into-flames",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Using only Ref to Video, Minimax-H3 made a whole Anime edit !",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vybx4i/using_only_ref_to_video_minimaxh3_made_a_whole",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "AgentHands: Generating interactive hand gestures for spatially grounded agent conversations in XR",
+      "url": "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr",
+      "source": "Google Research Blog",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+      "url": "https://arxiv.org/abs/2608.24885v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Claude Cowork finally remembers what you told the app in chat",
+      "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "LeFlow: Generative Latent Flow Planning for World Models",
+      "url": "https://arxiv.org/abs/2608.24855v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Show HN: Lightweight system monitor for Linux VPS written in Go",
+      "url": "https://github.com/leodeim/vpsmon",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "If dean ran into Harry Potter",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vy4a0b/if_dean_ran_into_harry_potter",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Warnock: Harnessing GPU geometry amplification for vector graphics",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3820012",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: I made a Raspberry with Qwen my local car AI",
+      "url": "https://github.com/ThinkOffApp/CarWatch",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Granite 4.2 LLMs: How They're Built",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training",
+      "url": "https://arxiv.org/abs/2608.24680v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "AI won’t replace radiologists, but it will dramatically change their jobs",
+      "url": "https://arstechnica.com/health/2026/08/ai-wont-replace-radiologists-but-it-will-dramatically-change-their-jobs",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Gamma acquires Accel-backed design startup Lica",
+      "url": "https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
+      "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI says its Jalapeño chip can power faster AI responses than the competition",
+      "url": "https://theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "X-MULTI: VLM-based Imaging Factor Disentanglement for Factor-Aware Image Synthesis",
+      "url": "https://arxiv.org/abs/2608.24563v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Apple's new desktop computers are designed specifically for local AI development",
+      "url": "https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Accel-backed Keenable is indexing the web for AI agents",
+      "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Black and white line drawn stuff with H3 is great.",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vxycqx/black_and_white_line_drawn_stuff_with_h3_is_great",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
+      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Nostr vs. Fediverse vs. Bluesky: A Comparison of Decentralized Social Protocols",
+      "url": "https://soapbox.pub/blog/comparing-protocols",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Metadata-Aware Adaptation of a Generative Foundation Model for Conditional CMR Synthesis",
+      "url": "https://arxiv.org/abs/2608.24342v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "OpenAI subpoenaed by Alabama AG over Hugging Face hack",
+      "url": "https://theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Gaussian Splatting test with MiniMax H3",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1vxu1ho/gaussian_splatting_test_with_minimax_h3",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Japan enlists 1,800 people to drag 360-tonne castle keep using ropes and rollers",
+      "url": "https://theguardian.com/world/2026/aug/25/japan-1800-people-move-pull-400-tonne-hirosaki-castle-with-ropes",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The full stack behind abundant intelligence",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+      "url": "https://github.com/dragthelake/ambient-context",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Was modern art a CIA psy-op? (2020)",
+      "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
+      "url": "https://techcrunch.com/2026/08/24/situational-awareness-star-ai-hedge-fund-that-nearly-imploded-now-being-probed-by-the-sec",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "GlanceWAM: Sparse Test-Time Imagination for World-Action Models",
+      "url": "https://arxiv.org/abs/2608.23927v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Disrupting a new covert influence campaign from Russia",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+      "url": "https://openai.com/index/introducing-admin-plugin",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+      "url": "https://huggingface.co/blog/gradio-workflow-guide",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+      "url": "https://github.com/murerkinn/bookshelf",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 67
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 1329
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 10837
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 667
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 510
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 315
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2548
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 2,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 472
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 4829
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 163
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 7942
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1148,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 315
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 1024
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 70
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 3304
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1777
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 319
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 279
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2758
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 40,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 158
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 161
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1010
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 199
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 850,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 484
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "피드 없음 · 개별 스크래퍼 필요",
+      "elapsed_ms": 2427
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 124,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 379
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 241,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 5148
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 590
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 229
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 8,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 952
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1388
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 170
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 137
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 7,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 276
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 73
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 67
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 66
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 287
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 190
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 187
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 68
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 67
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 253
+    }
+  ],
+  "stats": {
+    "collected": 2947,
+    "in_window": 61,
+    "screened": 24,
+    "clustered": 18,
+    "merged": 6,
+    "sources_total": 43,
+    "sources_ok": 30,
+    "translate_engine": "gemini",
+    "translate_status": "번역 3/3건 · 캐시 9건",
+    "tldr_status": "3줄",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 25,
+      "내용 없음": 6,
+      "논문 · 코드 미공개": 6
+    }
+  }
+}

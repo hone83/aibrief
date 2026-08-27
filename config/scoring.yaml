@@ -1,0 +1,154 @@
+# =============================================================================
+#  비주얼 AI 데일리 브리핑 · 랭킹 & 출력 설정
+#  숫자만 고쳐서 브리핑 성격을 바꾼다. 재배포 없이 다음 실행부터 반영.
+# =============================================================================
+
+version: 2
+updated: 2026-08-25
+
+# --- 관심 비중 (합 100) -------------------------------------------------------
+# 점수 계산에서 topic_multiplier로 쓰인다.
+# 한 항목이 여러 topic을 가지면 그중 최댓값을 적용 (합산하면 잡탕 기사가 유리해짐)
+interests:
+  video:    50
+  image:    20
+  tools:    20
+  industry: 10
+
+# 위 비중을 배수로 환산할 때의 기준값. 25를 1.0으로 본다.
+# → video 50 = 2.0배, image/tools 20 = 0.8배, industry 10 = 0.4배
+interest_baseline: 25
+
+# --- 출력 형태 ---------------------------------------------------------------
+output:
+  headlines: 5           # 상단 헤드라인 건수
+  cards: 12              # 본문 카드 건수
+  tldr_lines: 3          # TL;DR 문장 수
+  bullets_per_card: 3
+  summary_max_sentences: 4   # 저작권 안전선. 이 이상 늘리지 않는다.
+  min_cards: 5           # 이보다 적으면 "조용한 날" 배지 표시
+  related_collapse_after: 1  # 클러스터 대표 1건 외에는 접어서 표시
+
+# 카테고리별 최소 배정 — video가 50이라고 화면이 비디오로만 덮이면 안 된다.
+# 12장 중 최소 배분을 보장하고, 남는 슬롯을 점수순으로 채운다.
+# 키 이름은 screen.py의 카테고리 id와 정확히 같아야 한다. 다르면 조용히 무시된다.
+category_quota:
+  model_release: 2       # 신규 모델 출시
+  major_update:  1       # 기능 업데이트
+  benchmark:     1       # 리뷰·벤치마크
+  workflow:      2       # 워크플로우·활용사례
+  opensource:    1       # 오픈소스·툴
+  industry:      1       # 산업·규제·저작권
+# 합 8 → 나머지 4장은 점수 상위 자유 배정
+
+# --- 발행 시각 ---------------------------------------------------------------
+schedule:
+  timezone: Asia/Seoul
+  publish_at: "08:00"
+  # Actions cron은 혼잡 시간대에 밀리므로 40분 여유를 둔다 (07:20 KST = 22:20 UTC)
+  cron_utc: "20 22 * * *"
+  # 커버 구간: 전일 07:00 ~ 당일 07:00 KST
+  window_hours: 24
+  window_end_local: "07:00"
+
+# --- 중요도 점수 -------------------------------------------------------------
+# score = tier_weight
+#       × topic_multiplier
+#       × event_type_weight
+#       × (1 + community_boost)
+#       × freshness_decay
+#       × signal_modifier
+scoring:
+  event_type_weight:
+    model_release:   1.00   # 새 모델/버전 출시
+    major_update:    0.80   # 기존 모델 주요 기능 추가
+    benchmark:       0.70   # 비교·벤치마크 결과
+    workflow:        0.65   # 실사용 워크플로우·튜토리얼
+    opensource:      0.85   # 가중치·코드 공개 — 오픈 모델은 출시 자체가 핵심 사건
+    industry:        0.55   # 펀딩·규제·소송
+    minor:           0.30   # 잡담·루머
+
+  # 유튜브 signal 필드에 따른 배수
+  signal_modifier:
+    high:   1.20
+    normal: 1.00
+    low:    0.80
+
+  # 커뮤니티 반응 보정 (0 ~ 0.5). HN 점수·레딧 upvote·유튜브 조회수를
+  # 각 소스별 중앙값 대비 비율로 정규화해서 사용.
+  community_boost_max: 0.50
+
+  # 신선도 감쇠 — 24시간 창 안에서도 최근 것이 유리
+  #
+  # 18시간이었을 때 문제가 있었다. 창이 24시간인데 반감기가 18시간이면
+  # 창 앞쪽 항목이 0.4배로 깎여서, 아침 일찍 나온 큰 뉴스가 밀린다.
+  # 실제로 "Wan 3.0 30초 비디오 생성"이 XR 손동작 연구에 밀려 4위였다.
+  # 30시간이면 24시간 전 항목이 0.57배로 남아 순위가 뒤집히지 않는다.
+  freshness_half_life_hours: 30
+
+  # 여러 소스가 같은 사건을 보도하면 그 자체가 중요도 신호
+  cluster_size_bonus: 0.08      # 클러스터 1건당 +8%, 최대 +40%
+  cluster_size_bonus_max: 0.40
+
+# --- 광고 필터 ---------------------------------------------------------------
+ad_filter:
+  # 1단계: 규칙 (무료). blocklist는 sources.yaml에 있다.
+  # 2단계: LLM 스크리닝에서 promotional 판정
+  llm_threshold: 0.6            # 이 값 이상이면 제외
+  strict_sources_threshold: 0.4 # ad_filter: strict 인 소스는 더 엄격하게
+
+# --- 번역 ---------------------------------------------------------------
+# engine 한 줄만 바꾸면 번역 방식이 바뀐다. 재배포 없이 다음 실행부터 반영.
+#
+#   gemini : 무료. 번역 + 요약 + 3줄 불릿 + TL;DR. 하루 1,500회 무료, 카드 등록 불필요.
+#            (이 앱은 하루 2회만 쓴다) 무료 등급 입력은 구글이 학습에 쓸 수 있다.
+#   claude : 유료(월 1천원 안팎). 하는 일은 같고, 입력이 학습에 쓰이지 않는다.
+#   deepl  : 무료(월 50만자). 문장 번역만 하고 요약은 만들지 못한다.
+#   none   : 번역하지 않음.
+#
+# 어느 쪽이든 실패하면 원문 그대로 발행된다. 브리핑이 멈추지는 않는다.
+translate:
+  engine: gemini
+
+  # 엔진별 모델. 쓰지 않는 줄은 그냥 무시된다.
+  gemini_model: gemini-3.7-flash
+  claude_model: claude-haiku-4-5
+  max_tokens: 3000
+
+  # 무료 등급에서는 인기 모델이 자주 혼잡(503)하다. 밀리면 아래 순서로 옮겨 탄다.
+  # 위에서부터 시도하고, 되는 모델을 만나면 거기서 끝낸다.
+  gemini_fallback_models:
+    - gemini-3.6-flash
+    - gemini-3.5-flash
+    - gemini-3.5-flash-lite
+
+  # Gemini 3.x는 답하기 전에 '생각'을 한다. 기본값 medium으로 12건을 한 번에 보내면
+  # 3분을 넘겨 타임아웃이 났다. 번역·요약은 추론이 거의 필요 없어서 low로 낮춘다.
+  # 값: low / medium / high (모델에 따라 minimal도 가능)
+  thinking_level: low
+
+  # 한 번에 몇 건씩 보낼지. 12건을 한 요청에 넣으면 실패 시 12건이 통째로 날아간다.
+  # 나눠 보내면 한 묶음이 실패해도 나머지는 살아남는다.
+  # 작은 요청일수록 혼잡할 때 통과할 확률도 높다 (TL;DR 요청만 성공한 적이 있다).
+  chunk_size: 4
+
+  # 재시도는 4초 → 8초 → 16초로 간격을 늘린다.
+  # 503은 잠깐 기다리면 풀리지만 2초 만에 다시 보내면 또 밀린다.
+  # 키 오류(401)처럼 다시 해도 소용없는 것은 재시도하지 않고 바로 포기한다.
+  retries: 3
+  retry_base_seconds: 4
+
+  # deepl 유료 플랜이면 true (엔드포인트가 다르다)
+  pro: false
+
+  glossary: config/glossary.json
+
+  # 번역은 최종 선별된 카드에만 적용한다.
+  # 수집한 200건을 다 번역하면 비용이 20배가 되는데, 화면에 안 나오는 건 번역할 이유가 없다.
+  scope: cards
+
+# --- 헬스체크 ---------------------------------------------------------------
+health:
+  warn_after_empty_runs: 2      # 2일 연속 0건이면 브리핑 하단에 경고
+  max_stale_days_default: 21    # 최신 항목이 이보다 오래되면 stale 표시
+  alert_channel: telegram
