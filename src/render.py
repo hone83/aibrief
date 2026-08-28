@@ -753,6 +753,12 @@ PAGE_JS = r"""
 
   window.addEventListener('hashchange', route);
   route();
+
+  // 홈 화면에 추가했을 때 오프라인에서도 열리게 한다.
+  // file://로 열었을 때는 등록이 안 되므로 조용히 건너뛴다.
+  if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    navigator.serviceWorker.register(BASE + 'sw.js').catch(function(){});
+  }
 })();
 """
 
@@ -1007,6 +1013,12 @@ def render_page(brief: Brief, in_archive: bool = False) -> str:
 <meta name="robots" content="noindex, nofollow">
 <title>{e(brief.date_kst)} · 비주얼 AI 브리핑</title>
 <link rel="manifest" href="{manifest_href}">
+<link rel="icon" href="{base}icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="{base}apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI 브리핑">
+<link rel="alternate" type="application/rss+xml" title="비주얼 AI 브리핑" href="{base}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -1086,79 +1098,123 @@ def render_page(brief: Brief, in_archive: bool = False) -> str:
 # ==========================================================================
 
 def render_email(brief: Brief, site_url: str = "") -> str:
-    ink, muted, line, accent = "#141917", "#6A7A73", "#E2E7DE", "#0F6B57"
+    """
+    메일 본문 — 웹 화면과 같은 어두운 배경으로 맞춘다.
 
-    # 메일은 요약만 담는다. 순위표 전체나 원문 전환 같은 건 웹에서만 되므로
-    # 맨 위에 웹으로 가는 문을 하나 열어둔다.
+    메일에서 지켜야 하는 제약이 웹과 다르다.
+      · CSS 파일도 <style>도 못 믿는다 → 모든 스타일을 태그에 직접 쓴다
+      · flex/grid 없다 → 표(table)로만 배치한다
+      · 웹폰트 안 온다 → 시스템 글꼴만 쓴다
+      · 배경색은 style과 bgcolor를 함께 준다 (구버전 아웃룩은 style을 버린다)
+    자바스크립트가 없으므로 접기·탭 같은 건 없다. 대신 헤드라인 5건은 크게,
+    나머지는 한 줄로 줄이고, 자세한 건 웹에서 보게 한다.
+    """
+    GROUND, SURF, LINE = "#0B0E10", "#14181C", "#262E35"
+    INK, INK2, MUTED, AMBER = "#F2F5F7", "#B7C2CB", "#7C8A95", "#FFCE4A"
+    FONT = ("-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',"
+            "'Malgun Gothic',Roboto,sans-serif")
+    MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+
+    site = (site_url or "").rstrip("/")
     web = ""
-    if site_url:
-        web = (f'<a href="{e(site_url)}" style="font-size:12.5px;color:{accent};'
-               f'text-decoration:none;font-weight:600">웹에서 보기 →</a>')
+    if site:
+        web = (f'<a href="{e(site)}" style="color:{AMBER};text-decoration:none;'
+               f'font-size:12.5px;font-weight:600">웹에서 보기 →</a>')
 
     flow = "".join(
-        f'<p style="margin:0 0 8px;font-size:17px;line-height:1.6;color:{ink};'
-        f'font-weight:600">{e(t)}</p>' for t in brief.tldr
-    ) or f'<p style="margin:0;color:{muted}">오늘의 흐름 없음</p>'
+        f'<div style="color:{INK};font-size:18px;line-height:1.55;font-weight:700;'
+        f'margin:0 0 10px;word-break:keep-all">{e(t)}</div>'
+        for t in brief.tldr
+    ) or f'<div style="color:{MUTED};font-size:14px">오늘의 흐름 없음</div>'
 
-    rows = ""
-    for n, it in enumerate(brief.cards, 1):
+    heads = brief.headlines or brief.cards[:5]
+    rest = [c for c in brief.cards if c.uid not in {h.uid for h in heads}]
+
+    head_rows = ""
+    for n, it in enumerate(heads, 1):
         label = CATEGORY_LABELS.get(it.category, it.category)
-        summary = it.summary_ko or it.summary_raw[:200]
-        rows += f"""
-<tr><td style="padding:16px 0;border-bottom:1px solid {line}">
-  <div style="font-family:monospace;font-size:11px;color:{muted};letter-spacing:.08em">
-    {n:02d} · {e(label)} · {e(it.source_name)}
+        summary = it.summary_ko or it.summary_raw[:180]
+        head_rows += f"""
+<tr><td style="padding:18px 0;border-bottom:1px solid {LINE}">
+  <div style="font-family:{MONO};font-size:11px;color:{MUTED};letter-spacing:.08em">
+    <span style="color:{AMBER}">{n:02d}</span> · {e(label)} · {e(it.source_name)}
   </div>
-  <a href="{e(it.url)}" style="display:block;margin:5px 0 6px;font-size:17px;line-height:1.45;
-     font-weight:700;color:{ink};text-decoration:none">{e(it.display_title)}</a>
-  <div style="font-size:14px;line-height:1.65;color:#3B4642">{e(summary)}</div>
+  <a href="{e(it.url)}" style="display:block;margin:6px 0 7px;font-size:19px;line-height:1.45;
+     font-weight:700;color:{INK};text-decoration:none;word-break:keep-all">{e(it.display_title)}</a>
+  <div style="font-size:14px;line-height:1.65;color:{INK2};word-break:keep-all">{e(summary)}</div>
+</td></tr>"""
+
+    rest_rows = ""
+    if rest:
+        lines = ""
+        for it in rest:
+            label = CATEGORY_LABELS.get(it.category, it.category)
+            lines += (
+                f'<a href="{e(it.url)}" style="display:block;padding:9px 0;'
+                f'border-bottom:1px solid {LINE};color:{INK2};text-decoration:none;'
+                f'font-size:15px;line-height:1.5;word-break:keep-all">{e(it.display_title)}'
+                f'<span style="font-family:{MONO};font-size:10.5px;color:{MUTED};'
+                f'display:block;margin-top:3px">{e(label)} · {e(it.source_name)}</span></a>'
+            )
+        rest_rows = f"""
+<tr><td style="padding:22px 0 0">
+  <div style="font-family:{MONO};font-size:10.5px;color:{MUTED};letter-spacing:.14em;
+       text-transform:uppercase;margin-bottom:4px">나머지 {len(rest)}건</div>
+  {lines}
 </td></tr>"""
 
     rank_block = ""
     boards = [b for b in (brief.rankings or {}).get("boards", []) if b.get("rows")]
     if boards:
         b = boards[0]
-        top3 = "".join(
-            f'<span style="color:{muted}">{r.get("rank", "")}.</span> '
-            f'<b style="color:{ink}">{e(r["name"])}</b> '
-            f'<span style="color:{muted}">{r["score"] if r["score"] is not None else ""}</span><br>'
-            for r in b["rows"][:3]
+        rows = "".join(
+            f'<tr><td style="font-family:{MONO};font-size:12px;color:{MUTED};'
+            f'padding:5px 10px 5px 0;width:18px">{r.get("rank","")}</td>'
+            f'<td style="font-size:14px;color:{INK};font-weight:600;padding:5px 0">{e(r["name"])}'
+            f'<span style="color:{MUTED};font-weight:400"> · {e(r["creator"])}</span></td>'
+            f'<td style="font-family:{MONO};font-size:12.5px;color:{INK2};'
+            f'text-align:right;padding:5px 0">{r["score"] if r["score"] is not None else ""}</td></tr>'
+            for r in b["rows"][:5]
         )
         rank_block = f"""
-<tr><td style="padding:18px 0 0;border-top:2px solid {ink}">
-  <div style="font-family:monospace;font-size:11px;color:{muted};letter-spacing:.12em;
-       text-transform:uppercase;margin-bottom:8px">{e(b["label"])} 순위</div>
-  <div style="font-size:14px;line-height:1.9">{top3}</div>
-  <div style="font-size:11px;color:{muted};margin-top:6px">
+<tr><td style="padding:26px 0 0;border-top:1px solid {LINE}">
+  <div style="font-family:{MONO};font-size:10.5px;color:{MUTED};letter-spacing:.14em;
+       text-transform:uppercase;margin:14px 0 8px">{e(b["label"])} 순위</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{rows}</table>
+  <div style="font-size:11px;color:{MUTED};margin-top:8px">
     출처 {e((brief.rankings or {}).get("attribution", "Artificial Analysis"))}
   </div>
 </td></tr>"""
 
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#F4F6F2">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-       style="background:#F4F6F2;padding:24px 12px">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+</head>
+<body style="margin:0;padding:0;background:{GROUND};" bgcolor="{GROUND}">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       bgcolor="{GROUND}" style="background:{GROUND};padding:22px 10px">
 <tr><td align="center">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0"
-       style="max-width:600px;width:100%;background:#FFFFFF;border:1px solid {line};
-              border-radius:12px;padding:26px 24px;
-              font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+       bgcolor="{SURF}"
+       style="max-width:600px;width:100%;background:{SURF};border:1px solid {LINE};
+              border-radius:14px;padding:26px 24px;font-family:{FONT}">
 
-  <tr><td style="padding-bottom:16px;border-bottom:2px solid {ink}">
-    <div style="font-family:monospace;font-size:11px;letter-spacing:.16em;
-         text-transform:uppercase;color:{accent}">Visual AI Brief</div>
-    <div style="font-size:24px;font-weight:700;color:{ink};margin-top:4px">{e(brief.date_kst)}</div>
-    <div style="margin-top:6px">{web}</div>
+  <tr><td style="padding-bottom:16px;border-bottom:1px solid {LINE}">
+    <div style="font-family:{MONO};font-size:10.5px;letter-spacing:.16em;
+         text-transform:uppercase;color:{MUTED}">Visual AI Brief</div>
+    <div style="font-family:{MONO};font-size:23px;font-weight:700;color:{INK};
+         margin:3px 0 7px;letter-spacing:.02em">{e(brief.date_kst)}</div>
+    {web}
   </td></tr>
 
-  <tr><td style="padding:20px 0 4px">{flow}</td></tr>
-
-  {rows}
+  <tr><td style="padding:22px 0 4px">{flow}</td></tr>
+  {head_rows}
+  {rest_rows}
   {rank_block}
 
-  <tr><td style="padding-top:22px;font-size:12px;color:{muted};line-height:1.6">
+  <tr><td style="padding-top:24px;font-size:11.5px;color:{MUTED};line-height:1.65">
     수집 {brief.stats.get('collected', 0)}건에서 {len(brief.cards)}건 선별 ·
     소스 {brief.stats.get('sources_ok', 0)}/{brief.stats.get('sources_total', 0)} 정상<br>
     각 항목의 저작권은 원 저작자에게 있습니다. 개인 열람용 요약입니다.
@@ -1176,12 +1232,64 @@ def render_email(brief: Brief, site_url: str = "") -> str:
 MANIFEST = {
     "name": "비주얼 AI 브리핑",
     "short_name": "AI 브리핑",
+    "description": "생성형 비주얼 AI 뉴스 데일리 브리핑",
     "start_url": "./index.html",
+    "scope": "./",
     "display": "standalone",
+    "orientation": "portrait",
     "background_color": "#0B0E10",
     "theme_color": "#0B0E10",
-    "icons": [],
+    "lang": "ko",
+    "icons": [
+        {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+        {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+        # maskable은 안드로이드가 아이콘을 원형·사각형 등으로 잘라낼 때 쓴다.
+        # 여백을 넉넉히 둔 그림이라 어떻게 잘려도 안쪽 도형이 살아남는다.
+        {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png",
+         "purpose": "maskable"},
+    ],
 }
+
+# 서비스 워커 — 홈 화면에 추가한 뒤 지하철에서 열어도 어제 것이 보이게 한다.
+# 전략은 "네트워크 먼저, 실패하면 캐시". 브리핑은 매일 바뀌므로 캐시를 우선하면
+# 새 브리핑이 나온 날 옛것을 보게 된다. 반대로 두면 평소엔 항상 최신이고
+# 비행기 모드에서만 마지막으로 본 것이 뜬다.
+SERVICE_WORKER = """
+const CACHE = 'brief-v1';
+const CORE = ['./', './index.html', './manifest.json',
+              './dates.json', './models.json', './search-index.json'];
+
+self.addEventListener('install', function(ev){
+  self.skipWaiting();
+  ev.waitUntil(caches.open(CACHE).then(function(c){
+    return Promise.all(CORE.map(function(u){
+      return c.add(u).catch(function(){ /* 아직 없는 파일은 넘어간다 */ });
+    }));
+  }));
+});
+
+self.addEventListener('activate', function(ev){
+  ev.waitUntil(caches.keys().then(function(keys){
+    return Promise.all(keys.filter(function(k){ return k !== CACHE; })
+                           .map(function(k){ return caches.delete(k); }));
+  }).then(function(){ return self.clients.claim(); }));
+});
+
+self.addEventListener('fetch', function(ev){
+  if(ev.request.method !== 'GET'){ return; }
+  ev.respondWith(
+    fetch(ev.request).then(function(res){
+      var copy = res.clone();
+      caches.open(CACHE).then(function(c){ c.put(ev.request, copy); });
+      return res;
+    }).catch(function(){
+      return caches.match(ev.request).then(function(hit){
+        return hit || caches.match('./index.html');
+      });
+    })
+  );
+});
+"""
 
 
 def _write_if_changed(path: Path, text: str) -> bool:
@@ -1224,7 +1332,57 @@ def rebuild_archive(root: Path, limit: int = 120) -> int:
     return changed
 
 
-def write_outputs(brief: Brief, root: Path) -> dict[str, Path]:
+def render_feed(root: Path, site_url: str, days: int = 14) -> str:
+    """
+    RSS 피드 — 알림 앱을 따로 깔지 않아도 되는 가장 가벼운 구독 방법.
+
+    링크는 원문이 아니라 우리 페이지의 그 항목으로 건다. 요약과 원문 링크가
+    거기 함께 있어서, 읽고 나서 원문으로 갈지 말지를 고를 수 있기 때문이다.
+    """
+    from . import archive as _archive
+
+    site = (site_url or "").rstrip("/")
+    briefs = _archive.load_all(root / "data")[-days:]
+    items = []
+    for brief in reversed(briefs):
+        date = brief.get("date_kst", "")
+        for n, card in enumerate(brief.get("cards", [])):
+            title = card.get("title_ko") or card.get("title", "")
+            summary = card.get("summary_ko") or card.get("summary_raw", "")[:400]
+            link = f"{site}/archive/{date}.html#i-{card.get('uid','')}" if site else card.get("url", "")
+            # RFC 822 형식. 날짜만 있으므로 발행 시각은 07:00 KST로 고정한다.
+            pub = f"{date} 07:00:00 +0900"
+            try:
+                pub = dt.datetime.fromisoformat(f"{date}T07:00:00+09:00") \
+                        .strftime("%a, %d %b %Y %H:%M:%S %z")
+            except ValueError:
+                pass
+            items.append(
+                "<item>"
+                f"<title>{e(title)}</title>"
+                f"<link>{e(link)}</link>"
+                f"<guid isPermaLink=\"false\">{e(card.get('uid',''))}</guid>"
+                f"<pubDate>{pub}</pubDate>"
+                f"<category>{e(CATEGORY_LABELS.get(card.get('category','minor'), ''))}</category>"
+                f"<description>{e(summary)}</description>"
+                "</item>"
+            )
+
+    now = dt.datetime.now(dt.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0"><channel>'
+        "<title>비주얼 AI 브리핑</title>"
+        f"<link>{e(site)}/</link>"
+        "<description>생성형 비주얼 AI 뉴스 데일리 브리핑</description>"
+        "<language>ko</language>"
+        f"<lastBuildDate>{now}</lastBuildDate>"
+        + "".join(items) +
+        "</channel></rss>"
+    )
+
+
+def write_outputs(brief: Brief, root: Path, site_url: str = "") -> dict[str, Path]:
     """data/(원본 JSON) + docs/(공개 사이트) 두 곳에 나눠 쓴다."""
     data_dir = root / "data"
     docs_dir = root / "docs"
@@ -1243,6 +1401,17 @@ def write_outputs(brief: Brief, root: Path) -> dict[str, Path]:
     (docs_dir / "manifest.json").write_text(json.dumps(MANIFEST, ensure_ascii=False, indent=2),
                                             encoding="utf-8")
     (docs_dir / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+    (docs_dir / "sw.js").write_text(SERVICE_WORKER, encoding="utf-8")
+    _write_if_changed(docs_dir / "feed.xml", render_feed(root, site_url))
+
+    # 홈 화면 아이콘. assets/에 있는 원본을 docs/로 복사한다.
+    for name in ("icon-192.png", "icon-512.png", "icon-maskable-512.png",
+                 "apple-touch-icon.png"):
+        src_icon = root / "assets" / name
+        if src_icon.exists():
+            dst = docs_dir / name
+            if not dst.exists() or dst.read_bytes() != src_icon.read_bytes():
+                dst.write_bytes(src_icon.read_bytes())
     # 깃허브 Pages는 기본적으로 Jekyll이라는 옛 블로그 엔진을 한 번 거쳐서 사이트를
     # 만든다. 이 빈 파일이 있으면 그 단계를 통째로 건너뛴다.
     (docs_dir / ".nojekyll").write_text("", encoding="utf-8")

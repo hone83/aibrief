@@ -65,15 +65,20 @@ main() {
   fi
 
   # ---------- 4. 코드 교체 ----------
-  # .env 와 data/ 는 애초에 zip에 없으므로 건드려지지 않는다.
-  local changed=0
-  for path in src scripts tests config .github run.py requirements.txt README.md \
-              update.sh .env.example .gitignore; do
-    if [[ -e "$src_dir/$path" ]]; then
-      rm -rf "./$path"
-      cp -R "$src_dir/$path" "./$path"
-      changed=$((changed + 1))
-    fi
+  # zip에 들어 있는 것을 전부 가져온다. 목록을 손으로 적어두었더니 새 폴더가
+  # 생길 때마다 조용히 빠졌다(v15의 assets/가 그랬다. 아이콘이 통째로 안 왔다).
+  # 지킬 것만 이름으로 막고 나머지는 다 덮는 쪽이 안전하다.
+  # data/ 와 .env 는 애초에 zip에 없으므로 여기 오지도 않는다.
+  local changed=0 name
+  for entry in "$src_dir"/* "$src_dir"/.[!.]*; do
+    [[ -e "$entry" ]] || continue
+    name="$(basename "$entry")"
+    case "$name" in
+      data|docs|.venv|.env|backups|.git|__MACOSX) continue ;;
+    esac
+    rm -rf "./$name"
+    cp -R "$entry" "./$name"
+    changed=$((changed + 1))
   done
   echo "  코드 교체: $changed개 항목"
 

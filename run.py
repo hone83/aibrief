@@ -24,7 +24,7 @@ from pathlib import Path
 
 import yaml
 
-from src import (archive, collect, dedupe, mail, normalize, rankings,
+from src import (archive, collect, dedupe, mail, normalize, notify, rankings,
                  render, score, translate)
 from src.models import Brief, Item, SourceReport, KST
 
@@ -206,7 +206,8 @@ def main() -> int:
     )
 
     # --- 8) 렌더 + 저장 --------------------------------------------------
-    paths = render.write_outputs(brief, ROOT)
+    site_url = cfg.get("output", {}).get("site_url", "")
+    paths = render.write_outputs(brief, ROOT, site_url)
     print(f"[8] 저장          {paths['json'].relative_to(ROOT)} · {paths['index'].relative_to(ROOT)}")
 
     # 달력·검색·모델 탭이 읽는 색인. 지난 브리핑 전체를 훑어 다시 만든다.
@@ -220,16 +221,20 @@ def main() -> int:
     # --- 9) 발송 ---------------------------------------------------------
     if args.dry_run or args.no_mail:
         print("[9] 메일          생략 (--dry-run)")
+        print("[9b] 알림         생략 (--dry-run)")
     else:
         try:
             mail.send(
                 subject=f"[AI 브리핑] {brief.date_kst} · {len(cards)}건",
-                html_body=render.render_email(
-                    brief, site_url=cfg.get("output", {}).get("site_url", "")),
+                html_body=render.render_email(brief, site_url=site_url),
             )
             print("[9] 메일          발송 완료")
         except mail.MailNotConfigured as exc:
             print(f"[9] 메일          건너뜀 ({exc})")
+        except Exception as exc:  # noqa: BLE001 — 메일 실패가 알림까지 막지 않게
+            print(f"[9] 메일          실패 ({type(exc).__name__})")
+
+        print(f"[9b] 알림         {notify.send_all(brief, site_url)}")
 
     if args.show_dropped:
         _print_dropped(dropped_rows, args.show_dropped)
@@ -299,7 +304,7 @@ def _print_health(brief: Brief) -> None:
     if len(brief.cards) < 5:
         msg = f"⚠ 카드가 {len(brief.cards)}건뿐입니다. 필터가 과한지, 소스가 죽었는지 확인하세요."
         print("\n " + msg)
-        mail.send_telegram(msg)
+        notify.alert(msg)
     print()
 
 

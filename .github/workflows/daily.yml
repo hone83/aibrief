@@ -55,6 +55,9 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
+          # 폰 알림. 없으면 알림만 건너뛴다.
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # 예약으로 돈 실행에만 "이미 있으면 건너뛰기"를 붙인다.

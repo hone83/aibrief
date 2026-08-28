@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src import (archive, dedupe, normalize, rankings, render,   # noqa: E402
+from src import (archive, dedupe, normalize, notify, rankings, render,   # noqa: E402
                  screen, translate)
 from src.models import Brief                                    # noqa: E402
 from src.models import Item, KST                               # noqa: E402
@@ -536,6 +536,34 @@ _e = archive._entry({"uid": "u1", "title": "T", "title_ko": "제목",
 check("색인은 한국어 제목을 우선한다", _e["t"], "제목")
 check("색인은 원제도 함께 남긴다", _e["o"], "T")
 check("줄바꿈은 한 칸으로 눌린다", _e["s"], "요 약 입니다")
+
+
+print("\n알림·피드")
+import os as _os                                                    # noqa: E402
+for _k in ("NTFY_TOPIC", "TELEGRAM_TOKEN", "TELEGRAM_CHAT_ID"):
+    _os.environ.pop(_k, None)
+check("설정이 없으면 조용히 건너뛴다", notify.send_all(_brief), "설정된 알림 없음")
+_os.environ["NTFY_TOPIC"] = "한글주제어"
+_ok, _msg = notify.send_ntfy(_brief)
+check("한글 주제어는 보내기 전에 막는다", (_ok, "영문" in _msg), (False, True))
+_os.environ.pop("NTFY_TOPIC")
+check("알림 본문은 제목 세 줄까지", len(notify._lines(_brief)) <= 3, True)
+
+import tempfile, json as _json                                      # noqa: E402
+with tempfile.TemporaryDirectory() as _tmp:
+    _root = Path(_tmp)
+    (_root / "data").mkdir()
+    (_root / "data" / "2026-08-28.json").write_text(
+        _json.dumps({"date_kst": "2026-08-28", "cards": [
+            {"uid": "z9", "title": "T", "title_ko": "제목", "summary_ko": "요약",
+             "category": "workflow", "url": "https://x/1", "source_name": "S"}]}),
+        encoding="utf-8")
+    _xml = render.render_feed(_root, "https://example.github.io/aibrief")
+    check("피드에 항목이 들어간다", "<item>" in _xml, True)
+    check("피드 링크는 그 항목으로 바로 간다",
+          "https://example.github.io/aibrief/archive/2026-08-28.html#i-z9" in _xml, True)
+    import xml.etree.ElementTree as _ET                              # noqa: E402
+    check("피드가 XML로 파싱된다", _ET.fromstring(_xml).tag, "rss")
 
 print(f"\n  통과 {PASSED} · 실패 {FAILED}\n")
 sys.exit(1 if FAILED else 0)

@@ -37,7 +37,8 @@ Google 계정 → 보안 → **2단계 인증을 먼저 켠다** → 앱 비밀�
 | `ANTHROPIC_API_KEY` | 번역 엔진이 `claude`일 때 | |
 | `DEEPL_API_KEY` | 번역 엔진이 `deepl`일 때 | |
 | `AA_API_KEY` | 모델 순위표 (artificialanalysis.ai/data-api) | |
-| `TELEGRAM_TOKEN` | @BotFather에서 발급 | |
+| `NTFY_TOPIC` | 폰 알림 (ntfy). 남이 추측 못 할 긴 문자열 | |
+| `TELEGRAM_TOKEN` | 폰 알림 (텔레그램). @BotFather에서 발급 | |
 | `TELEGRAM_CHAT_ID` | 봇에게 말 건 뒤 getUpdates로 확인 | |
 
 ### 4. Pages 켜기
@@ -99,6 +100,32 @@ bash update.sh ~/Downloads/x.zip     # 직접 지정할 수도 있다
 설정을 직접 고쳐 쓰고 있었다면 `backups/`에서 꺼내 다시 반영하면 된다.
 
 ---
+
+## 폰에서 앱처럼 쓰기
+
+사파리(아이폰) 또는 크롬(안드로이드)으로 사이트를 열고 **공유 → 홈 화면에 추가**.
+아이콘이 생기고 주소창 없이 전체화면으로 열린다. 앱스토어를 거치지 않는다.
+
+`docs/sw.js`가 마지막으로 본 화면을 캐시해 두므로 지하철이나 비행기 모드에서도 열린다.
+전략은 "네트워크 먼저, 실패하면 캐시"라서 평소에는 항상 최신을 본다.
+
+## 알림 받기
+
+메일 말고 잠금화면으로 바로 받는 길이 두 가지 있다. 둘 다 무료이고 서버가 필요 없다.
+하나만 채우면 되고, 둘 다 비워두면 알림 단계만 건너뛴다.
+
+**ntfy** — 가장 단순하다. [ntfy 앱](https://ntfy.sh/)을 깔고 주제어를 하나 정해
+구독한 뒤, 같은 값을 `NTFY_TOPIC`에 넣는다. 가입도 토큰도 없다.
+대신 **주제어를 아는 사람은 누구나 같은 알림을 받을 수 있으므로**
+`aibrief-h7k2m9x4qp`처럼 추측할 수 없는 문자열을 써야 한다.
+
+**텔레그램** — 이미 쓰고 있다면 이쪽이 낫다. @BotFather에서 `/newbot`으로 봇을 만들고
+토큰을 `TELEGRAM_TOKEN`에, 봇에게 아무 말이나 건 뒤
+`api.telegram.org/bot<토큰>/getUpdates`에서 확인한 chat id를 `TELEGRAM_CHAT_ID`에 넣는다.
+대화 기록이 남아 며칠 전 알림을 거슬러 볼 수 있다.
+
+**RSS** — `docs/feed.xml`이 매 실행마다 만들어진다. 쓰던 RSS 앱이 있으면
+사이트 주소 뒤에 `/feed.xml`을 붙여 구독하면 된다. 설정이 필요 없다.
 
 ## 지난 브리핑 · 검색 · 모델 히스토리
 
