@@ -24,7 +24,8 @@ from pathlib import Path
 
 import yaml
 
-from src import collect, dedupe, mail, normalize, render, score, translate
+from src import (archive, collect, dedupe, mail, normalize, rankings,
+                 render, score, translate)
 from src.models import Brief, Item, SourceReport, KST
 
 ROOT = Path(__file__).resolve().parent
@@ -152,7 +153,16 @@ def main() -> int:
     print(f"[6] 번역({engine})   {tmsg}")
 
     tldr, tldr_msg = translate.make_tldr(cards, tcfg)
-    print(f"[7] TL;DR         {tldr_msg}")
+    print(f"[7] 오늘의 흐름   {tldr_msg}")
+
+    # 순위표는 뉴스와 무관하게 돈다. 실패해도 브리핑은 그대로 나간다.
+    board_data = rankings.fetch(cfg, ROOT)
+    if board_data.get("error"):
+        print(f"[7b] 순위표       건너뜀 ({board_data['error']})")
+    else:
+        ok = sum(1 for b in board_data["boards"] if b["rows"])
+        tier_ko = {"full": "유료 등급", "free": "무료 등급"}.get(board_data.get("tier"), "")
+        print(f"[7b] 순위표       {ok}/{len(board_data['boards'])}판 {tier_ko}")
 
     # 소스별 최종 채택 수를 리포트에 반영
     kept_by_source: dict[str, int] = {}
@@ -192,11 +202,20 @@ def main() -> int:
             "translated": sum(1 for c in cards if c.translated),
             "dropped_reasons": _count_reasons(dropped),
         },
+        rankings=board_data,
     )
 
     # --- 8) 렌더 + 저장 --------------------------------------------------
     paths = render.write_outputs(brief, ROOT)
     print(f"[8] 저장          {paths['json'].relative_to(ROOT)} · {paths['index'].relative_to(ROOT)}")
+
+    # 달력·검색·모델 탭이 읽는 색인. 지난 브리핑 전체를 훑어 다시 만든다.
+    protect = translate.load_glossary(
+        ROOT / cfg.get("translate", {}).get("glossary", "config/glossary.json"))["protect"]
+    idx = archive.build(ROOT, protect, cfg.get("history", {}))
+    redrawn = render.rebuild_archive(ROOT)
+    print(f"[8b] 색인         {idx['days']}일 · {idx['items']}건 · 모델 {idx['models']}개"
+          + (f" · 지난 페이지 {redrawn}장 갱신" if redrawn else ""))
 
     # --- 9) 발송 ---------------------------------------------------------
     if args.dry_run or args.no_mail:
@@ -205,7 +224,8 @@ def main() -> int:
         try:
             mail.send(
                 subject=f"[AI 브리핑] {brief.date_kst} · {len(cards)}건",
-                html_body=render.render_email(brief),
+                html_body=render.render_email(
+                    brief, site_url=cfg.get("output", {}).get("site_url", "")),
             )
             print("[9] 메일          발송 완료")
         except mail.MailNotConfigured as exc:

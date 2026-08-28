@@ -359,15 +359,21 @@ def translate_gemini(items: list[Item], cfg: dict, glossary: dict) -> list[str]:
 
 
 TLDR_SYSTEM = """당신은 생성형 AI 뉴스 브리핑의 편집장입니다.
-오늘의 항목들을 보고 전체를 3문장으로 요약합니다.
+오늘의 항목 목록을 보고, 헤드라인이 말해주지 않는 것을 2문장으로 씁니다.
+
+헤드라인은 "무슨 일이 있었나"를 이미 말합니다.
+여기서는 "그래서 오늘 전체가 어떤 그림인가"를 씁니다.
 
 규칙:
-1. 각 문장은 40자 내외. 한 문장에 하나의 사건만.
-2. 목록은 이미 중요도 순으로 정렬돼 있습니다. 1번을 첫 문장에 씁니다. 순서를 바꾸지 마세요.
-3. 모델명·버전은 원문 표기 그대로.
-4. "오늘은 ~한 하루였습니다" 같은 총평은 쓰지 않습니다. 사실만 씁니다.
+1. 두 문장. 각 60자 내외.
+2. 개별 항목의 제목을 그대로 옮겨 적지 마세요. 헤드라인과 같은 말이 되면 실패입니다.
+3. 여러 항목을 관통하는 흐름을 우선합니다.
+   (예: 같은 분야에 발표가 몰림, 가격 인하 경쟁, 폐쇄형에서 오픈웨이트로 이동,
+    한 회사가 연달아 내놓음, 어제 나온 것의 후속)
+4. 흐름이 안 보이는 날은 억지로 엮지 말고, 가장 중요한 한 건이 왜 중요한지를 씁니다.
+5. 모델명·버전은 원문 표기 그대로. "오늘은 ~한 하루였습니다" 같은 총평은 금지.
 
-반드시 JSON 배열만 출력합니다: ["문장1","문장2","문장3"]"""
+반드시 JSON 배열만 출력합니다: ["문장1","문장2"]"""
 
 
 def _tldr_llm(items: list[Item], cfg: dict, engine: str) -> list[str]:
@@ -376,7 +382,8 @@ def _tldr_llm(items: list[Item], cfg: dict, engine: str) -> list[str]:
     # 번호를 붙여 순위를 명시한다. 그냥 나열하면 모델이 제 판단으로 재배열해서,
     # 점수 1위인 비디오 모델 출시가 세 번째 줄로 밀린 적이 있다.
     prompt = "오늘의 항목 (중요도 순):\n" + "\n".join(
-        f"{n}. [{it.category}] {it.display_title}" for n, it in enumerate(items[:12], 1)
+        f"{n}. [{it.category}] {it.display_title}  — {it.source_name}"
+        for n, it in enumerate(items[:12], 1)
     )
 
     if engine == "gemini":
@@ -395,7 +402,7 @@ def _tldr_llm(items: list[Item], cfg: dict, engine: str) -> list[str]:
                            TLDR_SYSTEM, prompt, max_tokens=600)
 
     try:
-        return [str(x).strip() for x in _parse_json_array(raw)][:3]
+        return [str(x).strip() for x in _parse_json_array(raw)][:2]
     except (ValueError, json.JSONDecodeError):
         return []
 

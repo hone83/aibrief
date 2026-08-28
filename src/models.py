@@ -78,6 +78,18 @@ class Item:
         d["domain"] = self.domain
         return d
 
+    @classmethod
+    def from_dict(cls, d: dict) -> "Item":
+        """저장된 JSON에서 되살린다. 지난 브리핑을 다시 그릴 때 쓴다.
+
+        uid·domain·published_kst는 계산해서 나오는 값이라 넣지 않는다.
+        모르는 키가 섞여 있어도 무시한다 — 예전 버전이 쓴 파일도 읽혀야 하기 때문이다.
+        """
+        known = {f for f in cls.__dataclass_fields__}
+        kw = {k: v for k, v in d.items() if k in known}
+        kw["published"] = dt.datetime.fromisoformat(d["published"])
+        return cls(**kw)
+
 
 @dataclass
 class SourceReport:
@@ -110,6 +122,7 @@ class Brief:
     dropped: list[dict] = field(default_factory=list)  # 필터에 걸린 항목 (튜닝 근거)
     reports: list[SourceReport] = field(default_factory=list)
     stats: dict[str, Any] = field(default_factory=dict)
+    rankings: dict[str, Any] = field(default_factory=dict)   # 모델 순위표 (별도 탭)
 
     def to_dict(self) -> dict:
         return {
@@ -123,4 +136,23 @@ class Brief:
             "dropped": self.dropped,
             "reports": [r.to_dict() for r in self.reports],
             "stats": self.stats,
+            "rankings": self.rankings,
         }
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Brief":
+        return cls(
+            date_kst=d.get("date_kst", ""),
+            generated_at=d.get("generated_at", ""),
+            window_start=d.get("window_start", ""),
+            window_end=d.get("window_end", ""),
+            headlines=[Item.from_dict(x) for x in d.get("headlines", [])],
+            cards=[Item.from_dict(x) for x in d.get("cards", [])],
+            tldr=d.get("tldr", []),
+            dropped=d.get("dropped", []),
+            reports=[SourceReport(**{k: v for k, v in r.items()
+                                     if k in SourceReport.__dataclass_fields__})
+                     for r in d.get("reports", [])],
+            stats=d.get("stats", {}),
+            rankings=d.get("rankings", {}),
+        )

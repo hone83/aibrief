@@ -50,6 +50,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          # 모델 순위표. 없으면 순위 탭만 비고 브리핑은 그대로 나간다.
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}

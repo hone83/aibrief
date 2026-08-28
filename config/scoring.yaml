@@ -23,10 +23,14 @@ interest_baseline: 25
 output:
   headlines: 5           # 상단 헤드라인 건수
   cards: 12              # 본문 카드 건수
-  tldr_lines: 3          # TL;DR 문장 수
+  tldr_lines: 2          # TL;DR 문장 수
   bullets_per_card: 3
   summary_max_sentences: 4   # 저작권 안전선. 이 이상 늘리지 않는다.
-  min_cards: 5           # 이보다 적으면 "조용한 날" 배지 표시
+  min_cards: 5
+
+  # 메일 맨 위에 붙는 '웹에서 보기' 링크. 비워두면 링크가 나오지 않는다.
+  # 깃허브 Pages 주소를 그대로 적으면 된다.
+  site_url: https://hone83.github.io/aibrief/           # 이보다 적으면 "조용한 날" 배지 표시
   related_collapse_after: 1  # 클러스터 대표 1건 외에는 접어서 표시
 
 # 카테고리별 최소 배정 — video가 50이라고 화면이 비디오로만 덮이면 안 된다.
@@ -152,3 +156,64 @@ health:
   warn_after_empty_runs: 2      # 2일 연속 0건이면 브리핑 하단에 경고
   max_stale_days_default: 21    # 최신 항목이 이보다 오래되면 stale 표시
   alert_channel: telegram
+
+# --- 모델 순위표 -------------------------------------------------------------
+# Artificial Analysis의 데이터 API에서 받아온다. 키 발급: artificialanalysis.ai/data-api
+# 무료 등급은 하루 100회까지이고 "이름 + Elo + 오차범위"만 준다 (가격 없음).
+# 유료 키로 바꾸면 아래 설정을 그대로 두어도 가격 칸이 저절로 채워진다.
+# 출처 표기는 API 이용 조건이므로 화면에서 지우지 말 것.
+rankings:
+  enabled: true
+  attribution: Artificial Analysis
+  source_url: https://artificialanalysis.ai/
+
+  # 순서가 곧 화면에 보이는 순서다. 관심 비중(비디오 50)을 반영해 영상을 위에 둔다.
+  # top은 몇 위까지 보여줄지. 표가 길면 순위표의 쓸모가 오히려 떨어진다.
+  boards:
+    - id: text-to-video
+      label: 텍스트 → 영상
+      endpoint: media/text-to-video/models
+      kind: media
+      top: 8
+    - id: image-to-video
+      label: 이미지 → 영상
+      endpoint: media/image-to-video/models
+      kind: media
+      top: 8
+    - id: text-to-image
+      label: 텍스트 → 이미지
+      endpoint: media/text-to-image/models
+      kind: media
+      top: 8
+    - id: image-editing
+      label: 이미지 편집
+      endpoint: media/image-editing/models
+      kind: media
+      top: 8
+    - id: language
+      label: 언어모델 (지능·가격)
+      endpoint: language/models
+      kind: language
+      top: 10
+
+# --- 모델별 히스토리 ---------------------------------------------------------
+# '모델' 탭은 용어 사전(config/glossary.json)의 protect 목록을 이름 사전으로 쓴다.
+# 새 모델이 나오면 어차피 거기에 추가하게 되므로 목록을 두 벌 관리하지 않는다.
+history:
+  # 뉴스마다 등장하지만 "그 이름의 역사"로 볼 만한 대상이 아닌 것들.
+  # 라이선스·저장소·플랫폼 이름이 여기 해당한다.
+  exclude:
+    - Apache 2.0
+    - MIT
+    - GitHub
+    - arXiv
+    - Hugging Face
+    - Replicate
+    - fal.ai
+    - diffusers
+    - VAE
+    - CLIP
+
+  min_mentions: 2      # 이보다 적게 등장한 이름은 세우지 않는다
+  max_models: 60       # 목록에 세울 최대 개수
+  max_items: 80        # 한 이름당 보관할 기사 수

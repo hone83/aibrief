@@ -14,7 +14,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src import dedupe, normalize, screen, translate           # noqa: E402
+from src import (archive, dedupe, normalize, rankings, render,   # noqa: E402
+                 screen, translate)
+from src.models import Brief                                    # noqa: E402
 from src.models import Item, KST                               # noqa: E402
 
 PASSED, FAILED = 0, 0
@@ -440,6 +442,100 @@ it_b = item("Runway launches Gen-5")
 check("번역 전에는 원제가 표시된다", it_b.display_title, "Runway launches Gen-5")
 it_b.title_ko = "Runway, Gen-5 공개"
 check("번역 후에는 한국어가 표시된다", it_b.display_title, "Runway, Gen-5 공개")
+
+
+print("\n순위표 정규화")
+_raw = [
+    {"name": "Seedance 2.0", "model_creator": {"name": "ByteDance Seed"},
+     "elo": 1269, "ci_95": 8, "rank": 1, "price_per_minute": 0.45},
+    {"name": "Veo 4", "model_creator": {"name": "Google DeepMind"}, "elo": 1261, "rank": 2},
+    {"name": "빈 줄", "elo": None},
+]
+_n = rankings._normalize(_raw, "media", 8)
+check("점수 순으로 순위를 다시 매긴다", [r["rank"] for r in _n[:2]], [1, 2])
+check("제작사는 중첩된 객체에서 꺼낸다", _n[0]["creator"], "ByteDance Seed")
+check("분당 가격을 초당으로 바꾼다", _n[0]["price"], 0.0075)
+check("가격이 없으면 None", _n[1]["price"], None)
+check("점수 없는 줄은 뒤로 밀린다", _n[-1]["name"], "빈 줄")
+
+_lang = rankings._normalize(
+    [{"name": "M", "evaluations": {"artificial_analysis_intelligence_index": 71.2},
+      "pricing": {"price_1m_blended_3_to_1": 22.5}}], "language", 5)
+check("언어모델은 지능 지수를 점수로 쓴다", _lang[0]["score"], 71.2)
+check("언어모델 가격은 100만 토큰 기준", (_lang[0]["price"], _lang[0]["price_unit"]), (22.5, "$/1M"))
+
+_boards = [{"id": "b", "label": "L", "kind": "media", "note": "", "rows": [
+    {"name": "A", "rank": 1}, {"name": "B", "rank": 2}, {"name": "C", "rank": 3}]}]
+rankings._apply_deltas(_boards, {"ranks": {"b": {"A": 3, "B": 2}}})
+_rows = {r["name"]: r for r in _boards[0]["rows"]}
+check("두 계단 오르면 +2", _rows["A"]["delta"], 2)
+check("그대로면 0", _rows["B"]["delta"], 0)
+check("어제 없던 모델은 NEW", _rows["C"]["is_new"], True)
+
+_empty = rankings.fetch({"rankings": {"enabled": False}}, Path("."))
+check("꺼져 있으면 이유를 남기고 끝낸다", bool(_empty["error"]), True)
+
+
+print("\n화면 만들기")
+_c = item("Runway launches Gen-5", summary="Gen-5 produces up to 40 seconds.")
+_c.title_ko, _c.summary_ko, _c.bullets = "Runway, Gen-5 공개", "40초까지 생성된다.", ["최대 40초"]
+_c.category, _c.score = "model_release", 9.0
+_brief = Brief(date_kst="2026-08-28", generated_at="", window_start="2026-08-27T07:00:00+09:00",
+               window_end="2026-08-28T07:00:00+09:00", headlines=[_c], cards=[_c],
+               tldr=["흐름 한 줄."], rankings={})
+_page = render.render_page(_brief)
+check("세부 화면이 항목마다 만들어진다", f'id="d-{_c.uid}"' in _page, True)
+check("목록 항목이 세부와 연결된다", f'data-uid="{_c.uid}"' in _page, True)
+check("항목마다 원문 링크가 붙는다", 'class="go"' in _page, True)
+check("검색창이 첫 화면에 있다", 'id="q"' in _page, True)
+check("달력이 팝오버로 붙는다", 'id="calpop"' in _page, True)
+
+_notrans = item("Only English here", summary="Raw body text only.")
+_notrans.category, _notrans.score = "minor", 1.0
+_nb = Brief(date_kst="2026-08-28", generated_at="", window_start="", window_end="",
+            headlines=[_notrans], cards=[_notrans], tldr=[], rankings={})
+check("번역이 없으면 원문 요약을 그대로 싣는다",
+      "Raw body text only." in render.render_page(_nb), True)
+check("순위 탭 자리는 항상 있다", 'data-view="rank"' in _page, True)
+check("키가 없으면 안내가 뜬다", "AA_API_KEY" in _page, True)
+check("메일에는 스크립트가 없다", "<script" in render.render_email(_brief), False)
+
+_evil = item("<script>alert(1)</script>", summary="x")
+_evil.category, _evil.score = "minor", 1.0
+_bad = Brief(date_kst="2026-08-28", generated_at="", window_start="", window_end="",
+             headlines=[_evil], cards=[_evil], tldr=[], rankings={})
+check("제목의 태그는 이스케이프된다", "<script>alert(1)</script>" in render.render_page(_bad), False)
+
+
+
+print("\n지난 브리핑 색인")
+_b1 = {"date_kst": "2026-08-27", "cards": [
+    {"uid": "aaa", "title": "Runway launches Gen-5", "title_ko": "Runway, Gen-5 공개",
+     "summary_ko": "40초까지 생성된다.", "summary_raw": "Gen-5 does 40 seconds.",
+     "source_name": "Runway", "category": "model_release", "url": "https://x/1"}]}
+_b2 = {"date_kst": "2026-08-28", "cards": [
+    {"uid": "bbb", "title": "Kling 2.8 cuts price", "title_ko": "Kling 2.8 가격 인하",
+     "summary_ko": "40% 인하.", "summary_raw": "Kling cuts price.",
+     "source_name": "Kling", "category": "major_update", "url": "https://x/2"}]}
+_names = ["Runway", "Gen-5", "Kling", "GitHub"]
+_m = archive.build_models([_b1, _b2, _b1], _names, {"min_mentions": 2, "exclude": ["GitHub"]})
+_by = {x["name"]: x for x in _m}
+check("두 번 나온 이름만 세운다", sorted(_by), ["Gen-5", "Runway"])
+check("최근 날짜가 기록된다", _by["Runway"]["last"], "2026-08-27")
+check("제외 목록의 이름은 빠진다", "GitHub" in _by, False)
+check("한 번만 나온 이름은 빠진다", "Kling" in _by, False)
+
+_one = archive.build_models([{"date_kst": "2026-08-28", "cards": [
+    {"uid": "c", "title": "Sorare raises funding", "summary_raw": "", "url": "u",
+     "source_name": "s", "category": "industry"}]}] * 2, ["Sora"], {"min_mentions": 1})
+check("이름이 다른 단어에 묻혀 있으면 잡지 않는다 (Sora ≠ Sorare)", _one, [])
+
+_e = archive._entry({"uid": "u1", "title": "T", "title_ko": "제목",
+                     "summary_ko": "요\n약  입니다", "source_name": "S",
+                     "category": "workflow", "url": "https://x"}, "2026-08-28")
+check("색인은 한국어 제목을 우선한다", _e["t"], "제목")
+check("색인은 원제도 함께 남긴다", _e["o"], "T")
+check("줄바꿈은 한 칸으로 눌린다", _e["s"], "요 약 입니다")
 
 print(f"\n  통과 {PASSED} · 실패 {FAILED}\n")
 sys.exit(1 if FAILED else 0)

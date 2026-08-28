@@ -36,6 +36,7 @@ Google 계정 → 보안 → **2단계 인증을 먼저 켠다** → 앱 비밀�
 | `GEMINI_API_KEY` | 번역 엔진이 `gemini`일 때 (기본값) | |
 | `ANTHROPIC_API_KEY` | 번역 엔진이 `claude`일 때 | |
 | `DEEPL_API_KEY` | 번역 엔진이 `deepl`일 때 | |
+| `AA_API_KEY` | 모델 순위표 (artificialanalysis.ai/data-api) | |
 | `TELEGRAM_TOKEN` | @BotFather에서 발급 | |
 | `TELEGRAM_CHAT_ID` | 봇에게 말 건 뒤 getUpdates로 확인 | |
 
@@ -98,6 +99,55 @@ bash update.sh ~/Downloads/x.zip     # 직접 지정할 수도 있다
 설정을 직접 고쳐 쓰고 있었다면 `backups/`에서 꺼내 다시 반영하면 된다.
 
 ---
+
+## 지난 브리핑 · 검색 · 모델 히스토리
+
+헤더의 **검색창**, **날짜** 버튼(미니 달력), **모델** 탭이 읽는 색인은 매 실행마다 다시 만들어진다.
+
+    docs/dates.json          브리핑이 있는 날짜 (달력)
+    docs/search-index.json   모든 날의 모든 카드 (검색)
+    docs/models.json         이름별 등장 기록 (모델 탭)
+
+색인을 HTML에 박지 않고 따로 두는 이유는 커밋을 깨끗하게 유지하기 위해서다.
+페이지 안에 넣으면 하루가 지날 때마다 지난 페이지 전부가 바뀌어 커밋에 딸려 들어온다.
+
+모델 카드에는 최신 헤드라인과, 기사 제목에서 뽑아낸 최근 버전이 함께 붙는다.
+("Wan 3.0", "Kling 2.8" 같은 표기를 찾는다. 이름에 이미 버전이 붙어 있으면 생략된다.)
+
+모델 탭의 이름 사전은 `config/glossary.json`의 `protect` 목록을 그대로 쓴다.
+새 모델이 나오면 거기에 추가하면 다음 실행부터 탭에 잡힌다.
+라이선스·저장소처럼 뉴스마다 나오지만 추적할 의미가 없는 이름은
+`config/scoring.yaml`의 `history.exclude`에서 뺀다.
+
+지난 브리핑 페이지(`docs/archive/`)는 매 실행마다 지금 디자인으로 다시 그려진다.
+저장된 JSON이 원본이므로 화면을 바꿔도 과거가 옛 모습으로 남지 않는다.
+내용이 같으면 파일을 쓰지 않아서 커밋에는 실제로 달라진 것만 올라간다.
+
+**로컬에서 볼 때 주의** — `open docs/index.html`로 직접 열면 브라우저 보안 정책 때문에
+검색·달력·모델 탭이 동작하지 않는다(색인 파일을 못 읽는다). 이렇게 열어야 한다.
+
+    cd docs && python -m http.server 8000
+    # 브라우저에서 http://localhost:8000
+
+## 모델 순위표
+
+'순위' 탭은 [Artificial Analysis](https://artificialanalysis.ai/)의 데이터 API에서 받아온다.
+키는 artificialanalysis.ai/data-api에서 무료로 발급되고 하루 100회까지 쓸 수 있다
+(이 앱은 하루 5회 쓴다).
+
+무료 등급은 **모델 이름·Elo·오차범위**까지만 준다. 영상·이미지의 가격은 유료 등급 전용이다.
+언어모델 판은 무료 등급에도 가격이 들어 있다.
+유료로 올리면 설정을 고치지 않아도 가격 칸이 저절로 채워진다 —
+정식 주소를 먼저 찔러 보고 권한이 없을 때만 무료 주소로 물러서기 때문이다.
+
+    python scripts/probe_aa.py          # 키가 사는지, 어떤 값이 오는지
+    python scripts/probe_aa.py --raw    # 응답 원본 필드까지
+
+보는 판과 순서는 `config/scoring.yaml`의 `rankings.boards`에서 바꾼다.
+순위 변동(▲▼)은 `data/rankings.json`에 저장된 직전 순위와 비교해서 나온다.
+전부 실패한 날에는 이 파일을 덮어쓰지 않는다 — 기준을 잃으면 비교가 끊기기 때문이다.
+
+출처 표기는 API 이용 조건이다. 화면 아래 크레딧을 지우지 말 것.
 
 ## 필터 튜닝
 
