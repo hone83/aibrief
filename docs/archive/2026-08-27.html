@@ -1,66 +1,969 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>비주얼 AI 브리핑 · 2026-08-27</title><link rel="manifest" href="manifest.json"><style>
-:root{--paper:#F4F6F2;--surface:#fff;--surface2:#EAEEE8;--line:#D3DACF;--ink:#141917;
---ink2:#3B4642;--muted:#6A7A73;--accent:#1F6F5C;--accent-ink:#17564A;--wash:#E3EFEA;--clay:#A8512F}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#101413;--surface:#171D1B;
---surface2:#1E2624;--line:#2C3634;--ink:#E7ECE8;--ink2:#C2CCC7;--muted:#8B9A94;--accent:#4BA88E;
---accent-ink:#6FC4AB;--wash:#16302A;--clay:#D08663}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);line-height:1.7;
-font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
--webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px 80px}
-header{padding:44px 0 24px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
-.date{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
-font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-h1{font-size:clamp(26px,5vw,36px);margin:0;letter-spacing:-.02em;line-height:1.2}
-.sub{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
-nav.jump{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
-nav.jump a{font-size:12px;padding:3px 9px;border:1px solid var(--line);border-radius:2px;
-color:var(--muted);text-decoration:none}
-nav.jump a:hover{border-color:var(--accent);color:var(--accent)}
-section{padding-top:36px;display:flex;flex-direction:column;gap:14px}
-h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0;
-font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:500}
-.tldr{background:var(--wash);border-left:2px solid var(--accent);padding:18px 20px;
-display:flex;flex-direction:column;gap:8px}
-.tldr p{margin:0;font-size:16.5px;line-height:1.65;color:var(--ink)}
-ol.heads{margin:0;padding:0;list-style:none;counter-reset:h;display:flex;flex-direction:column;gap:2px}
-ol.heads li{counter-increment:h;display:grid;grid-template-columns:26px 1fr;gap:10px;
-padding:11px 0;border-bottom:1px solid var(--line)}
-ol.heads li::before{content:counter(h);font-family:ui-monospace,monospace;font-size:12px;
-color:var(--muted);padding-top:4px}
-ol.heads a{color:var(--ink);text-decoration:none;font-weight:500;line-height:1.45}
-ol.heads a:hover{color:var(--accent-ink)}
-.hmeta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-top:3px}
-.card{background:var(--surface);border:1px solid var(--line);padding:18px 20px;
-display:flex;flex-direction:column;gap:9px}
-.card h3{margin:0;font-size:17px;line-height:1.45;letter-spacing:-.01em}
-.card h3 a{color:var(--ink);text-decoration:none}
-.card h3 a:hover{color:var(--accent-ink)}
-.orig{font-size:13px;color:var(--muted);line-height:1.5}
-.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}
-.badge{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;padding:2px 6px;
-border:1px solid var(--line);color:var(--muted);border-radius:2px;white-space:nowrap}
-.badge.t0{color:var(--accent);border-color:var(--accent);background:var(--wash)}
-.badge.cat{color:var(--ink2)}
-.stars{color:var(--accent);letter-spacing:.1em}
-.summary{font-size:14.5px;color:var(--ink2);margin:0;line-height:1.65}
-ul.bullets{margin:2px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
-ul.bullets li{position:relative;padding-left:15px;font-size:13.5px;color:var(--ink2);line-height:1.6}
-ul.bullets li::before{content:"";position:absolute;left:1px;top:10px;width:5px;height:1px;
-background:var(--accent)}
-details.rel{font-size:13px}
-details.rel summary{cursor:pointer;color:var(--muted);list-style:none}
-details.rel summary::-webkit-details-marker{display:none}
-details.rel summary::before{content:"+ ";color:var(--accent)}
-details.rel[open] summary::before{content:"− "}
-details.rel ul{margin:8px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:5px}
-details.rel a{color:var(--muted)}
-.report{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;
-color:var(--muted)}
-.report table{border-collapse:collapse;width:100%;margin-top:10px;font-variant-numeric:tabular-nums}
-.report td{padding:3px 8px 3px 0;border-bottom:1px solid var(--line)}
-.report .fail{color:var(--clay)}
-.empty{padding:40px 0;color:var(--muted);text-align:center}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-</style></head><body><div class="wrap"><header><span class="date">2026-08-27</span><h1>비주얼 AI 브리핑</h1><span class="sub">수집 2828건 → 선별 12건 · 소스 43개 중 27개 정상</span><nav class="jump"><a href="#c-model_release">모델 출시 7</a><a href="#c-major_update">업데이트 1</a><a href="#c-workflow">워크플로우 2</a><a href="#c-opensource">오픈소스·툴 1</a><a href="#c-industry">산업·규제 1</a></nav></header><section><h2>오늘 한눈에</h2><div class="tldr"><p>Lightricks가 비디오 모델 LTX-2 v1.3.0을 공개했습니다.</p><p>ComfyUI에 MiniMax H3 전용 신규 노드와 기능이 대거 지원됩니다.</p><p>8GB VRAM 환경에서 LTX-2.5 멀티샷 립싱크 시연이 공유되었습니다.</p></div></section><section><h2>헤드라인</h2><ol class="heads"><li><div><a href="#i-a138bab46675">Lightricks, LTX-2 v1.3.0 공개</a><div class="hmeta"><span>Lightricks LTX-2 (GitHub Releases)</span><span>모델 출시</span><span>08/26 20:21</span></div></div></li><li><div><a href="#i-49e0b0c0ed67">ComfyUI, MiniMax H3 신규 노드 및 기능 대거 지원</a><div class="hmeta"><span>r/comfyui</span><span>모델 출시</span><span>08/27 00:13</span></div></div></li><li><div><a href="#i-2e69b3c61aa0">8GB VRAM 환경 LTX-2.5 멀티샷 립싱크 시연</a><div class="hmeta"><span>r/comfyui</span><span>모델 출시</span><span>08/26 21:19</span></div></div></li><li><div><a href="#i-c4cd16d2931a">8GB VRAM 기반 고화질 비디오 생성 워크플로우 문의</a><div class="hmeta"><span>r/comfyui</span><span>모델 출시</span><span>08/26 21:07</span></div></div></li><li><div><a href="#i-638c6628100a">AMD 라데온 환경 Wan 2.2 구동 여부 커뮤니티 문의</a><div class="hmeta"><span>r/comfyui</span><span>모델 출시</span><span>08/26 16:58</span></div></div></li></ol></section><section id="c-model_release"><h2>모델 출시</h2><article class="card" id="i-a138bab46675"><div class="meta"><span class="badge t0">T0 · 공식</span><span class="badge cat">모델 출시</span><span class="badge">Lightricks LTX-2 (GitHub Releases)</span><span class="badge">08/26 20:21 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://github.com/Lightricks/LTX-2/releases/tag/v1.3.0" target="_blank" rel="noopener">Lightricks, LTX-2 v1.3.0 공개</a></h3><p class="orig">LTX-2 v1.3.0</p><p class="summary">Lightricks가 비디오 생성 모델 LTX-2의 v1.3.0 업데이트를 공개했습니다. 타일 분할 방식을 적용해 4K 생성 품질을 개선하고 다중 GPU 지원 기능을 추가했습니다. 또한 키프레임 기반 VAE 디코딩을 도입해 세부 묘사를 선명하게 개선했습니다.</p><ul class="bullets"><li>4K 업스케일링 품질 및 타일 분할 방식 개선</li><li>다중 GPU DFR 실행 파이프라인 추가</li><li>키프레임 기반 확산-VAE 디코딩 지원</li></ul></article><article class="card" id="i-49e0b0c0ed67"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/27 00:13 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyzvqi/a_quick_minimax_h3_news_roundup_26th_august_2026" target="_blank" rel="noopener">ComfyUI, MiniMax H3 신규 노드 및 기능 대거 지원</a></h3><p class="orig">A quick Minimax H3 news round-up - 26th August 2026</p><p class="summary">ComfyUI Portable 최신 버전이 v0.34.0으로 업데이트되었습니다. 이번 업데이트를 통해 MiniMax H3 모델을 위한 프레임 가이드 고정, 단일 이미지 잠재 노드 사용, 토큰별 노이즈 마스크 및 프롬프트 임베딩 지원 등의 기능이 추가되었습니다.</p><ul class="bullets"><li>ComfyUI Portable v0.34.0 릴리스</li><li>MiniMax H3용 이미지·오디오 가이드 노드 추가</li><li>토큰별 비디오·오디오 노이즈 마스크 지원</li></ul></article><article class="card" id="i-2e69b3c61aa0"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/26 21:19 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyvh4p/ltx25_multishot_lip_sync_i2v_8gb_vram" target="_blank" rel="noopener">8GB VRAM 환경 LTX-2.5 멀티샷 립싱크 시연</a></h3><p class="orig">LTX-2.5 Multishot Lip Sync i2v (8GB VRAM)</p><p class="summary">RTX-4070 8GB VRAM 환경에서 LTX-2.5를 활용한 멀티샷 립싱크 이미지-투-비디오 작업 결과가 공유되었습니다. 832x640 해상도 기준으로 각각 13분 29초와 12분 6초의 렌더링 시간이 소요되었습니다.</p><ul class="bullets"><li>LTX-2.5 기반 이미지-투-비디오 립싱크 테스트</li><li>RTX-4070 8GB VRAM 및 64GB RAM 환경</li><li>832x640 해상도 기준 12~13분대 렌더링</li></ul></article><article class="card" id="i-c4cd16d2931a"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/26 21:07 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyv80l/generating_videos_on_8gb_vram" target="_blank" rel="noopener">8GB VRAM 기반 고화질 비디오 생성 워크플로우 문의</a></h3><p class="orig">Generating videos on 8gb vram</p><p class="summary">RTX 4070 8GB VRAM 환경에서 Wan 14b, LTX 2.3, MiniMax H3 모델 구동 시 긴 생성 시간과 품질 저하 문제가 제기되었습니다. 질문자는 5초 영상 생성에 1시간 이상 소요되고 해상도 저하가 발생한다며 8GB VRAM용 이미지-투-비디오 워크플로우 공유를 요청했습니다.</p><ul class="bullets"><li>RTX 4070 8GB 환경서 영상 생성 시 저하 문제 공유</li><li>Wan 14b·LTX 2.3 등에서 긴 지연 시간 발생</li><li>8GB VRAM 전용 이미지-투-비디오 워크플로우 문의</li></ul></article><article class="card" id="i-638c6628100a"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/26 16:58 KST</span><span class="stars" title="중요도">★★☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyqlp6/wan_22_et_carte_amd" target="_blank" rel="noopener">AMD 라데온 환경 Wan 2.2 구동 여부 커뮤니티 문의</a></h3><p class="orig">WAN 2.2 et carte Amd</p><p class="summary">사용자가 AMD RX 9060 XT 16GB 그래픽 카드로 Wan 2.2 모델을 구동할 수 있는지 커뮤니티에 문의했습니다. 구동 성공 여부와 관련 피드백을 요청하고 있습니다.</p><ul class="bullets"><li>AMD RX 9060 XT 16GB 그래픽 카드 사용</li><li>Wan 2.2 모델 구동 성공 여부 확인 요청</li><li>커뮤니티 내 사용자 피드백 요청</li></ul></article><article class="card" id="i-dc81ad7b015b"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/26 15:36 KST</span><span class="stars" title="중요도">★★☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyp6uq/llm_qwen_38_is_a_nice_comfyui_companion_on_the" target="_blank" rel="noopener">ComfyUI 사용자를 위한 로컬 LLM Qwen 3.8 활용법</a></h3><p class="orig">LLM (Qwen 3.8) is a nice ComfyUI companion on the side</p><p class="summary">로컬 환경에서 Qwen 3.8과 같은 LLM을 함께 실행하면 ComfyUI 작업에 큰 도움이 됩니다. LM Studio 등을 통해 모델을 로드하면 프롬프트 작성이나 커스텀 노드 코드 수정 작업을 간편하게 처리할 수 있습니다.</p><ul class="bullets"><li>LM Studio로 Qwen 3.8 간편하게 로드</li><li>MiniMax 프롬프트 작성을 용이하게 지원</li><li>출력 폴더 레이턴트 선택 등 노드 수정 도모</li></ul></article><article class="card" id="i-b83e3b1929d2"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">모델 출시</span><span class="badge">r/comfyui</span><span class="badge">08/27 00:47 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vz0t2v/sensenova_u15_lite_full_release_native_editing" target="_blank" rel="noopener">SenseNova U1.5 Lite 정식 출시 및 편집 워크플로우 지원</a></h3><p class="orig">SenseNova U1.5 Lite full release: native editing workflows (style+content, restyle keeping text, image-as-prompt)</p><p class="summary">SenseNova U1.5 Lite가 정식 출시되어 단일 모델 아키텍처로 텍스트, 에스테틱, 편집 분야 전문가 모델의 성능을 구현했습니다. 이미지 품질 향상, 4K 지원, 텍스트 렌더링 개선 및 세밀한 시각적 제어가 가능합니다.</p><ul class="bullets"><li>OPD를 통해 전문 모델을 단일 모델로 증류</li><li>네이티브 4K 출력 및 개선된 편집 기능 제공</li><li>Qwen-Image-Bench 등 주요 벤치마크 점수 상승</li></ul></article></section><section id="c-major_update"><h2>업데이트</h2><article class="card" id="i-2121b49a3b89"><div class="meta"><span class="badge">T1 · 연구</span><span class="badge cat">업데이트</span><span class="badge">ComfyUI (GitHub Releases)</span><span class="badge">08/26 11:09 KST</span><span class="stars" title="중요도">★★☆</span></div><h3><a href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.0" target="_blank" rel="noopener">ComfyUI v0.34.0 정식 출시</a></h3><p class="orig">ComfyUI v0.34.0</p><p class="summary">ComfyUI v0.34.0 버전이 새롭게 출시되었습니다. MiniMax 관련 신규 기능 추가 및 오류 수정과 함께 Gemma4 텍스트 생성 속도가 향상되었습니다. 아울러 ROCm 7.14 이상 환경에서 동적 VRAM 설정이 기본 활성화됩니다.</p><ul class="bullets"><li>MiniMax 프레임 가이드 기능 추가 및 오류 수정</li><li>Gemma4 텍스트 생성 속도 개선</li><li>ROCm 7.14 이상 동적 VRAM 기본 활성화</li></ul><details class="rel"><summary>관련 1건</summary><ul><li><a href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.1" target="_blank" rel="noopener">ComfyUI v0.34.1</a> · ComfyUI (GitHub Releases)</li></ul></details></article></section><section id="c-workflow"><h2>워크플로우</h2><article class="card" id="i-9fc00a0c0989"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">워크플로우</span><span class="badge">r/comfyui</span><span class="badge">08/27 00:05 KST</span><span class="stars" title="중요도">★★☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyzo2o/comfyui_minimax_h3_speed_lora_vram_monitor_nodes" target="_blank" rel="noopener">ComfyUI용 MiniMax H3 Speed LoRA 및 VRAM 노드 공개</a></h3><p class="orig">ComfyUI MiniMax H3 Speed LoRA + VRAM Monitor Nodes (Ep32)</p><p class="summary">ComfyUI에서 MiniMax H3 비디오 생성 속도를 높여주는 Speed LoRA와 Pixaroma VRAM 모니터링 노드가 튜토리얼과 함께 소개되었습니다. 생성 단계를 기존 20단계에서 4~8단계로 줄이면서 품질과 속도 간의 균형을 맞출 수 있습니다.</p><ul class="bullets"><li>생성 단계를 20단계에서 4~8단계로 단축</li><li>Speed LoRA 및 권장 shift 값 설정법 안내</li><li>VRAM 모니터링 노드 및 워크플로우 제공</li></ul></article><article class="card" id="i-5bf915d923ee"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">워크플로우</span><span class="badge">r/comfyui</span><span class="badge">08/26 23:48 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vyz7sr/looking_for_a_good_krea_2_turbo_workflow" target="_blank" rel="noopener">Krea 2 Turbo 실사풍 워크플로우 추천 요청</a></h3><p class="orig">Looking for a good Krea 2 Turbo workflow</p><p class="summary">커뮤니티에서 뛰어난 결과물을 보여주고 있는 Krea 2의 워크플로우와 로라(LoRA) 추천을 구하는 사용자의 게시글이다. 실사풍 스타일의 SFW 및 NSFW 작업에 적합한 설정을 찾고 있다.</p><ul class="bullets"><li>Krea 2의 우수한 텍스트-투-이미지 성능에 주목</li><li>실사풍 스타일을 위한 워크플로우 및 로라 요청</li><li>SFW와 NSFW 작업 모두 지원하는 설정 탐색</li></ul></article></section><section id="c-opensource"><h2>오픈소스·툴</h2><article class="card" id="i-9da9270fcfa6"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">오픈소스·툴</span><span class="badge">r/comfyui</span><span class="badge">08/27 02:13 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/comfyui/comments/1vz38t7/int6_convrot_custom_node" target="_blank" rel="noopener">ComfyUI용 INT6 ConvRot 커스텀 노드 오픈소스 공개</a></h3><p class="orig">INT6 ConvRot Custom Node</p><p class="summary">양자화 연구를 바탕으로 INT4와 INT8 중간 형태의 INT6 ConvRot 커스텀 노드가 개발되었습니다. INT8 대비 저장 용량을 25% 줄이면서도 생성 시간은 유사한 수준을 유지합니다.</p><ul class="bullets"><li>INT8 대비 저장 용량 25% 절감 달성</li><li>INT6 가중치를 활용하며 생성 시간은 INT8과 유사</li><li>GitHub를 통해 추가 설치 없이 클론 가능</li></ul></article></section><section id="c-industry"><h2>산업·규제</h2><article class="card" id="i-038853b2471e"><div class="meta"><span class="badge">T3 · 미디어</span><span class="badge cat">산업·규제</span><span class="badge">TechCrunch AI</span><span class="badge">08/26 21:55 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://techcrunch.com/2026/08/26/arga-is-building-a-better-way-to-train-enterprise-ai-agents" target="_blank" rel="noopener">Arga Labs, 기업용 AI 에이전트 학습 위해 1,000만 달러 유치</a></h3><p class="orig">Arga Labs is building a better way to train enterprise AI agents</p><p class="summary">Arga Labs가 기업용 AI 에이전트 학습 솔루션 구축을 위해 1,000만 달러의 시드 투자를 유치했습니다. 이번 투자 라운드는 General Catalyst가 주도했습니다.</p><ul class="bullets"><li>1,000만 달러 규모 시드 투자 완료</li><li>General Catalyst 투자 주도</li><li>기업용 AI 에이전트 학습 향상 목표</li></ul></article></section><div class="report"><strong>수집 리포트</strong><table><tr class="fail"><td>T0</td><td>Adobe Firefly Blog</td><td>HTTP 404 · 404</td><td>259ms</td></tr><tr><td>T0</td><td>Black Forest Labs (FLUX)</td><td>0건 → 0건</td><td>542ms</td></tr><tr class="fail"><td>T0</td><td>ByteDance Seed (Seedance / Seedream)</td><td>목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</td><td>826ms</td></tr><tr><td>T0</td><td>Google DeepMind Blog</td><td>100건 → 0건</td><td>687ms</td></tr><tr><td>T0</td><td>Google Research Blog</td><td>100건 → 0건</td><td>655ms</td></tr><tr><td>T0</td><td>Tencent HunyuanVideo (GitHub Releases)</td><td>1건 → 0건</td><td>352ms</td></tr><tr><td>T0</td><td>Kling AI (Kuaishou)</td><td>0건 → 0건</td><td>1047ms</td></tr><tr><td>T0</td><td>Lightricks LTX-2 (GitHub Releases)</td><td>3건 → 1건</td><td>491ms</td></tr><tr><td>T0</td><td>Luma AI (Ray / Dream Machine)</td><td>0건 → 0건</td><td>692ms</td></tr><tr class="fail"><td>T0</td><td>Midjourney</td><td>HTTP 403 · Just a moment... &lt;meta http-equiv=&quot;content-security-policy&quot; content=&quot;default-src &amp;#39;none&amp;#39;; script-src &amp;#39;nonce-V2E4YXCBzqmxuyapqpuLQr&amp;#39; &amp;#39;unsafe-eval&amp;#39; https://cha</td><td>192ms</td></tr><tr><td>T0</td><td>MiniMax / Hailuo</td><td>0건 → 0건</td><td>570ms</td></tr><tr><td>T0</td><td>OpenAI News</td><td>1153건 → 0건</td><td>634ms</td></tr><tr><td>T0</td><td>Pika</td><td>0건 → 0건</td><td>482ms</td></tr><tr><td>T0</td><td>Qwen (Alibaba) Blog</td><td>44건 → 0건</td><td>143ms</td></tr><tr class="fail"><td>T0</td><td>Runway</td><td>목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</td><td>206ms</td></tr><tr><td>T0</td><td>Stability AI</td><td>20건 → 0건</td><td>978ms</td></tr><tr><td>T0</td><td>Alibaba Wan (GitHub Releases)</td><td>0건 → 0건</td><td>255ms</td></tr><tr><td>T1</td><td>arXiv cs.CV (필터링)</td><td>15건 → 0건</td><td>602ms</td></tr><tr class="fail"><td>T1</td><td>Banodoco</td><td>목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</td><td>466ms</td></tr><tr><td>T1</td><td>Civitai (신규 모델·LoRA)</td><td>40건 → 0건</td><td>373ms</td></tr><tr><td>T1</td><td>ComfyUI Blog</td><td>20건 → 0건</td><td>418ms</td></tr><tr><td>T1</td><td>ComfyUI (GitHub Releases)</td><td>10건 → 1건</td><td>818ms</td></tr><tr><td>T1</td><td>fal.ai Blog</td><td>15건 → 0건</td><td>552ms</td></tr><tr><td>T1</td><td>Hugging Face Blog</td><td>851건 → 0건</td><td>312ms</td></tr><tr><td>T1</td><td>Hugging Face Papers (Daily)</td><td>13건 → 0건</td><td>260ms</td></tr><tr><td>T1</td><td>Replicate Blog</td><td>124건 → 0건</td><td>517ms</td></tr><tr><td>T2</td><td>Hacker News (키워드 필터)</td><td>237건 → 0건</td><td>3819ms</td></tr><tr class="fail"><td>T2</td><td>r/aivideo</td><td>레딧 차단(데이터센터 IP) — 건너뜀</td><td>191ms</td></tr><tr><td>T2</td><td>r/comfyui</td><td>25건 → 9건</td><td>640ms</td></tr><tr class="fail"><td>T2</td><td>r/StableDiffusion</td><td>레딧 차단(데이터센터 IP) — 건너뜀</td><td>219ms</td></tr><tr><td>T3</td><td>Ars Technica AI</td><td>20건 → 0건</td><td>464ms</td></tr><tr><td>T3</td><td>TechCrunch AI</td><td>20건 → 1건</td><td>161ms</td></tr><tr><td>T3</td><td>The Verge AI</td><td>10건 → 0건</td><td>146ms</td></tr><tr><td>T3</td><td>VentureBeat AI</td><td>7건 → 0건</td><td>253ms</td></tr><tr class="fail"><td>T4</td><td>Curious Refuge</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Latent Vision (Matteo Spinelli)</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>MattVidPro AI</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Mickmumpitz</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Nerdy Rodent</td><td>HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh</td><td>119ms</td></tr><tr class="fail"><td>T4</td><td>Olivio Sarikas</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Scott Detweiler</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Sebastian Kamph</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr><tr class="fail"><td>T4</td><td>Theoretically Media</td><td>ValueError: channel_id 비어 있음 — scripts/check_sources.py --write 먼저 실행</td><td>0ms</td></tr></table><details class="rel"><summary>필터에 걸린 46건 보기</summary><p style="margin:10px 0 4px"><strong>주제 무관</strong> 39건</p><ul><li><a href="https://theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue" target="_blank" rel="noopener">Nvidia is about to be a hundred-billion-dollar-a-quarter company</a> · The Verge AI</li><li><a href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale" target="_blank" rel="noopener">Anthropic continues compute-gobbling streak in $45B deal with Nscale</a> · TechCrunch AI</li><li><a href="https://theverge.com/ai-artificial-intelligence/985385/openais-rogue-ai-model-hugging-face-cybersecurity-incident-reports-metr" target="_blank" rel="noopener">OpenAI’s rogue AI model incident was worse than we thought</a> · The Verge AI</li><li><a href="https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent" target="_blank" rel="noopener">AI agents meant to replace Meta workers made “large-scale, disruptive actions”</a> · Ars Technica AI</li><li><a href="https://techcrunch.com/2026/08/26/googles-gemini-has-a-branding-problem-and-so-does-the-rest-of-ai" target="_blank" rel="noopener">Google’s Gemini has a branding problem, and so does the rest of AI</a> · TechCrunch AI</li><li><a href="https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus" target="_blank" rel="noopener">How do we explain OpenAI’s executive exodus?</a> · TechCrunch AI</li><li><a href="https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text" target="_blank" rel="noopener">Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text</a> · Ars Technica AI</li><li><a href="https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach" target="_blank" rel="noopener">OpenAI releases its official report on the Hugging Face breach</a> · TechCrunch AI</li><li><a href="https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring" target="_blank" rel="noopener">GlucoFM: Foundation model for continuous glucose monitoring</a> · Google Research Blog</li><li><a href="https://lwn.net/SubscriberLink/1089390/46116614cc74b814" target="_blank" rel="noopener">An ongoing 3D-printer AGPL violation</a> · Hacker News (키워드 필터)</li><li><a href="https://hotosm.org/en/news/comaps-the-offline-app-that-guided-rescuers-without-a-signal-in-the-venezuela-response" target="_blank" rel="noopener">CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela</a> · Hacker News (키워드 필터)</li><li><a href="https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe" target="_blank" rel="noopener">Intelligent transcription with Gemini 3.5 Transcribe</a> · Google DeepMind Blog</li><li><a href="https://theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai" target="_blank" rel="noopener">Google’s new AI transcription edits out your &amp;#8216;ums&amp;#8217; and &amp;#8216;ahs&amp;#8217;</a> · The Verge AI</li><li><a href="https://fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer" target="_blank" rel="noopener">FDA approves first in class targeted therapy for metastatic pancreatic cancer</a> · Hacker News (키워드 필터)</li><li><a href="https://risklytics.ai/" target="_blank" rel="noopener">Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies</a> · Hacker News (키워드 필터)</li><li><a href="https://theguardian.com/film/2026/aug/26/tim-curry-dies-rocky-horror-show-stephen-king-it-legend-film" target="_blank" rel="noopener">Tim Curry has died</a> · Hacker News (키워드 필터)</li><li><a href="https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents" target="_blank" rel="noopener">Radar makes podcasts searchable — and usable by AI agents</a> · TechCrunch AI</li><li><a href="https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor" target="_blank" rel="noopener">Ex-Meta scientists want to bring visual AI to the factory floor</a> · TechCrunch AI</li><li><a href="https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai" target="_blank" rel="noopener">Bill Gates wants to see a robot tax and ‘Human Reserved’ jobs to mitigate harms from AI</a> · TechCrunch AI</li><li><a href="https://venturebeat.com/orchestration/orchestration-is-the-new-challenge-for-cx-in-the-age-of-ai-agents" target="_blank" rel="noopener">Orchestration is the new challenge for CX in the age of AI agents</a> · VentureBeat AI</li><li><a href="https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model" target="_blank" rel="noopener">Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model</a> · TechCrunch AI</li><li><a href="https://hnstats.com/" target="_blank" rel="noopener">Show HN: How much of Hacker News is about AI?</a> · Hacker News (키워드 필터)</li><li><a href="https://techcrunch.com/2026/08/26/robot-brain-builders-are-pushing-out-of-their-gpt-2-era" target="_blank" rel="noopener">Robot brain builders are pushing out of their GPT-2 era</a> · TechCrunch AI</li><li><a href="https://thehistoryblog.com/archives/76809" target="_blank" rel="noopener">11,000-year-old sculpture of man riding a leopard found in Turkey</a> · Hacker News (키워드 필터)</li><li><a href="https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses" target="_blank" rel="noopener">Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing gl</a> · TechCrunch AI</li><li>… 14건 더</li></ul><p style="margin:10px 0 4px"><strong>논문 · 코드 미공개</strong> 7건</p><ul><li><a href="https://arxiv.org/abs/2608.26105v1" target="_blank" rel="noopener">VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25956v1" target="_blank" rel="noopener">4DGS-WAM: Bridging Past and Future with an Object-Centric World Action Model based on 4D G</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25933v1" target="_blank" rel="noopener">When Composition Doesn&#x27;t Add Up: Humans Identifying Defects in AI-Generated Images</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25927v1" target="_blank" rel="noopener">Code World Model: Coding Agent as World Brain</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25479v1" target="_blank" rel="noopener">4DStreamCtrl: Interactive Video Generation with Online 4D Control</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25452v1" target="_blank" rel="noopener">VGA-BenchV2: An Expanded Unified Benchmark and Multi-Model Framework for Evaluating Video </a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.25386v1" target="_blank" rel="noopener">Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Im</a> · arXiv cs.CV (필터링)</li></ul></details><p>지난 브리핑: <a href="archive/translation-cache.html">translation-cache</a> · <a href="archive/seen.html">seen</a> · <a href="archive/2026-08-26.html">2026-08-26</a> · <a href="archive/2026-08-25.html">2026-08-25</a></p></div></div></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0E10">
+<meta name="robots" content="noindex, nofollow">
+<title>2026-08-27 · 비주얼 AI 브리핑</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0B0E10; --surface:#14181C; --surface-2:#1B2127; --surface-3:#232B32;
+  --line:#262E35; --line-soft:#1E252B;
+  --ink:#F2F5F7; --ink-2:#B7C2CB; --muted:#7C8A95;
+  --accent:#FFCE4A; --accent-ink:#0B0E10; --accent-soft:#3A2F12;
+  --up:#4ADE80; --down:#F87171;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box;}
+/* display를 지정한 요소에는 hidden 속성이 먹지 않는다(작성자 스타일이 이긴다).
+   달력 팝오버가 닫히지 않던 원인이라 전역으로 못박아 둔다. */
+[hidden]{display:none !important;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+body[data-detail]{overflow:hidden;}
+a{color:inherit;}
+.wrap{max-width:1080px; margin:0 auto; padding:0 18px 72px;}
+
+/* ---------- 상단 바 ---------- */
+.top{
+  position:sticky; top:0; z-index:30; background:rgba(11,14,16,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1080px; margin:0 auto; padding:12px 18px;
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; margin-right:auto;}
+.brand .d{font-family:var(--f-mono); font-size:19px; font-weight:600; letter-spacing:.02em;}
+.brand .s{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+          text-transform:uppercase; color:var(--muted);}
+.tabs{display:flex; gap:4px; background:var(--surface-2); padding:3px; border-radius:999px;}
+.tabs button{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink-2);
+  background:none; border:0; padding:6px 16px; border-radius:999px; cursor:pointer;
+}
+.tabs button[aria-selected="true"]{background:var(--accent); color:var(--accent-ink); font-weight:600;}
+/* 검색은 늘 보이게 둔다. 버튼 뒤에 숨기면 "찾아볼 수 있다"는 사실 자체를 잊는다. */
+.find{display:flex; gap:6px; align-items:center; position:relative;}
+#q{
+  width:210px; font:inherit; font-size:14px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:8px 12px;
+}
+#q::placeholder{color:var(--muted);}
+#q:focus{border-color:var(--accent); outline:none; background:var(--surface);}
+.calbtn{
+  font:inherit; font-size:12.5px; font-family:var(--f-mono); letter-spacing:.04em;
+  background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:8px; padding:8px 12px; cursor:pointer;
+  white-space:nowrap;
+}
+.calbtn:hover, .calbtn[aria-expanded="true"]{border-color:var(--accent); color:var(--ink);}
+
+/* 검색 결과는 헤더 바로 아래로 펼친다. 다른 화면으로 넘어가지 않으므로
+   지금 보던 자리를 잃지 않는다. */
+#results{
+  position:absolute; left:0; right:0; top:100%;
+  background:var(--ground); border-bottom:1px solid var(--line);
+  max-height:min(70vh,560px); overflow-y:auto; box-shadow:0 18px 40px rgba(0,0,0,.5);
+}
+#results .res-in{max-width:1080px; margin:0 auto; padding:12px 18px 20px;}
+
+/* 미니 달력은 날짜 버튼 아래에 붙는다 */
+#calpop{
+  position:absolute; right:0; top:calc(100% + 8px); width:296px; z-index:40;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:14px; box-shadow:0 18px 40px rgba(0,0,0,.55);
+  display:flex; flex-direction:column; gap:10px;
+}
+
+/* ---------- 덮어쓰는 화면들(세부·검색·달력) 공통 ---------- */
+.sheet{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.sheet[data-open]{display:block;}
+.s-body{max-width:760px; margin:0 auto; padding:22px 18px 80px;
+        display:flex; flex-direction:column; gap:16px;}
+
+/* ---------- 검색 ---------- */
+.q-note{font-family:var(--f-mono); font-size:11.5px; color:var(--muted);}
+.hits{display:flex; flex-direction:column;}
+.hit{
+  display:block; text-decoration:none; color:inherit;
+  padding:13px 2px; border-bottom:1px solid var(--line-soft);
+}
+.hit:hover{background:var(--surface);}
+.hit .hm{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+         display:flex; gap:8px; align-items:center;}
+.hit .ht{font-size:16px; font-weight:600; line-height:1.5; margin:3px 0 2px;
+         word-break:keep-all; overflow-wrap:break-word;}
+.hit .hs{font-size:13.5px; color:var(--ink-2); line-height:1.55;
+         display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+         overflow:hidden;}
+mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-radius:2px;}
+
+/* ---------- 달력 ---------- */
+.cal-head{display:flex; align-items:center; gap:14px;}
+.cal-head .mo{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums;
+              margin-right:auto;}
+.cal-head button{
+  font:inherit; font-size:15px; background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; width:32px; height:28px; cursor:pointer;
+}
+.cal-head button:disabled{opacity:.3; cursor:default;}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:3px;}
+.cal .dow{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+          text-align:center; padding:4px 0;}
+.cal a, .cal span{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:1/1; border-radius:6px; font-family:var(--f-mono); font-size:12.5px;
+  font-variant-numeric:tabular-nums;
+}
+.cal span{color:#3D474F;}
+.cal span.pad{visibility:hidden;}
+.cal a{background:var(--surface); border:1px solid var(--line);
+       color:var(--ink); text-decoration:none;}
+.cal a:hover{border-color:var(--accent); color:var(--accent);}
+.cal a.now{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+           font-weight:600;}
+
+/* ---------- 모델 히스토리 ---------- */
+.mgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:9px;
+       padding-top:22px;}
+.mcard{
+  display:flex; flex-direction:column; gap:7px; text-align:left; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 15px; font:inherit; color:inherit;
+}
+.mcard:hover{border-color:var(--accent);}
+.mcard .top-row{display:flex; align-items:baseline; gap:8px;}
+.mcard b{font-size:16px; font-weight:600; word-break:break-word;}
+.mcard .ver{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em;
+  color:var(--accent); border:1px solid var(--accent); border-radius:4px;
+  padding:1px 6px; white-space:nowrap;
+}
+.mcard .hd{
+  font-size:13.5px; line-height:1.55; color:var(--ink-2);
+  word-break:keep-all; overflow-wrap:break-word;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.mcard .meta{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:auto;}
+.mhead{display:flex; align-items:center; gap:12px; padding:22px 0 6px;}
+.mhead h2{margin:0; font-size:22px; font-weight:700;}
+.mhead .n{font-family:var(--f-mono); font-size:12px; color:var(--muted); margin-right:auto;}
+.timeline{display:flex; flex-direction:column;}
+.tl{display:grid; grid-template-columns:78px 1fr; gap:14px; padding:13px 2px;
+    border-bottom:1px solid var(--line-soft); text-decoration:none; color:inherit;}
+.tl:hover{background:var(--surface);}
+.tl .dt{font-family:var(--f-mono); font-size:11.5px; color:var(--accent);
+        font-variant-numeric:tabular-nums;}
+.tl .tt{font-size:15.5px; font-weight:500; line-height:1.5;
+        word-break:keep-all; overflow-wrap:break-word;}
+.tl .tt, .tl .ts{display:block;}
+.tl .ts{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:4px;}
+
+/* ---------- 오늘: 핵심 덩어리 ---------- */
+.lede{
+  padding:28px 0 22px; border-bottom:1px solid var(--line);
+  display:flex; flex-direction:column; gap:22px;
+}
+.flow{
+  font-weight:700; font-size:clamp(21px,3vw,30px);
+  line-height:1.5; letter-spacing:-.025em;
+  margin:0; max-width:30ch; text-wrap:balance;
+}
+/* 한국어는 기본값이 글자 단위 줄바꿈이라 '몰렸고'가 '몰/렸고'로 끊긴다.
+   keep-all로 어절을 지키고, 긴 영문 모델명만 예외로 쪼갠다. */
+.flow, .head .t, .tile .t, .d-title, .body-text, .bul li, td.nm{
+  word-break:keep-all; overflow-wrap:break-word;
+}
+.flow span{display:block;}
+.flow span+span{color:var(--ink-2); font-size:.82em; margin-top:.35em;}
+.flow.empty{color:var(--muted); font-size:20px;}
+
+.heads{display:flex; flex-direction:column; border-top:1px solid var(--line-soft);}
+.head{
+  display:grid; grid-template-columns:32px 1fr auto; align-items:baseline; gap:12px;
+  padding:13px 6px 13px 0; border-bottom:1px solid var(--line-soft);
+  background:none; border-left:0; border-right:0; border-top:0;
+  width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer;
+}
+.head:last-child{border-bottom:none;}
+.head:hover, .head:focus-visible{background:var(--surface);}
+.head .n{
+  font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.head .t{font-size:clamp(16px,2vw,19px); font-weight:600; line-height:1.45;}
+.head .m{font-family:var(--f-mono); font-size:11px; color:var(--muted); white-space:nowrap;}
+
+/* ---------- 오늘: 카드 타일 ---------- */
+.sec-h{
+  display:flex; align-items:baseline; gap:10px; padding:24px 0 11px;
+}
+.sec-h h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0;
+}
+.sec-h .c{font-family:var(--f-mono); font-size:11px; color:var(--accent);}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:10px;}
+.tile{
+  display:flex; flex-direction:column; gap:9px; text-align:left;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:15px 16px 13px; cursor:pointer; font:inherit; color:inherit;
+  transition:border-color .12s, background .12s;
+}
+.tile:hover, .tile:focus-visible{border-color:var(--accent); background:var(--surface-2);}
+.tile .cat{
+  display:flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+.dot{width:7px; height:7px; border-radius:50%; flex:none;}
+.tile .t{font-size:16px; font-weight:600; line-height:1.5; letter-spacing:-.01em;}
+.tile .m{
+  margin-top:auto; font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+  display:flex; gap:8px; align-items:center;
+}
+.tile .m .st{color:var(--accent); letter-spacing:.1em;}
+
+/* ---------- 세부 화면 ---------- */
+.detail{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.detail[data-open]{display:block;}
+.sheet .d-bar{padding:11px 18px;}
+.d-bar{
+  position:sticky; top:0; background:rgba(11,14,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line); padding:11px 18px;
+  display:flex; align-items:center; gap:12px;
+}
+.d-bar .back{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:6px 13px; cursor:pointer;
+}
+.d-bar .back:hover{border-color:var(--accent);}
+.d-bar .pos{font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:auto;}
+.d-body{max-width:720px; margin:0 auto; padding:26px 18px 80px;
+        display:flex; flex-direction:column; gap:18px;}
+.d-meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+        font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.d-meta .st{color:var(--accent); letter-spacing:.1em;}
+.d-title{
+  font-weight:700; margin:0;
+  font-size:clamp(23px,4vw,33px); line-height:1.38; letter-spacing:-.03em;
+  text-wrap:balance;
+}
+.d-orig{font-size:13.5px; color:var(--muted); line-height:1.55; margin:0;}
+
+.raw-text{font-size:15.5px; color:var(--ink-2);}
+.body-text{font-size:17.5px; line-height:1.78; color:var(--ink); margin:0;}
+.raw .body-text{font-size:15.5px; color:var(--ink-2); line-height:1.7;}
+.bul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px;
+     border-left:2px solid var(--accent); padding-left:16px;}
+.bul li{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+.none{color:var(--muted); font-size:14.5px;}
+
+.go{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background:var(--accent); color:var(--accent-ink); text-decoration:none;
+  font-weight:600; font-size:15px; padding:12px 20px; border-radius:10px;
+}
+.go:hover{filter:brightness(1.08);}
+.rel{border-top:1px solid var(--line); padding-top:16px;
+     display:flex; flex-direction:column; gap:9px;}
+.rel h3{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--muted); margin:0; font-weight:500;}
+.rel a{display:flex; flex-direction:column; gap:3px; font-size:14.5px; color:var(--ink-2);
+       text-decoration:none; line-height:1.5; padding:8px 0;
+       border-bottom:1px solid var(--line-soft);}
+.rel a:hover{color:var(--accent);}
+.rel a .src{font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+
+/* ---------- 순위 ---------- */
+.boards{display:flex; gap:6px; flex-wrap:wrap; padding:26px 0 16px;}
+.boards button{
+  font:inherit; font-size:13px; background:var(--surface); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:999px; padding:7px 15px; cursor:pointer;
+}
+.boards button[aria-selected="true"]{
+  background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600;
+}
+.board{display:none;}
+.board[data-open]{display:block;}
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14px;}
+th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+thead th{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+td.r{font-family:var(--f-mono); color:var(--muted); font-variant-numeric:tabular-nums; width:38px;}
+td.nm{font-weight:600;}
+td.nm small{display:block; font-weight:400; font-size:12px; color:var(--muted);}
+td.num{font-family:var(--f-mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap;}
+td.sc{width:132px;}
+.scwrap{display:flex; align-items:center; gap:9px; justify-content:flex-end;}
+.bar{height:4px; border-radius:2px; background:var(--accent); opacity:.75; flex:none;}
+.barbg{flex:1; height:4px; border-radius:2px; background:var(--surface-3); position:relative;}
+.barbg i{position:absolute; inset:0 auto 0 0; border-radius:2px; background:var(--accent); opacity:.8;}
+td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
+.up{color:var(--up);} .down{color:var(--down);}
+.new{color:var(--accent-ink); background:var(--accent); font-family:var(--f-mono);
+     font-size:9.5px; letter-spacing:.1em; padding:2px 5px; border-radius:3px;}
+.note{color:var(--muted); font-size:14px; padding:18px 0;}
+.credit{font-size:12px; color:var(--muted); padding:14px 2px 0;}
+.credit a{color:var(--ink-2);}
+
+/* ---------- 꼬리말 ---------- */
+.foot{
+  margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  font-family:var(--f-mono); font-size:11px; color:var(--muted);
+}
+.foot button{
+  font:inherit; background:none; border:0; color:var(--muted);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:0;
+}
+.foot button:hover{color:var(--accent);}
+#report{display:none; padding-top:18px;}
+#report[data-open]{display:block;}
+#report table{min-width:560px; font-size:12.5px;}
+.bad{color:var(--down);}
+.drop{margin-top:14px;}
+.drop summary{cursor:pointer; font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.drop ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:12.5px;
+         line-height:1.7; max-height:320px; overflow-y:auto;}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+@media (max-width:560px){
+  /* 폰에서 표가 옆으로 밀려 점수·변동이 안 보이던 것을 고친다.
+     막대는 접고 숫자만 남긴다 — 좁은 화면에서는 숫자가 먼저다. */
+  table{min-width:0; font-size:13px;}
+  th,td{padding:9px 7px;}
+  thead th{font-size:9px; letter-spacing:.06em;}
+  td.r{width:26px;}
+  td.sc{width:auto;}
+  td.d{width:44px;}
+  td.nm small{font-size:11px;}
+  .barbg{display:none;}
+  .find{width:100%;}
+  #q{flex:1; width:auto;}
+  #calpop{right:0; width:min(296px, calc(100vw - 28px));}
+  .boards{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+          margin:0 -14px; padding:22px 14px 14px;}
+  .boards::-webkit-scrollbar{display:none;}
+  .boards button{flex:none; white-space:nowrap;}
+  .top-in{gap:10px; padding:10px 14px;}
+  .brand{width:100%; margin-right:0;}
+  .wrap{padding:0 14px 60px;}
+  .lede{padding:24px 0 20px;}
+  .head{grid-template-columns:26px 1fr; gap:10px;}
+  .head .m{grid-column:2; margin-top:2px;}
+}
+</style>
+</head>
+<body data-base="../" data-date="2026-08-27">
+
+<header class="top"><div class="top-in">
+  <div class="brand">
+    <span class="d">2026-08-27</span>
+    <span class="s">Visual AI Brief</span>
+  </div>
+  <div class="tabs">
+    <button type="button" data-go="today" aria-selected="true">오늘</button>
+    <button type="button" data-go="rank" aria-selected="false">순위</button>
+    <button type="button" data-go="models" aria-selected="false">모델</button>
+  </div>
+  <div class="find">
+    <input id="q" type="search" placeholder="검색 (지난 브리핑 포함)"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="calbtn" type="button" aria-expanded="false">날짜</button>
+  </div>
+</div>
+
+<div id="results" hidden><div class="res-in">
+  <p class="q-note"></p>
+  <div class="hits"></div>
+</div></div>
+
+<div id="calpop" hidden>
+  <div class="cal-head">
+    <span class="mo"></span>
+    <button class="prev" type="button" aria-label="이전 달">‹</button>
+    <button class="next" type="button" aria-label="다음 달">›</button>
+  </div>
+  <div class="cal"></div>
+  <p class="q-note cal-note"></p>
+</div>
+</header>
+
+<main class="wrap">
+
+  <section data-view="today">
+    <div class="lede">
+      <p class="flow"><span>Lightricks가 비디오 모델 LTX-2 v1.3.0을 공개했습니다.</span><span>ComfyUI에 MiniMax H3 전용 신규 노드와 기능이 대거 지원됩니다.</span><span>8GB VRAM 환경에서 LTX-2.5 멀티샷 립싱크 시연이 공유되었습니다.</span></p>
+      <div class="heads"><button class="head" data-uid="a138bab46675"><span class="n">01</span><span class="t">Lightricks, LTX-2 v1.3.0 공개</span><span class="m">모델 출시 · Lightricks LTX-2 (GitHub Releases)</span></button><button class="head" data-uid="49e0b0c0ed67"><span class="n">02</span><span class="t">ComfyUI, MiniMax H3 신규 노드 및 기능 대거 지원</span><span class="m">모델 출시 · r/comfyui</span></button><button class="head" data-uid="2e69b3c61aa0"><span class="n">03</span><span class="t">8GB VRAM 환경 LTX-2.5 멀티샷 립싱크 시연</span><span class="m">모델 출시 · r/comfyui</span></button><button class="head" data-uid="c4cd16d2931a"><span class="n">04</span><span class="t">8GB VRAM 기반 고화질 비디오 생성 워크플로우 문의</span><span class="m">모델 출시 · r/comfyui</span></button><button class="head" data-uid="638c6628100a"><span class="n">05</span><span class="t">AMD 라데온 환경 Wan 2.2 구동 여부 커뮤니티 문의</span><span class="m">모델 출시 · r/comfyui</span></button></div>
+    </div>
+    <div class="sec-h"><h2>나머지</h2><span class="c">7건</span></div><div class="grid"><button class="tile" data-uid="2121b49a3b89"><span class="cat"><i class="dot" style="background:#8AB4F8"></i>업데이트</span><span class="t">ComfyUI v0.34.0 정식 출시</span><span class="m"><span class="st">●●○</span><span>ComfyUI (GitHub Releases)</span><span>08.26 11:09</span></span></button><button class="tile" data-uid="dc81ad7b015b"><span class="cat"><i class="dot" style="background:#FFCE4A"></i>모델 출시</span><span class="t">ComfyUI 사용자를 위한 로컬 LLM Qwen 3.8 활용법</span><span class="m"><span class="st">●●○</span><span>r/comfyui</span><span>08.26 15:36</span></span></button><button class="tile" data-uid="9fc00a0c0989"><span class="cat"><i class="dot" style="background:#6FD3B8"></i>워크플로우</span><span class="t">ComfyUI용 MiniMax H3 Speed LoRA 및 VRAM 노드 공개</span><span class="m"><span class="st">●●○</span><span>r/comfyui</span><span>08.27 00:05</span></span></button><button class="tile" data-uid="b83e3b1929d2"><span class="cat"><i class="dot" style="background:#FFCE4A"></i>모델 출시</span><span class="t">SenseNova U1.5 Lite 정식 출시 및 편집 워크플로우 지원</span><span class="m"><span class="st">●○○</span><span>r/comfyui</span><span>08.27 00:47</span></span></button><button class="tile" data-uid="9da9270fcfa6"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">ComfyUI용 INT6 ConvRot 커스텀 노드 오픈소스 공개</span><span class="m"><span class="st">●○○</span><span>r/comfyui</span><span>08.27 02:13</span></span></button><button class="tile" data-uid="5bf915d923ee"><span class="cat"><i class="dot" style="background:#6FD3B8"></i>워크플로우</span><span class="t">Krea 2 Turbo 실사풍 워크플로우 추천 요청</span><span class="m"><span class="st">●○○</span><span>r/comfyui</span><span>08.26 23:48</span></span></button><button class="tile" data-uid="038853b2471e"><span class="cat"><i class="dot" style="background:#E89B72"></i>산업·규제</span><span class="t">Arga Labs, 기업용 AI 에이전트 학습 위해 1,000만 달러 유치</span><span class="m"><span class="st">●○○</span><span>TechCrunch AI</span><span>08.26 21:55</span></span></button></div>
+    <div class="foot">
+      <span>12건 · 08-26 07:00 ~ 08-27 07:00 KST</span>
+      <button type="button" id="report-toggle">실행 정보</button>
+    </div>
+    <div id="report"><p class="note">수집 2828 → 시간창 69 → 필터 23 → 병합 후 18 → 카드 12 · 번역 12건(gemini)</p><div class="tblwrap"><table><thead><tr><th>소스</th><th>등급</th><th style="text-align:right">수집</th><th style="text-align:right">채택</th><th>상태</th></tr></thead><tbody><tr><td>Adobe Firefly Blog</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · 404</span></td></tr><tr><td>Banodoco</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>ByteDance Seed (Seedance / Seedream)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>Midjourney</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 403 · Just a moment... &lt;meta http-equiv=&quot;content-security-policy&quot; content=&quot;default-src &amp;#39;none&amp;#39;; script-src &amp;#39;nonce-V2E4YXCBzqmxuyapqpuLQr&amp;#39; &amp;#39;unsafe-eval&amp;#39; https</span></td></tr><tr><td>r/aivideo</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>r/StableDiffusion</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>Runway</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>Curious Refuge</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Latent Vision (Matteo Spinelli)</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>MattVidPro AI</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Mickmumpitz</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Nerdy Rodent</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Olivio Sarikas</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Scott Detweiler</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Sebastian Kamph</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>Theoretically Media</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ValueError</span></td></tr><tr><td>r/comfyui</td><td>T2</td><td class="num">25</td><td class="num">9</td><td>정상</td></tr><tr><td>ComfyUI (GitHub Releases)</td><td>T1</td><td class="num">10</td><td class="num">1</td><td>정상</td></tr><tr><td>Lightricks LTX-2 (GitHub Releases)</td><td>T0</td><td class="num">3</td><td class="num">1</td><td>정상</td></tr><tr><td>TechCrunch AI</td><td>T3</td><td class="num">20</td><td class="num">1</td><td>정상</td></tr><tr><td>Ars Technica AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>arXiv cs.CV (필터링)</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Black Forest Labs (FLUX)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Civitai (신규 모델·LoRA)</td><td>T1</td><td class="num">40</td><td class="num">0</td><td>정상</td></tr><tr><td>ComfyUI Blog</td><td>T1</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Google DeepMind Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>fal.ai Blog</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Google Research Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>Hacker News (키워드 필터)</td><td>T2</td><td class="num">237</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Blog</td><td>T1</td><td class="num">851</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Papers (Daily)</td><td>T1</td><td class="num">13</td><td class="num">0</td><td>정상</td></tr><tr><td>Tencent HunyuanVideo (GitHub Releases)</td><td>T0</td><td class="num">1</td><td class="num">0</td><td>정상</td></tr><tr><td>Kling AI (Kuaishou)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Luma AI (Ray / Dream Machine)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>MiniMax / Hailuo</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>OpenAI News</td><td>T0</td><td class="num">1153</td><td class="num">0</td><td>정상</td></tr><tr><td>Pika</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Qwen (Alibaba) Blog</td><td>T0</td><td class="num">44</td><td class="num">0</td><td>정상</td></tr><tr><td>Replicate Blog</td><td>T1</td><td class="num">124</td><td class="num">0</td><td>정상</td></tr><tr><td>Stability AI</td><td>T0</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>The Verge AI</td><td>T3</td><td class="num">10</td><td class="num">0</td><td>정상</td></tr><tr><td>VentureBeat AI</td><td>T3</td><td class="num">7</td><td class="num">0</td><td>정상</td></tr><tr><td>Alibaba Wan (GitHub Releases)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr></tbody></table></div><details class="drop"><summary>필터에 걸린 46건 보기</summary><ul><li>[주제 무관] Nvidia is about to be a hundred-billion-dollar-a-quarter company</li><li>[주제 무관] Anthropic continues compute-gobbling streak in $45B deal with Nscale</li><li>[주제 무관] OpenAI’s rogue AI model incident was worse than we thought</li><li>[주제 무관] AI agents meant to replace Meta workers made “large-scale, disruptive actions”</li><li>[주제 무관] Google’s Gemini has a branding problem, and so does the rest of AI</li><li>[주제 무관] How do we explain OpenAI’s executive exodus?</li><li>[주제 무관] Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text</li><li>[주제 무관] OpenAI releases its official report on the Hugging Face breach</li><li>[주제 무관] GlucoFM: Foundation model for continuous glucose monitoring</li><li>[논문 · 코드 미공개] VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning</li><li>[주제 무관] An ongoing 3D-printer AGPL violation</li><li>[주제 무관] CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela</li><li>[주제 무관] Intelligent transcription with Gemini 3.5 Transcribe</li><li>[주제 무관] Google’s new AI transcription edits out your &amp;#8216;ums&amp;#8217; and &amp;#8216;ahs&amp;#8217;</li><li>[주제 무관] FDA approves first in class targeted therapy for metastatic pancreatic cancer</li><li>[논문 · 코드 미공개] 4DGS-WAM: Bridging Past and Future with an Object-Centric World Action Model based on 4D Gaussian Splatting</li><li>[주제 무관] Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies</li><li>[주제 무관] Tim Curry has died</li><li>[논문 · 코드 미공개] When Composition Doesn&#x27;t Add Up: Humans Identifying Defects in AI-Generated Images</li><li>[주제 무관] Radar makes podcasts searchable — and usable by AI agents</li><li>[논문 · 코드 미공개] Code World Model: Coding Agent as World Brain</li><li>[주제 무관] Ex-Meta scientists want to bring visual AI to the factory floor</li><li>[주제 무관] Bill Gates wants to see a robot tax and ‘Human Reserved’ jobs to mitigate harms from AI</li><li>[주제 무관] Orchestration is the new challenge for CX in the age of AI agents</li><li>[주제 무관] Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model</li><li>[주제 무관] Show HN: How much of Hacker News is about AI?</li><li>[주제 무관] Robot brain builders are pushing out of their GPT-2 era</li><li>[주제 무관] 11,000-year-old sculpture of man riding a leopard found in Turkey</li><li>[주제 무관] Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses</li><li>[주제 무관] Just say something people want</li><li>[주제 무관] IBM&#x27;s new Granite 4.2 models ride the wave of interest in local LLMs</li><li>[주제 무관] Bill Gates is deeply worried about AI, and he’s no longer staying quiet</li><li>[주제 무관] Runable hits $21M to bet AI agents can go from building businesses to growing them</li><li>[주제 무관] Bringing ChatGPT for Teachers to more U.S. school districts</li><li>[주제 무관] Learning never stops: How AI makes learning continuous</li><li>[논문 · 코드 미공개] 4DStreamCtrl: Interactive Video Generation with Online 4D Control</li><li>[논문 · 코드 미공개] VGA-BenchV2: An Expanded Unified Benchmark and Multi-Model Framework for Evaluating Video Aesthetics and Gener</li><li>[논문 · 코드 미공개] Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation</li><li>[주제 무관] India’s Ringg gets backing from Peak XV as it pushes voice AI past the phone call</li><li>[주제 무관] Analyzing student votes across AI models for college essay help</li><li>[주제 무관] Robotics startup Generalist reaches $3B valuation, sources say</li><li>[주제 무관] OpenAI loses a top data center exec as stream of high-profile departures continues</li><li>[주제 무관] The Hugging Face incident and the road ahead</li><li>[주제 무관] How loveholidays is making everyone a builder with Codex</li><li>[주제 무관] Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers</li><li>[주제 무관] Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM</li></ul></details></div>
+  </section>
+
+  <section data-view="rank" hidden>
+    <p class="note">순위표가 아직 없습니다 — 설정되지 않음.<br>키를 넣으면 다음 실행부터 채워집니다 (<code>AA_API_KEY</code>, artificialanalysis.ai/data-api).</p>
+  </section>
+
+  <section data-view="models" hidden>
+    <div id="mlist"></div>
+    <div id="mone" hidden></div>
+  </section>
+
+</main>
+
+<div class="detail" id="d-a138bab46675">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">1/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>Lightricks LTX-2 (GitHub Releases) · 공식</span>
+      <span>08.26 20:21</span>
+    </div>
+    <h1 class="d-title">Lightricks, LTX-2 v1.3.0 공개</h1>
+    <p class="d-orig">원제 · LTX-2 v1.3.0</p>
+    <p class="body-text">Lightricks가 비디오 생성 모델 LTX-2의 v1.3.0 업데이트를 공개했습니다. 타일 분할 방식을 적용해 4K 생성 품질을 개선하고 다중 GPU 지원 기능을 추가했습니다. 또한 키프레임 기반 VAE 디코딩을 도입해 세부 묘사를 선명하게 개선했습니다.</p><ul class="bul"><li>4K 업스케일링 품질 및 타일 분할 방식 개선</li><li>다중 GPU DFR 실행 파이프라인 추가</li><li>키프레임 기반 확산-VAE 디코딩 지원</li></ul>
+    <a class="go" href="https://github.com/Lightricks/LTX-2/releases/tag/v1.3.0" target="_blank" rel="noopener">원문 열기 · github.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-49e0b0c0ed67">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">2/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.27 00:13</span>
+    </div>
+    <h1 class="d-title">ComfyUI, MiniMax H3 신규 노드 및 기능 대거 지원</h1>
+    <p class="d-orig">원제 · A quick Minimax H3 news round-up - 26th August 2026</p>
+    <p class="body-text">ComfyUI Portable 최신 버전이 v0.34.0으로 업데이트되었습니다. 이번 업데이트를 통해 MiniMax H3 모델을 위한 프레임 가이드 고정, 단일 이미지 잠재 노드 사용, 토큰별 노이즈 마스크 및 프롬프트 임베딩 지원 등의 기능이 추가되었습니다.</p><ul class="bul"><li>ComfyUI Portable v0.34.0 릴리스</li><li>MiniMax H3용 이미지·오디오 가이드 노드 추가</li><li>토큰별 비디오·오디오 노이즈 마스크 지원</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyzvqi/a_quick_minimax_h3_news_roundup_26th_august_2026" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-2e69b3c61aa0">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">3/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.26 21:19</span>
+    </div>
+    <h1 class="d-title">8GB VRAM 환경 LTX-2.5 멀티샷 립싱크 시연</h1>
+    <p class="d-orig">원제 · LTX-2.5 Multishot Lip Sync i2v (8GB VRAM)</p>
+    <p class="body-text">RTX-4070 8GB VRAM 환경에서 LTX-2.5를 활용한 멀티샷 립싱크 이미지-투-비디오 작업 결과가 공유되었습니다. 832x640 해상도 기준으로 각각 13분 29초와 12분 6초의 렌더링 시간이 소요되었습니다.</p><ul class="bul"><li>LTX-2.5 기반 이미지-투-비디오 립싱크 테스트</li><li>RTX-4070 8GB VRAM 및 64GB RAM 환경</li><li>832x640 해상도 기준 12~13분대 렌더링</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyvh4p/ltx25_multishot_lip_sync_i2v_8gb_vram" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-c4cd16d2931a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">4/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.26 21:07</span>
+    </div>
+    <h1 class="d-title">8GB VRAM 기반 고화질 비디오 생성 워크플로우 문의</h1>
+    <p class="d-orig">원제 · Generating videos on 8gb vram</p>
+    <p class="body-text">RTX 4070 8GB VRAM 환경에서 Wan 14b, LTX 2.3, MiniMax H3 모델 구동 시 긴 생성 시간과 품질 저하 문제가 제기되었습니다. 질문자는 5초 영상 생성에 1시간 이상 소요되고 해상도 저하가 발생한다며 8GB VRAM용 이미지-투-비디오 워크플로우 공유를 요청했습니다.</p><ul class="bul"><li>RTX 4070 8GB 환경서 영상 생성 시 저하 문제 공유</li><li>Wan 14b·LTX 2.3 등에서 긴 지연 시간 발생</li><li>8GB VRAM 전용 이미지-투-비디오 워크플로우 문의</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyv80l/generating_videos_on_8gb_vram" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-638c6628100a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">5/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.26 16:58</span>
+    </div>
+    <h1 class="d-title">AMD 라데온 환경 Wan 2.2 구동 여부 커뮤니티 문의</h1>
+    <p class="d-orig">원제 · WAN 2.2 et carte Amd</p>
+    <p class="body-text">사용자가 AMD RX 9060 XT 16GB 그래픽 카드로 Wan 2.2 모델을 구동할 수 있는지 커뮤니티에 문의했습니다. 구동 성공 여부와 관련 피드백을 요청하고 있습니다.</p><ul class="bul"><li>AMD RX 9060 XT 16GB 그래픽 카드 사용</li><li>Wan 2.2 모델 구동 성공 여부 확인 요청</li><li>커뮤니티 내 사용자 피드백 요청</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyqlp6/wan_22_et_carte_amd" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-2121b49a3b89">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">6/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●●○</span>
+      <span>ComfyUI (GitHub Releases) · 연구</span>
+      <span>08.26 11:09</span>
+    </div>
+    <h1 class="d-title">ComfyUI v0.34.0 정식 출시</h1>
+    <p class="d-orig">원제 · ComfyUI v0.34.0</p>
+    <p class="body-text">ComfyUI v0.34.0 버전이 새롭게 출시되었습니다. MiniMax 관련 신규 기능 추가 및 오류 수정과 함께 Gemma4 텍스트 생성 속도가 향상되었습니다. 아울러 ROCm 7.14 이상 환경에서 동적 VRAM 설정이 기본 활성화됩니다.</p><ul class="bul"><li>MiniMax 프레임 가이드 기능 추가 및 오류 수정</li><li>Gemma4 텍스트 생성 속도 개선</li><li>ROCm 7.14 이상 동적 VRAM 기본 활성화</li></ul>
+    <a class="go" href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.0" target="_blank" rel="noopener">원문 열기 · github.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 1건</h3><a href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.34.1" target="_blank" rel="noopener">ComfyUI v0.34.1<span class="src">ComfyUI (GitHub Releases)</span></a></div>
+  </div>
+</div><div class="detail" id="d-dc81ad7b015b">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">7/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.26 15:36</span>
+    </div>
+    <h1 class="d-title">ComfyUI 사용자를 위한 로컬 LLM Qwen 3.8 활용법</h1>
+    <p class="d-orig">원제 · LLM (Qwen 3.8) is a nice ComfyUI companion on the side</p>
+    <p class="body-text">로컬 환경에서 Qwen 3.8과 같은 LLM을 함께 실행하면 ComfyUI 작업에 큰 도움이 됩니다. LM Studio 등을 통해 모델을 로드하면 프롬프트 작성이나 커스텀 노드 코드 수정 작업을 간편하게 처리할 수 있습니다.</p><ul class="bul"><li>LM Studio로 Qwen 3.8 간편하게 로드</li><li>MiniMax 프롬프트 작성을 용이하게 지원</li><li>출력 폴더 레이턴트 선택 등 노드 수정 도모</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyp6uq/llm_qwen_38_is_a_nice_comfyui_companion_on_the" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-9fc00a0c0989">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">8/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#6FD3B8"></i>워크플로우
+      <span class="st" title="중요도">●●○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.27 00:05</span>
+    </div>
+    <h1 class="d-title">ComfyUI용 MiniMax H3 Speed LoRA 및 VRAM 노드 공개</h1>
+    <p class="d-orig">원제 · ComfyUI MiniMax H3 Speed LoRA + VRAM Monitor Nodes (Ep32)</p>
+    <p class="body-text">ComfyUI에서 MiniMax H3 비디오 생성 속도를 높여주는 Speed LoRA와 Pixaroma VRAM 모니터링 노드가 튜토리얼과 함께 소개되었습니다. 생성 단계를 기존 20단계에서 4~8단계로 줄이면서 품질과 속도 간의 균형을 맞출 수 있습니다.</p><ul class="bul"><li>생성 단계를 20단계에서 4~8단계로 단축</li><li>Speed LoRA 및 권장 shift 값 설정법 안내</li><li>VRAM 모니터링 노드 및 워크플로우 제공</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyzo2o/comfyui_minimax_h3_speed_lora_vram_monitor_nodes" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-b83e3b1929d2">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">9/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●○○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.27 00:47</span>
+    </div>
+    <h1 class="d-title">SenseNova U1.5 Lite 정식 출시 및 편집 워크플로우 지원</h1>
+    <p class="d-orig">원제 · SenseNova U1.5 Lite full release: native editing workflows (style+content, restyle keeping text, image-as-prompt)</p>
+    <p class="body-text">SenseNova U1.5 Lite가 정식 출시되어 단일 모델 아키텍처로 텍스트, 에스테틱, 편집 분야 전문가 모델의 성능을 구현했습니다. 이미지 품질 향상, 4K 지원, 텍스트 렌더링 개선 및 세밀한 시각적 제어가 가능합니다.</p><ul class="bul"><li>OPD를 통해 전문 모델을 단일 모델로 증류</li><li>네이티브 4K 출력 및 개선된 편집 기능 제공</li><li>Qwen-Image-Bench 등 주요 벤치마크 점수 상승</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vz0t2v/sensenova_u15_lite_full_release_native_editing" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-9da9270fcfa6">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">10/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.27 02:13</span>
+    </div>
+    <h1 class="d-title">ComfyUI용 INT6 ConvRot 커스텀 노드 오픈소스 공개</h1>
+    <p class="d-orig">원제 · INT6 ConvRot Custom Node</p>
+    <p class="body-text">양자화 연구를 바탕으로 INT4와 INT8 중간 형태의 INT6 ConvRot 커스텀 노드가 개발되었습니다. INT8 대비 저장 용량을 25% 줄이면서도 생성 시간은 유사한 수준을 유지합니다.</p><ul class="bul"><li>INT8 대비 저장 용량 25% 절감 달성</li><li>INT6 가중치를 활용하며 생성 시간은 INT8과 유사</li><li>GitHub를 통해 추가 설치 없이 클론 가능</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vz38t7/int6_convrot_custom_node" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-5bf915d923ee">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">11/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#6FD3B8"></i>워크플로우
+      <span class="st" title="중요도">●○○</span>
+      <span>r/comfyui · 커뮤니티</span>
+      <span>08.26 23:48</span>
+    </div>
+    <h1 class="d-title">Krea 2 Turbo 실사풍 워크플로우 추천 요청</h1>
+    <p class="d-orig">원제 · Looking for a good Krea 2 Turbo workflow</p>
+    <p class="body-text">커뮤니티에서 뛰어난 결과물을 보여주고 있는 Krea 2의 워크플로우와 로라(LoRA) 추천을 구하는 사용자의 게시글이다. 실사풍 스타일의 SFW 및 NSFW 작업에 적합한 설정을 찾고 있다.</p><ul class="bul"><li>Krea 2의 우수한 텍스트-투-이미지 성능에 주목</li><li>실사풍 스타일을 위한 워크플로우 및 로라 요청</li><li>SFW와 NSFW 작업 모두 지원하는 설정 탐색</li></ul>
+    <a class="go" href="https://reddit.com/r/comfyui/comments/1vyz7sr/looking_for_a_good_krea_2_turbo_workflow" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-038853b2471e">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">12/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#E89B72"></i>산업·규제
+      <span class="st" title="중요도">●○○</span>
+      <span>TechCrunch AI · 미디어</span>
+      <span>08.26 21:55</span>
+    </div>
+    <h1 class="d-title">Arga Labs, 기업용 AI 에이전트 학습 위해 1,000만 달러 유치</h1>
+    <p class="d-orig">원제 · Arga Labs is building a better way to train enterprise AI agents</p>
+    <p class="body-text">Arga Labs가 기업용 AI 에이전트 학습 솔루션 구축을 위해 1,000만 달러의 시드 투자를 유치했습니다. 이번 투자 라운드는 General Catalyst가 주도했습니다.</p><ul class="bul"><li>1,000만 달러 규모 시드 투자 완료</li><li>General Catalyst 투자 주도</li><li>기업용 AI 에이전트 학습 향상 목표</li></ul>
+    <a class="go" href="https://techcrunch.com/2026/08/26/arga-is-building-a-better-way-to-train-enterprise-ai-agents" target="_blank" rel="noopener">원문 열기 · techcrunch.com ↗</a>
+    
+  </div>
+</div>
+
+
+<script>
+(function(){
+  var body = document.body;
+  var BASE = body.dataset.base || '';       // 지난 브리핑 폴더 안에서는 '../'
+  var TODAY = body.dataset.date || '';
+
+  // 색인 파일은 필요할 때 한 번만 받아서 들고 있는다.
+  // 첫 화면을 여는 속도에 영향을 주지 않으려고 미리 받지 않는다.
+  var cache = {};
+  function load(name){
+    // 시안이나 오프라인 미리보기에서는 색인을 페이지 안에 직접 넣어 쓴다.
+    // 실제 사이트에는 이 값이 없고 아래 fetch로 간다.
+    if(window.__IDX__ && window.__IDX__[name]){ return Promise.resolve(window.__IDX__[name]); }
+    if(cache[name]){ return cache[name]; }
+    cache[name] = fetch(BASE + name + '.json')
+      .then(function(r){ return r.ok ? r.json() : []; })
+      .catch(function(){ return []; });
+    return cache[name];
+  }
+
+  function esc(t){
+    return String(t).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+  function linkTo(date, uid){
+    var page = (date === TODAY && !BASE) ? '' : BASE + 'archive/' + date + '.html';
+    return page + '#i-' + uid;
+  }
+
+  /* ---------------- 화면 전환 ---------------- */
+  function setView(v){
+    document.querySelectorAll('[data-view]').forEach(function(sec){
+      sec.hidden = (sec.dataset.view !== v);
+    });
+    document.querySelectorAll('.tabs button').forEach(function(b){
+      b.setAttribute('aria-selected', String(b.dataset.go === v));
+    });
+    if(v === 'models'){ renderModels(); }
+  }
+  function closeSheets(){
+    document.querySelectorAll('.sheet[data-open]').forEach(function(x){
+      x.removeAttribute('data-open');
+    });
+    body.removeAttribute('data-detail');
+  }
+  function openSheet(el){
+    closeSheets();
+    if(!el){ return; }
+    el.setAttribute('data-open','');
+    body.setAttribute('data-detail','');
+    el.scrollTop = 0;
+  }
+  function goBack(){
+    if(history.length > 1){ history.back(); } else { location.hash = ''; }
+  }
+
+  /* ---------------- 검색 ---------------- */
+  var hits = null, qInput = null, qNote = null, results = null, timer = null;
+
+  function tokens(q){
+    return q.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
+  }
+  // 검색어를 정규식으로 만들지 않는다. 모델 이름에는 .+-() 같은 기호가 흔해서
+  // (FLUX.2, Gen-5, fal.ai) 이스케이프를 한 번만 틀려도 검색 전체가 죽는다.
+  // 그냥 소문자로 위치를 찾아가며 잘라 붙인다.
+  function hl(text, toks){
+    var src = String(text), low = src.toLowerCase(), out = '', i = 0;
+    while(i < src.length){
+      var at = -1, len = 0;
+      for(var k = 0; k < toks.length; k++){
+        var j = low.indexOf(toks[k], i);
+        if(j !== -1 && (at === -1 || j < at)){ at = j; len = toks[k].length; }
+      }
+      if(at === -1){ out += esc(src.slice(i)); break; }
+      out += esc(src.slice(i, at)) + '<mark>' + esc(src.slice(at, at + len)) + '</mark>';
+      i = at + len;
+    }
+    return out;
+  }
+
+  function hideResults(){ results.hidden = true; }
+
+  function runSearch(){
+    var q = qInput.value.trim();
+    if(q.length < 2){
+      hits.innerHTML = '';
+      if(q.length === 0){ hideResults(); return; }
+      results.hidden = false;
+      qNote.textContent = '두 글자 이상 입력하세요.';
+      return;
+    }
+    results.hidden = false;
+    load('search-index').then(function(rows){
+      if(rows === null){ qNote.textContent = OFFLINE; hits.innerHTML = ''; return; }
+      var toks = tokens(q);
+      var found = rows.filter(function(r){
+        var hay = (r.t + ' ' + r.o + ' ' + r.s + ' ' + r.src).toLowerCase();
+        return toks.every(function(t){ return hay.indexOf(t) !== -1; });
+      });
+      qNote.textContent = found.length
+        ? found.length + '건 (' + rows.length + '건 중)'
+        : '찾은 것이 없습니다. 영문 모델명으로도 찾아보세요.';
+      hits.innerHTML = found.slice(0, 80).map(function(r){
+        return '<a class="hit" href="' + linkTo(r.d, r.u) + '">'
+          + '<span class="hm"><span>' + r.d + '</span><span>' + esc(r.src) + '</span></span>'
+          + '<span class="ht">' + hl(r.t, toks) + '</span>'
+          + '<span class="hs">' + hl(r.s, toks) + '</span></a>';
+      }).join('');
+    });
+  }
+
+  /* ---------------- 달력 ---------------- */
+  var calMonth = null, calPop = null, calBtn = null;
+  function ym(d){ return d.slice(0,7); }
+  function toggleCal(force){
+    var show = (force === undefined) ? calPop.hidden : force;
+    calPop.hidden = !show;
+    calBtn.setAttribute('aria-expanded', String(show));
+    if(show){ load('dates').then(renderCal); }
+  }
+  function renderCal(dates){
+    if(dates === null){
+      calPop.querySelector('.cal-note').textContent = OFFLINE;
+      return [];
+    }
+    var have = {};
+    dates.forEach(function(d){ have[d] = true; });
+    if(!calMonth){ calMonth = dates.length ? ym(dates[0]) : TODAY.slice(0,7); }
+    var y = parseInt(calMonth.slice(0,4), 10), m = parseInt(calMonth.slice(5,7), 10);
+    var first = new Date(Date.UTC(y, m - 1, 1));
+    var days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    var lead = first.getUTCDay();
+
+    var cells = ['일','월','화','수','목','금','토'].map(function(d){
+      return '<span class="dow">' + d + '</span>';
+    });
+    for(var i = 0; i < lead; i++){ cells.push('<span class="pad">.</span>'); }
+    for(var day = 1; day <= days; day++){
+      var iso = calMonth + '-' + String(day).padStart(2,'0');
+      if(have[iso]){
+        var href = (iso === TODAY && !BASE) ? '' : BASE + 'archive/' + iso + '.html';
+        cells.push('<a href="' + (href || '#') + '" class="' + (iso === TODAY ? 'now' : '')
+                   + '">' + day + '</a>');
+      } else {
+        cells.push('<span>' + day + '</span>');
+      }
+    }
+    calPop.querySelector('.cal').innerHTML = cells.join('');
+    calPop.querySelector('.mo').textContent = y + '년 ' + m + '월';
+
+    var months = {};
+    dates.forEach(function(d){ months[ym(d)] = true; });
+    var keys = Object.keys(months).sort();
+    calPop.querySelector('.prev').disabled = (keys.indexOf(calMonth) <= 0);
+    calPop.querySelector('.next').disabled =
+      (keys.indexOf(calMonth) === keys.length - 1 || keys.length === 0);
+    calPop.querySelector('.cal-note').textContent =
+      '브리핑이 있는 날만 누를 수 있습니다 · 전체 ' + dates.length + '일';
+    return keys;
+  }
+  function moveMonth(step){
+    load('dates').then(function(dates){
+      if(dates === null){ return; }
+      var months = {};
+      dates.forEach(function(d){ months[ym(d)] = true; });
+      var keys = Object.keys(months).sort();
+      var i = keys.indexOf(calMonth);
+      if(i + step >= 0 && i + step < keys.length){
+        calMonth = keys[i + step];
+        renderCal(dates);
+      }
+    });
+  }
+
+  /* ---------------- 모델별 히스토리 ---------------- */
+  var modelsDrawn = false;
+  function renderModels(){
+    if(modelsDrawn){ return; }
+    modelsDrawn = true;
+    load('models').then(function(list){
+      var box = document.querySelector('#mlist');
+      if(list === null){
+        modelsDrawn = false;
+        box.innerHTML = '<p class="note">' + OFFLINE + '</p>';
+        return;
+      }
+      if(!list.length){
+        box.innerHTML = '<p class="note">아직 쌓인 기록이 없습니다. '
+          + '며칠 지나면 모델·회사별로 묶여 나타납니다.</p>';
+        return;
+      }
+      box.innerHTML = '<div class="mgrid">' + list.map(function(m){
+        return '<button class="mcard" data-model="' + esc(m.name) + '">'
+          + '<span class="top-row"><b>' + esc(m.name) + '</b>'
+          + (m.ver ? '<span class="ver">' + esc(m.ver) + '</span>' : '') + '</span>'
+          + '<span class="hd">' + esc(m.head || '') + '</span>'
+          + '<span class="meta">' + m.n + '건 · 최근 ' + m.last + '</span></button>';
+      }).join('') + '</div>';
+    });
+  }
+  function showModel(name){
+    load('models').then(function(list){
+      var m = (list || []).filter(function(x){ return x.name === name; })[0];
+      var box = document.querySelector('#mone');
+      if(!m){ location.hash = 'models'; return; }
+      box.innerHTML = '<div class="mhead"><button class="back" type="button">← 목록</button>'
+        + '<h2>' + esc(m.name) + '</h2><span class="n">' + m.n + '건</span></div>'
+        + '<div class="timeline">' + m.items.map(function(it){
+            return '<a class="tl" href="' + linkTo(it.d, it.u) + '">'
+              + '<span class="dt">' + it.d + '</span>'
+              + '<span><span class="tt">' + esc(it.t) + '</span>'
+              + '<span class="ts">' + esc(it.src) + '</span></span></a>';
+          }).join('') + '</div>';
+      document.querySelector('#mlist').hidden = true;
+      box.hidden = false;
+    });
+  }
+
+  /* ---------------- 주소 ↔ 화면 ---------------- */
+  function route(){
+    var h = decodeURIComponent(location.hash.replace(/^#/, ''));
+
+    if(h.indexOf('i-') === 0){ openSheet(document.getElementById('d-' + h.slice(2))); return; }
+    closeSheets();
+    if(h.indexOf('m-') === 0){ setView('models'); showModel(h.slice(2)); return; }
+    document.querySelector('#mone').hidden = true;
+    document.querySelector('#mlist').hidden = false;
+    setView(h === 'rank' ? 'rank' : (h === 'models' ? 'models' : 'today'));
+  }
+
+  /* ---------------- 클릭 한 곳에서 처리 ---------------- */
+  document.addEventListener('click', function(ev){
+    var t = ev.target;
+
+    var mc = t.closest('.mcard');
+    if(mc){ location.hash = 'm-' + encodeURIComponent(mc.dataset.model); return; }
+
+    if(t.closest('.hit')){ hideResults(); return; }   // 링크는 그대로 따라간다
+
+    var el = t.closest('[data-uid]');
+    if(el){ location.hash = 'i-' + el.dataset.uid; return; }
+
+    var tab = t.closest('.tabs button');
+    if(tab){ location.hash = tab.dataset.go === 'today' ? '' : tab.dataset.go; return; }
+
+    if(t.closest('.calbtn')){ toggleCal(); return; }
+    if(t.closest('#calpop .prev')){ moveMonth(-1); return; }
+    if(t.closest('#calpop .next')){ moveMonth(1); return; }
+
+    if(t.closest('.back')){ goBack(); return; }
+
+    // 팝오버·결과 패널 바깥을 누르면 닫는다
+    if(!t.closest('#calpop') && !t.closest('.calbtn')){ toggleCal(false); }
+    if(!t.closest('#results') && !t.closest('#q')){ hideResults(); }
+
+    var bd = t.closest('.boards button');
+    if(bd){
+      document.querySelectorAll('.boards button').forEach(function(b){
+        b.setAttribute('aria-selected', String(b === bd));
+      });
+      document.querySelectorAll('.board').forEach(function(sec){
+        sec.toggleAttribute('data-open', sec.dataset.board === bd.dataset.board);
+      });
+      return;
+    }
+
+    if(t.closest('#report-toggle')){
+      document.getElementById('report').toggleAttribute('data-open');
+    }
+  });
+
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      if(!calPop.hidden){ toggleCal(false); return; }
+      if(!results.hidden){ hideResults(); qInput.blur(); return; }
+      if(body.hasAttribute('data-detail')){ goBack(); }
+      return;
+    }
+    // 어느 화면에서든 / 를 누르면 검색창으로 간다
+    if(ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)){
+      ev.preventDefault();
+      qInput.focus();
+      qInput.select();
+    }
+  });
+
+  qInput = document.getElementById('q');
+  qNote = document.querySelector('#results .q-note');
+  hits = document.querySelector('#results .hits');
+  results = document.getElementById('results');
+  calPop = document.getElementById('calpop');
+  calBtn = document.querySelector('.calbtn');
+  qInput.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(runSearch, 140);
+  });
+  qInput.addEventListener('focus', function(){
+    if(qInput.value.trim().length >= 2){ runSearch(); }
+  });
+
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>

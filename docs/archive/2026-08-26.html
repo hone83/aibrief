@@ -1,66 +1,969 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>비주얼 AI 브리핑 · 2026-08-26</title><link rel="manifest" href="manifest.json"><style>
-:root{--paper:#F4F6F2;--surface:#fff;--surface2:#EAEEE8;--line:#D3DACF;--ink:#141917;
---ink2:#3B4642;--muted:#6A7A73;--accent:#1F6F5C;--accent-ink:#17564A;--wash:#E3EFEA;--clay:#A8512F}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#101413;--surface:#171D1B;
---surface2:#1E2624;--line:#2C3634;--ink:#E7ECE8;--ink2:#C2CCC7;--muted:#8B9A94;--accent:#4BA88E;
---accent-ink:#6FC4AB;--wash:#16302A;--clay:#D08663}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);line-height:1.7;
-font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
--webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px 80px}
-header{padding:44px 0 24px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
-.date{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
-font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-h1{font-size:clamp(26px,5vw,36px);margin:0;letter-spacing:-.02em;line-height:1.2}
-.sub{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
-nav.jump{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
-nav.jump a{font-size:12px;padding:3px 9px;border:1px solid var(--line);border-radius:2px;
-color:var(--muted);text-decoration:none}
-nav.jump a:hover{border-color:var(--accent);color:var(--accent)}
-section{padding-top:36px;display:flex;flex-direction:column;gap:14px}
-h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0;
-font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:500}
-.tldr{background:var(--wash);border-left:2px solid var(--accent);padding:18px 20px;
-display:flex;flex-direction:column;gap:8px}
-.tldr p{margin:0;font-size:16.5px;line-height:1.65;color:var(--ink)}
-ol.heads{margin:0;padding:0;list-style:none;counter-reset:h;display:flex;flex-direction:column;gap:2px}
-ol.heads li{counter-increment:h;display:grid;grid-template-columns:26px 1fr;gap:10px;
-padding:11px 0;border-bottom:1px solid var(--line)}
-ol.heads li::before{content:counter(h);font-family:ui-monospace,monospace;font-size:12px;
-color:var(--muted);padding-top:4px}
-ol.heads a{color:var(--ink);text-decoration:none;font-weight:500;line-height:1.45}
-ol.heads a:hover{color:var(--accent-ink)}
-.hmeta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-top:3px}
-.card{background:var(--surface);border:1px solid var(--line);padding:18px 20px;
-display:flex;flex-direction:column;gap:9px}
-.card h3{margin:0;font-size:17px;line-height:1.45;letter-spacing:-.01em}
-.card h3 a{color:var(--ink);text-decoration:none}
-.card h3 a:hover{color:var(--accent-ink)}
-.orig{font-size:13px;color:var(--muted);line-height:1.5}
-.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}
-.badge{font-family:ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;padding:2px 6px;
-border:1px solid var(--line);color:var(--muted);border-radius:2px;white-space:nowrap}
-.badge.t0{color:var(--accent);border-color:var(--accent);background:var(--wash)}
-.badge.cat{color:var(--ink2)}
-.stars{color:var(--accent);letter-spacing:.1em}
-.summary{font-size:14.5px;color:var(--ink2);margin:0;line-height:1.65}
-ul.bullets{margin:2px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
-ul.bullets li{position:relative;padding-left:15px;font-size:13.5px;color:var(--ink2);line-height:1.6}
-ul.bullets li::before{content:"";position:absolute;left:1px;top:10px;width:5px;height:1px;
-background:var(--accent)}
-details.rel{font-size:13px}
-details.rel summary{cursor:pointer;color:var(--muted);list-style:none}
-details.rel summary::-webkit-details-marker{display:none}
-details.rel summary::before{content:"+ ";color:var(--accent)}
-details.rel[open] summary::before{content:"− "}
-details.rel ul{margin:8px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:5px}
-details.rel a{color:var(--muted)}
-.report{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;
-color:var(--muted)}
-.report table{border-collapse:collapse;width:100%;margin-top:10px;font-variant-numeric:tabular-nums}
-.report td{padding:3px 8px 3px 0;border-bottom:1px solid var(--line)}
-.report .fail{color:var(--clay)}
-.empty{padding:40px 0;color:var(--muted);text-align:center}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-</style></head><body><div class="wrap"><header><span class="date">2026-08-26</span><h1>비주얼 AI 브리핑</h1><span class="sub">수집 2947건 → 선별 12건 · 소스 43개 중 30개 정상</span><nav class="jump"><a href="#c-model_release">모델 출시 1</a><a href="#c-major_update">업데이트 3</a><a href="#c-benchmark">리뷰·벤치마크 1</a><a href="#c-workflow">워크플로우 1</a><a href="#c-opensource">오픈소스·툴 4</a><a href="#c-industry">산업·규제 1</a><a href="#c-minor">기타 1</a></nav></header><section><h2>오늘 한눈에</h2><div class="tldr"><p>알리바바가 ComfyUI를 지원하는 Wan 3.0 비디오 모델을 출시했습니다.</p><p>ComfyUI용 Face Detailer 신규 커스텀 노드가 새롭게 공개되었습니다.</p><p>실사풍과 판타지 스타일을 개선한 Jib Mix Krea 2 모델이 출시되었습니다.</p></div></section><section><h2>헤드라인</h2><ol class="heads"><li><div><a href="#i-20b66cdc544a">Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시</a><div class="hmeta"><span>ComfyUI Blog</span><span>모델 출시</span><span>08/25 10:54</span></div></div></li><li><div><a href="#i-c561023871b8">ComfyUI용 Face Detailer 신규 커스텀 노드 공개</a><div class="hmeta"><span>r/StableDiffusion</span><span>오픈소스·툴</span><span>08/26 03:10</span></div></div></li><li><div><a href="#i-ca9a6219c40a">실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시</a><div class="hmeta"><span>r/StableDiffusion</span><span>업데이트</span><span>08/26 03:32</span></div></div></li><li><div><a href="#i-9ad99bb5f40a">OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상</a><div class="hmeta"><span>OpenAI News</span><span>업데이트</span><span>08/25 16:00</span></div></div></li><li><div><a href="#i-ca8c1cc86f65">데이비드 삭스, 오픈소스 규제 시도 예측</a><div class="hmeta"><span>r/StableDiffusion</span><span>오픈소스·툴</span><span>08/26 00:52</span></div></div></li></ol></section><section id="c-model_release"><h2>모델 출시</h2><article class="card" id="i-20b66cdc544a"><div class="meta"><span class="badge">T1 · 연구</span><span class="badge cat">모델 출시</span><span class="badge">ComfyUI Blog</span><span class="badge">08/25 10:54 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second" target="_blank" rel="noopener">Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시</a></h3><p class="orig">Wan 3.0 in ComfyUI: Native 30-Second Video with Omni-Reference Control</p><p class="summary">Alibaba가 단일 패스로 30초 비디오를 생성하는 Wan 3.0 모델을 공개했다. 최대 20개의 레퍼런스 자산 지원 및 프롬프트 기반 비디오 편집 기능을 ComfyUI 워크플로우에서 제공한다.</p><ul class="bullets"><li>단일 패스로 30초 비디오 생성</li><li>최대 20개 레퍼런스 자산 활용</li><li>지시문 기반 비디오 편집 지원</li></ul></article></section><section id="c-major_update"><h2>업데이트</h2><article class="card" id="i-ca9a6219c40a"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">업데이트</span><span class="badge">r/StableDiffusion</span><span class="badge">08/26 03:32 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy88fg/not_another_minimax_post_jib_mix_krea_2_v4" target="_blank" rel="noopener">실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시</a></h3><p class="orig">Not Another Minimax Post - Jib Mix Krea 2 - v4 Habanero - Free Forever</p><p class="summary">실사감과 판타지 스타일 표현력을 높인 Jib Mix Krea 2 - v4 Habanero 모델이 Civitai에 무료로 공개됐다. 제작자는 Krea 2 모델 기반의 LoRA 제작 과정에서 기술적 어려움이 있다고 밝혔다.</p><ul class="bullets"><li>실사감 및 판타지 스타일 향상</li><li>Civitai 통해 영구 무료 배포</li><li>Krea 2 기반 LoRA 제작 진행 중</li></ul></article><article class="card" id="i-9ad99bb5f40a"><div class="meta"><span class="badge t0">T0 · 공식</span><span class="badge cat">업데이트</span><span class="badge">OpenAI News</span><span class="badge">08/25 16:00 KST</span><span class="stars" title="중요도">★★☆</span></div><h3><a href="https://openai.com/index/jalapeno-first-results" target="_blank" rel="noopener">OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상</a></h3><p class="orig">Jalapeño’s first results show industry-leading speed and efficiency in AI inference</p><p class="summary">OpenAI가 연산 속도와 전력 효율을 극대화한 자체 AI 추론 칩 Jalapeño의 초기 결과를 발표했다. 이 칩은 최신 모델 운용 시 지연 시간을 줄이고 처리량을 크게 높인 것이 특징이다.</p><ul class="bullets"><li>OpenAI의 자체 추론 전용 칩</li><li>전력 효율 및 추론 속도 향상</li><li>지연 시간 감소와 처리량 증대</li></ul><details class="rel"><summary>관련 1건</summary><ul><li><a href="https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show" target="_blank" rel="noopener">OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show</a> · TechCrunch AI</li></ul></details></article><article class="card" id="i-0f3963cc8de4"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">업데이트</span><span class="badge">r/StableDiffusion</span><span class="badge">08/25 23:23 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy1aij/overhaul_sla_huge_improvement_added_many_new" target="_blank" rel="noopener">SLA 노드 v1.3.8 업데이트, 구도·프롬프트 준수율 대폭 개선</a></h3><p class="orig">Overhaul SLA, huge improvement. added many new options and changed defaults</p><p class="summary">SLA 노드 v1.3.8 업데이트가 배포되었습니다. 밀도 제어 단계 설정과 백엔드 선택 기능이 추가되어 구도와 프롬프트 준수율, 이미지 품질이 향상되었습니다. 모션 안정화 및 FP16 비활성화 옵션도 추가되었습니다.</p><ul class="bullets"><li>밀도 단계 조절로 프롬프트 반영 향상</li><li>기본 밀도 단계 변경으로 품질 개선</li><li>Comfy_kitchen 등 백엔드 선택 추가</li></ul></article></section><section id="c-benchmark"><h2>리뷰·벤치마크</h2><article class="card" id="i-ae37cb1c74a1"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">리뷰·벤치마크</span><span class="badge">r/StableDiffusion</span><span class="badge">08/25 17:05 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vxtizs/krea2_turbo_distill_4_step_lora_new_checkpoint" target="_blank" rel="noopener">Krea2 Turbo용 4스텝 증류 LoRA 신규 체크포인트 공개</a></h3><p class="orig">Krea2 Turbo Distill 4 step LoRA - new checkpoint (chk26K) released (cuts 4-step error vs. the 8-step Turbo teacher by 46%, improves texture and detail vs previous checkpoints)</p><p class="summary">Krea 2 Turbo의 최소 사용 가능 스텝 수를 8에서 4로 줄이는 LoRA의 신규 체크포인트(chk26K)가 공개되었습니다. 이번 업데이트는 8스텝 교사 모델 대비 4스텝 실행 시 발생하는 예측 오차를 46% 감소시키고 질감과 세부 묘사를 개선했습니다.</p><ul class="bullets"><li>최소 사용 스텝 수 8에서 4로 감소</li><li>8스텝 교사 모델 대비 오차 46% 감소</li><li>이전 체크포인트 대비 질감 및 디테일 개선</li></ul></article></section><section id="c-workflow"><h2>워크플로우</h2><article class="card" id="i-067fd781498c"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">워크플로우</span><span class="badge">r/StableDiffusion</span><span class="badge">08/25 16:17 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vxsq13/comparing_h3_models_with_music_reference" target="_blank" rel="noopener">H3 모델 음악 참조 성능 비교 분석 및 워크플로우 공유</a></h3><p class="orig">Comparing H3 models with music reference</p><p class="summary">커뮤니티를 통해 H3 모델들의 음악 참조 워크플로우 비교 결과가 공유되었다. ref2va는 비디오와 음악의 싱크 조절 능력이 뛰어나지만, 동작 품질 면에서는 fl2va에 비해 다소 떨어진다는 평가다.</p><ul class="bullets"><li>int8 4단계 워크플로우 비교</li><li>ref2va의 우수한 비디오 싱크 능력</li><li>fl2va 대비 떨어지는 동작 품질</li></ul><details class="rel"><summary>관련 1건</summary><ul><li><a href="https://reddit.com/r/StableDiffusion/comments/1vy855b/made_a_music_video_using_local_h3_for_a_suno_song" target="_blank" rel="noopener">Made a music video using local H3 for a Suno song</a> · r/StableDiffusion</li></ul></details></article></section><section id="c-opensource"><h2>오픈소스·툴</h2><article class="card" id="i-c561023871b8"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">오픈소스·툴</span><span class="badge">r/StableDiffusion</span><span class="badge">08/26 03:10 KST</span><span class="stars" title="중요도">★★★</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy7l8y/face_detailer_with_perrowmasking" target="_blank" rel="noopener">ComfyUI용 Face Detailer 신규 커스텀 노드 공개</a></h3><p class="orig">Face Detailer With PerRowMasking</p><p class="summary">PerRowMasking 기능을 지원하는 Face Detailer 워크플로우 관련 노드가 공개됐다. 영상 비교 결과와 함께 필요한 파이프라인 커스텀 노드 링크가 제공된다.</p><ul class="bullets"><li>PerRowMasking 기능 적용</li><li>ComfyUI-H3 커스텀 노드 활용</li></ul></article><article class="card" id="i-ca8c1cc86f65"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">오픈소스·툴</span><span class="badge">r/StableDiffusion</span><span class="badge">08/26 00:52 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy3pby/david_sacks_predicts_the_regulatory_capture" target="_blank" rel="noopener">데이비드 삭스, 오픈소스 규제 시도 예측</a></h3><p class="orig">David Sacks Predicts the Regulatory Capture Playbook to Ban Open Source ...</p><p class="summary">데이비드 삭스가 오픈소스를 금지하기 위한 규제 포획 시나리오를 예측한 내용이 공유되었습니다. r/StableDiffusion 커뮤니티에서 관련 논의가 이어지고 있습니다.</p><ul class="bullets"><li>데이비드 삭스의 규제 예측 논의</li><li>오픈소스 금지 시도 가능성 제기</li><li>r/StableDiffusion 커뮤니티 공유</li></ul></article><article class="card" id="i-4ffd839653f8"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">오픈소스·툴</span><span class="badge">r/StableDiffusion</span><span class="badge">08/25 23:54 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy2455/anima_turbo_v11_is_released" target="_blank" rel="noopener">오픈소스 Anima Turbo v1.1 모델 공개</a></h3><p class="orig">Anima Turbo v1.1 is released</p><p class="summary">Anima Turbo의 신규 버전인 1.1이 Hugging Face와 Civitai를 통해 배포되었다. 해당 모델은 CircleStone Labs의 비상업적 라이선스가 적용된다.</p><ul class="bullets"><li>Hugging Face·Civitai에 배포</li><li>CircleStone Labs 라이선스 적용</li><li>비상업적 용도로 모델 제공</li></ul></article><article class="card" id="i-a939420c05fc"><div class="meta"><span class="badge">T4 · 영상</span><span class="badge cat">오픈소스·툴</span><span class="badge">Mickmumpitz</span><span class="badge">08/26 00:36 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://youtube.com/watch?v=eJuYBNrD8HI" target="_blank" rel="noopener">텍스트와 이미지로 3D 공간을 생성하는 오픈소스 기술 공개</a></h3><p class="orig">We Open Sourced World Generation</p><p class="summary">단일 이미지나 텍스트 프롬프트만으로 탐색 가능한 3D 공간을 생성하는 파이프라인이 오픈소스로 공개되었습니다. 로컬 환경에서 무료로 실행할 수 있습니다. ComfyUI용 워크플로우와 설치 가이드가 함께 제공됩니다.</p><ul class="bullets"><li>이미지와 프롬프트로 3D 공간 생성</li><li>로컬 환경에서 무료로 실행 가능</li><li>ComfyUI 워크플로우 및 가이드 제공</li></ul></article></section><section id="c-industry"><h2>산업·규제</h2><article class="card" id="i-75979cc45734"><div class="meta"><span class="badge">T3 · 미디어</span><span class="badge cat">산업·규제</span><span class="badge">TechCrunch AI</span><span class="badge">08/26 04:03 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding" target="_blank" rel="noopener">Stability AI, 7,600만 달러 규모 신규 투자 유치 성공</a></h3><p class="orig">Stability AI, maker of image generator Stable Diffusion, raises $76 million in fresh funding</p><p class="summary">Stable Diffusion 개발사인 Stability AI가 7,600만 달러의 신규 자금을 조달했다. 이번 투자를 포함해 회사의 누적 투자 유치 금액은 총 2억 3,200만 달러에 달한다.</p><ul class="bullets"><li>7,600만 달러 신규 자금 조달</li><li>누적 투자금 2억 3,200만 달러</li><li>Stable Diffusion 개발사 소식</li></ul></article></section><section id="c-minor"><h2>기타</h2><article class="card" id="i-ebc3acadd836"><div class="meta"><span class="badge">T2 · 커뮤니티</span><span class="badge cat">기타</span><span class="badge">r/StableDiffusion</span><span class="badge">08/26 00:33 KST</span><span class="stars" title="중요도">★☆☆</span></div><h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy361r/on_minimax_built_in_characters_and_environments" target="_blank" rel="noopener">MiniMax 내장 캐릭터 및 환경 학습 특징 분석 결과 공개</a></h3><p class="orig">On MiniMax built in characters and environments (not a list)</p><p class="summary">MiniMax 모델에 학습된 영화 및 TV 프로그램 캐릭터 분석 결과가 공유되었습니다. 모델 내에 완전히 구축된 캐릭터는 배우 이름을 함께 입력하지 않고 캐릭터 이름만으로도 구현이 가능합니다. 배우 이름을 명시해야 하는 경우는 모델이 배우 정보를 활용해 채우는 방식입니다.</p><ul class="bullets"><li>MiniMax 내장 캐릭터 탐색 진행</li><li>배우 이름 없이 캐릭터명만으로 생성</li><li>배우 입력 시 기존 정보 활용해 생성</li></ul></article></section><div class="report"><strong>수집 리포트</strong><table><tr class="fail"><td>T0</td><td>Adobe Firefly Blog</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>67ms</td></tr><tr class="fail"><td>T0</td><td>Black Forest Labs (FLUX)</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>1329ms</td></tr><tr class="fail"><td>T0</td><td>ByteDance Seed (Seedance / Seedream)</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>10837ms</td></tr><tr><td>T0</td><td>Google DeepMind Blog</td><td>100건 → 0건</td><td>667ms</td></tr><tr><td>T0</td><td>Google Research Blog</td><td>100건 → 0건</td><td>510ms</td></tr><tr><td>T0</td><td>Tencent HunyuanVideo (GitHub Releases)</td><td>1건 → 0건</td><td>315ms</td></tr><tr class="fail"><td>T0</td><td>Kling AI (Kuaishou)</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>2548ms</td></tr><tr><td>T0</td><td>Lightricks LTX-2 (GitHub Releases)</td><td>2건 → 0건</td><td>472ms</td></tr><tr class="fail"><td>T0</td><td>Luma AI (Ray / Dream Machine)</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>4829ms</td></tr><tr class="fail"><td>T0</td><td>Midjourney</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>163ms</td></tr><tr class="fail"><td>T0</td><td>MiniMax / Hailuo</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>7942ms</td></tr><tr><td>T0</td><td>OpenAI News</td><td>1148건 → 1건</td><td>315ms</td></tr><tr class="fail"><td>T0</td><td>Pika</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>1024ms</td></tr><tr><td>T0</td><td>Qwen (Alibaba) Blog</td><td>44건 → 0건</td><td>70ms</td></tr><tr class="fail"><td>T0</td><td>Runway</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>3304ms</td></tr><tr><td>T0</td><td>Stability AI</td><td>20건 → 0건</td><td>1777ms</td></tr><tr><td>T0</td><td>Alibaba Wan (GitHub Releases)</td><td>0건 → 0건</td><td>319ms</td></tr><tr><td>T1</td><td>arXiv cs.CV (필터링)</td><td>15건 → 0건</td><td>279ms</td></tr><tr class="fail"><td>T1</td><td>Banodoco</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>2758ms</td></tr><tr><td>T1</td><td>Civitai (신규 모델·LoRA)</td><td>40건 → 0건</td><td>158ms</td></tr><tr><td>T1</td><td>ComfyUI Blog</td><td>20건 → 1건</td><td>161ms</td></tr><tr><td>T1</td><td>ComfyUI (GitHub Releases)</td><td>10건 → 0건</td><td>1010ms</td></tr><tr><td>T1</td><td>fal.ai Blog</td><td>15건 → 0건</td><td>199ms</td></tr><tr><td>T1</td><td>Hugging Face Blog</td><td>850건 → 0건</td><td>484ms</td></tr><tr class="fail"><td>T1</td><td>Hugging Face Papers (Daily)</td><td>피드 없음 · 개별 스크래퍼 필요</td><td>2427ms</td></tr><tr><td>T1</td><td>Replicate Blog</td><td>124건 → 0건</td><td>379ms</td></tr><tr><td>T2</td><td>Hacker News (키워드 필터)</td><td>241건 → 0건</td><td>5148ms</td></tr><tr class="fail"><td>T2</td><td>r/aivideo</td><td>레딧 차단(데이터센터 IP) — 건너뜀</td><td>590ms</td></tr><tr class="fail"><td>T2</td><td>r/comfyui</td><td>레딧 차단(데이터센터 IP) — 건너뜀</td><td>229ms</td></tr><tr><td>T2</td><td>r/StableDiffusion</td><td>25건 → 8건</td><td>952ms</td></tr><tr><td>T3</td><td>Ars Technica AI</td><td>20건 → 0건</td><td>1388ms</td></tr><tr><td>T3</td><td>TechCrunch AI</td><td>20건 → 1건</td><td>170ms</td></tr><tr><td>T3</td><td>The Verge AI</td><td>10건 → 0건</td><td>137ms</td></tr><tr><td>T3</td><td>VentureBeat AI</td><td>7건 → 0건</td><td>276ms</td></tr><tr><td>T4</td><td>Curious Refuge</td><td>15건 → 0건</td><td>73ms</td></tr><tr><td>T4</td><td>Latent Vision (Matteo Spinelli)</td><td>15건 → 0건</td><td>67ms</td></tr><tr><td>T4</td><td>MattVidPro AI</td><td>15건 → 0건</td><td>66ms</td></tr><tr><td>T4</td><td>Mickmumpitz</td><td>15건 → 1건</td><td>287ms</td></tr><tr><td>T4</td><td>Nerdy Rodent</td><td>15건 → 0건</td><td>190ms</td></tr><tr><td>T4</td><td>Olivio Sarikas</td><td>15건 → 0건</td><td>187ms</td></tr><tr><td>T4</td><td>Scott Detweiler</td><td>15건 → 0건</td><td>68ms</td></tr><tr><td>T4</td><td>Sebastian Kamph</td><td>15건 → 0건</td><td>67ms</td></tr><tr><td>T4</td><td>Theoretically Media</td><td>15건 → 0건</td><td>253ms</td></tr></table><details class="rel"><summary>필터에 걸린 37건 보기</summary><p style="margin:10px 0 4px"><strong>주제 무관</strong> 25건</p><ul><li><a href="https://news.ycombinator.com/item?id=49440786" target="_blank" rel="noopener">XCancel also down, at least for time being</a> · Hacker News (키워드 필터)</li><li><a href="https://arstechnica.com/ai/2026/08/world-humanoid-robot-games-show-runners-breaking-records-bursting-into-flames" target="_blank" rel="noopener">World humanoid robot games show runners breaking records, bursting into flames</a> · Ars Technica AI</li><li><a href="https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr" target="_blank" rel="noopener">AgentHands: Generating interactive hand gestures for spatially grounded agent conversation</a> · Google Research Blog</li><li><a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat" target="_blank" rel="noopener">Claude Cowork finally remembers what you told the app in chat</a> · TechCrunch AI</li><li><a href="https://github.com/leodeim/vpsmon" target="_blank" rel="noopener">Show HN: Lightweight system monitor for Linux VPS written in Go</a> · Hacker News (키워드 필터)</li><li><a href="https://dl.acm.org/doi/pdf/10.1145/3820012" target="_blank" rel="noopener">Warnock: Harnessing GPU geometry amplification for vector graphics</a> · Hacker News (키워드 필터)</li><li><a href="https://github.com/ThinkOffApp/CarWatch" target="_blank" rel="noopener">Show HN: I made a Raspberry with Qwen my local car AI</a> · Hacker News (키워드 필터)</li><li><a href="https://huggingface.co/blog/ibm-granite/granite-4-2" target="_blank" rel="noopener">Granite 4.2 LLMs: How They&#x27;re Built</a> · Hugging Face Blog</li><li><a href="https://arstechnica.com/health/2026/08/ai-wont-replace-radiologists-but-it-will-dramatically-change-their-jobs" target="_blank" rel="noopener">AI won’t replace radiologists, but it will dramatically change their jobs</a> · Ars Technica AI</li><li><a href="https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica" target="_blank" rel="noopener">Gamma acquires Accel-backed design startup Lica</a> · TechCrunch AI</li><li><a href="https://e360.yale.edu/digest/bomb-fishing-coral-reefs" target="_blank" rel="noopener">Bomb fishing is wreaking havoc on Indonesia&#x27;s coral reefs</a> · Hacker News (키워드 필터)</li><li><a href="https://theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks" target="_blank" rel="noopener">OpenAI says its Jalapeño chip can power faster AI responses than the competition</a> · The Verge AI</li><li><a href="https://arstechnica.com/apple/2026/08/with-new-mac-studio-and-mac-mini-apple-leans-hard-into-local-ai-inference" target="_blank" rel="noopener">Apple&#x27;s new desktop computers are designed specifically for local AI development</a> · Ars Technica AI</li><li><a href="https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents" target="_blank" rel="noopener">Accel-backed Keenable is indexing the web for AI agents</a> · TechCrunch AI</li><li><a href="https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux" target="_blank" rel="noopener">‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux</a> · TechCrunch AI</li><li><a href="https://soapbox.pub/blog/comparing-protocols" target="_blank" rel="noopener">Nostr vs. Fediverse vs. Bluesky: A Comparison of Decentralized Social Protocols</a> · Hacker News (키워드 필터)</li><li><a href="https://theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack" target="_blank" rel="noopener">OpenAI subpoenaed by Alabama AG over Hugging Face hack</a> · The Verge AI</li><li><a href="https://theguardian.com/world/2026/aug/25/japan-1800-people-move-pull-400-tonne-hirosaki-castle-with-ropes" target="_blank" rel="noopener">Japan enlists 1,800 people to drag 360-tonne castle keep using ropes and rollers</a> · Hacker News (키워드 필터)</li><li><a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence" target="_blank" rel="noopener">The full stack behind abundant intelligence</a> · OpenAI News</li><li><a href="https://github.com/dragthelake/ambient-context" target="_blank" rel="noopener">Show HN: Screen memory without screenshots, just text to Markdown</a> · Hacker News (키워드 필터)</li><li><a href="https://daily.jstor.org/was-modern-art-really-a-cia-psy-op" target="_blank" rel="noopener">Was modern art a CIA psy-op? (2020)</a> · Hacker News (키워드 필터)</li><li><a href="https://techcrunch.com/2026/08/24/situational-awareness-star-ai-hedge-fund-that-nearly-imploded-now-being-probed-by-the-sec" target="_blank" rel="noopener">Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SE</a> · TechCrunch AI</li><li><a href="https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia" target="_blank" rel="noopener">Disrupting a new covert influence campaign from Russia</a> · OpenAI News</li><li><a href="https://openai.com/index/introducing-admin-plugin" target="_blank" rel="noopener">Introducing the Admin plugin for ChatGPT Work and Codex</a> · OpenAI News</li><li><a href="https://github.com/murerkinn/bookshelf" target="_blank" rel="noopener">Bookshelf – Self-hosted eBook library that runs on object storage</a> · Hacker News (키워드 필터)</li></ul><p style="margin:10px 0 4px"><strong>내용 없음</strong> 6건</p><ul><li><a href="https://reddit.com/r/StableDiffusion/comments/1vybx4i/using_only_ref_to_video_minimaxh3_made_a_whole" target="_blank" rel="noopener">Using only Ref to Video, Minimax-H3 made a whole Anime edit !</a> · r/StableDiffusion</li><li><a href="https://reddit.com/r/StableDiffusion/comments/1vy4a0b/if_dean_ran_into_harry_potter" target="_blank" rel="noopener">If dean ran into Harry Potter</a> · r/StableDiffusion</li><li><a href="https://reddit.com/r/StableDiffusion/comments/1vxycqx/black_and_white_line_drawn_stuff_with_h3_is_great" target="_blank" rel="noopener">Black and white line drawn stuff with H3 is great.</a> · r/StableDiffusion</li><li><a href="https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing" target="_blank" rel="noopener">Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision </a> · Hugging Face Blog</li><li><a href="https://reddit.com/r/StableDiffusion/comments/1vxu1ho/gaussian_splatting_test_with_minimax_h3" target="_blank" rel="noopener">Gaussian Splatting test with MiniMax H3</a> · r/StableDiffusion</li><li><a href="https://huggingface.co/blog/gradio-workflow-guide" target="_blank" rel="noopener">Wire It, Run It, Deploy It: AI Workflows in Gradio</a> · Hugging Face Blog</li></ul><p style="margin:10px 0 4px"><strong>논문 · 코드 미공개</strong> 6건</p><ul><li><a href="https://arxiv.org/abs/2608.24885v1" target="_blank" rel="noopener">Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned </a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.24855v1" target="_blank" rel="noopener">LeFlow: Generative Latent Flow Planning for World Models</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.24680v1" target="_blank" rel="noopener">Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.24563v1" target="_blank" rel="noopener">X-MULTI: VLM-based Imaging Factor Disentanglement for Factor-Aware Image Synthesis</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.24342v1" target="_blank" rel="noopener">Metadata-Aware Adaptation of a Generative Foundation Model for Conditional CMR Synthesis</a> · arXiv cs.CV (필터링)</li><li><a href="https://arxiv.org/abs/2608.23927v1" target="_blank" rel="noopener">GlanceWAM: Sparse Test-Time Imagination for World-Action Models</a> · arXiv cs.CV (필터링)</li></ul></details><p>지난 브리핑: <a href="archive/translation-cache.html">translation-cache</a> · <a href="archive/2026-08-25.html">2026-08-25</a></p></div></div></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0E10">
+<meta name="robots" content="noindex, nofollow">
+<title>2026-08-26 · 비주얼 AI 브리핑</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0B0E10; --surface:#14181C; --surface-2:#1B2127; --surface-3:#232B32;
+  --line:#262E35; --line-soft:#1E252B;
+  --ink:#F2F5F7; --ink-2:#B7C2CB; --muted:#7C8A95;
+  --accent:#FFCE4A; --accent-ink:#0B0E10; --accent-soft:#3A2F12;
+  --up:#4ADE80; --down:#F87171;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box;}
+/* display를 지정한 요소에는 hidden 속성이 먹지 않는다(작성자 스타일이 이긴다).
+   달력 팝오버가 닫히지 않던 원인이라 전역으로 못박아 둔다. */
+[hidden]{display:none !important;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+body[data-detail]{overflow:hidden;}
+a{color:inherit;}
+.wrap{max-width:1080px; margin:0 auto; padding:0 18px 72px;}
+
+/* ---------- 상단 바 ---------- */
+.top{
+  position:sticky; top:0; z-index:30; background:rgba(11,14,16,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1080px; margin:0 auto; padding:12px 18px;
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; margin-right:auto;}
+.brand .d{font-family:var(--f-mono); font-size:19px; font-weight:600; letter-spacing:.02em;}
+.brand .s{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+          text-transform:uppercase; color:var(--muted);}
+.tabs{display:flex; gap:4px; background:var(--surface-2); padding:3px; border-radius:999px;}
+.tabs button{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink-2);
+  background:none; border:0; padding:6px 16px; border-radius:999px; cursor:pointer;
+}
+.tabs button[aria-selected="true"]{background:var(--accent); color:var(--accent-ink); font-weight:600;}
+/* 검색은 늘 보이게 둔다. 버튼 뒤에 숨기면 "찾아볼 수 있다"는 사실 자체를 잊는다. */
+.find{display:flex; gap:6px; align-items:center; position:relative;}
+#q{
+  width:210px; font:inherit; font-size:14px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:8px 12px;
+}
+#q::placeholder{color:var(--muted);}
+#q:focus{border-color:var(--accent); outline:none; background:var(--surface);}
+.calbtn{
+  font:inherit; font-size:12.5px; font-family:var(--f-mono); letter-spacing:.04em;
+  background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:8px; padding:8px 12px; cursor:pointer;
+  white-space:nowrap;
+}
+.calbtn:hover, .calbtn[aria-expanded="true"]{border-color:var(--accent); color:var(--ink);}
+
+/* 검색 결과는 헤더 바로 아래로 펼친다. 다른 화면으로 넘어가지 않으므로
+   지금 보던 자리를 잃지 않는다. */
+#results{
+  position:absolute; left:0; right:0; top:100%;
+  background:var(--ground); border-bottom:1px solid var(--line);
+  max-height:min(70vh,560px); overflow-y:auto; box-shadow:0 18px 40px rgba(0,0,0,.5);
+}
+#results .res-in{max-width:1080px; margin:0 auto; padding:12px 18px 20px;}
+
+/* 미니 달력은 날짜 버튼 아래에 붙는다 */
+#calpop{
+  position:absolute; right:0; top:calc(100% + 8px); width:296px; z-index:40;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:14px; box-shadow:0 18px 40px rgba(0,0,0,.55);
+  display:flex; flex-direction:column; gap:10px;
+}
+
+/* ---------- 덮어쓰는 화면들(세부·검색·달력) 공통 ---------- */
+.sheet{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.sheet[data-open]{display:block;}
+.s-body{max-width:760px; margin:0 auto; padding:22px 18px 80px;
+        display:flex; flex-direction:column; gap:16px;}
+
+/* ---------- 검색 ---------- */
+.q-note{font-family:var(--f-mono); font-size:11.5px; color:var(--muted);}
+.hits{display:flex; flex-direction:column;}
+.hit{
+  display:block; text-decoration:none; color:inherit;
+  padding:13px 2px; border-bottom:1px solid var(--line-soft);
+}
+.hit:hover{background:var(--surface);}
+.hit .hm{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+         display:flex; gap:8px; align-items:center;}
+.hit .ht{font-size:16px; font-weight:600; line-height:1.5; margin:3px 0 2px;
+         word-break:keep-all; overflow-wrap:break-word;}
+.hit .hs{font-size:13.5px; color:var(--ink-2); line-height:1.55;
+         display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+         overflow:hidden;}
+mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-radius:2px;}
+
+/* ---------- 달력 ---------- */
+.cal-head{display:flex; align-items:center; gap:14px;}
+.cal-head .mo{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums;
+              margin-right:auto;}
+.cal-head button{
+  font:inherit; font-size:15px; background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; width:32px; height:28px; cursor:pointer;
+}
+.cal-head button:disabled{opacity:.3; cursor:default;}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:3px;}
+.cal .dow{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+          text-align:center; padding:4px 0;}
+.cal a, .cal span{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:1/1; border-radius:6px; font-family:var(--f-mono); font-size:12.5px;
+  font-variant-numeric:tabular-nums;
+}
+.cal span{color:#3D474F;}
+.cal span.pad{visibility:hidden;}
+.cal a{background:var(--surface); border:1px solid var(--line);
+       color:var(--ink); text-decoration:none;}
+.cal a:hover{border-color:var(--accent); color:var(--accent);}
+.cal a.now{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+           font-weight:600;}
+
+/* ---------- 모델 히스토리 ---------- */
+.mgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:9px;
+       padding-top:22px;}
+.mcard{
+  display:flex; flex-direction:column; gap:7px; text-align:left; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 15px; font:inherit; color:inherit;
+}
+.mcard:hover{border-color:var(--accent);}
+.mcard .top-row{display:flex; align-items:baseline; gap:8px;}
+.mcard b{font-size:16px; font-weight:600; word-break:break-word;}
+.mcard .ver{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em;
+  color:var(--accent); border:1px solid var(--accent); border-radius:4px;
+  padding:1px 6px; white-space:nowrap;
+}
+.mcard .hd{
+  font-size:13.5px; line-height:1.55; color:var(--ink-2);
+  word-break:keep-all; overflow-wrap:break-word;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.mcard .meta{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:auto;}
+.mhead{display:flex; align-items:center; gap:12px; padding:22px 0 6px;}
+.mhead h2{margin:0; font-size:22px; font-weight:700;}
+.mhead .n{font-family:var(--f-mono); font-size:12px; color:var(--muted); margin-right:auto;}
+.timeline{display:flex; flex-direction:column;}
+.tl{display:grid; grid-template-columns:78px 1fr; gap:14px; padding:13px 2px;
+    border-bottom:1px solid var(--line-soft); text-decoration:none; color:inherit;}
+.tl:hover{background:var(--surface);}
+.tl .dt{font-family:var(--f-mono); font-size:11.5px; color:var(--accent);
+        font-variant-numeric:tabular-nums;}
+.tl .tt{font-size:15.5px; font-weight:500; line-height:1.5;
+        word-break:keep-all; overflow-wrap:break-word;}
+.tl .tt, .tl .ts{display:block;}
+.tl .ts{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:4px;}
+
+/* ---------- 오늘: 핵심 덩어리 ---------- */
+.lede{
+  padding:28px 0 22px; border-bottom:1px solid var(--line);
+  display:flex; flex-direction:column; gap:22px;
+}
+.flow{
+  font-weight:700; font-size:clamp(21px,3vw,30px);
+  line-height:1.5; letter-spacing:-.025em;
+  margin:0; max-width:30ch; text-wrap:balance;
+}
+/* 한국어는 기본값이 글자 단위 줄바꿈이라 '몰렸고'가 '몰/렸고'로 끊긴다.
+   keep-all로 어절을 지키고, 긴 영문 모델명만 예외로 쪼갠다. */
+.flow, .head .t, .tile .t, .d-title, .body-text, .bul li, td.nm{
+  word-break:keep-all; overflow-wrap:break-word;
+}
+.flow span{display:block;}
+.flow span+span{color:var(--ink-2); font-size:.82em; margin-top:.35em;}
+.flow.empty{color:var(--muted); font-size:20px;}
+
+.heads{display:flex; flex-direction:column; border-top:1px solid var(--line-soft);}
+.head{
+  display:grid; grid-template-columns:32px 1fr auto; align-items:baseline; gap:12px;
+  padding:13px 6px 13px 0; border-bottom:1px solid var(--line-soft);
+  background:none; border-left:0; border-right:0; border-top:0;
+  width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer;
+}
+.head:last-child{border-bottom:none;}
+.head:hover, .head:focus-visible{background:var(--surface);}
+.head .n{
+  font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.head .t{font-size:clamp(16px,2vw,19px); font-weight:600; line-height:1.45;}
+.head .m{font-family:var(--f-mono); font-size:11px; color:var(--muted); white-space:nowrap;}
+
+/* ---------- 오늘: 카드 타일 ---------- */
+.sec-h{
+  display:flex; align-items:baseline; gap:10px; padding:24px 0 11px;
+}
+.sec-h h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0;
+}
+.sec-h .c{font-family:var(--f-mono); font-size:11px; color:var(--accent);}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:10px;}
+.tile{
+  display:flex; flex-direction:column; gap:9px; text-align:left;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:15px 16px 13px; cursor:pointer; font:inherit; color:inherit;
+  transition:border-color .12s, background .12s;
+}
+.tile:hover, .tile:focus-visible{border-color:var(--accent); background:var(--surface-2);}
+.tile .cat{
+  display:flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+.dot{width:7px; height:7px; border-radius:50%; flex:none;}
+.tile .t{font-size:16px; font-weight:600; line-height:1.5; letter-spacing:-.01em;}
+.tile .m{
+  margin-top:auto; font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+  display:flex; gap:8px; align-items:center;
+}
+.tile .m .st{color:var(--accent); letter-spacing:.1em;}
+
+/* ---------- 세부 화면 ---------- */
+.detail{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.detail[data-open]{display:block;}
+.sheet .d-bar{padding:11px 18px;}
+.d-bar{
+  position:sticky; top:0; background:rgba(11,14,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line); padding:11px 18px;
+  display:flex; align-items:center; gap:12px;
+}
+.d-bar .back{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:6px 13px; cursor:pointer;
+}
+.d-bar .back:hover{border-color:var(--accent);}
+.d-bar .pos{font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:auto;}
+.d-body{max-width:720px; margin:0 auto; padding:26px 18px 80px;
+        display:flex; flex-direction:column; gap:18px;}
+.d-meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+        font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.d-meta .st{color:var(--accent); letter-spacing:.1em;}
+.d-title{
+  font-weight:700; margin:0;
+  font-size:clamp(23px,4vw,33px); line-height:1.38; letter-spacing:-.03em;
+  text-wrap:balance;
+}
+.d-orig{font-size:13.5px; color:var(--muted); line-height:1.55; margin:0;}
+
+.raw-text{font-size:15.5px; color:var(--ink-2);}
+.body-text{font-size:17.5px; line-height:1.78; color:var(--ink); margin:0;}
+.raw .body-text{font-size:15.5px; color:var(--ink-2); line-height:1.7;}
+.bul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px;
+     border-left:2px solid var(--accent); padding-left:16px;}
+.bul li{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+.none{color:var(--muted); font-size:14.5px;}
+
+.go{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background:var(--accent); color:var(--accent-ink); text-decoration:none;
+  font-weight:600; font-size:15px; padding:12px 20px; border-radius:10px;
+}
+.go:hover{filter:brightness(1.08);}
+.rel{border-top:1px solid var(--line); padding-top:16px;
+     display:flex; flex-direction:column; gap:9px;}
+.rel h3{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--muted); margin:0; font-weight:500;}
+.rel a{display:flex; flex-direction:column; gap:3px; font-size:14.5px; color:var(--ink-2);
+       text-decoration:none; line-height:1.5; padding:8px 0;
+       border-bottom:1px solid var(--line-soft);}
+.rel a:hover{color:var(--accent);}
+.rel a .src{font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+
+/* ---------- 순위 ---------- */
+.boards{display:flex; gap:6px; flex-wrap:wrap; padding:26px 0 16px;}
+.boards button{
+  font:inherit; font-size:13px; background:var(--surface); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:999px; padding:7px 15px; cursor:pointer;
+}
+.boards button[aria-selected="true"]{
+  background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600;
+}
+.board{display:none;}
+.board[data-open]{display:block;}
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14px;}
+th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+thead th{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+td.r{font-family:var(--f-mono); color:var(--muted); font-variant-numeric:tabular-nums; width:38px;}
+td.nm{font-weight:600;}
+td.nm small{display:block; font-weight:400; font-size:12px; color:var(--muted);}
+td.num{font-family:var(--f-mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap;}
+td.sc{width:132px;}
+.scwrap{display:flex; align-items:center; gap:9px; justify-content:flex-end;}
+.bar{height:4px; border-radius:2px; background:var(--accent); opacity:.75; flex:none;}
+.barbg{flex:1; height:4px; border-radius:2px; background:var(--surface-3); position:relative;}
+.barbg i{position:absolute; inset:0 auto 0 0; border-radius:2px; background:var(--accent); opacity:.8;}
+td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
+.up{color:var(--up);} .down{color:var(--down);}
+.new{color:var(--accent-ink); background:var(--accent); font-family:var(--f-mono);
+     font-size:9.5px; letter-spacing:.1em; padding:2px 5px; border-radius:3px;}
+.note{color:var(--muted); font-size:14px; padding:18px 0;}
+.credit{font-size:12px; color:var(--muted); padding:14px 2px 0;}
+.credit a{color:var(--ink-2);}
+
+/* ---------- 꼬리말 ---------- */
+.foot{
+  margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  font-family:var(--f-mono); font-size:11px; color:var(--muted);
+}
+.foot button{
+  font:inherit; background:none; border:0; color:var(--muted);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:0;
+}
+.foot button:hover{color:var(--accent);}
+#report{display:none; padding-top:18px;}
+#report[data-open]{display:block;}
+#report table{min-width:560px; font-size:12.5px;}
+.bad{color:var(--down);}
+.drop{margin-top:14px;}
+.drop summary{cursor:pointer; font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.drop ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:12.5px;
+         line-height:1.7; max-height:320px; overflow-y:auto;}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+@media (max-width:560px){
+  /* 폰에서 표가 옆으로 밀려 점수·변동이 안 보이던 것을 고친다.
+     막대는 접고 숫자만 남긴다 — 좁은 화면에서는 숫자가 먼저다. */
+  table{min-width:0; font-size:13px;}
+  th,td{padding:9px 7px;}
+  thead th{font-size:9px; letter-spacing:.06em;}
+  td.r{width:26px;}
+  td.sc{width:auto;}
+  td.d{width:44px;}
+  td.nm small{font-size:11px;}
+  .barbg{display:none;}
+  .find{width:100%;}
+  #q{flex:1; width:auto;}
+  #calpop{right:0; width:min(296px, calc(100vw - 28px));}
+  .boards{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+          margin:0 -14px; padding:22px 14px 14px;}
+  .boards::-webkit-scrollbar{display:none;}
+  .boards button{flex:none; white-space:nowrap;}
+  .top-in{gap:10px; padding:10px 14px;}
+  .brand{width:100%; margin-right:0;}
+  .wrap{padding:0 14px 60px;}
+  .lede{padding:24px 0 20px;}
+  .head{grid-template-columns:26px 1fr; gap:10px;}
+  .head .m{grid-column:2; margin-top:2px;}
+}
+</style>
+</head>
+<body data-base="../" data-date="2026-08-26">
+
+<header class="top"><div class="top-in">
+  <div class="brand">
+    <span class="d">2026-08-26</span>
+    <span class="s">Visual AI Brief</span>
+  </div>
+  <div class="tabs">
+    <button type="button" data-go="today" aria-selected="true">오늘</button>
+    <button type="button" data-go="rank" aria-selected="false">순위</button>
+    <button type="button" data-go="models" aria-selected="false">모델</button>
+  </div>
+  <div class="find">
+    <input id="q" type="search" placeholder="검색 (지난 브리핑 포함)"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="calbtn" type="button" aria-expanded="false">날짜</button>
+  </div>
+</div>
+
+<div id="results" hidden><div class="res-in">
+  <p class="q-note"></p>
+  <div class="hits"></div>
+</div></div>
+
+<div id="calpop" hidden>
+  <div class="cal-head">
+    <span class="mo"></span>
+    <button class="prev" type="button" aria-label="이전 달">‹</button>
+    <button class="next" type="button" aria-label="다음 달">›</button>
+  </div>
+  <div class="cal"></div>
+  <p class="q-note cal-note"></p>
+</div>
+</header>
+
+<main class="wrap">
+
+  <section data-view="today">
+    <div class="lede">
+      <p class="flow"><span>알리바바가 ComfyUI를 지원하는 Wan 3.0 비디오 모델을 출시했습니다.</span><span>ComfyUI용 Face Detailer 신규 커스텀 노드가 새롭게 공개되었습니다.</span><span>실사풍과 판타지 스타일을 개선한 Jib Mix Krea 2 모델이 출시되었습니다.</span></p>
+      <div class="heads"><button class="head" data-uid="20b66cdc544a"><span class="n">01</span><span class="t">Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시</span><span class="m">모델 출시 · ComfyUI Blog</span></button><button class="head" data-uid="c561023871b8"><span class="n">02</span><span class="t">ComfyUI용 Face Detailer 신규 커스텀 노드 공개</span><span class="m">오픈소스·툴 · r/StableDiffusion</span></button><button class="head" data-uid="ca9a6219c40a"><span class="n">03</span><span class="t">실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시</span><span class="m">업데이트 · r/StableDiffusion</span></button><button class="head" data-uid="9ad99bb5f40a"><span class="n">04</span><span class="t">OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상</span><span class="m">업데이트 · OpenAI News</span></button><button class="head" data-uid="ca8c1cc86f65"><span class="n">05</span><span class="t">데이비드 삭스, 오픈소스 규제 시도 예측</span><span class="m">오픈소스·툴 · r/StableDiffusion</span></button></div>
+    </div>
+    <div class="sec-h"><h2>나머지</h2><span class="c">7건</span></div><div class="grid"><button class="tile" data-uid="4ffd839653f8"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">오픈소스 Anima Turbo v1.1 모델 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>08.25 23:54</span></span></button><button class="tile" data-uid="0f3963cc8de4"><span class="cat"><i class="dot" style="background:#8AB4F8"></i>업데이트</span><span class="t">SLA 노드 v1.3.8 업데이트, 구도·프롬프트 준수율 대폭 개선</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>08.25 23:23</span></span></button><button class="tile" data-uid="ebc3acadd836"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">MiniMax 내장 캐릭터 및 환경 학습 특징 분석 결과 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>08.26 00:33</span></span></button><button class="tile" data-uid="a939420c05fc"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">텍스트와 이미지로 3D 공간을 생성하는 오픈소스 기술 공개</span><span class="m"><span class="st">●○○</span><span>Mickmumpitz</span><span>08.26 00:36</span></span></button><button class="tile" data-uid="ae37cb1c74a1"><span class="cat"><i class="dot" style="background:#C4A0F0"></i>리뷰·벤치마크</span><span class="t">Krea2 Turbo용 4스텝 증류 LoRA 신규 체크포인트 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>08.25 17:05</span></span></button><button class="tile" data-uid="067fd781498c"><span class="cat"><i class="dot" style="background:#6FD3B8"></i>워크플로우</span><span class="t">H3 모델 음악 참조 성능 비교 분석 및 워크플로우 공유</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>08.25 16:17</span></span></button><button class="tile" data-uid="75979cc45734"><span class="cat"><i class="dot" style="background:#E89B72"></i>산업·규제</span><span class="t">Stability AI, 7,600만 달러 규모 신규 투자 유치 성공</span><span class="m"><span class="st">●○○</span><span>TechCrunch AI</span><span>08.26 04:03</span></span></button></div>
+    <div class="foot">
+      <span>12건 · 08-25 07:00 ~ 08-26 07:00 KST</span>
+      <button type="button" id="report-toggle">실행 정보</button>
+    </div>
+    <div id="report"><p class="note">수집 2947 → 시간창 61 → 필터 24 → 병합 후 18 → 카드 12 · 번역 12건(gemini)</p><div class="tblwrap"><table><thead><tr><th>소스</th><th>등급</th><th style="text-align:right">수집</th><th style="text-align:right">채택</th><th>상태</th></tr></thead><tbody><tr><td>Adobe Firefly Blog</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Banodoco</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Black Forest Labs (FLUX)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>ByteDance Seed (Seedance / Seedream)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Hugging Face Papers (Daily)</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Kling AI (Kuaishou)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Luma AI (Ray / Dream Machine)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Midjourney</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>MiniMax / Hailuo</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>Pika</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>r/aivideo</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>r/comfyui</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>Runway</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">피드 없음 · 개별 스크래퍼 필요</span></td></tr><tr><td>r/StableDiffusion</td><td>T2</td><td class="num">25</td><td class="num">8</td><td>정상</td></tr><tr><td>ComfyUI Blog</td><td>T1</td><td class="num">20</td><td class="num">1</td><td>정상</td></tr><tr><td>OpenAI News</td><td>T0</td><td class="num">1148</td><td class="num">1</td><td>정상</td></tr><tr><td>TechCrunch AI</td><td>T3</td><td class="num">20</td><td class="num">1</td><td>정상</td></tr><tr><td>Mickmumpitz</td><td>T4</td><td class="num">15</td><td class="num">1</td><td>정상</td></tr><tr><td>Ars Technica AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>arXiv cs.CV (필터링)</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Civitai (신규 모델·LoRA)</td><td>T1</td><td class="num">40</td><td class="num">0</td><td>정상</td></tr><tr><td>ComfyUI (GitHub Releases)</td><td>T1</td><td class="num">10</td><td class="num">0</td><td>정상</td></tr><tr><td>Google DeepMind Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>fal.ai Blog</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Google Research Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>Hacker News (키워드 필터)</td><td>T2</td><td class="num">241</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Blog</td><td>T1</td><td class="num">850</td><td class="num">0</td><td>정상</td></tr><tr><td>Tencent HunyuanVideo (GitHub Releases)</td><td>T0</td><td class="num">1</td><td class="num">0</td><td>정상</td></tr><tr><td>Lightricks LTX-2 (GitHub Releases)</td><td>T0</td><td class="num">2</td><td class="num">0</td><td>정상</td></tr><tr><td>Qwen (Alibaba) Blog</td><td>T0</td><td class="num">44</td><td class="num">0</td><td>정상</td></tr><tr><td>Replicate Blog</td><td>T1</td><td class="num">124</td><td class="num">0</td><td>정상</td></tr><tr><td>Stability AI</td><td>T0</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>The Verge AI</td><td>T3</td><td class="num">10</td><td class="num">0</td><td>정상</td></tr><tr><td>VentureBeat AI</td><td>T3</td><td class="num">7</td><td class="num">0</td><td>정상</td></tr><tr><td>Alibaba Wan (GitHub Releases)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Curious Refuge</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Latent Vision (Matteo Spinelli)</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>MattVidPro AI</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Nerdy Rodent</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Olivio Sarikas</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Scott Detweiler</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Sebastian Kamph</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Theoretically Media</td><td>T4</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr></tbody></table></div><details class="drop"><summary>필터에 걸린 37건 보기</summary><ul><li>[주제 무관] XCancel also down, at least for time being</li><li>[주제 무관] World humanoid robot games show runners breaking records, bursting into flames</li><li>[내용 없음] Using only Ref to Video, Minimax-H3 made a whole Anime edit !</li><li>[주제 무관] AgentHands: Generating interactive hand gestures for spatially grounded agent conversations in XR</li><li>[논문 · 코드 미공개] Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Polic</li><li>[주제 무관] Claude Cowork finally remembers what you told the app in chat</li><li>[논문 · 코드 미공개] LeFlow: Generative Latent Flow Planning for World Models</li><li>[주제 무관] Show HN: Lightweight system monitor for Linux VPS written in Go</li><li>[내용 없음] If dean ran into Harry Potter</li><li>[주제 무관] Warnock: Harnessing GPU geometry amplification for vector graphics</li><li>[주제 무관] Show HN: I made a Raspberry with Qwen my local car AI</li><li>[주제 무관] Granite 4.2 LLMs: How They&#x27;re Built</li><li>[논문 · 코드 미공개] Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training</li><li>[주제 무관] AI won’t replace radiologists, but it will dramatically change their jobs</li><li>[주제 무관] Gamma acquires Accel-backed design startup Lica</li><li>[주제 무관] Bomb fishing is wreaking havoc on Indonesia&#x27;s coral reefs</li><li>[주제 무관] OpenAI says its Jalapeño chip can power faster AI responses than the competition</li><li>[논문 · 코드 미공개] X-MULTI: VLM-based Imaging Factor Disentanglement for Factor-Aware Image Synthesis</li><li>[주제 무관] Apple&#x27;s new desktop computers are designed specifically for local AI development</li><li>[주제 무관] Accel-backed Keenable is indexing the web for AI agents</li><li>[내용 없음] Black and white line drawn stuff with H3 is great.</li><li>[주제 무관] ‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux</li><li>[내용 없음] Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original</li><li>[주제 무관] Nostr vs. Fediverse vs. Bluesky: A Comparison of Decentralized Social Protocols</li><li>[논문 · 코드 미공개] Metadata-Aware Adaptation of a Generative Foundation Model for Conditional CMR Synthesis</li><li>[주제 무관] OpenAI subpoenaed by Alabama AG over Hugging Face hack</li><li>[내용 없음] Gaussian Splatting test with MiniMax H3</li><li>[주제 무관] Japan enlists 1,800 people to drag 360-tonne castle keep using ropes and rollers</li><li>[주제 무관] The full stack behind abundant intelligence</li><li>[주제 무관] Show HN: Screen memory without screenshots, just text to Markdown</li><li>[주제 무관] Was modern art a CIA psy-op? (2020)</li><li>[주제 무관] Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC</li><li>[논문 · 코드 미공개] GlanceWAM: Sparse Test-Time Imagination for World-Action Models</li><li>[주제 무관] Disrupting a new covert influence campaign from Russia</li><li>[주제 무관] Introducing the Admin plugin for ChatGPT Work and Codex</li><li>[내용 없음] Wire It, Run It, Deploy It: AI Workflows in Gradio</li><li>[주제 무관] Bookshelf – Self-hosted eBook library that runs on object storage</li></ul></details></div>
+  </section>
+
+  <section data-view="rank" hidden>
+    <p class="note">순위표가 아직 없습니다 — 설정되지 않음.<br>키를 넣으면 다음 실행부터 채워집니다 (<code>AA_API_KEY</code>, artificialanalysis.ai/data-api).</p>
+  </section>
+
+  <section data-view="models" hidden>
+    <div id="mlist"></div>
+    <div id="mone" hidden></div>
+  </section>
+
+</main>
+
+<div class="detail" id="d-20b66cdc544a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">1/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>ComfyUI Blog · 연구</span>
+      <span>08.25 10:54</span>
+    </div>
+    <h1 class="d-title">Alibaba, ComfyUI 지원 Wan 3.0 비디오 모델 출시</h1>
+    <p class="d-orig">원제 · Wan 3.0 in ComfyUI: Native 30-Second Video with Omni-Reference Control</p>
+    <p class="body-text">Alibaba가 단일 패스로 30초 비디오를 생성하는 Wan 3.0 모델을 공개했다. 최대 20개의 레퍼런스 자산 지원 및 프롬프트 기반 비디오 편집 기능을 ComfyUI 워크플로우에서 제공한다.</p><ul class="bul"><li>단일 패스로 30초 비디오 생성</li><li>최대 20개 레퍼런스 자산 활용</li><li>지시문 기반 비디오 편집 지원</li></ul>
+    <a class="go" href="https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second" target="_blank" rel="noopener">원문 열기 · blog.comfy.org ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-c561023871b8">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">2/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.26 03:10</span>
+    </div>
+    <h1 class="d-title">ComfyUI용 Face Detailer 신규 커스텀 노드 공개</h1>
+    <p class="d-orig">원제 · Face Detailer With PerRowMasking</p>
+    <p class="body-text">PerRowMasking 기능을 지원하는 Face Detailer 워크플로우 관련 노드가 공개됐다. 영상 비교 결과와 함께 필요한 파이프라인 커스텀 노드 링크가 제공된다.</p><ul class="bul"><li>PerRowMasking 기능 적용</li><li>ComfyUI-H3 커스텀 노드 활용</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy7l8y/face_detailer_with_perrowmasking" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-ca9a6219c40a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">3/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.26 03:32</span>
+    </div>
+    <h1 class="d-title">실사풍·판타지 스타일 개선 모델 Jib Mix Krea 2 출시</h1>
+    <p class="d-orig">원제 · Not Another Minimax Post - Jib Mix Krea 2 - v4 Habanero - Free Forever</p>
+    <p class="body-text">실사감과 판타지 스타일 표현력을 높인 Jib Mix Krea 2 - v4 Habanero 모델이 Civitai에 무료로 공개됐다. 제작자는 Krea 2 모델 기반의 LoRA 제작 과정에서 기술적 어려움이 있다고 밝혔다.</p><ul class="bul"><li>실사감 및 판타지 스타일 향상</li><li>Civitai 통해 영구 무료 배포</li><li>Krea 2 기반 LoRA 제작 진행 중</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy88fg/not_another_minimax_post_jib_mix_krea_2_v4" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-9ad99bb5f40a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">4/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●●○</span>
+      <span>OpenAI News · 공식</span>
+      <span>08.25 16:00</span>
+    </div>
+    <h1 class="d-title">OpenAI, 자체 추론 칩 Jalapeño 공개… 속도·효율 대폭 향상</h1>
+    <p class="d-orig">원제 · Jalapeño’s first results show industry-leading speed and efficiency in AI inference</p>
+    <p class="body-text">OpenAI가 연산 속도와 전력 효율을 극대화한 자체 AI 추론 칩 Jalapeño의 초기 결과를 발표했다. 이 칩은 최신 모델 운용 시 지연 시간을 줄이고 처리량을 크게 높인 것이 특징이다.</p><ul class="bul"><li>OpenAI의 자체 추론 전용 칩</li><li>전력 효율 및 추론 속도 향상</li><li>지연 시간 감소와 처리량 증대</li></ul>
+    <a class="go" href="https://openai.com/index/jalapeno-first-results" target="_blank" rel="noopener">원문 열기 · openai.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 1건</h3><a href="https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show" target="_blank" rel="noopener">OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show<span class="src">TechCrunch AI</span></a></div>
+  </div>
+</div><div class="detail" id="d-ca8c1cc86f65">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">5/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.26 00:52</span>
+    </div>
+    <h1 class="d-title">데이비드 삭스, 오픈소스 규제 시도 예측</h1>
+    <p class="d-orig">원제 · David Sacks Predicts the Regulatory Capture Playbook to Ban Open Source ...</p>
+    <p class="body-text">데이비드 삭스가 오픈소스를 금지하기 위한 규제 포획 시나리오를 예측한 내용이 공유되었습니다. r/StableDiffusion 커뮤니티에서 관련 논의가 이어지고 있습니다.</p><ul class="bul"><li>데이비드 삭스의 규제 예측 논의</li><li>오픈소스 금지 시도 가능성 제기</li><li>r/StableDiffusion 커뮤니티 공유</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy3pby/david_sacks_predicts_the_regulatory_capture" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-4ffd839653f8">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">6/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.25 23:54</span>
+    </div>
+    <h1 class="d-title">오픈소스 Anima Turbo v1.1 모델 공개</h1>
+    <p class="d-orig">원제 · Anima Turbo v1.1 is released</p>
+    <p class="body-text">Anima Turbo의 신규 버전인 1.1이 Hugging Face와 Civitai를 통해 배포되었다. 해당 모델은 CircleStone Labs의 비상업적 라이선스가 적용된다.</p><ul class="bul"><li>Hugging Face·Civitai에 배포</li><li>CircleStone Labs 라이선스 적용</li><li>비상업적 용도로 모델 제공</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy2455/anima_turbo_v11_is_released" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-0f3963cc8de4">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">7/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.25 23:23</span>
+    </div>
+    <h1 class="d-title">SLA 노드 v1.3.8 업데이트, 구도·프롬프트 준수율 대폭 개선</h1>
+    <p class="d-orig">원제 · Overhaul SLA, huge improvement. added many new options and changed defaults</p>
+    <p class="body-text">SLA 노드 v1.3.8 업데이트가 배포되었습니다. 밀도 제어 단계 설정과 백엔드 선택 기능이 추가되어 구도와 프롬프트 준수율, 이미지 품질이 향상되었습니다. 모션 안정화 및 FP16 비활성화 옵션도 추가되었습니다.</p><ul class="bul"><li>밀도 단계 조절로 프롬프트 반영 향상</li><li>기본 밀도 단계 변경으로 품질 개선</li><li>Comfy_kitchen 등 백엔드 선택 추가</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy1aij/overhaul_sla_huge_improvement_added_many_new" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-ebc3acadd836">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">8/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.26 00:33</span>
+    </div>
+    <h1 class="d-title">MiniMax 내장 캐릭터 및 환경 학습 특징 분석 결과 공개</h1>
+    <p class="d-orig">원제 · On MiniMax built in characters and environments (not a list)</p>
+    <p class="body-text">MiniMax 모델에 학습된 영화 및 TV 프로그램 캐릭터 분석 결과가 공유되었습니다. 모델 내에 완전히 구축된 캐릭터는 배우 이름을 함께 입력하지 않고 캐릭터 이름만으로도 구현이 가능합니다. 배우 이름을 명시해야 하는 경우는 모델이 배우 정보를 활용해 채우는 방식입니다.</p><ul class="bul"><li>MiniMax 내장 캐릭터 탐색 진행</li><li>배우 이름 없이 캐릭터명만으로 생성</li><li>배우 입력 시 기존 정보 활용해 생성</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vy361r/on_minimax_built_in_characters_and_environments" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-a939420c05fc">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">9/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>Mickmumpitz · 영상</span>
+      <span>08.26 00:36</span>
+    </div>
+    <h1 class="d-title">텍스트와 이미지로 3D 공간을 생성하는 오픈소스 기술 공개</h1>
+    <p class="d-orig">원제 · We Open Sourced World Generation</p>
+    <p class="body-text">단일 이미지나 텍스트 프롬프트만으로 탐색 가능한 3D 공간을 생성하는 파이프라인이 오픈소스로 공개되었습니다. 로컬 환경에서 무료로 실행할 수 있습니다. ComfyUI용 워크플로우와 설치 가이드가 함께 제공됩니다.</p><ul class="bul"><li>이미지와 프롬프트로 3D 공간 생성</li><li>로컬 환경에서 무료로 실행 가능</li><li>ComfyUI 워크플로우 및 가이드 제공</li></ul>
+    <a class="go" href="https://youtube.com/watch?v=eJuYBNrD8HI" target="_blank" rel="noopener">원문 열기 · youtube.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-ae37cb1c74a1">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">10/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#C4A0F0"></i>리뷰·벤치마크
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.25 17:05</span>
+    </div>
+    <h1 class="d-title">Krea2 Turbo용 4스텝 증류 LoRA 신규 체크포인트 공개</h1>
+    <p class="d-orig">원제 · Krea2 Turbo Distill 4 step LoRA - new checkpoint (chk26K) released (cuts 4-step error vs. the 8-step Turbo teacher by 46%, improves texture and detail vs previous checkpoints)</p>
+    <p class="body-text">Krea 2 Turbo의 최소 사용 가능 스텝 수를 8에서 4로 줄이는 LoRA의 신규 체크포인트(chk26K)가 공개되었습니다. 이번 업데이트는 8스텝 교사 모델 대비 4스텝 실행 시 발생하는 예측 오차를 46% 감소시키고 질감과 세부 묘사를 개선했습니다.</p><ul class="bul"><li>최소 사용 스텝 수 8에서 4로 감소</li><li>8스텝 교사 모델 대비 오차 46% 감소</li><li>이전 체크포인트 대비 질감 및 디테일 개선</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vxtizs/krea2_turbo_distill_4_step_lora_new_checkpoint" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-067fd781498c">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">11/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#6FD3B8"></i>워크플로우
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>08.25 16:17</span>
+    </div>
+    <h1 class="d-title">H3 모델 음악 참조 성능 비교 분석 및 워크플로우 공유</h1>
+    <p class="d-orig">원제 · Comparing H3 models with music reference</p>
+    <p class="body-text">커뮤니티를 통해 H3 모델들의 음악 참조 워크플로우 비교 결과가 공유되었다. ref2va는 비디오와 음악의 싱크 조절 능력이 뛰어나지만, 동작 품질 면에서는 fl2va에 비해 다소 떨어진다는 평가다.</p><ul class="bul"><li>int8 4단계 워크플로우 비교</li><li>ref2va의 우수한 비디오 싱크 능력</li><li>fl2va 대비 떨어지는 동작 품질</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1vxsq13/comparing_h3_models_with_music_reference" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 1건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1vy855b/made_a_music_video_using_local_h3_for_a_suno_song" target="_blank" rel="noopener">Made a music video using local H3 for a Suno song<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div><div class="detail" id="d-75979cc45734">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">12/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#E89B72"></i>산업·규제
+      <span class="st" title="중요도">●○○</span>
+      <span>TechCrunch AI · 미디어</span>
+      <span>08.26 04:03</span>
+    </div>
+    <h1 class="d-title">Stability AI, 7,600만 달러 규모 신규 투자 유치 성공</h1>
+    <p class="d-orig">원제 · Stability AI, maker of image generator Stable Diffusion, raises $76 million in fresh funding</p>
+    <p class="body-text">Stable Diffusion 개발사인 Stability AI가 7,600만 달러의 신규 자금을 조달했다. 이번 투자를 포함해 회사의 누적 투자 유치 금액은 총 2억 3,200만 달러에 달한다.</p><ul class="bul"><li>7,600만 달러 신규 자금 조달</li><li>누적 투자금 2억 3,200만 달러</li><li>Stable Diffusion 개발사 소식</li></ul>
+    <a class="go" href="https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding" target="_blank" rel="noopener">원문 열기 · techcrunch.com ↗</a>
+    
+  </div>
+</div>
+
+
+<script>
+(function(){
+  var body = document.body;
+  var BASE = body.dataset.base || '';       // 지난 브리핑 폴더 안에서는 '../'
+  var TODAY = body.dataset.date || '';
+
+  // 색인 파일은 필요할 때 한 번만 받아서 들고 있는다.
+  // 첫 화면을 여는 속도에 영향을 주지 않으려고 미리 받지 않는다.
+  var cache = {};
+  function load(name){
+    // 시안이나 오프라인 미리보기에서는 색인을 페이지 안에 직접 넣어 쓴다.
+    // 실제 사이트에는 이 값이 없고 아래 fetch로 간다.
+    if(window.__IDX__ && window.__IDX__[name]){ return Promise.resolve(window.__IDX__[name]); }
+    if(cache[name]){ return cache[name]; }
+    cache[name] = fetch(BASE + name + '.json')
+      .then(function(r){ return r.ok ? r.json() : []; })
+      .catch(function(){ return []; });
+    return cache[name];
+  }
+
+  function esc(t){
+    return String(t).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+  function linkTo(date, uid){
+    var page = (date === TODAY && !BASE) ? '' : BASE + 'archive/' + date + '.html';
+    return page + '#i-' + uid;
+  }
+
+  /* ---------------- 화면 전환 ---------------- */
+  function setView(v){
+    document.querySelectorAll('[data-view]').forEach(function(sec){
+      sec.hidden = (sec.dataset.view !== v);
+    });
+    document.querySelectorAll('.tabs button').forEach(function(b){
+      b.setAttribute('aria-selected', String(b.dataset.go === v));
+    });
+    if(v === 'models'){ renderModels(); }
+  }
+  function closeSheets(){
+    document.querySelectorAll('.sheet[data-open]').forEach(function(x){
+      x.removeAttribute('data-open');
+    });
+    body.removeAttribute('data-detail');
+  }
+  function openSheet(el){
+    closeSheets();
+    if(!el){ return; }
+    el.setAttribute('data-open','');
+    body.setAttribute('data-detail','');
+    el.scrollTop = 0;
+  }
+  function goBack(){
+    if(history.length > 1){ history.back(); } else { location.hash = ''; }
+  }
+
+  /* ---------------- 검색 ---------------- */
+  var hits = null, qInput = null, qNote = null, results = null, timer = null;
+
+  function tokens(q){
+    return q.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
+  }
+  // 검색어를 정규식으로 만들지 않는다. 모델 이름에는 .+-() 같은 기호가 흔해서
+  // (FLUX.2, Gen-5, fal.ai) 이스케이프를 한 번만 틀려도 검색 전체가 죽는다.
+  // 그냥 소문자로 위치를 찾아가며 잘라 붙인다.
+  function hl(text, toks){
+    var src = String(text), low = src.toLowerCase(), out = '', i = 0;
+    while(i < src.length){
+      var at = -1, len = 0;
+      for(var k = 0; k < toks.length; k++){
+        var j = low.indexOf(toks[k], i);
+        if(j !== -1 && (at === -1 || j < at)){ at = j; len = toks[k].length; }
+      }
+      if(at === -1){ out += esc(src.slice(i)); break; }
+      out += esc(src.slice(i, at)) + '<mark>' + esc(src.slice(at, at + len)) + '</mark>';
+      i = at + len;
+    }
+    return out;
+  }
+
+  function hideResults(){ results.hidden = true; }
+
+  function runSearch(){
+    var q = qInput.value.trim();
+    if(q.length < 2){
+      hits.innerHTML = '';
+      if(q.length === 0){ hideResults(); return; }
+      results.hidden = false;
+      qNote.textContent = '두 글자 이상 입력하세요.';
+      return;
+    }
+    results.hidden = false;
+    load('search-index').then(function(rows){
+      if(rows === null){ qNote.textContent = OFFLINE; hits.innerHTML = ''; return; }
+      var toks = tokens(q);
+      var found = rows.filter(function(r){
+        var hay = (r.t + ' ' + r.o + ' ' + r.s + ' ' + r.src).toLowerCase();
+        return toks.every(function(t){ return hay.indexOf(t) !== -1; });
+      });
+      qNote.textContent = found.length
+        ? found.length + '건 (' + rows.length + '건 중)'
+        : '찾은 것이 없습니다. 영문 모델명으로도 찾아보세요.';
+      hits.innerHTML = found.slice(0, 80).map(function(r){
+        return '<a class="hit" href="' + linkTo(r.d, r.u) + '">'
+          + '<span class="hm"><span>' + r.d + '</span><span>' + esc(r.src) + '</span></span>'
+          + '<span class="ht">' + hl(r.t, toks) + '</span>'
+          + '<span class="hs">' + hl(r.s, toks) + '</span></a>';
+      }).join('');
+    });
+  }
+
+  /* ---------------- 달력 ---------------- */
+  var calMonth = null, calPop = null, calBtn = null;
+  function ym(d){ return d.slice(0,7); }
+  function toggleCal(force){
+    var show = (force === undefined) ? calPop.hidden : force;
+    calPop.hidden = !show;
+    calBtn.setAttribute('aria-expanded', String(show));
+    if(show){ load('dates').then(renderCal); }
+  }
+  function renderCal(dates){
+    if(dates === null){
+      calPop.querySelector('.cal-note').textContent = OFFLINE;
+      return [];
+    }
+    var have = {};
+    dates.forEach(function(d){ have[d] = true; });
+    if(!calMonth){ calMonth = dates.length ? ym(dates[0]) : TODAY.slice(0,7); }
+    var y = parseInt(calMonth.slice(0,4), 10), m = parseInt(calMonth.slice(5,7), 10);
+    var first = new Date(Date.UTC(y, m - 1, 1));
+    var days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    var lead = first.getUTCDay();
+
+    var cells = ['일','월','화','수','목','금','토'].map(function(d){
+      return '<span class="dow">' + d + '</span>';
+    });
+    for(var i = 0; i < lead; i++){ cells.push('<span class="pad">.</span>'); }
+    for(var day = 1; day <= days; day++){
+      var iso = calMonth + '-' + String(day).padStart(2,'0');
+      if(have[iso]){
+        var href = (iso === TODAY && !BASE) ? '' : BASE + 'archive/' + iso + '.html';
+        cells.push('<a href="' + (href || '#') + '" class="' + (iso === TODAY ? 'now' : '')
+                   + '">' + day + '</a>');
+      } else {
+        cells.push('<span>' + day + '</span>');
+      }
+    }
+    calPop.querySelector('.cal').innerHTML = cells.join('');
+    calPop.querySelector('.mo').textContent = y + '년 ' + m + '월';
+
+    var months = {};
+    dates.forEach(function(d){ months[ym(d)] = true; });
+    var keys = Object.keys(months).sort();
+    calPop.querySelector('.prev').disabled = (keys.indexOf(calMonth) <= 0);
+    calPop.querySelector('.next').disabled =
+      (keys.indexOf(calMonth) === keys.length - 1 || keys.length === 0);
+    calPop.querySelector('.cal-note').textContent =
+      '브리핑이 있는 날만 누를 수 있습니다 · 전체 ' + dates.length + '일';
+    return keys;
+  }
+  function moveMonth(step){
+    load('dates').then(function(dates){
+      if(dates === null){ return; }
+      var months = {};
+      dates.forEach(function(d){ months[ym(d)] = true; });
+      var keys = Object.keys(months).sort();
+      var i = keys.indexOf(calMonth);
+      if(i + step >= 0 && i + step < keys.length){
+        calMonth = keys[i + step];
+        renderCal(dates);
+      }
+    });
+  }
+
+  /* ---------------- 모델별 히스토리 ---------------- */
+  var modelsDrawn = false;
+  function renderModels(){
+    if(modelsDrawn){ return; }
+    modelsDrawn = true;
+    load('models').then(function(list){
+      var box = document.querySelector('#mlist');
+      if(list === null){
+        modelsDrawn = false;
+        box.innerHTML = '<p class="note">' + OFFLINE + '</p>';
+        return;
+      }
+      if(!list.length){
+        box.innerHTML = '<p class="note">아직 쌓인 기록이 없습니다. '
+          + '며칠 지나면 모델·회사별로 묶여 나타납니다.</p>';
+        return;
+      }
+      box.innerHTML = '<div class="mgrid">' + list.map(function(m){
+        return '<button class="mcard" data-model="' + esc(m.name) + '">'
+          + '<span class="top-row"><b>' + esc(m.name) + '</b>'
+          + (m.ver ? '<span class="ver">' + esc(m.ver) + '</span>' : '') + '</span>'
+          + '<span class="hd">' + esc(m.head || '') + '</span>'
+          + '<span class="meta">' + m.n + '건 · 최근 ' + m.last + '</span></button>';
+      }).join('') + '</div>';
+    });
+  }
+  function showModel(name){
+    load('models').then(function(list){
+      var m = (list || []).filter(function(x){ return x.name === name; })[0];
+      var box = document.querySelector('#mone');
+      if(!m){ location.hash = 'models'; return; }
+      box.innerHTML = '<div class="mhead"><button class="back" type="button">← 목록</button>'
+        + '<h2>' + esc(m.name) + '</h2><span class="n">' + m.n + '건</span></div>'
+        + '<div class="timeline">' + m.items.map(function(it){
+            return '<a class="tl" href="' + linkTo(it.d, it.u) + '">'
+              + '<span class="dt">' + it.d + '</span>'
+              + '<span><span class="tt">' + esc(it.t) + '</span>'
+              + '<span class="ts">' + esc(it.src) + '</span></span></a>';
+          }).join('') + '</div>';
+      document.querySelector('#mlist').hidden = true;
+      box.hidden = false;
+    });
+  }
+
+  /* ---------------- 주소 ↔ 화면 ---------------- */
+  function route(){
+    var h = decodeURIComponent(location.hash.replace(/^#/, ''));
+
+    if(h.indexOf('i-') === 0){ openSheet(document.getElementById('d-' + h.slice(2))); return; }
+    closeSheets();
+    if(h.indexOf('m-') === 0){ setView('models'); showModel(h.slice(2)); return; }
+    document.querySelector('#mone').hidden = true;
+    document.querySelector('#mlist').hidden = false;
+    setView(h === 'rank' ? 'rank' : (h === 'models' ? 'models' : 'today'));
+  }
+
+  /* ---------------- 클릭 한 곳에서 처리 ---------------- */
+  document.addEventListener('click', function(ev){
+    var t = ev.target;
+
+    var mc = t.closest('.mcard');
+    if(mc){ location.hash = 'm-' + encodeURIComponent(mc.dataset.model); return; }
+
+    if(t.closest('.hit')){ hideResults(); return; }   // 링크는 그대로 따라간다
+
+    var el = t.closest('[data-uid]');
+    if(el){ location.hash = 'i-' + el.dataset.uid; return; }
+
+    var tab = t.closest('.tabs button');
+    if(tab){ location.hash = tab.dataset.go === 'today' ? '' : tab.dataset.go; return; }
+
+    if(t.closest('.calbtn')){ toggleCal(); return; }
+    if(t.closest('#calpop .prev')){ moveMonth(-1); return; }
+    if(t.closest('#calpop .next')){ moveMonth(1); return; }
+
+    if(t.closest('.back')){ goBack(); return; }
+
+    // 팝오버·결과 패널 바깥을 누르면 닫는다
+    if(!t.closest('#calpop') && !t.closest('.calbtn')){ toggleCal(false); }
+    if(!t.closest('#results') && !t.closest('#q')){ hideResults(); }
+
+    var bd = t.closest('.boards button');
+    if(bd){
+      document.querySelectorAll('.boards button').forEach(function(b){
+        b.setAttribute('aria-selected', String(b === bd));
+      });
+      document.querySelectorAll('.board').forEach(function(sec){
+        sec.toggleAttribute('data-open', sec.dataset.board === bd.dataset.board);
+      });
+      return;
+    }
+
+    if(t.closest('#report-toggle')){
+      document.getElementById('report').toggleAttribute('data-open');
+    }
+  });
+
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      if(!calPop.hidden){ toggleCal(false); return; }
+      if(!results.hidden){ hideResults(); qInput.blur(); return; }
+      if(body.hasAttribute('data-detail')){ goBack(); }
+      return;
+    }
+    // 어느 화면에서든 / 를 누르면 검색창으로 간다
+    if(ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)){
+      ev.preventDefault();
+      qInput.focus();
+      qInput.select();
+    }
+  });
+
+  qInput = document.getElementById('q');
+  qNote = document.querySelector('#results .q-note');
+  hits = document.querySelector('#results .hits');
+  results = document.getElementById('results');
+  calPop = document.getElementById('calpop');
+  calBtn = document.querySelector('.calbtn');
+  qInput.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(runSearch, 140);
+  });
+  qInput.addEventListener('focus', function(){
+    if(qInput.value.trim().length >= 2){ runSearch(); }
+  });
+
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>

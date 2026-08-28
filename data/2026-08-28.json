@@ -1,6 +1,6 @@
 {
   "date_kst": "2026-08-28",
-  "generated_at": "2026-08-28T15:10:33.745167+09:00",
+  "generated_at": "2026-08-28T18:32:51.277735+09:00",
   "window_start": "2026-08-27T07:00:00+09:00",
   "window_end": "2026-08-28T07:00:00+09:00",
   "headlines": [
@@ -29,7 +29,7 @@
         "인체 구조 오류 복구 및 디테일 추가 기능 지원"
       ],
       "category": "model_release",
-      "score": 1.0735,
+      "score": 0.993,
       "cluster_id": 4,
       "related": [],
       "drop_reason": "",
@@ -61,7 +61,7 @@
         "MiniMax Music 3 및 FireRed TTS3 등 모델 추가"
       ],
       "category": "benchmark",
-      "score": 0.7379,
+      "score": 0.6826,
       "cluster_id": 5,
       "related": [],
       "drop_reason": "",
@@ -91,7 +91,7 @@
         "MiniMax bf16 대 가지치기·int8 버전 품질 비교"
       ],
       "category": "benchmark",
-      "score": 0.7226,
+      "score": 0.6685,
       "cluster_id": 6,
       "related": [],
       "drop_reason": "",
@@ -124,7 +124,7 @@
         "선호도 평가서 품질·프롬프트 이해도 1위 달성"
       ],
       "category": "minor",
-      "score": 0.5845,
+      "score": 0.5407,
       "cluster_id": 3,
       "related": [
         {
@@ -156,12 +156,6 @@
           "url": "https://reddit.com/r/StableDiffusion/comments/1vzsx9o/would_this_manner_of_character_sheet_work_with",
           "source": "r/StableDiffusion",
           "tier": "T2"
-        },
-        {
-          "title": "Minimax H3 Max?",
-          "url": "https://reddit.com/r/StableDiffusion/comments/1vzp5vc/minimax_h3_max",
-          "source": "r/StableDiffusion",
-          "tier": "T2"
         }
       ],
       "drop_reason": "",
@@ -183,8 +177,8 @@
       "signal": "normal",
       "ad_filter": "normal",
       "extra": {
-        "points": 154,
-        "comments": 26,
+        "points": 177,
+        "comments": 35,
         "hn_id": "49471407"
       },
       "title_ko": "Rust 기반 오픈소스 모델 게이트웨이 공개",
@@ -195,7 +189,7 @@
         "1~2ms 미만의 낮은 요청 지연 시간 제공"
       ],
       "category": "opensource",
-      "score": 0.4713,
+      "score": 0.436,
       "cluster_id": 0,
       "related": [],
       "drop_reason": "",
@@ -230,7 +224,7 @@
         "인체 구조 오류 복구 및 디테일 추가 기능 지원"
       ],
       "category": "model_release",
-      "score": 1.0735,
+      "score": 0.993,
       "cluster_id": 4,
       "related": [],
       "drop_reason": "",
@@ -262,7 +256,7 @@
         "MiniMax Music 3 및 FireRed TTS3 등 모델 추가"
       ],
       "category": "benchmark",
-      "score": 0.7379,
+      "score": 0.6826,
       "cluster_id": 5,
       "related": [],
       "drop_reason": "",
@@ -292,7 +286,7 @@
         "MiniMax bf16 대 가지치기·int8 버전 품질 비교"
       ],
       "category": "benchmark",
-      "score": 0.7226,
+      "score": 0.6685,
       "cluster_id": 6,
       "related": [],
       "drop_reason": "",
@@ -325,7 +319,7 @@
         "선호도 평가서 품질·프롬프트 이해도 1위 달성"
       ],
       "category": "minor",
-      "score": 0.5845,
+      "score": 0.5407,
       "cluster_id": 3,
       "related": [
         {
@@ -357,12 +351,6 @@
           "url": "https://reddit.com/r/StableDiffusion/comments/1vzsx9o/would_this_manner_of_character_sheet_work_with",
           "source": "r/StableDiffusion",
           "tier": "T2"
-        },
-        {
-          "title": "Minimax H3 Max?",
-          "url": "https://reddit.com/r/StableDiffusion/comments/1vzp5vc/minimax_h3_max",
-          "source": "r/StableDiffusion",
-          "tier": "T2"
         }
       ],
       "drop_reason": "",
@@ -384,8 +372,8 @@
       "signal": "normal",
       "ad_filter": "normal",
       "extra": {
-        "points": 154,
-        "comments": 26,
+        "points": 177,
+        "comments": 35,
         "hn_id": "49471407"
       },
       "title_ko": "Rust 기반 오픈소스 모델 게이트웨이 공개",
@@ -396,7 +384,7 @@
         "1~2ms 미만의 낮은 요청 지연 시간 제공"
       ],
       "category": "opensource",
-      "score": 0.4713,
+      "score": 0.436,
       "cluster_id": 0,
       "related": [],
       "drop_reason": "",
@@ -429,83 +417,12 @@
         "위치 피셀 이동 방지로 자연스러운 비디오 전환"
       ],
       "category": "minor",
-      "score": 0.2714,
+      "score": 0.2511,
       "cluster_id": 8,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-27T20:16:42+09:00",
       "uid": "97e0f74c0264",
-      "domain": "reddit.com"
-    },
-    {
-      "title": "lightx2v/Minimax-h3-Turbo · 8-step 768p V1.0 LoRA released",
-      "url": "https://reddit.com/r/StableDiffusion/comments/1vzmcby/lightx2vminimaxh3turbo_8step_768p_v10_lora",
-      "source_id": "reddit-stablediffusion",
-      "source_name": "r/StableDiffusion",
-      "tier": "T2",
-      "topics": [
-        "video",
-        "tools"
-      ],
-      "published": "2026-08-27T06:43:59+00:00",
-      "summary_raw": "",
-      "signal": "normal",
-      "ad_filter": "normal",
-      "extra": {
-        "pre_filtered": true
-      },
-      "title_ko": "Minimax-h3-Turbo 8스텝 768p LoRA 출시",
-      "summary_ko": "Minimax-h3-Turbo 8스텝 768p V1.0 LoRA가 정식 출시되었다. 이번 배포를 통해 768p 해상도 비디오를 8스텝으로 생성할 수 있게 되었다.",
-      "bullets": [
-        "Minimax-h3-Turbo V1.0 LoRA 정식 출시",
-        "8스텝 설정으로 768p 해상도 비디오 생성"
-      ],
-      "category": "minor",
-      "score": 0.2639,
-      "cluster_id": 2,
-      "related": [
-        {
-          "title": "Krea2 Turbo Distill 4 step LoRA (NOT a New Checkpoint... YET to share / still mid training) ... but fun 2-step extreme experiment with surprising results... (OUT OF TRAINING SPEC, which is 4 steps!)",
-          "url": "https://reddit.com/r/StableDiffusion/comments/1w05eyt/krea2_turbo_distill_4_step_lora_not_a_new",
-          "source": "r/StableDiffusion",
-          "tier": "T2"
-        }
-      ],
-      "drop_reason": "",
-      "published_kst": "2026-08-27T15:43:59+09:00",
-      "uid": "4a741fcab753",
-      "domain": "reddit.com"
-    },
-    {
-      "title": "Is anyone else getting tired of the MiniMax clips?",
-      "url": "https://reddit.com/r/StableDiffusion/comments/1vzp1hw/is_anyone_else_getting_tired_of_the_minimax_clips",
-      "source_id": "reddit-stablediffusion",
-      "source_name": "r/StableDiffusion",
-      "tier": "T2",
-      "topics": [
-        "video",
-        "tools"
-      ],
-      "published": "2026-08-27T09:24:36+00:00",
-      "summary_raw": "I’m genuinely impressed by what MiniMax H3 can do, and I understand why people are excited to play with recognizable characters, shows, and styles. But since its release, it feels like this sub has been flooded with very short clips that are mostly variations on “what if X was in Y?” or recreations of existing TV shows. Maybe I’m in the minority, but one of the main reasons I come to r/StableDiffusion is to learn what’s happening in local image/video/audio generation: new models, workflows, prompting techniques, ComfyUI setups, comparisons, limitations, weird discoveries, what actually works, ",
-      "signal": "normal",
-      "ad_filter": "normal",
-      "extra": {
-        "pre_filtered": true
-      },
-      "title_ko": "MiniMax 관련 단편 클립 범람에 대한 유저 피드백",
-      "summary_ko": "MiniMax H3 출시 이후 단순한 스타일 패러디나 TV 프로그램 재현 중심의 짧은 클립 생성이 커뮤니티에 지나치게 늘어났다는 지적이 나왔다. 단편 클립보다 로컬 영상·이미지 생성 모델, ComfyUI 워크플로우, 프롬프트 기법 등의 실질적 정보 공유를 원한다는 의견이 제시되었다.",
-      "bullets": [
-        "MiniMax H3 관련 단순 패러디 영상 급증",
-        "ComfyUI 워크플로우 등 실질 정보 공유 요구"
-      ],
-      "category": "minor",
-      "score": 0.2599,
-      "cluster_id": 9,
-      "related": [],
-      "drop_reason": "",
-      "published_kst": "2026-08-27T18:24:36+09:00",
-      "uid": "35a4c4bed158",
       "domain": "reddit.com"
     },
     {
@@ -522,7 +439,7 @@
       "signal": "normal",
       "ad_filter": "normal",
       "extra": {
-        "points": 35,
+        "points": 36,
         "comments": 11,
         "hn_id": "49458502"
       },
@@ -534,13 +451,46 @@
         "고성능 영상 생성 기술 개선 기대"
       ],
       "category": "minor",
-      "score": 0.2324,
-      "cluster_id": 11,
+      "score": 0.2137,
+      "cluster_id": 10,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-27T10:53:34+09:00",
       "uid": "64915dd6d3f0",
       "domain": "linum.ai"
+    },
+    {
+      "title": "Krea2 Turbo Distill 4 step LoRA (NOT a New Checkpoint... YET to share / still mid training) ... but fun 2-step extreme experiment with surprising results... (OUT OF TRAINING SPEC, which is 4 steps!)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1w05eyt/krea2_turbo_distill_4_step_lora_not_a_new",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-08-27T20:25:15+00:00",
+      "summary_raw": "I am sure for those of you who have been following my 4 step Krea 2 Turbo LoRA, you would know from my previous posts the work of progress I have been sharing with you ( if not see here - https://www.reddit.com/r/StableDiffusion/comments/1vxtizs/krea2_turbo_distill_4_step_lora_new_checkpoint/ ) This post is not an announcement of a new release/checkpoint ( 26K is still the latest released checkpoint ). I'm midway through training with a tweaked recipe and a new element in the flow: the Progressive Distillation I've used since the beginning is now paired with a GAN critic in the latent space — ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Krea 2 Turbo 4스텝 LoRA의 2스텝 실험 결과 공개",
+      "summary_ko": "Krea 2 Turbo 4스텝 LoRA의 학습 중간 과정에서 진행된 2스텝 극단적 실험 결과가 공유되었습니다. 점진적 증류 기법에 잠재 공간 GAN 비평가를 결합한 새로운 레시피로 학습을 진행 중입니다. 이번 게시물은 신규 체크포인트 배포 소식이 아니며 기존 26K가 최신 버전입니다.",
+      "bullets": [
+        "Krea 2 Turbo 4스텝 LoRA 진행 상황 공유",
+        "잠재 공간 GAN 비평가를 적용한 새 레시피 사용",
+        "2스텝 실험에서 놀라운 결과 확인"
+      ],
+      "category": "minor",
+      "score": 0.124,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-08-28T05:25:15+09:00",
+      "uid": "5bad63f22342",
+      "domain": "reddit.com"
     },
     {
       "title": "Pixaroma got some many useful nodes",
@@ -566,7 +516,7 @@
         "토글 및 스위치 설정 번거로움 해소"
       ],
       "category": "minor",
-      "score": 0.1103,
+      "score": 0.1021,
       "cluster_id": 7,
       "related": [],
       "drop_reason": "",
@@ -596,8 +546,8 @@
         "클라우드 사업 영역 재진출 도모"
       ],
       "category": "opensource",
-      "score": 0.1083,
-      "cluster_id": 10,
+      "score": 0.1002,
+      "cluster_id": 9,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-27T15:32:51+09:00",
@@ -626,7 +576,7 @@
         "AI 학습 데이터의 윤리성 논란 제기"
       ],
       "category": "industry",
-      "score": 0.0976,
+      "score": 0.0903,
       "cluster_id": 1,
       "related": [],
       "drop_reason": "",
@@ -636,9 +586,8 @@
     }
   ],
   "tldr": [
-    "Wan 2.1 기반 영상 캐릭터 세부 묘사 개선 워크플로우가 공개되었습니다.",
-    "audio.cpp 0.7이 아레나 UI와 신규 오디오 모델을 추가해 출시되었습니다.",
-    "MiniMax bf16과 하위 버전 간의 품질 차이에 대한 비교 논의가 진행 중입니다."
+    "엔비디아의 빅딜과 xAI의 사법 리스크라는 대형 악재 속에서도 커뮤니티의 오픈소스 생태계 확장은 거침없이 이어지고 있습니다.",
+    "특히 비디오 생성 모델의 세부 제어 기술과 추론 속도 최적화를 향한 실용적 시도들이 대거 쏟아졌습니다."
   ],
   "dropped": [
     {
@@ -831,16 +780,16 @@
       "reason": "주제 무관"
     },
     {
-      "title": "Plaud’s new earphones come with an eSIM-enabled case for talking to AI agents",
-      "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents",
-      "source": "TechCrunch AI",
+      "title": "Adobe is adding more AI to Photoshop",
+      "url": "https://theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup",
+      "source": "The Verge AI",
       "tier": "T3",
       "reason": "주제 무관"
     },
     {
-      "title": "Adobe is adding more AI to Photoshop",
-      "url": "https://theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup",
-      "source": "The Verge AI",
+      "title": "Plaud’s new earphones come with an eSIM-enabled case for talking to AI agents",
+      "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents",
+      "source": "TechCrunch AI",
       "tier": "T3",
       "reason": "주제 무관"
     },
@@ -1008,7 +957,7 @@
       "kept": 0,
       "ok": false,
       "error": "HTTP 404 · 404",
-      "elapsed_ms": 157
+      "elapsed_ms": 310
     },
     {
       "source_id": "bfl-blog",
@@ -1018,7 +967,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 437
+      "elapsed_ms": 347
     },
     {
       "source_id": "bytedance-seed",
@@ -1028,7 +977,7 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 1266
+      "elapsed_ms": 918
     },
     {
       "source_id": "deepmind-blog",
@@ -1038,7 +987,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 622
+      "elapsed_ms": 408
     },
     {
       "source_id": "google-research-blog",
@@ -1048,7 +997,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 586
+      "elapsed_ms": 294
     },
     {
       "source_id": "hunyuan-video-releases",
@@ -1058,7 +1007,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 173
+      "elapsed_ms": 312
     },
     {
       "source_id": "kling-updates",
@@ -1068,7 +1017,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 673
+      "elapsed_ms": 1167
     },
     {
       "source_id": "lightricks-ltx-releases",
@@ -1078,17 +1027,17 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 326
+      "elapsed_ms": 309
     },
     {
       "source_id": "luma-news",
       "source_name": "Luma AI (Ray / Dream Machine)",
       "tier": "T0",
-      "collected": 10,
+      "collected": 0,
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 1099
+      "elapsed_ms": 930
     },
     {
       "source_id": "midjourney-updates",
@@ -1097,8 +1046,8 @@
       "collected": 0,
       "kept": 0,
       "ok": false,
-      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-mtUF8szBobgQq81HShGYbc&#39; &#39;unsafe-eval&#39; https://cha",
-      "elapsed_ms": 98
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-T6JeMAwERvqiDKvPP4Dcze&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 316
     },
     {
       "source_id": "minimax-hailuo",
@@ -1108,17 +1057,17 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 289
+      "elapsed_ms": 372
     },
     {
       "source_id": "openai-news",
       "source_name": "OpenAI News",
       "tier": "T0",
-      "collected": 1155,
+      "collected": 1156,
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 541
+      "elapsed_ms": 920
     },
     {
       "source_id": "pika-blog",
@@ -1128,7 +1077,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 624
+      "elapsed_ms": 577
     },
     {
       "source_id": "qwen-blog",
@@ -1138,7 +1087,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 54
+      "elapsed_ms": 132
     },
     {
       "source_id": "runway-news",
@@ -1148,7 +1097,7 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 331
+      "elapsed_ms": 254
     },
     {
       "source_id": "stability-news",
@@ -1158,7 +1107,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 861
+      "elapsed_ms": 686
     },
     {
       "source_id": "wan-releases",
@@ -1168,7 +1117,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 159
+      "elapsed_ms": 179
     },
     {
       "source_id": "arxiv-cv",
@@ -1178,7 +1127,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 338
+      "elapsed_ms": 268
     },
     {
       "source_id": "banodoco",
@@ -1188,17 +1137,17 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 330
+      "elapsed_ms": 492
     },
     {
       "source_id": "civitai-models",
       "source_name": "Civitai (신규 모델·LoRA)",
       "tier": "T1",
-      "collected": 39,
+      "collected": 40,
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 476
+      "elapsed_ms": 389
     },
     {
       "source_id": "comfyui-blog",
@@ -1208,7 +1157,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 419
+      "elapsed_ms": 542
     },
     {
       "source_id": "comfyui-releases",
@@ -1218,7 +1167,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 582
+      "elapsed_ms": 890
     },
     {
       "source_id": "fal-blog",
@@ -1228,7 +1177,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 323
+      "elapsed_ms": 357
     },
     {
       "source_id": "huggingface-blog",
@@ -1238,7 +1187,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 292
+      "elapsed_ms": 246
     },
     {
       "source_id": "huggingface-papers",
@@ -1248,7 +1197,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 305
+      "elapsed_ms": 273
     },
     {
       "source_id": "replicate-blog",
@@ -1258,17 +1207,17 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 211
+      "elapsed_ms": 384
     },
     {
       "source_id": "hn-visual-ai",
       "source_name": "Hacker News (키워드 필터)",
       "tier": "T2",
-      "collected": 260,
+      "collected": 259,
       "kept": 2,
       "ok": true,
       "error": "",
-      "elapsed_ms": 2486
+      "elapsed_ms": 2552
     },
     {
       "source_id": "reddit-aivideo",
@@ -1278,7 +1227,7 @@
       "kept": 0,
       "ok": false,
       "error": "레딧 차단(데이터센터 IP) — 건너뜀",
-      "elapsed_ms": 71
+      "elapsed_ms": 93
     },
     {
       "source_id": "reddit-comfyui",
@@ -1288,17 +1237,17 @@
       "kept": 0,
       "ok": false,
       "error": "레딧 차단(데이터센터 IP) — 건너뜀",
-      "elapsed_ms": 45
+      "elapsed_ms": 134
     },
     {
       "source_id": "reddit-stablediffusion",
       "source_name": "r/StableDiffusion",
       "tier": "T2",
       "collected": 25,
-      "kept": 7,
+      "kept": 6,
       "ok": true,
       "error": "",
-      "elapsed_ms": 456
+      "elapsed_ms": 534
     },
     {
       "source_id": "arstechnica-ai",
@@ -1308,7 +1257,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 289
+      "elapsed_ms": 380
     },
     {
       "source_id": "techcrunch-ai",
@@ -1318,7 +1267,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 120
+      "elapsed_ms": 182
     },
     {
       "source_id": "theverge-ai",
@@ -1328,7 +1277,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 169
+      "elapsed_ms": 105
     },
     {
       "source_id": "venturebeat-ai",
@@ -1338,7 +1287,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 237
+      "elapsed_ms": 304
     },
     {
       "source_id": "yt-curious-refuge",
@@ -1384,11 +1333,11 @@
       "source_id": "yt-nerdy-rodent",
       "source_name": "Nerdy Rodent",
       "tier": "T4",
-      "collected": 0,
+      "collected": 15,
       "kept": 0,
-      "ok": false,
-      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
-      "elapsed_ms": 236
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 313
     },
     {
       "source_id": "yt-olivio-sarikas",
@@ -1432,20 +1381,28 @@
     }
   ],
   "stats": {
-    "collected": 2867,
-    "in_window": 70,
-    "screened": 19,
-    "clustered": 12,
-    "merged": 7,
+    "collected": 2873,
+    "in_window": 67,
+    "screened": 16,
+    "clustered": 11,
+    "merged": 5,
     "sources_total": 43,
-    "sources_ok": 27,
+    "sources_ok": 28,
     "translate_engine": "gemini",
-    "translate_status": "번역 12/12건 · 캐시 0건",
-    "tldr_status": "3줄",
-    "translated": 12,
+    "translate_status": "번역 1/1건 · 캐시 10건",
+    "tldr_status": "2줄",
+    "translated": 11,
     "dropped_reasons": {
       "주제 무관": 38,
       "논문 · 코드 미공개": 13
     }
+  },
+  "rankings": {
+    "fetched_at": "2026-08-28T09:33:31.092493+00:00",
+    "attribution": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/",
+    "boards": [],
+    "tier": "",
+    "error": "AA_API_KEY 없음"
   }
 }
