@@ -1,6 +1,6 @@
 {
   "date_kst": "2026-08-28",
-  "generated_at": "2026-08-28T18:32:51.277735+09:00",
+  "generated_at": "2026-08-28T22:12:06.650608+09:00",
   "window_start": "2026-08-27T07:00:00+09:00",
   "window_end": "2026-08-28T07:00:00+09:00",
   "headlines": [
@@ -29,7 +29,7 @@
         "인체 구조 오류 복구 및 디테일 추가 기능 지원"
       ],
       "category": "model_release",
-      "score": 0.993,
+      "score": 0.9126,
       "cluster_id": 4,
       "related": [],
       "drop_reason": "",
@@ -61,7 +61,7 @@
         "MiniMax Music 3 및 FireRed TTS3 등 모델 추가"
       ],
       "category": "benchmark",
-      "score": 0.6826,
+      "score": 0.6273,
       "cluster_id": 5,
       "related": [],
       "drop_reason": "",
@@ -91,7 +91,7 @@
         "MiniMax bf16 대 가지치기·int8 버전 품질 비교"
       ],
       "category": "benchmark",
-      "score": 0.6685,
+      "score": 0.6143,
       "cluster_id": 6,
       "related": [],
       "drop_reason": "",
@@ -124,7 +124,7 @@
         "선호도 평가서 품질·프롬프트 이해도 1위 달성"
       ],
       "category": "minor",
-      "score": 0.5407,
+      "score": 0.4685,
       "cluster_id": 3,
       "related": [
         {
@@ -150,12 +150,6 @@
           "url": "https://reddit.com/r/StableDiffusion/comments/1vzvcne/i_am_currently_testing_by_compiling_a_list_of",
           "source": "r/StableDiffusion",
           "tier": "T2"
-        },
-        {
-          "title": "Would this manner of character sheet work with MiniMax H3? What's the best way to craft character sheets for it?",
-          "url": "https://reddit.com/r/StableDiffusion/comments/1vzsx9o/would_this_manner_of_character_sheet_work_with",
-          "source": "r/StableDiffusion",
-          "tier": "T2"
         }
       ],
       "drop_reason": "",
@@ -177,8 +171,8 @@
       "signal": "normal",
       "ad_filter": "normal",
       "extra": {
-        "points": 177,
-        "comments": 35,
+        "points": 196,
+        "comments": 37,
         "hn_id": "49471407"
       },
       "title_ko": "Rust 기반 오픈소스 모델 게이트웨이 공개",
@@ -189,7 +183,7 @@
         "1~2ms 미만의 낮은 요청 지연 시간 제공"
       ],
       "category": "opensource",
-      "score": 0.436,
+      "score": 0.4007,
       "cluster_id": 0,
       "related": [],
       "drop_reason": "",
@@ -224,7 +218,7 @@
         "인체 구조 오류 복구 및 디테일 추가 기능 지원"
       ],
       "category": "model_release",
-      "score": 0.993,
+      "score": 0.9126,
       "cluster_id": 4,
       "related": [],
       "drop_reason": "",
@@ -256,7 +250,7 @@
         "MiniMax Music 3 및 FireRed TTS3 등 모델 추가"
       ],
       "category": "benchmark",
-      "score": 0.6826,
+      "score": 0.6273,
       "cluster_id": 5,
       "related": [],
       "drop_reason": "",
@@ -286,7 +280,7 @@
         "MiniMax bf16 대 가지치기·int8 버전 품질 비교"
       ],
       "category": "benchmark",
-      "score": 0.6685,
+      "score": 0.6143,
       "cluster_id": 6,
       "related": [],
       "drop_reason": "",
@@ -319,7 +313,7 @@
         "선호도 평가서 품질·프롬프트 이해도 1위 달성"
       ],
       "category": "minor",
-      "score": 0.5407,
+      "score": 0.4685,
       "cluster_id": 3,
       "related": [
         {
@@ -345,12 +339,6 @@
           "url": "https://reddit.com/r/StableDiffusion/comments/1vzvcne/i_am_currently_testing_by_compiling_a_list_of",
           "source": "r/StableDiffusion",
           "tier": "T2"
-        },
-        {
-          "title": "Would this manner of character sheet work with MiniMax H3? What's the best way to craft character sheets for it?",
-          "url": "https://reddit.com/r/StableDiffusion/comments/1vzsx9o/would_this_manner_of_character_sheet_work_with",
-          "source": "r/StableDiffusion",
-          "tier": "T2"
         }
       ],
       "drop_reason": "",
@@ -372,8 +360,8 @@
       "signal": "normal",
       "ad_filter": "normal",
       "extra": {
-        "points": 177,
-        "comments": 35,
+        "points": 196,
+        "comments": 37,
         "hn_id": "49471407"
       },
       "title_ko": "Rust 기반 오픈소스 모델 게이트웨이 공개",
@@ -384,46 +372,13 @@
         "1~2ms 미만의 낮은 요청 지연 시간 제공"
       ],
       "category": "opensource",
-      "score": 0.436,
+      "score": 0.4007,
       "cluster_id": 0,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-28T06:18:35+09:00",
       "uid": "a1b02a6424f5",
       "domain": "github.com"
-    },
-    {
-      "title": "Seamless H3 video join",
-      "url": "https://reddit.com/r/StableDiffusion/comments/1vzr24d/seamless_h3_video_join",
-      "source_id": "reddit-stablediffusion",
-      "source_name": "r/StableDiffusion",
-      "tier": "T2",
-      "topics": [
-        "video",
-        "tools"
-      ],
-      "published": "2026-08-27T11:16:42+00:00",
-      "summary_raw": "I made a node to help seamlessly join MiniMax H3 generated videos (each video continues from a few seconds of the previous segment). If you use MiniMaxH3AddGuide with a video chunk to continue it, you might have noticed some flashes in the generated output. My node corrects the brightness/tone using the actual source video. It's much better to use MiniMaxH3AddGuide instead of relying solely on the prompt because it's more precise. In my experiments, without the guide adding node the starting video shifts down by a few dozen pixels so seamless transition becomes impossible. With a guide it's in",
-      "signal": "normal",
-      "ad_filter": "normal",
-      "extra": {
-        "pre_filtered": true
-      },
-      "title_ko": "MiniMax H3 비디오 연결 개선 커스텀 노드 개발",
-      "summary_ko": "MiniMax H3로 생성한 비디오 조각을 매끄럽게 연결해 주는 커스텀 노드가 제작되었다. MiniMaxH3AddGuide 사용 시 발생하는 프레임 깜빡임 현상을 원본 비디오 기반의 밝기 및 톤 보정으로 해결했다. 가이드 노드를 사용하면 비디오 시작 부분의 위치 피셀 이동을 막아 자연스러운 전환이 가능하다.",
-      "bullets": [
-        "MiniMax H3 생성 비디오 간 매끄러운 연결 지원",
-        "원본 비디오 기반 밝기 및 톤 보정 기능 제공",
-        "위치 피셀 이동 방지로 자연스러운 비디오 전환"
-      ],
-      "category": "minor",
-      "score": 0.2511,
-      "cluster_id": 8,
-      "related": [],
-      "drop_reason": "",
-      "published_kst": "2026-08-27T20:16:42+09:00",
-      "uid": "97e0f74c0264",
-      "domain": "reddit.com"
     },
     {
       "title": "Getting video models to learn better, faster",
@@ -451,8 +406,8 @@
         "고성능 영상 생성 기술 개선 기대"
       ],
       "category": "minor",
-      "score": 0.2137,
-      "cluster_id": 10,
+      "score": 0.1955,
+      "cluster_id": 8,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-27T10:53:34+09:00",
@@ -484,44 +439,12 @@
         "2스텝 실험에서 놀라운 결과 확인"
       ],
       "category": "minor",
-      "score": 0.124,
+      "score": 0.114,
       "cluster_id": 2,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-28T05:25:15+09:00",
       "uid": "5bad63f22342",
-      "domain": "reddit.com"
-    },
-    {
-      "title": "Pixaroma got some many useful nodes",
-      "url": "https://reddit.com/r/StableDiffusion/comments/1vzrwmf/pixaroma_got_some_many_useful_nodes",
-      "source_id": "reddit-stablediffusion",
-      "source_name": "r/StableDiffusion",
-      "tier": "T2",
-      "topics": [
-        "tools"
-      ],
-      "published": "2026-08-27T11:58:55+00:00",
-      "summary_raw": "here is the one I found out recently. &quot;fast group muter&quot; can do, but Pixaroma's &quot;group switch&quot; let you hide/show by selection groups. It is so much cleaner for the purpose of switching off certain function without doing toggle, if/else switch hassle to the setup. https://preview.redd.it/19m5giywpwlh1.png?width=1669&amp;format=png&amp;auto=webp&amp;s=a64dc0e536b60c676583dde8bc96fc7d0d6d8a51",
-      "signal": "normal",
-      "ad_filter": "normal",
-      "extra": {
-        "pre_filtered": true
-      },
-      "title_ko": "ComfyUI 커스텀 노드 Pixaroma 유용성 화제",
-      "summary_ko": "ComfyUI 사용자가 Pixaroma 패키지의 'group switch' 노드를 활용한 워크플로우 효율화 방법을 공유했습니다. 이 노드는 선택한 그룹을 숨기거나 표시할 수 있어 복잡한 스위치 설정 없이 특정 기능을 끄기에 편리합니다. 기존 방식보다 정리된 작업 환경을 제공합니다.",
-      "bullets": [
-        "Pixaroma의 group switch 노드 기능",
-        "그룹 선택을 통한 간편한 표시 제어",
-        "토글 및 스위치 설정 번거로움 해소"
-      ],
-      "category": "minor",
-      "score": 0.1021,
-      "cluster_id": 7,
-      "related": [],
-      "drop_reason": "",
-      "published_kst": "2026-08-27T20:58:55+09:00",
-      "uid": "3b245511156d",
       "domain": "reddit.com"
     },
     {
@@ -546,8 +469,8 @@
         "클라우드 사업 영역 재진출 도모"
       ],
       "category": "opensource",
-      "score": 0.1002,
-      "cluster_id": 9,
+      "score": 0.0921,
+      "cluster_id": 7,
       "related": [],
       "drop_reason": "",
       "published_kst": "2026-08-27T15:32:51+09:00",
@@ -576,7 +499,7 @@
         "AI 학습 데이터의 윤리성 논란 제기"
       ],
       "category": "industry",
-      "score": 0.0903,
+      "score": 0.083,
       "cluster_id": 1,
       "related": [],
       "drop_reason": "",
@@ -586,8 +509,8 @@
     }
   ],
   "tldr": [
-    "엔비디아의 빅딜과 xAI의 사법 리스크라는 대형 악재 속에서도 커뮤니티의 오픈소스 생태계 확장은 거침없이 이어지고 있습니다.",
-    "특히 비디오 생성 모델의 세부 제어 기술과 추론 속도 최적화를 향한 실용적 시도들이 대거 쏟아졌습니다."
+    "영상 생성의 미세 조정과 인프라 최적화 기술이 동시에 고도화되며 오픈소스 생태계의 실용성이 크게 향상되고 있습니다.",
+    "대형 인수합병과 법적 리스크가 공존하는 가운데 기술적 효율성을 극대화하려는 개발자들의 시도가 이어집니다."
   ],
   "dropped": [
     {
@@ -780,16 +703,16 @@
       "reason": "주제 무관"
     },
     {
-      "title": "Adobe is adding more AI to Photoshop",
-      "url": "https://theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup",
-      "source": "The Verge AI",
+      "title": "Plaud’s new earphones come with an eSIM-enabled case for talking to AI agents",
+      "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents",
+      "source": "TechCrunch AI",
       "tier": "T3",
       "reason": "주제 무관"
     },
     {
-      "title": "Plaud’s new earphones come with an eSIM-enabled case for talking to AI agents",
-      "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents",
-      "source": "TechCrunch AI",
+      "title": "Adobe is adding more AI to Photoshop",
+      "url": "https://theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup",
+      "source": "The Verge AI",
       "tier": "T3",
       "reason": "주제 무관"
     },
@@ -957,7 +880,7 @@
       "kept": 0,
       "ok": false,
       "error": "HTTP 404 · 404",
-      "elapsed_ms": 310
+      "elapsed_ms": 74
     },
     {
       "source_id": "bfl-blog",
@@ -967,7 +890,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 347
+      "elapsed_ms": 803
     },
     {
       "source_id": "bytedance-seed",
@@ -977,7 +900,7 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 918
+      "elapsed_ms": 465
     },
     {
       "source_id": "deepmind-blog",
@@ -987,7 +910,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 408
+      "elapsed_ms": 803
     },
     {
       "source_id": "google-research-blog",
@@ -997,7 +920,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 294
+      "elapsed_ms": 544
     },
     {
       "source_id": "hunyuan-video-releases",
@@ -1007,7 +930,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 312
+      "elapsed_ms": 344
     },
     {
       "source_id": "kling-updates",
@@ -1017,7 +940,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 1167
+      "elapsed_ms": 493
     },
     {
       "source_id": "lightricks-ltx-releases",
@@ -1027,7 +950,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 309
+      "elapsed_ms": 549
     },
     {
       "source_id": "luma-news",
@@ -1037,7 +960,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 930
+      "elapsed_ms": 1020
     },
     {
       "source_id": "midjourney-updates",
@@ -1046,8 +969,8 @@
       "collected": 0,
       "kept": 0,
       "ok": false,
-      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-T6JeMAwERvqiDKvPP4Dcze&#39; &#39;unsafe-eval&#39; https://cha",
-      "elapsed_ms": 316
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-PixmClUn1Yp5XceWaLmo8J&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 226
     },
     {
       "source_id": "minimax-hailuo",
@@ -1057,7 +980,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 372
+      "elapsed_ms": 1080
     },
     {
       "source_id": "openai-news",
@@ -1067,7 +990,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 920
+      "elapsed_ms": 345
     },
     {
       "source_id": "pika-blog",
@@ -1077,7 +1000,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 577
+      "elapsed_ms": 345
     },
     {
       "source_id": "qwen-blog",
@@ -1087,7 +1010,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 132
+      "elapsed_ms": 80
     },
     {
       "source_id": "runway-news",
@@ -1097,7 +1020,7 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 254
+      "elapsed_ms": 111
     },
     {
       "source_id": "stability-news",
@@ -1107,7 +1030,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 686
+      "elapsed_ms": 1826
     },
     {
       "source_id": "wan-releases",
@@ -1117,7 +1040,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 179
+      "elapsed_ms": 283
     },
     {
       "source_id": "arxiv-cv",
@@ -1127,7 +1050,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 268
+      "elapsed_ms": 757
     },
     {
       "source_id": "banodoco",
@@ -1137,7 +1060,7 @@
       "kept": 0,
       "ok": false,
       "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
-      "elapsed_ms": 492
+      "elapsed_ms": 857
     },
     {
       "source_id": "civitai-models",
@@ -1147,7 +1070,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 389
+      "elapsed_ms": 348
     },
     {
       "source_id": "comfyui-blog",
@@ -1157,7 +1080,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 542
+      "elapsed_ms": 791
     },
     {
       "source_id": "comfyui-releases",
@@ -1167,7 +1090,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 890
+      "elapsed_ms": 782
     },
     {
       "source_id": "fal-blog",
@@ -1177,7 +1100,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 357
+      "elapsed_ms": 173
     },
     {
       "source_id": "huggingface-blog",
@@ -1187,17 +1110,17 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 246
+      "elapsed_ms": 426
     },
     {
       "source_id": "huggingface-papers",
       "source_name": "Hugging Face Papers (Daily)",
       "tier": "T1",
-      "collected": 18,
+      "collected": 1,
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 273
+      "elapsed_ms": 424
     },
     {
       "source_id": "replicate-blog",
@@ -1207,17 +1130,17 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 384
+      "elapsed_ms": 1213
     },
     {
       "source_id": "hn-visual-ai",
       "source_name": "Hacker News (키워드 필터)",
       "tier": "T2",
-      "collected": 259,
+      "collected": 260,
       "kept": 2,
       "ok": true,
       "error": "",
-      "elapsed_ms": 2552
+      "elapsed_ms": 5438
     },
     {
       "source_id": "reddit-aivideo",
@@ -1227,7 +1150,7 @@
       "kept": 0,
       "ok": false,
       "error": "레딧 차단(데이터센터 IP) — 건너뜀",
-      "elapsed_ms": 93
+      "elapsed_ms": 273
     },
     {
       "source_id": "reddit-comfyui",
@@ -1237,17 +1160,17 @@
       "kept": 0,
       "ok": false,
       "error": "레딧 차단(데이터센터 IP) — 건너뜀",
-      "elapsed_ms": 134
+      "elapsed_ms": 286
     },
     {
       "source_id": "reddit-stablediffusion",
       "source_name": "r/StableDiffusion",
       "tier": "T2",
       "collected": 25,
-      "kept": 6,
+      "kept": 4,
       "ok": true,
       "error": "",
-      "elapsed_ms": 534
+      "elapsed_ms": 1019
     },
     {
       "source_id": "arstechnica-ai",
@@ -1257,7 +1180,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 380
+      "elapsed_ms": 1595
     },
     {
       "source_id": "techcrunch-ai",
@@ -1267,7 +1190,7 @@
       "kept": 1,
       "ok": true,
       "error": "",
-      "elapsed_ms": 182
+      "elapsed_ms": 270
     },
     {
       "source_id": "theverge-ai",
@@ -1277,7 +1200,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 105
+      "elapsed_ms": 194
     },
     {
       "source_id": "venturebeat-ai",
@@ -1287,7 +1210,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 304
+      "elapsed_ms": 279
     },
     {
       "source_id": "yt-curious-refuge",
@@ -1337,7 +1260,7 @@
       "kept": 0,
       "ok": true,
       "error": "",
-      "elapsed_ms": 313
+      "elapsed_ms": 292
     },
     {
       "source_id": "yt-olivio-sarikas",
@@ -1381,28 +1304,573 @@
     }
   ],
   "stats": {
-    "collected": 2873,
-    "in_window": 67,
-    "screened": 16,
-    "clustered": 11,
-    "merged": 5,
+    "collected": 2857,
+    "in_window": 64,
+    "screened": 13,
+    "clustered": 9,
+    "merged": 4,
     "sources_total": 43,
     "sources_ok": 28,
     "translate_engine": "gemini",
-    "translate_status": "번역 1/1건 · 캐시 10건",
+    "translate_status": "캐시 적중 9건 · 호출 0회",
     "tldr_status": "2줄",
-    "translated": 11,
+    "translated": 9,
     "dropped_reasons": {
       "주제 무관": 38,
       "논문 · 코드 미공개": 13
     }
   },
   "rankings": {
-    "fetched_at": "2026-08-28T09:33:31.092493+00:00",
+    "fetched_at": "2026-08-28T13:12:41.787886+00:00",
     "attribution": "Artificial Analysis",
     "source_url": "https://artificialanalysis.ai/",
-    "boards": [],
-    "tier": "",
-    "error": "AA_API_KEY 없음"
+    "boards": [
+      {
+        "id": "text-to-video",
+        "label": "텍스트 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1322.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1301.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.0",
+            "creator": "Alibaba-ATH",
+            "score": 1284.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1267.0,
+            "ci": 7,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.1",
+            "creator": "Alibaba-ATH",
+            "score": 1261.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Wan2.7-260612",
+            "creator": "Alibaba",
+            "score": 1242.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Kling 3.0 1080p (Pro)",
+            "creator": "KlingAI",
+            "score": 1238.0,
+            "ci": 7,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Kling 3.0 Omni 1080p (Pro)",
+            "creator": "KlingAI",
+            "score": 1228.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": null,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-to-video",
+        "label": "이미지 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1365.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1347.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1337.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "grok-imagine-video-1.5",
+            "creator": "SpaceXAI",
+            "score": 1328.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "grok-imagine-video",
+            "creator": "SpaceXAI",
+            "score": 1325.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "PixVerse V6",
+            "creator": "PixVerse",
+            "score": 1324.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.1",
+            "creator": "Alibaba-ATH",
+            "score": 1304.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.0",
+            "creator": "Alibaba-ATH",
+            "score": 1289.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": null,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "text-to-image",
+        "label": "텍스트 → 이미지",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1370.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6-Preview",
+            "creator": "Microsoft AI",
+            "score": 1351.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Reve 2.1",
+            "creator": "Reve",
+            "score": 1323.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+            "creator": "Google",
+            "score": 1322.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 1.5 (high)",
+            "creator": "OpenAI",
+            "score": 1308.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5",
+            "creator": "Microsoft AI",
+            "score": 1304.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+            "creator": "Google",
+            "score": 1298.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5-Pro",
+            "creator": "Microsoft AI",
+            "score": 1294.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": null,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-editing",
+        "label": "이미지 편집",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "MAI-Image-2.6-Preview",
+            "creator": "Microsoft AI",
+            "score": 1285.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5-Pro",
+            "creator": "Microsoft AI",
+            "score": 1271.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Reve 2.1",
+            "creator": "Reve",
+            "score": 1262.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1257.0,
+            "ci": 6,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5",
+            "creator": "Microsoft AI",
+            "score": 1256.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+            "creator": "Google",
+            "score": 1251.0,
+            "ci": 7,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 1.5 (high)",
+            "creator": "OpenAI",
+            "score": 1251.0,
+            "ci": 7,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Qwen-Image-3.0-Pro",
+            "creator": "Alibaba",
+            "score": 1249.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": null,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "language",
+        "label": "언어모델 (지능·가격)",
+        "kind": "language",
+        "rows": [
+          {
+            "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+            "creator": "Anthropic",
+            "score": 62.5,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 1,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Grok 4.6 (medium)",
+            "creator": "SpaceXAI",
+            "score": 59.0,
+            "ci": null,
+            "price": 6.0,
+            "price_unit": "$/1M",
+            "released": "2026-08-12",
+            "rank": 2,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GLM-5.3-Flash",
+            "creator": "Z AI",
+            "score": 57.5,
+            "ci": null,
+            "price": 0.5,
+            "price_unit": "$/1M",
+            "released": "2026-08-26",
+            "rank": 3,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Muse Spark 1.2 (xhigh)",
+            "creator": "Meta",
+            "score": 56.8,
+            "ci": null,
+            "price": 4.25,
+            "price_unit": "$/1M",
+            "released": "2026-08-05",
+            "rank": 4,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT-5.5 (xhigh)",
+            "creator": "OpenAI",
+            "score": 56.3,
+            "ci": null,
+            "price": 30.0,
+            "price_unit": "$/1M",
+            "released": "2026-04-23",
+            "rank": 5,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+            "creator": "Anthropic",
+            "score": 55.3,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-06-30",
+            "rank": 6,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+            "creator": "Anthropic",
+            "score": 52.5,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 7,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT-5.6 Luna (max)",
+            "creator": "OpenAI",
+            "score": 52.3,
+            "ci": null,
+            "price": 1.2,
+            "price_unit": "$/1M",
+            "released": "2026-07-09",
+            "rank": 8,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "Gemini 3.5 Flash (high)",
+            "creator": "Google",
+            "score": 52.0,
+            "ci": null,
+            "price": 9.0,
+            "price_unit": "$/1M",
+            "released": "2026-05-19",
+            "rank": 9,
+            "delta": null,
+            "is_new": false
+          },
+          {
+            "name": "GPT-5.6 Sol (low)",
+            "creator": "OpenAI",
+            "score": 50.7,
+            "ci": null,
+            "price": 20.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-09",
+            "rank": 10,
+            "delta": null,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "tier": "free",
+    "error": ""
   }
 }

@@ -8,6 +8,12 @@
 <meta name="robots" content="noindex, nofollow">
 <title>2026-08-26 · 비주얼 AI 브리핑</title>
 <link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI 브리핑">
+<link rel="alternate" type="application/rss+xml" title="비주얼 AI 브리핑" href="../feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -963,6 +969,12 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
 
   window.addEventListener('hashchange', route);
   route();
+
+  // 홈 화면에 추가했을 때 오프라인에서도 열리게 한다.
+  // file://로 열었을 때는 등록이 안 되므로 조용히 건너뛴다.
+  if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    navigator.serviceWorker.register(BASE + 'sw.js').catch(function(){});
+  }
 })();
 </script>
 </body>

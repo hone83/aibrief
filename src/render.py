@@ -401,6 +401,23 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
 .credit{font-size:12px; color:var(--muted); padding:14px 2px 0;}
 .credit a{color:var(--ink-2);}
 
+/* 홈 화면 앱에서 어제 것을 보고 있을 때 띄우는 띠.
+   앱은 한 번 연 화면을 그대로 들고 있어서, 새 브리핑이 나온 걸 스스로 알기 어렵다. */
+#fresh{
+  position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom));
+  z-index:80; display:none; align-items:center; gap:12px;
+  background:var(--accent); color:var(--accent-ink);
+  border-radius:12px; padding:12px 14px; box-shadow:0 12px 30px rgba(0,0,0,.5);
+  font-size:14px; font-weight:600;
+}
+#fresh[data-show]{display:flex;}
+#fresh span{flex:1;}
+#fresh button{
+  font:inherit; font-weight:700; font-size:13.5px; cursor:pointer;
+  background:var(--accent-ink); color:var(--accent);
+  border:0; border-radius:8px; padding:8px 14px; white-space:nowrap;
+}
+
 /* ---------- 꼬리말 ---------- */
 .foot{
   margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
@@ -759,6 +776,39 @@ PAGE_JS = r"""
   if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
     navigator.serviceWorker.register(BASE + 'sw.js').catch(function(){});
   }
+
+  // 홈 화면 앱은 한 번 연 화면을 그대로 들고 있는다. 그래서 아침에 열면
+  // 어제 것이 그대로 보인다. 열 때마다 "가장 최근 브리핑 날짜"만 캐시를 무시하고
+  // 확인해서, 지금 보는 것보다 새 것이 있으면 띠를 띄운다.
+  function checkFresh(){
+    if(!TODAY || BASE){ return; }              // 지난 브리핑 페이지에서는 띄우지 않는다
+    fetch(BASE + 'dates.json', {cache: 'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(dates){
+        if(!dates || !dates.length || dates[0] <= TODAY){ return; }
+        var bar = document.getElementById('fresh');
+        bar.querySelector('span').textContent = dates[0] + ' 브리핑이 나왔습니다';
+        bar.setAttribute('data-show', '');
+      })
+      .catch(function(){});
+  }
+
+  document.getElementById('fresh').querySelector('button')
+    .addEventListener('click', function(){
+      // 캐시를 비우고 주소에 시각을 붙여 다시 부른다.
+      // 둘 다 해야 확실하다 — 서비스 워커 캐시와 브라우저 캐시는 서로 다른 것이다.
+      var done = function(){ location.replace(BASE + 'index.html?v=' + Date.now()); };
+      if(!('caches' in window)){ done(); return; }
+      caches.keys().then(function(keys){
+        return Promise.all(keys.map(function(k){ return caches.delete(k); }));
+      }).then(done, done);
+    });
+
+  checkFresh();
+  // 앱을 다시 앞으로 가져왔을 때도 확인한다 (폰에서는 이쪽이 훨씬 흔하다)
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'visible'){ checkFresh(); }
+  });
 })();
 """
 
@@ -1088,6 +1138,8 @@ def render_page(brief: Brief, in_archive: bool = False) -> str:
 {details}
 
 
+<div id="fresh"><span></span><button type="button">열기</button></div>
+
 <script>{PAGE_JS}</script>
 </body>
 </html>"""
@@ -1255,7 +1307,7 @@ MANIFEST = {
 # 새 브리핑이 나온 날 옛것을 보게 된다. 반대로 두면 평소엔 항상 최신이고
 # 비행기 모드에서만 마지막으로 본 것이 뜬다.
 SERVICE_WORKER = """
-const CACHE = 'brief-v1';
+const CACHE = 'brief-v2';
 const CORE = ['./', './index.html', './manifest.json',
               './dates.json', './models.json', './search-index.json'];
 
@@ -1275,10 +1327,24 @@ self.addEventListener('activate', function(ev){
   }).then(function(){ return self.clients.claim(); }));
 });
 
+// 브리핑 본문과 색인은 매일 바뀐다. 그런데 그냥 fetch를 하면 브라우저의 HTTP 캐시가
+// 먼저 답해버려서, 서비스 워커가 "네트워크 먼저"를 해도 어제 것이 온다.
+// (깃허브 Pages가 HTML에 10분짜리 캐시를 걸어 두기 때문이다.)
+// 그래서 이 파일들만 cache:'reload'로 요청해 HTTP 캐시를 건너뛴다.
+function isFresh(url){
+  return /\.(html|json)$/.test(url) || url.endsWith('/') ||
+         url.indexOf('/index') !== -1;
+}
+
 self.addEventListener('fetch', function(ev){
   if(ev.request.method !== 'GET'){ return; }
+  var req = ev.request;
+  if(req.mode === 'navigate' || isFresh(req.url)){
+    try { req = new Request(req.url, {cache: 'reload', credentials: 'same-origin'}); }
+    catch(e){ req = ev.request; }
+  }
   ev.respondWith(
-    fetch(ev.request).then(function(res){
+    fetch(req).then(function(res){
       var copy = res.clone();
       caches.open(CACHE).then(function(c){ c.put(ev.request, copy); });
       return res;
