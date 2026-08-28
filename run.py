@@ -84,6 +84,9 @@ def main() -> int:
                     help="이번 실행에만 번역 엔진을 바꾼다 (설정 파일은 그대로)")
     ap.add_argument("--show-dropped", nargs="?", const=40, type=int, metavar="N",
                     help="필터에 걸린 항목을 제목까지 출력한다 (기본 40건). 필터 튜닝용")
+    ap.add_argument("--skip-if-done", action="store_true",
+                    help="오늘 자 브리핑이 이미 있으면 아무것도 하지 않고 끝낸다. "
+                         "예약 실행을 여러 번 걸어두기 위한 안전장치")
     args = ap.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -97,6 +100,17 @@ def main() -> int:
         hours=cfg["schedule"]["window_hours"],
     )
     print(f"\n창(窓): {start:%Y-%m-%d %H:%M} ~ {end:%Y-%m-%d %H:%M} KST")
+
+    # 예약 실행을 하루에 여러 번 걸어두기 위한 장치.
+    # 깃허브의 무료 예약은 정시를 보장하지 않고 아예 거르기도 한다. 그래서 아침에
+    # 세 번 예약을 걸어두고, 이미 오늘 자 브리핑이 만들어졌으면 나머지는 즉시 끝낸다.
+    # 시간창은 "당일 07:00까지"로 고정이라 몇 시에 돌든 결과가 같다 —
+    # 즉 첫 성공이 그날의 브리핑이고, 나머지는 순수한 보험이다.
+    if args.skip_if_done:
+        done = ROOT / "data" / f"{end.date().isoformat()}.json"
+        if done.exists():
+            print(f"오늘 자 브리핑이 이미 있습니다 ({done.name}). 실행하지 않고 끝냅니다.\n")
+            return 0
 
     # --- 1) 수집 ---------------------------------------------------------
     if args.fixture:
