@@ -1,31 +1,30 @@
 {
- "pika-blog": {
-  "https://experiment.pika.art/blog/pika-soundtrack": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-music": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-sfx": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-speech": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-audio-models": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-api-club": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/founder-starter-kit": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/pika-experiments": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/your-ai-self-just-got-a-job": "2026-08-27T02:48:21.115162+00:00",
-  "https://experiment.pika.art/blog/introducing-real-time-video-chat": "2026-08-27T02:48:21.115162+00:00"
- },
- "kling-updates": {
-  "https://kling.ai/release-note/release-history": "2026-08-27T02:48:21.335082+00:00",
-  "https://kling.ai/release-note/release-preview": "2026-08-27T02:48:21.335082+00:00"
- },
- "minimax-hailuo": {
-  "https://www.minimax.io/news/minimax-speech-28": "2026-08-27T02:48:21.665540+00:00"
- },
- "luma-news": {
-  "https://lumalabs.ai/news/ai-video-generator-youtube": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-creative-teams": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-agencies": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-social-media-content": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-ecommerce": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-ads": "2026-08-27T02:48:21.870360+00:00",
-  "https://lumalabs.ai/news/ai-video-generator-product-demos": "2026-08-27T02:48:21.870360+00:00",
+ "huggingface-papers": {
+  "https://huggingface.co/papers/2608.25518": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27345": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27456": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27448": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26872": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27260": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.15763": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26200": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26530": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26103": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27351": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27454": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26238": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27168": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.23943": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.23172": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.25500": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27455": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26809": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.25798": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.26993": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.27123": "2026-08-29T01:24:15.876432+00:00",
+  "https://huggingface.co/papers/2608.19269": "2026-08-29T01:24:15.876432+00:00"
+ }
+}2:48:21.870360+00:00",
   "https://lumalabs.ai/news/ai-video-generator-marketing-teams": "2026-08-27T02:48:21.870360+00:00",
   "https://lumalabs.ai/news/prompt-ai-face-swap": "2026-08-27T02:48:21.870360+00:00",
   "https://lumalabs.ai/news/ai-camera-movement-prompts": "2026-08-27T02:48:21.870360+00:00",
