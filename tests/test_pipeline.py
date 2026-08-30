@@ -549,6 +549,16 @@ check("한글 주제어는 보내기 전에 막는다", (_ok, "영문" in _msg),
 _os.environ.pop("NTFY_TOPIC")
 check("알림 본문은 제목 세 줄까지", len(notify._lines(_brief)) <= 3, True)
 
+# 깃허브 액션은 등록하지 않은 Secret도 빈 문자열로 넣어준다.
+# 그래서 기본값이 무시되고 주소가 "/주제어"가 되어 발송이 통째로 실패했다.
+_os.environ["NTFY_SERVER"] = ""
+check("빈 서버 주소는 기본값으로 되돌린다", notify._server(), "https://ntfy.sh")
+_os.environ["NTFY_SERVER"] = "  "
+check("공백만 있어도 기본값", notify._server(), "https://ntfy.sh")
+_os.environ["NTFY_SERVER"] = "my.ntfy.example/"
+check("http가 빠져 있으면 붙여준다", notify._server(), "https://my.ntfy.example")
+_os.environ.pop("NTFY_SERVER")
+
 import tempfile, json as _json                                      # noqa: E402
 with tempfile.TemporaryDirectory() as _tmp:
     _root = Path(_tmp)

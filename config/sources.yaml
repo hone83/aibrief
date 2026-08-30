@@ -457,7 +457,7 @@ sources:
     topics: [video]
     type: youtube
     handle: "@TheoreticallyMedia"
-    channel_id: ""
+    channel_id: "UC9Ryt3XOGYBoAJVsBHNGDzA"
     signal: high      # 가중치 상향
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -470,7 +470,7 @@ sources:
     topics: [video, tools]
     type: youtube
     handle: "@mickmumpitz"
-    channel_id: ""
+    channel_id: "UCKBURc62w9crMI1BhzHRnvw"
     signal: high
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -483,7 +483,7 @@ sources:
     topics: [tools, image]
     type: youtube
     handle: "@latentvision"
-    channel_id: ""
+    channel_id: "UCNOzlWHq4LgGcEHliHWm6HA"
     signal: high
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -496,7 +496,7 @@ sources:
     topics: [video, industry]
     type: youtube
     handle: "@curiousrefuge"
-    channel_id: ""
+    channel_id: "UClnFtyUEaxQOCd1s5NKYGFA"
     signal: normal
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -522,7 +522,7 @@ sources:
     topics: [tools, image]
     type: youtube
     handle: "@sebastiankamph"
-    channel_id: ""
+    channel_id: "UCvKqTb-65iAmXK59sFNKINQ"
     signal: normal
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -535,7 +535,7 @@ sources:
     topics: [tools, image]
     type: youtube
     handle: "@sedetweiler"
-    channel_id: ""
+    channel_id: "UC9kC4zCxE-i-g4GnB3KhWpA"
     signal: normal
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -547,7 +547,7 @@ sources:
     topics: [image, video]
     type: youtube
     handle: "@OlivioSarikas"
-    channel_id: ""
+    channel_id: "UCCKx8mAHiFus-XYQLy_WnaA"
     signal: normal
     status: unverified
     skip_topic_filter: true   # 이 소스는 나오는 게 전부 비주얼 AI다
@@ -560,7 +560,7 @@ sources:
     topics: [video, image]
     type: youtube
     handle: "@MattVidPro"
-    channel_id: ""
+    channel_id: "UC06GdmaEdCdCFwR3NvszloQ"
     signal: low
     ad_filter: strict
     status: unverified

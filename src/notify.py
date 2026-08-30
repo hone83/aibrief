@@ -25,6 +25,25 @@ import httpx
 
 TIMEOUT = httpx.Timeout(connect=8.0, read=20.0, write=10.0, pool=8.0)
 TELEGRAM_URL = "https://api.telegram.org/bot{token}/sendMessage"
+NTFY_DEFAULT = "https://ntfy.sh"
+
+
+def _server() -> str:
+    """
+    ntfy 서버 주소.
+
+    os.environ.get(이름, 기본값)은 "값이 없을 때"만 기본값을 준다.
+    그런데 깃허브 액션은 등록하지 않은 Secret도 **빈 문자열**로 넣어준다.
+    그래서 NTFY_SERVER를 등록하지 않았는데도 값이 ""로 존재하게 되고,
+    주소가 "/주제어"가 되어 UnsupportedProtocol이 났다.
+    빈 문자열도 "없음"으로 취급해야 한다.
+    """
+    server = (os.environ.get("NTFY_SERVER") or "").strip().rstrip("/")
+    if not server:
+        return NTFY_DEFAULT
+    if not server.startswith(("http://", "https://")):
+        server = "https://" + server
+    return server
 
 
 def _lines(brief) -> list[str]:
@@ -47,7 +66,7 @@ def send_ntfy(brief, site_url: str = "") -> tuple[bool, str]:
     if not topic.isascii():
         return False, "NTFY_TOPIC은 영문·숫자여야 합니다"
 
-    server = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    server = _server()
     body = "\n".join(f"· {t}" for t in _lines(brief))
     body = f"{brief.date_kst} · {len(brief.cards)}건\n{body}"
 
@@ -113,7 +132,7 @@ def alert(text: str) -> bool:
     """장애 알림용. 브리핑이 아니라 '뭔가 잘못됐다'를 알릴 때."""
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if topic and topic.isascii():
-        server = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+        server = _server()
         try:
             httpx.post(f"{server}/{topic}", data=text.encode("utf-8"),
                        headers={"Title": "AI Brief warning", "Priority": "high",
