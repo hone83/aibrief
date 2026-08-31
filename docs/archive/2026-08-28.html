@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0B0E10">
 <meta name="robots" content="noindex, nofollow">
@@ -36,10 +36,22 @@ body{
   margin:0; background:var(--ground); color:var(--ink);
   font-family:var(--f-body); font-size:16px; line-height:1.65;
   -webkit-font-smoothing:antialiased;
+  /* 홈 화면 앱에서 더블탭 확대를 막는다. 뉴스를 읽는 화면이라 확대할 일이 없고,
+     확대되면 상단바가 화면 밖으로 밀려 되돌리기가 어렵다. */
+  touch-action:manipulation;
+}
+/* 홈 화면 앱은 상태표시줄(노치)과 홈 인디케이터 아래까지 화면을 차지한다.
+   그대로 두면 상단바가 시계에 가려 눌리지 않는다. 기기가 알려주는 여백을 더해준다. */
+:root{
+  --sa-top:env(safe-area-inset-top, 0px);
+  --sa-bot:env(safe-area-inset-bottom, 0px);
+  --sa-l:env(safe-area-inset-left, 0px);
+  --sa-r:env(safe-area-inset-right, 0px);
 }
 body[data-detail]{overflow:hidden;}
 a{color:inherit;}
-.wrap{max-width:1080px; margin:0 auto; padding:0 18px 72px;}
+.wrap{max-width:1080px; margin:0 auto;
+      padding:0 calc(18px + var(--sa-r)) calc(72px + var(--sa-bot)) calc(18px + var(--sa-l));}
 
 /* ---------- 상단 바 ---------- */
 .top{
@@ -47,7 +59,8 @@ a{color:inherit;}
   backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
 }
 .top-in{
-  max-width:1080px; margin:0 auto; padding:12px 18px;
+  max-width:1080px; margin:0 auto;
+  padding:calc(12px + var(--sa-top)) calc(18px + var(--sa-r)) 12px calc(18px + var(--sa-l));
   display:flex; align-items:center; gap:14px; flex-wrap:wrap;
 }
 .brand{display:flex; flex-direction:column; line-height:1.2; margin-right:auto;}
@@ -77,14 +90,23 @@ a{color:inherit;}
 }
 .calbtn:hover, .calbtn[aria-expanded="true"]{border-color:var(--accent); color:var(--ink);}
 
-/* 검색 결과는 헤더 바로 아래로 펼친다. 다른 화면으로 넘어가지 않으므로
-   지금 보던 자리를 잃지 않는다. */
+/* 검색은 별도 화면으로 연다. 폰에서는 결과가 목록 위에 겹쳐 뜨면
+   지금 무엇을 보고 있는지가 흐려진다. 뒤로가기로 닫힌다. */
 #results{
-  position:absolute; left:0; right:0; top:100%;
-  background:var(--ground); border-bottom:1px solid var(--line);
-  max-height:min(70vh,560px); overflow-y:auto; box-shadow:0 18px 40px rgba(0,0,0,.5);
+  position:fixed; inset:0; z-index:70; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
 }
-#results .res-in{max-width:1080px; margin:0 auto; padding:12px 18px 20px;}
+#results[data-open]{display:block;}
+#results .res-in{
+  max-width:760px; margin:0 auto;
+  padding:16px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+}
+#q2{
+  width:100%; font:inherit; font-size:16px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; margin-bottom:12px;
+}
+#q2:focus{border-color:var(--accent); outline:none;}
 
 /* 미니 달력은 날짜 버튼 아래에 붙는다 */
 #calpop{
@@ -100,7 +122,8 @@ a{color:inherit;}
   overflow-y:auto; display:none; overscroll-behavior:contain;
 }
 .sheet[data-open]{display:block;}
-.s-body{max-width:760px; margin:0 auto; padding:22px 18px 80px;
+.s-body{max-width:760px; margin:0 auto;
+        padding:22px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
         display:flex; flex-direction:column; gap:16px;}
 
 /* ---------- 검색 ---------- */
@@ -255,7 +278,8 @@ mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-r
 .sheet .d-bar{padding:11px 18px;}
 .d-bar{
   position:sticky; top:0; background:rgba(11,14,16,.94); backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line); padding:11px 18px;
+  border-bottom:1px solid var(--line);
+  padding:calc(11px + var(--sa-top)) calc(18px + var(--sa-r)) 11px calc(18px + var(--sa-l));
   display:flex; align-items:center; gap:12px;
 }
 .d-bar .back{
@@ -265,7 +289,8 @@ mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-r
 }
 .d-bar .back:hover{border-color:var(--accent);}
 .d-bar .pos{font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:auto;}
-.d-body{max-width:720px; margin:0 auto; padding:26px 18px 80px;
+.d-body{max-width:720px; margin:0 auto;
+        padding:26px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
         display:flex; flex-direction:column; gap:18px;}
 .d-meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
         font-family:var(--f-mono); font-size:11px; color:var(--muted);}
@@ -394,9 +419,10 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
           margin:0 -14px; padding:22px 14px 14px;}
   .boards::-webkit-scrollbar{display:none;}
   .boards button{flex:none; white-space:nowrap;}
-  .top-in{gap:10px; padding:10px 14px;}
+  .top-in{gap:10px;
+          padding:calc(10px + var(--sa-top)) calc(14px + var(--sa-r)) 10px calc(14px + var(--sa-l));}
   .brand{width:100%; margin-right:0;}
-  .wrap{padding:0 14px 60px;}
+  .wrap{padding:0 calc(14px + var(--sa-r)) calc(60px + var(--sa-bot)) calc(14px + var(--sa-l));}
   .lede{padding:24px 0 20px;}
   .head{grid-template-columns:26px 1fr; gap:10px;}
   .head .m{grid-column:2; margin-top:2px;}
@@ -422,10 +448,6 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
   </div>
 </div>
 
-<div id="results" hidden><div class="res-in">
-  <p class="q-note"></p>
-  <div class="hits"></div>
-</div></div>
 
 <div id="calpop" hidden>
   <div class="cal-head">
@@ -629,6 +651,19 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
 </div>
 
 
+<div id="results">
+  <div class="d-bar">
+    <button class="back" type="button">← 닫기</button>
+    <span class="pos">지난 브리핑까지 검색</span>
+  </div>
+  <div class="res-in">
+    <input id="q2" type="search" placeholder="모델 이름, 회사, 키워드…"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <p class="q-note"></p>
+    <div class="hits"></div>
+  </div>
+</div>
+
 <div id="fresh"><span></span><button type="button">열기</button></div>
 
 <script>
@@ -672,7 +707,7 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
     if(v === 'models'){ renderModels(); }
   }
   function closeSheets(){
-    document.querySelectorAll('.sheet[data-open]').forEach(function(x){
+    document.querySelectorAll('.detail[data-open]').forEach(function(x){
       x.removeAttribute('data-open');
     });
     body.removeAttribute('data-detail');
@@ -689,7 +724,8 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
   }
 
   /* ---------------- 검색 ---------------- */
-  var hits = null, qInput = null, qNote = null, results = null, timer = null;
+  var hits = null, qInput = null, qInput2 = null, qNote = null,
+      results = null, timer = null;
 
   function tokens(q){
     return q.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
@@ -712,18 +748,33 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
     return out;
   }
 
-  function hideResults(){ results.hidden = true; }
+  function openSearch(seed){
+    // 헤더 입력칸은 문을 여는 역할만 한다. 실제 입력은 검색 화면 안에서 받는다.
+    if(seed !== undefined && seed !== null){ qInput2.value = seed; }
+    if(location.hash !== '#search'){ location.hash = 'search'; }
+    else { showSearch(); }
+  }
+  function showSearch(){
+    closeSheets();
+    results.setAttribute('data-open', '');
+    body.setAttribute('data-detail', '');
+    setTimeout(function(){ qInput2.focus(); }, 40);
+    runSearch();
+  }
+  function hideResults(){
+    results.removeAttribute('data-open');
+    if(!document.querySelector('.detail[data-open]')){ body.removeAttribute('data-detail'); }
+  }
 
   function runSearch(){
-    var q = qInput.value.trim();
+    var q = qInput2.value.trim();
     if(q.length < 2){
       hits.innerHTML = '';
-      if(q.length === 0){ hideResults(); return; }
-      results.hidden = false;
-      qNote.textContent = '두 글자 이상 입력하세요.';
+      qNote.textContent = q.length === 0
+        ? '지난 브리핑까지 함께 찾습니다.'
+        : '두 글자 이상 입력하세요.';
       return;
     }
-    results.hidden = false;
     load('search-index').then(function(rows){
       if(rows === null){ qNote.textContent = OFFLINE; hits.innerHTML = ''; return; }
       var toks = tokens(q);
@@ -855,6 +906,8 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
     var h = decodeURIComponent(location.hash.replace(/^#/, ''));
 
     if(h.indexOf('i-') === 0){ openSheet(document.getElementById('d-' + h.slice(2))); return; }
+    if(h === 'search'){ showSearch(); return; }
+    hideResults();
     closeSheets();
     if(h.indexOf('m-') === 0){ setView('models'); showModel(h.slice(2)); return; }
     document.querySelector('#mone').hidden = true;
@@ -869,7 +922,7 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
     var mc = t.closest('.mcard');
     if(mc){ location.hash = 'm-' + encodeURIComponent(mc.dataset.model); return; }
 
-    if(t.closest('.hit')){ hideResults(); return; }   // 링크는 그대로 따라간다
+    if(t.closest('.hit')){ return; }   // 링크는 그대로 따라간다
 
     var el = t.closest('[data-uid]');
     if(el){ location.hash = 'i-' + el.dataset.uid; return; }
@@ -883,9 +936,8 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
 
     if(t.closest('.back')){ goBack(); return; }
 
-    // 팝오버·결과 패널 바깥을 누르면 닫는다
+    // 팝오버 바깥을 누르면 닫는다
     if(!t.closest('#calpop') && !t.closest('.calbtn')){ toggleCal(false); }
-    if(!t.closest('#results') && !t.closest('#q')){ hideResults(); }
 
     var bd = t.closest('.boards button');
     if(bd){
@@ -906,30 +958,30 @@ td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
   document.addEventListener('keydown', function(ev){
     if(ev.key === 'Escape'){
       if(!calPop.hidden){ toggleCal(false); return; }
-      if(!results.hidden){ hideResults(); qInput.blur(); return; }
       if(body.hasAttribute('data-detail')){ goBack(); }
       return;
     }
     // 어느 화면에서든 / 를 누르면 검색창으로 간다
     if(ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)){
       ev.preventDefault();
-      qInput.focus();
-      qInput.select();
+      openSearch('');
     }
   });
 
   qInput = document.getElementById('q');
+  qInput2 = document.getElementById('q2');
   qNote = document.querySelector('#results .q-note');
   hits = document.querySelector('#results .hits');
   results = document.getElementById('results');
   calPop = document.getElementById('calpop');
   calBtn = document.querySelector('.calbtn');
-  qInput.addEventListener('input', function(){
+
+  // 헤더 칸은 누르는 순간 검색 화면을 연다. 거기서 친 글자를 그대로 넘긴다.
+  qInput.addEventListener('focus', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput.addEventListener('click', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput2.addEventListener('input', function(){
     clearTimeout(timer);
     timer = setTimeout(runSearch, 140);
-  });
-  qInput.addEventListener('focus', function(){
-    if(qInput.value.trim().length >= 2){ runSearch(); }
   });
 
   window.addEventListener('hashchange', route);
