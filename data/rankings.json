@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "ranks": {
     "text-to-video": {
       "Gemini Omni Flash": 1,
@@ -16,8 +16,8 @@
       "MiniMax H3": 2,
       "Dreamina Seedance 2.0 720p": 3,
       "grok-imagine-video-1.5": 4,
-      "grok-imagine-video": 5,
-      "PixVerse V6": 6,
+      "PixVerse V6": 5,
+      "grok-imagine-video": 6,
       "HappyHorse-1.1": 7,
       "HappyHorse-1.0": 8
     },
@@ -42,16 +42,16 @@
       "Qwen-Image-3.0-Pro": 8
     },
     "language": {
-      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 1,
-      "Grok 4.6 (medium)": 2,
-      "GLM-5.3-Flash": 3,
-      "Muse Spark 1.2 (xhigh)": 4,
-      "GPT-5.5 (xhigh)": 5,
-      "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)": 6,
-      "Claude Opus 5 (Adaptive Reasoning, Low Effort)": 7,
-      "GPT-5.6 Luna (max)": 8,
-      "Gemini 3.5 Flash (high)": 9,
-      "GPT-5.6 Sol (low)": 10
+      "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
+      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 2,
+      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 3,
+      "Grok 4.6 (medium)": 4,
+      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 5,
+      "GLM-5.3-Flash": 6,
+      "Muse Spark 1.2 (xhigh)": 7,
+      "GPT-5.5 (xhigh)": 8,
+      "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)": 9,
+      "Claude Opus 5 (Adaptive Reasoning, Low Effort)": 10
     }
   }
 }

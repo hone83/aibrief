@@ -1314,5 +1314,131 @@
    "소니, Anthropic 상대로 저작권 침해 소송 제기",
    "AI 생성 음악 차트 진입으로 작곡가 피해 주장"
   ]
+ },
+ "bb425dca955c": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "젠레스 존 제로 '존 도' 캐릭터 LoRA 공개",
+  "summary_ko": "Zenless Zone Zero의 캐릭터 Jane Doe를 성별 전환한 'John Doe' LoRA가 공개되었습니다. Illustrious v1 및 ANIMA v1 Base 모델을 기반으로 하며, 전용 트리거 워드와 추천 생성 설정값을 제공합니다. 캐릭터의 외형 및 의상 묘사를 위한 상세 프롬프트가 함께 포함되었습니다.",
+  "bullets": [
+   "Zenless Zone Zero 캐릭터 기반 성별 전환 LoRA 공개",
+   "Illustrious 및 ANIMA v1 모델용 트리거 워드 제공",
+   "가중치 0.8~1.0 및 DPM++·Euler A 권장 설정 공유"
+  ]
+ },
+ "29556ef70cc7": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "MiniMax-H3 연계 LTX 2.5 업스케일링 결과 공개",
+  "summary_ko": "MiniMax-H3와 LTX 2.5를 결합한 비디오 업스케일링 워크플로우의 테스트 결과가 공유되었습니다. 원본 MiniMax-H3의 품질이 높을수록 최종 결과가 개선되며, 인물의 일관성을 유지하려면 안정적인 원본 생성이 필요합니다. RTX 3060 12GB 환경에서 해상도에 따라 15분에서 30분의 업스케일링 시간이 소요됩니다.",
+  "bullets": [
+   "MiniMax-H3와 LTX 2.5 연계 업스케일링 워크플로우 시험",
+   "원본 생성 품질에 비례하는 최종 업스케일링 결과 확인",
+   "RTX 3060 환경에서 작업 시 15~30분 소요"
+  ]
+ },
+ "64901a903f2d": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "올인원 MiniMax-H3 결합 체크포인트 공개",
+  "summary_ko": "Hugging Face에 MATLOWAI의 minimax-h3-fused-turbo-int8-convrot 체크포인트가 등록되었습니다. 텍스트, 이미지, 참조 비디오 생성 기능과 4스텝 터보 생성을 단일 모델로 통합했습니다. 추가적인 모델 교체나 터보 LoRA 로드 없이 참조 기반 비디오 생성을 처리할 수 있습니다.",
+  "bullets": [
+   "텍스트·이미지·참조 비디오 기능 단일 체크포인트로 통합",
+   "4스텝 터보 생성을 내장해 별도 LoRA 불필요",
+   "Hugging Face 통해 올인원 INT8 모델 배포"
+  ]
+ },
+ "97b9deb3edb9": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "MiniMax H3용 픽셀 아트 스타일 모델 공개",
+  "summary_ko": "MiniMax H3 모델을 지원하는 'TFM Cutesy Anime Pixel'이 공개되었습니다. 귀여운 애니메이션 풍의 픽셀 아트 스타일 생성을 지원합니다. 제작자는 Patreon, X, Discord 등의 커뮤니티 채널 링크를 함께 공유했습니다.",
+  "bullets": [
+   "MiniMax H3 전용 애니메이션 픽셀 아트 모델 배포",
+   "귀여운 스타일의 픽셀 그래픽 생성 지원",
+   "Patreon 및 Discord 등 관련 커뮤니티 경로 제공"
+  ]
+ },
+ "fb86def50906": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "그란디아 2 캐릭터 '엘레나' 신규 모델 출시",
+  "summary_ko": "게임 Grandia 2의 주인공 엘레나 캐릭터 모델이 새롭게 공개되었습니다. 의상의 복잡한 세부 묘사와 적은 데이터셋으로 인해 제작 과정의 난이도가 높았습니다.",
+  "bullets": [
+   "Grandia 2 엘레나 캐릭터 모델",
+   "적은 데이터셋과 복잡한 의상 세부 묘사 반영"
+  ]
+ },
+ "823a2b55ffa4": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "MiniMax 기반 신규 비디오 워크플로우 제작 사례",
+  "summary_ko": "MiniMax H3 ref2v와 SEED HUNTER 워크플로우를 활용해 제작된 비디오 결과물이 공유되었습니다. 해당 방식을 통해 영상 생성 과정을 구현했습니다.",
+  "bullets": [
+   "MiniMax H3 ref2v 모델 활용",
+   "SEED HUNTER 워크플로우 적용"
+  ]
+ },
+ "3b5f2688fec1": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "AI 네이티브 기업의 AI 에이전트 도입 사례",
+  "summary_ko": "Basis, Clay, Exa Labs 등 AI 네이티브 기업들이 AI 에이전트를 도입해 운영 역량을 강화하고 있습니다. 이들 기업은 온보딩과 계정 관리, 개발자 통합 프로세스를 개선하는 데 이를 활용 중입니다.",
+  "bullets": [
+   "Basis·Clay·Exa Labs의 AI 에이전트 도입",
+   "온보딩 및 계정 관리 개선",
+   "개발자 통합 프로세스 최적화"
+  ]
+ },
+ "6c1333c54fd9": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "오리지널 캐릭터 'Sensh the Cat' 모델 공개",
+  "summary_ko": "Senshion의 오리지널 캐릭터인 'Sensh the Cat' 모델이 공개되었습니다. 해당 캐릭터 외형을 생성할 수 있도록 제작되었습니다.",
+  "bullets": [
+   "Senshion의 캐릭터 Sensh the Cat 모델",
+   "Civitai에 신규 모델 등록"
+  ]
+ },
+ "d45ff0849441": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "MiniMax H3 활용 로컬 AI 단편 영화 제작 공유",
+  "summary_ko": "MiniMax H3를 활용해 제작한 첫 완전 로컬 AI 단편 영화 'the bird-king'이 공개되었습니다. 제작자는 결과물에 대한 피드백과 함께 인물의 플라스틱 같은 피부 질감을 개선하는 방법에 대한 조언을 요청했습니다.",
+  "bullets": [
+   "MiniMax H3 기반 로컬 AI 단편 영화 제작",
+   "부자연스러운 피부 질감 개선을 위한 피드백 요청"
+  ]
+ },
+ "5eef65ec3aa7": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "신규 모델 '桃灼-taozhuo' Civitai 등록",
+  "summary_ko": "신규 모델 '桃灼-taozhuo'가 Civitai에 등록되었습니다. 세부적인 모델 정보나 설명은 제공되지 않았습니다.",
+  "bullets": [
+   "Civitai에 신규 모델 '桃灼-taozhuo' 등록"
+  ]
+ },
+ "07eb7c5cd974": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "90년대 영화 질감 재현하는 Krea2 LoRA 공개",
+  "summary_ko": "1990년대 영화의 거친 질감과 색감, 구도를 재현하는 Krea2 LoRA가 Civitai에 공개되었습니다. 약 300장의 영화 프레임을 학습해 제작되었으며 기본 Krea Raw 및 Turbo와 호환됩니다.",
+  "bullets": [
+   "90년대 영화 약 300프레임 학습해 제작",
+   "특유의 거친 질감·색감·구도 재현",
+   "Krea Raw 및 Turbo 베이스에 최적화"
+  ]
+ },
+ "98141e213cde": {
+  "engine": "gemini",
+  "ts": "2026-09-02T00:19:32.843842+00:00",
+  "title_ko": "80년대 VHS 테이프 질감 구현 MiniMax H3 LoRA",
+  "summary_ko": "MiniMax H3 영상에 1980년대 VHS 테이프 녹화 질감을 적용하는 LoRA가 Hugging Face에 공개되었습니다. 화면 노이즈, 크로마 블리드와 함께 테이프 히스 및 뭉개진 모노 사운드 등 오디오 효과도 함께 구현합니다.",
+  "bullets": [
+   "1980년대 방송 녹화 VHS 테이프 질감 구현",
+   "화면 노이즈 및 왜곡 효과 적용",
+   "테이프 히스·모노 사운드 등 음향 효과 지원"
+  ]
  }
 }
