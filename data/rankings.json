@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -23,35 +23,35 @@
     },
     "text-to-image": {
       "GPT Image 2 (high)": 1,
-      "MAI-Image-2.6-Preview": 2,
+      "MAI-Image-2.6": 2,
       "Reve 2.1": 3,
-      "Nano Banana 2 (Gemini 3.1 Flash Image Preview)": 4,
-      "GPT Image 1.5 (high)": 5,
-      "MAI-Image-2.5": 6,
-      "Nano Banana Pro (Gemini 3 Pro Image)": 7,
-      "MAI-Image-2.5-Pro": 8
+      "Nano Banana 2 (Gemini 3.1 Flash Image)": 4,
+      "Muse Image": 5,
+      "GPT Image 1.5 (high)": 6,
+      "MAI-Image-2.5": 7,
+      "MAI-Image-2.6-Flash": 8
     },
     "image-editing": {
-      "MAI-Image-2.6-Preview": 1,
-      "GPT Image 2 (high)": 2,
-      "Nano Banana 2 (Gemini 3.1 Flash Image Preview)": 3,
-      "Seedream 5.0 Pro": 4,
-      "MAI-Image-2.5": 5,
-      "Nano Banana Pro (Gemini 3 Pro Image)": 6,
-      "MAI-Image-2.5-Pro": 7,
-      "GPT Image 1.5 (high)": 8
+      "MAI-Image-2.6": 1,
+      "Nano Banana 2 (Gemini 3.1 Flash Image)": 2,
+      "MAI-Image-2.6-Flash": 3,
+      "Muse Image": 4,
+      "GPT Image 2 (high)": 5,
+      "MAI-Image-2.5": 6,
+      "Seedream 5.0 Pro": 7,
+      "Nano Banana Pro (Gemini 3 Pro Image)": 8
     },
     "language": {
       "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
-      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 2,
-      "GPT-6 Astra (max)": 3,
-      "GPT-6 Astra (xhigh)": 4,
+      "GPT-6 Astra (max)": 2,
+      "GPT-6 Astra (xhigh)": 3,
+      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 4,
       "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 5,
       "Grok 4.6 (medium)": 6,
       "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 7,
-      "GLM-5.3-Flash": 8,
+      "GPT-6 Astra (Non-reasoning)": 8,
       "Muse Spark 1.2 (xhigh)": 9,
-      "GPT-5.5 (xhigh)": 10
+      "GLM-5.3-Flash": 10
     }
   }
 }
