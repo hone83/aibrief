@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -27,17 +27,17 @@
       "Reve 2.1": 3,
       "Nano Banana 2 (Gemini 3.1 Flash Image)": 4,
       "Muse Image": 5,
-      "MAI-Image-2.5": 6,
-      "GPT Image 1.5 (high)": 7,
+      "GPT Image 1.5 (high)": 6,
+      "MAI-Image-2.5": 7,
       "MAI-Image-2.6-Flash": 8
     },
     "image-editing": {
       "MAI-Image-2.6": 1,
-      "MAI-Image-2.6-Flash": 2,
-      "GPT Image 2 (high)": 3,
-      "Muse Image": 4,
-      "MAI-Image-2.5": 5,
-      "Nano Banana 2 (Gemini 3.1 Flash Image)": 6,
+      "GPT Image 2 (high)": 2,
+      "Muse Image": 3,
+      "MAI-Image-2.6-Flash": 4,
+      "Nano Banana 2 (Gemini 3.1 Flash Image)": 5,
+      "MAI-Image-2.5": 6,
       "Seedream 5.0 Pro": 7,
       "MAI-Image-2.5-Pro": 8
     },
@@ -47,8 +47,8 @@
       "GPT-6 Astra (xhigh)": 3,
       "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 4,
       "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 5,
-      "Grok 4.6 (medium)": 6,
-      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 7,
+      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 6,
+      "Grok 4.6 (medium)": 7,
       "GPT-6 Astra (Non-reasoning)": 8,
       "Muse Spark 1.2 (xhigh)": 9,
       "GLM-5.3-Flash": 10
