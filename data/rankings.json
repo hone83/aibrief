@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -48,10 +48,10 @@
       "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 4,
       "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 5,
       "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 6,
-      "GPT-6 Astra (Non-reasoning)": 7,
-      "Grok 4.6 (medium)": 8,
-      "GLM-5.3-Flash": 9,
-      "Muse Spark 1.2 (xhigh)": 10
+      "Grok 4.6 (medium)": 7,
+      "GLM-5.3-Flash": 8,
+      "Muse Spark 1.2 (xhigh)": 9,
+      "Claude Opus 5 (Adaptive Reasoning, Low Effort)": 10
     }
   }
 }
