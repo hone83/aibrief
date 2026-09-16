@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -14,12 +14,12 @@
     "image-to-video": {
       "Gemini Omni Flash": 1,
       "Wan 3.0": 2,
-      "MiniMax H3": 3,
-      "Dreamina Seedance 2.0 720p": 4,
-      "grok-imagine-video-1.5": 5,
-      "PixVerse V6": 6,
-      "grok-imagine-video": 7,
-      "HappyHorse-1.1": 8
+      "Bach 1.0 Pro": 3,
+      "MiniMax H3": 4,
+      "Dreamina Seedance 2.0 720p": 5,
+      "grok-imagine-video-1.5": 6,
+      "PixVerse V6": 7,
+      "grok-imagine-video": 8
     },
     "text-to-image": {
       "GPT Image 2.5 Flare (max)": 1,
