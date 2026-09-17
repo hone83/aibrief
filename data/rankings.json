@@ -1,24 +1,24 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
       "Gemini Omni Flash": 2,
       "MiniMax H3": 3,
       "HappyHorse-1.0": 4,
-      "Dreamina Seedance 2.0 720p": 5,
-      "HappyHorse-1.1": 6,
+      "HappyHorse-1.1": 5,
+      "Dreamina Seedance 2.0 720p": 6,
       "Wan2.7-260612": 7,
-      "Kling 3.0 1080p (Pro)": 8
+      "grok-imagine-video": 8
     },
     "image-to-video": {
       "Gemini Omni Flash": 1,
       "Wan 3.0": 2,
       "Bach 1.0 Pro": 3,
       "MiniMax H3": 4,
-      "Dreamina Seedance 2.0 720p": 5,
-      "grok-imagine-video-1.5": 6,
-      "PixVerse V6": 7,
+      "PixVerse V6": 5,
+      "Dreamina Seedance 2.0 720p": 6,
+      "grok-imagine-video-1.5": 7,
       "grok-imagine-video": 8
     },
     "text-to-image": {
@@ -29,7 +29,7 @@
       "Reve 2.1": 5,
       "Nano Banana 2 (Gemini 3.1 Flash Image)": 6,
       "Muse Image": 7,
-      "MAI-Image-2.5": 8
+      "GPT Image 1.5 (high)": 8
     },
     "image-editing": {
       "GPT Image 2.5 Sunburst (max)": 1,
@@ -39,7 +39,7 @@
       "GPT Image 2 (high)": 5,
       "Muse Image": 6,
       "MAI-Image-2.5": 7,
-      "Nano Banana 2 (Gemini 3.1 Flash Image)": 8
+      "MAI-Image-2.5-Pro": 8
     },
     "language": {
       "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
@@ -49,7 +49,7 @@
       "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 5,
       "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 6,
       "Grok 4.6 (medium)": 7,
-      "GLM-5.3-Flash": 8,
+      "GLM 5.3 Flash": 8,
       "Muse Spark 1.2 (xhigh)": 9,
       "Claude Opus 5 (Adaptive Reasoning, Low Effort)": 10
     }
