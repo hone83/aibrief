@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-19",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -25,11 +25,11 @@
       "GPT Image 2.5 Flare (max)": 1,
       "GPT Image 2.5 Sunburst (max)": 2,
       "GPT Image 2 (high)": 3,
-      "MAI-Image-2.6": 4,
-      "Reve 2.1": 5,
-      "Nano Banana 2 (Gemini 3.1 Flash Image)": 6,
-      "Muse Image": 7,
-      "GPT Image 1.5 (high)": 8
+      "Grok Imagine Image 2.0": 4,
+      "MAI-Image-2.6": 5,
+      "Reve 2.1": 6,
+      "Nano Banana 2 (Gemini 3.1 Flash Image)": 7,
+      "Muse Image": 8
     },
     "image-editing": {
       "GPT Image 2.5 Sunburst (max)": 1,

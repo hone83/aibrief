@@ -1,0 +1,1883 @@
+{
+  "date_kst": "2026-09-19",
+  "generated_at": "2026-09-19T09:24:51.369802+09:00",
+  "window_start": "2026-09-18T07:00:00+09:00",
+  "window_end": "2026-09-19T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "Minimax H3+ Flux 2 pro japan bicycle street video workflow",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjsfck/minimax_h3_flux_2_pro_japan_bicycle_street_video",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-09-18T14:54:50+00:00",
+      "summary_raw": "I say a skating video on this sub and decided to try cycling video myself with Minimax. I started in morphic with the character generation, used Flux 2 pro for the image, it did not need and reference and the result was pretty good for a simple prompt. The bicycle was the next component , I generated both cycle and character separately again no reference and I just asked it for red cycle with black design common anime plot. The third step again was an image where I generated multiple japanese animated street view selected few which I like. This part took a lot of time before animating straight",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax와 FLUX 2 pro를 활용한 일본 자전거 거리 비디오 워크플로우",
+      "summary_ko": "한 사용자가 MiniMax와 FLUX 2 pro를 활용하여 일본 애니메이션 스타일의 자전거 주행 비디오를 제작하는 워크플로우를 공유했습니다. 캐릭터와 빨간색 자전거, 일본 거리 배경 이미지를 각각 생성한 뒤 애니메이션화하는 과정을 거쳤습니다.",
+      "bullets": [
+        "FLUX 2 pro로 캐릭터 이미지 생성",
+        "참조 없이 프롬프트로 자전거 생성",
+        "일본 거리 배경 이미지 생성 및 애니메이션"
+      ],
+      "category": "model_release",
+      "score": 1.1241,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T23:54:50+09:00",
+      "uid": "9d641f4279c5",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "H3 Max: Built with fal Inference and Training",
+      "url": "https://blog.fal.ai/h3-max-built-with-fal-inference-and-training",
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-17T23:36:06+00:00",
+      "summary_raw": "H3 Max generates a 5-second video in under 3 seconds. In our human preference evaluations against twelve leading video models, it ranks first on quality, prompt understanding, and aesthetics. Independent benchmarks from Artificial Analysis and Design Arena rank it first as well. We&#x2019;ve written about the model",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "discovered_feed": "https://blog.fal.ai/rss/"
+      },
+      "title_ko": "fal 추론 및 학습 기반 H3 Max 출시, 벤치마크 1위 달성",
+      "summary_ko": "fal의 추론 및 학습 기술로 구축된 H3 Max가 공개되었습니다. 이 모델은 5초 분량의 비디오를 3초 미만에 생성하며, 화질과 프롬프트 이해도 및 미적 기준 평가에서 1위를 기록했습니다.",
+      "bullets": [
+        "5초 비디오를 3초 미만에 생성 완료",
+        "품질 및 프롬프트 이해도 평가 1위",
+        "Artificial Analysis 등 벤치마크 1위"
+      ],
+      "category": "benchmark",
+      "score": 0.9943,
+      "cluster_id": 5,
+      "related": [
+        {
+          "title": "I Built Custom Nodes for LONG Seamless MiniMax-H3 Videos! [FREE Nodes + ...",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjz2nj/i_built_custom_nodes_for_long_seamless_minimaxh3",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3 - What Happens When You Train With Stills Alone?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjvje2/minimax_h3_what_happens_when_you_train_with",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "How to make character take turns in speech CONSISTENTLY in Minimax H3?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjqc50/how_to_make_character_take_turns_in_speech",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "VC-Attention for MiniMax H3 looks very promising",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjniii/vcattention_for_minimax_h3_looks_very_promising",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3 Faceswap/Face Replacement For VFX",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjiskj/minimax_h3_faceswapface_replacement_for_vfx",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T08:36:06+09:00",
+      "uid": "7841f921cb5d",
+      "domain": "blog.fal.ai"
+    },
+    {
+      "title": "H3 Camera Control v3 - New Updates Coming",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjhb4n/h3_camera_control_v3_new_updates_coming",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-09-18T05:24:42+00:00",
+      "summary_raw": "Camera control on video is coming new update is almost ready",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "H3 카메라 컨트롤 v3 신규 업데이트 예정",
+      "summary_ko": "비디오 생성에 적용할 수 있는 새로운 카메라 컨트롤 기능의 업데이트가 거의 완료되어 곧 출시될 예정입니다.",
+      "bullets": [
+        "비디오 카메라 컨트롤 기능 추가 예정",
+        "신규 업데이트 준비 완료 단계"
+      ],
+      "category": "major_update",
+      "score": 0.722,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T14:24:42+09:00",
+      "uid": "f50684ac7abe",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "MiniMax video generation: Contact sheet grid vs. video input for character face swap and precise motion? Results are too basic...",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjlcip/minimax_video_generation_contact_sheet_grid_vs",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-18T09:22:37+00:00",
+      "summary_raw": "Hey everyone, I'm trying to figure out how to properly make MiniMax work for a specific task and I really need some advice. The Goal: I want to perform a character-to-character face swap/transfer on a 4-second sequence. I need to take a specific character and make the AI replicate her features onto an existing sequence that includes complex camera motion, facial expressions, eye movements, and micro-expressions, keeping everything consistent with zero subtitles. The Problem with MiniMax: No matter what I try, MiniMax keeps generating extremely basic and lazy movements (it just does a slight zo",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax 비디오 생성의 정밀 모션 및 페이스 스왑 한계",
+      "summary_ko": "한 사용자가 MiniMax를 사용해 4초 분량의 영상에서 캐릭터 페이스 스왑과 정밀한 미세 표정 구현을 시도했으나 난관에 봉착했습니다. 복잡한 카메라 움직임과 표정 일관성을 유지하려 했으나 MiniMax가 단순한 움직임만 생성하는 문제를 겪고 있습니다.",
+      "bullets": [
+        "4초 영상 캐릭터 페이스 스왑 시도",
+        "복잡한 카메라 및 미세 표정 구현 목적",
+        "MiniMax의 단순하고 소극적인 움직임 한계"
+      ],
+      "category": "benchmark",
+      "score": 0.6923,
+      "cluster_id": 13,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T18:22:37+09:00",
+      "uid": "cdbc093131b0",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "MageTrail - V0.2.5 Update: MageFlow 4B Dan/E621 Finetune now a 2.8B Architecture",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjni8r/magetrail_v025_update_mageflow_4b_dane621",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-09-18T11:22:55+00:00",
+      "summary_raw": "Hi again! This is a update to my previous post MageTrail V0.2 where I release this tech demo toy model thingy called MageTrail , a Danbooru/E621 proof of concept Full-Finetune of Microsoft's MageFlow 4B T2I model, using a diversity maximized condensed 41k images dataset (originally made by Lodestone, the creator of the Chroma model lineage) as a way to tune booru concept and tags based prompting + Illustration capabilities into the model without having to tune with the full booru dataset. (Potentially costing 20k-50k+ dollars). Civitai Hugging Face This is a smaller update and not actually a f",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MageTrail V0.2.5 출시, 구조 경량화 및 파인튜닝 진행",
+      "summary_ko": "MageTrail의 V0.2.5 업데이트가 공개되었습니다. 이번 버전은 Microsoft의 MageFlow 4B 기반 파인튜닝 모델을 2.8B 구조로 축소하여 단부루 및 E621 태그 기반 프롬프트와 일러스트 생성을 지원합니다.",
+      "bullets": [
+        "MageFlow 4B 기반 2.8B 구조 적용",
+        "압축된 41k 이미지 데이터셋 활용",
+        "Civitai 및 Hugging Face에 공개"
+      ],
+      "category": "model_release",
+      "score": 0.4144,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T20:22:55+09:00",
+      "uid": "a31cfd931d1c",
+      "domain": "reddit.com"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Minimax H3+ Flux 2 pro japan bicycle street video workflow",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjsfck/minimax_h3_flux_2_pro_japan_bicycle_street_video",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-09-18T14:54:50+00:00",
+      "summary_raw": "I say a skating video on this sub and decided to try cycling video myself with Minimax. I started in morphic with the character generation, used Flux 2 pro for the image, it did not need and reference and the result was pretty good for a simple prompt. The bicycle was the next component , I generated both cycle and character separately again no reference and I just asked it for red cycle with black design common anime plot. The third step again was an image where I generated multiple japanese animated street view selected few which I like. This part took a lot of time before animating straight",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax와 FLUX 2 pro를 활용한 일본 자전거 거리 비디오 워크플로우",
+      "summary_ko": "한 사용자가 MiniMax와 FLUX 2 pro를 활용하여 일본 애니메이션 스타일의 자전거 주행 비디오를 제작하는 워크플로우를 공유했습니다. 캐릭터와 빨간색 자전거, 일본 거리 배경 이미지를 각각 생성한 뒤 애니메이션화하는 과정을 거쳤습니다.",
+      "bullets": [
+        "FLUX 2 pro로 캐릭터 이미지 생성",
+        "참조 없이 프롬프트로 자전거 생성",
+        "일본 거리 배경 이미지 생성 및 애니메이션"
+      ],
+      "category": "model_release",
+      "score": 1.1241,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T23:54:50+09:00",
+      "uid": "9d641f4279c5",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "H3 Max: Built with fal Inference and Training",
+      "url": "https://blog.fal.ai/h3-max-built-with-fal-inference-and-training",
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-17T23:36:06+00:00",
+      "summary_raw": "H3 Max generates a 5-second video in under 3 seconds. In our human preference evaluations against twelve leading video models, it ranks first on quality, prompt understanding, and aesthetics. Independent benchmarks from Artificial Analysis and Design Arena rank it first as well. We&#x2019;ve written about the model",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "discovered_feed": "https://blog.fal.ai/rss/"
+      },
+      "title_ko": "fal 추론 및 학습 기반 H3 Max 출시, 벤치마크 1위 달성",
+      "summary_ko": "fal의 추론 및 학습 기술로 구축된 H3 Max가 공개되었습니다. 이 모델은 5초 분량의 비디오를 3초 미만에 생성하며, 화질과 프롬프트 이해도 및 미적 기준 평가에서 1위를 기록했습니다.",
+      "bullets": [
+        "5초 비디오를 3초 미만에 생성 완료",
+        "품질 및 프롬프트 이해도 평가 1위",
+        "Artificial Analysis 등 벤치마크 1위"
+      ],
+      "category": "benchmark",
+      "score": 0.9943,
+      "cluster_id": 5,
+      "related": [
+        {
+          "title": "I Built Custom Nodes for LONG Seamless MiniMax-H3 Videos! [FREE Nodes + ...",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjz2nj/i_built_custom_nodes_for_long_seamless_minimaxh3",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3 - What Happens When You Train With Stills Alone?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjvje2/minimax_h3_what_happens_when_you_train_with",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "How to make character take turns in speech CONSISTENTLY in Minimax H3?",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjqc50/how_to_make_character_take_turns_in_speech",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "VC-Attention for MiniMax H3 looks very promising",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjniii/vcattention_for_minimax_h3_looks_very_promising",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "Minimax H3 Faceswap/Face Replacement For VFX",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1wjiskj/minimax_h3_faceswapface_replacement_for_vfx",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T08:36:06+09:00",
+      "uid": "7841f921cb5d",
+      "domain": "blog.fal.ai"
+    },
+    {
+      "title": "H3 Camera Control v3 - New Updates Coming",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjhb4n/h3_camera_control_v3_new_updates_coming",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-09-18T05:24:42+00:00",
+      "summary_raw": "Camera control on video is coming new update is almost ready",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "H3 카메라 컨트롤 v3 신규 업데이트 예정",
+      "summary_ko": "비디오 생성에 적용할 수 있는 새로운 카메라 컨트롤 기능의 업데이트가 거의 완료되어 곧 출시될 예정입니다.",
+      "bullets": [
+        "비디오 카메라 컨트롤 기능 추가 예정",
+        "신규 업데이트 준비 완료 단계"
+      ],
+      "category": "major_update",
+      "score": 0.722,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T14:24:42+09:00",
+      "uid": "f50684ac7abe",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "MiniMax video generation: Contact sheet grid vs. video input for character face swap and precise motion? Results are too basic...",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjlcip/minimax_video_generation_contact_sheet_grid_vs",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-18T09:22:37+00:00",
+      "summary_raw": "Hey everyone, I'm trying to figure out how to properly make MiniMax work for a specific task and I really need some advice. The Goal: I want to perform a character-to-character face swap/transfer on a 4-second sequence. I need to take a specific character and make the AI replicate her features onto an existing sequence that includes complex camera motion, facial expressions, eye movements, and micro-expressions, keeping everything consistent with zero subtitles. The Problem with MiniMax: No matter what I try, MiniMax keeps generating extremely basic and lazy movements (it just does a slight zo",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax 비디오 생성의 정밀 모션 및 페이스 스왑 한계",
+      "summary_ko": "한 사용자가 MiniMax를 사용해 4초 분량의 영상에서 캐릭터 페이스 스왑과 정밀한 미세 표정 구현을 시도했으나 난관에 봉착했습니다. 복잡한 카메라 움직임과 표정 일관성을 유지하려 했으나 MiniMax가 단순한 움직임만 생성하는 문제를 겪고 있습니다.",
+      "bullets": [
+        "4초 영상 캐릭터 페이스 스왑 시도",
+        "복잡한 카메라 및 미세 표정 구현 목적",
+        "MiniMax의 단순하고 소극적인 움직임 한계"
+      ],
+      "category": "benchmark",
+      "score": 0.6923,
+      "cluster_id": 13,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T18:22:37+09:00",
+      "uid": "cdbc093131b0",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "MageTrail - V0.2.5 Update: MageFlow 4B Dan/E621 Finetune now a 2.8B Architecture",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjni8r/magetrail_v025_update_mageflow_4b_dane621",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-09-18T11:22:55+00:00",
+      "summary_raw": "Hi again! This is a update to my previous post MageTrail V0.2 where I release this tech demo toy model thingy called MageTrail , a Danbooru/E621 proof of concept Full-Finetune of Microsoft's MageFlow 4B T2I model, using a diversity maximized condensed 41k images dataset (originally made by Lodestone, the creator of the Chroma model lineage) as a way to tune booru concept and tags based prompting + Illustration capabilities into the model without having to tune with the full booru dataset. (Potentially costing 20k-50k+ dollars). Civitai Hugging Face This is a smaller update and not actually a f",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MageTrail V0.2.5 출시, 구조 경량화 및 파인튜닝 진행",
+      "summary_ko": "MageTrail의 V0.2.5 업데이트가 공개되었습니다. 이번 버전은 Microsoft의 MageFlow 4B 기반 파인튜닝 모델을 2.8B 구조로 축소하여 단부루 및 E621 태그 기반 프롬프트와 일러스트 생성을 지원합니다.",
+      "bullets": [
+        "MageFlow 4B 기반 2.8B 구조 적용",
+        "압축된 41k 이미지 데이터셋 활용",
+        "Civitai 및 Hugging Face에 공개"
+      ],
+      "category": "model_release",
+      "score": 0.4144,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T20:22:55+09:00",
+      "uid": "a31cfd931d1c",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "I made LingBot-World 2.0 1.3B run at real-time 16 FPS on one RTX 5090. 2.5x faster than SGlang, 1.9x faster than Nvidia",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wk22yh/i_made_lingbotworld_20_13b_run_at_realtime_16_fps",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-18T20:51:55+00:00",
+      "summary_raw": "Hi y'all, lots of cool world models have dropped recently, but most don't run on consumer GPUs in real time. LingBot-World 2.0 1.3B runs at 6 FPS on an RTX 5090 GPU. I made the same model run on 16 FPS on the same card. Then, I benchmarked all other inference engines and found 6-8 FPS is the best these get. So I open-sourced the code, which runs 2.5× faster than SGLang Diffusion and 1.9× faster than NVIDIA FlashDreams. The resolution is 832×464, so it's a bit small but playable with a minimized window. How did I get there? I made the model operations run with lower numerical precision while ke",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "RTX 5090서 LingBot-World 2.0 16FPS 실시간 구동 성공",
+      "summary_ko": "LingBot-World 2.0 1.3B 모델을 단일 RTX 5090 GPU에서 실시간 16 FPS로 구동하는 기술이 공개되었습니다. 이는 기존 SGLang 대비 2.5배, NVIDIA FlashDreams 대비 1.9배 빠른 속도입니다.",
+      "bullets": [
+        "RTX 5090 기반 16 FPS 구동 달성",
+        "SGLang 대비 2.5배 속도 향상",
+        "832×464 해상도 지원 코드 오픈소스화"
+      ],
+      "category": "minor",
+      "score": 0.3869,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-19T05:51:55+09:00",
+      "uid": "413d8975b053",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Dungeons & Dragons - Live!",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wk1uf1/dungeons_dragons_live",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-09-18T20:42:37+00:00",
+      "summary_raw": "Inspired by the previous Spiderman cartoon to real action post... Created by MiniMax H3 Ref2VA",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 활용 던전앤드래곤 라이브 영상 공개",
+      "summary_ko": "스파이더맨 애니메이션의 실사화 작업에서 영감을 받은 신규 영상이 커뮤니티에 공유되었습니다. 해당 콘텐츠는 MiniMax H3 Ref2VA 기술을 활용하여 제작되었습니다.",
+      "bullets": [
+        "던전앤드래곤 라이브 컨셉 영상",
+        "MiniMax H3 Ref2VA 기술 활용",
+        "애니메이션의 실사화 기법 적용"
+      ],
+      "category": "minor",
+      "score": 0.3855,
+      "cluster_id": 3,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-19T05:42:37+09:00",
+      "uid": "c8df4d36e784",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "World model companies are keeping a lot of secrets",
+      "url": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-09-18T20:18:14+00:00",
+      "summary_raw": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "월드 모델 개발 기업들의 비밀주의 논란",
+      "summary_ko": "월드 모델 분야 기업들이 대규모 자금과 관심을 모으고 있으나 실제 개발 내용에 대한 정보 공개를 꺼리고 있습니다. 창업자부터 데이터 공급업체에 이르기까지 구체적인 구성을 밝히지 않고 있습니다.",
+      "bullets": [
+        "월드 모델 업계 대규모 자금 유입",
+        "구체적 개발 내용에 대한 비밀 유지",
+        "창업자 및 공급업체의 정보 통제"
+      ],
+      "category": "minor",
+      "score": 0.3001,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-19T05:18:14+09:00",
+      "uid": "31344e51cc80",
+      "domain": "techcrunch.com"
+    },
+    {
+      "title": "Kijai Latest MH3 Vae is great and use less VRAM",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjlflm/kijai_latest_mh3_vae_is_great_and_use_less_vram",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-18T09:27:48+00:00",
+      "summary_raw": "In case you didn’t know, Kijai updated the VAE for MH3 three days ago. It uses less VRAM with no quality degradation. Before, my PC couldn’t handle 1MP at 10 seconds, and 0.8MP was the max. But with this VAE, I can now generate 1MP at 10 seconds and 0.7MP at 15 seconds. I’m using an RTX 3060 12GB with 16GB of RAM. this video is R2V with 3 image references, at max. Here’s the VAE link: https://huggingface.co/Comfy-Org/MiniMax-H3/blob/main/vae/minimax_h3_video_vae_int8_convrot.safetensors",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Kijai, VRAM 사용량 줄인 신규 MH3 VAE 공개",
+      "summary_ko": "Kijai가 품질 저하 없이 VRAM 사용량을 줄인 MH3용 신규 VAE를 공개했다. 기존에 0.8MP가 한계였던 RTX 3060 환경에서 1MP 10초 및 0.7MP 15초 영상 생성이 가능해졌다. 해당 VAE 파일은 Hugging Face에 공개되어 있다.",
+      "bullets": [
+        "품질 저하 없이 VRAM 사용량 감소",
+        "RTX 3060에서 1MP 10초 영상 생성 가능",
+        "Hugging Face 통해 VAE 파일 공유"
+      ],
+      "category": "minor",
+      "score": 0.2973,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T18:27:48+09:00",
+      "uid": "a09b6f35ae9c",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Afternoon snuggles (Test)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjdl8a/afternoon_snuggles_test",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-09-18T02:20:20+00:00",
+      "summary_raw": "Hello! I noticed Minimax H3 tends to do better if it has a video reference to go off of so I did this as a character replacement test, hope you enjoy! :D",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3 비디오 참조 기반 캐릭터 교체 테스트",
+      "summary_ko": "MiniMax H3 모델에서 비디오 참조를 활용한 캐릭터 교체 테스트 결과가 공유되었다. 작성자는 MiniMax H3가 비디오 참조가 있을 때 더 좋은 성능을 보이는 점을 활용해 이번 테스트를 진행했다고 밝혔다.",
+      "bullets": [
+        "MiniMax H3 기반 캐릭터 교체 테스트",
+        "비디오 참조 활용 시 성능 향상 확인"
+      ],
+      "category": "minor",
+      "score": 0.2522,
+      "cluster_id": 16,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T11:20:20+09:00",
+      "uid": "4092590d521f",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Testing Minimax realism, combat, and environment continuity",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjd48u/testing_minimax_realism_combat_and_environment",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-09-18T01:58:29+00:00",
+      "summary_raw": "When MiniMax-H3 launched I found myself wanting to test how well it handled things. Specifically I wanted to look at cinematic realism, combat, and environment continuity. I shifted to a different project for a few weeks, but wanted to come back to this to edit it into a scene. This is what I ended up with. Some take aways I found (most likely well known by now) - Realism is improved via prompt and generation MP. The higher the better. About 3/4 of the way through making these videos I switched to PlagueKind's workflow and a fast version of the model minimax_h3_fastvideo_vsa_datafree_1300step_",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax H3의 실사감 및 연출 연속성 테스트",
+      "summary_ko": "MiniMax H3 모델의 영화적 실사감, 전투, 환경 연속성을 테스트한 결과가 공개되었다. 프롬프트와 생성 MP 수치가 높을수록 실사감이 향상되는 것으로 나타났다. 제작 과정에서 PlagueKind의 워크플로우와 빠른 모델 버전이 사용되었다.",
+      "bullets": [
+        "영화적 실사감 및 연속성 성능 테스트",
+        "높은 MP 설정 시 실사감 향상 확인",
+        "PlagueKind 워크플로우 활용 영상 제작"
+      ],
+      "category": "minor",
+      "score": 0.2501,
+      "cluster_id": 17,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-18T10:58:29+09:00",
+      "uid": "a41f89f83a61",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Enjoy a Yu2 Italian 80s/90s style Canzone Lora",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wk3r7o/enjoy_a_yu2_italian_80s90s_style_canzone_lora",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-09-18T21:58:21+00:00",
+      "summary_raw": "One of my fav childhood genres, very edge, but it may grow on you.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "80~90년대 이탈리아 가요 스타일 Yu2 LoRA 공유",
+      "summary_ko": "80~90년대 이탈리아 칸초네 스타일을 구현한 Yu2 LoRA가 공유되었다. 작성자는 해당 장르가 개인적으로 좋아하는 추억의 장르이자 독특한 매력이 있다고 소개했다.",
+      "bullets": [
+        "80~90년대 이탈리아 칸초네 LoRA 공유",
+        "독특한 매력의 복고풍 스타일 구현"
+      ],
+      "category": "minor",
+      "score": 0.1588,
+      "cluster_id": 0,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-09-19T06:58:21+09:00",
+      "uid": "74667c7eb41f",
+      "domain": "reddit.com"
+    }
+  ],
+  "tldr": [
+    "MiniMax H3와 FLUX를 비롯한 비디오 생성 모델들의 제어력과 실시간 구동 능력을 극대화하려는 시도가 이어졌습니다.",
+    "경량화 모듈과 제어성 개선 업데이트가 맞물리며 고품질 영상 생성 기술의 실용화 검증이 한층 활발해졌습니다."
+  ],
+  "dropped": [
+    {
+      "title": "Anthropic’s first embedded evaluator is … Accenture?",
+      "url": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "How are these high quality character transfers done? Can H3 do it?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wk32dj/how_are_these_high_quality_character_transfers",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "OpenAI and Microsoft knew they were starting a ‘doom loop’ for the web",
+      "url": "https://theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "AI hallucination of Chinese nuclear components almost led to US military attack",
+      "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "FAA tees up $875M AI tool to help manage air traffic congestion",
+      "url": "https://arstechnica.com/ai/2026/09/faa-tees-up-875m-ai-tool-to-help-manage-air-traffic-congestion",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The Implications of Linguistic Illegibility for LLM Security",
+      "url": "https://arxiv.org/abs/2609.02852",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "A new kind of AI model from a ChatGPT inventor is thrilling developers",
+      "url": "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Virginia governor creates an AI task force and moves to restrain data centers",
+      "url": "https://theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Disney’s first CTO led an AI startup it once accused of copying its characters",
+      "url": "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "MilleMiglia: A realistic instance generator for middle-mile logistics",
+      "url": "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics",
+      "source": "Google Research Blog",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Google’s new ‘CC’ is an AI agent that helps families run their households",
+      "url": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "US government website used Chinese model the FBI called \"malicious\"",
+      "url": "https://arstechnica.com/tech-policy/2026/09/us-government-website-used-chinese-model-the-fbi-called-malicious",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Dario Amodei and other AI leaders want to ‘Pace the Frontier’ but…how?",
+      "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
+      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Gavin Newsom is pushing for an AI kill switch",
+      "url": "https://theverge.com/policy/997516/california-governor-newsom-ai-kill-switch",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "as far as is know it does t2i and i2i",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1wjv6k3/as_far_as_is_know_it_does_t2i_and_i2i",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
+      "url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "What Hollywood thinks about existential AI warnings",
+      "url": "https://theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Security researchers used Claude to help them hack into OpenAI",
+      "url": "https://theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Open or closed AI? Nvidia’s Nader Khalil and Sydney Sykes take on one of the decisions shaping next-gen startups at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/18/open-or-closed-ai-nvidias-nader-khalil-and-sydney-sykes-take-on-one-of-the-decisions-shaping-next-gen-startups-at-techcrunch-disrupt-2026",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Meta’s Muse hits Mac, letting the AI take actions on your computer",
+      "url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+      "url": "https://newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Robinhood’s Abhishek Fatehpuria on winning the modern financial consumer at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/18/robinhoods-abhishek-fatehpuria-on-winning-the-modern-financial-consumer-at-techcrunch-disrupt-2026",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Researchers used Anthropic’s Claude to hack into OpenAI",
+      "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The clock is ticking: Final 24 hours to exhibit at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/18/final-24-hours-to-exhibit-at-techcrunch-disrupt-2026",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "AI chatbots are becoming experts at changing people's minds",
+      "url": "https://science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Researchers used Claude to hack OpenAI",
+      "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Flash floods can strike without warning — this new technology could change that",
+      "url": "https://theverge.com/science/997083/flash-flood-warning-tacls-satellite-machine-learning",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
+      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Pre-Greek: The lost language hidden within Ancient Greek",
+      "url": "https://linguisticdiscovery.com/posts/pre-greek",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Crusoe raises $3.9B to build massive data centers and small modular ‘AI factories’",
+      "url": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Google DeepMind launches institute to widen the AGI debate",
+      "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: Scry, programmable internet search w/ congestion pricing",
+      "url": "https://scry.io/",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "PrismML hopes its tiny LLM will change how we all use AI",
+      "url": "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The FAA’s plan to fix air traffic? $875M worth of AI",
+      "url": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Small AI models let drones autonomously identify and attack battlefield targets",
+      "url": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · 404",
+      "elapsed_ms": 187
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 380
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 746
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 559
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 623
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 150
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1032
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 3,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 295
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 3964
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-7E5Q83JAXvqwBJFdtksksL&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 141
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 338
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1209,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 589
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 278
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 39
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 642
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 590
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 152
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 388
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 302
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 40,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 326
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 459
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 521
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 142
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 862,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 241
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 24,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 252
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 124,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 319
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 263,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 2560
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 84
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 122
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 10,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 352
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 246
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 160
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 119
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 429 · Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{t",
+      "elapsed_ms": 135
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 133
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 137
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 27
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 1248
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 35
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 212
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 77
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 86
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 117
+    }
+  ],
+  "stats": {
+    "collected": 2925,
+    "in_window": 60,
+    "screened": 24,
+    "clustered": 19,
+    "merged": 5,
+    "sources_total": 43,
+    "sources_ok": 27,
+    "translate_engine": "gemini",
+    "translate_status": "번역 12/12건 · 캐시 0건",
+    "tldr_status": "2줄",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 34,
+      "내용 없음": 2
+    }
+  },
+  "rankings": {
+    "fetched_at": "2026-09-19T00:25:38.618254+00:00",
+    "attribution": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/",
+    "boards": [
+      {
+        "id": "text-to-video",
+        "label": "텍스트 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1336.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1330.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1302.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.0",
+            "creator": "Alibaba-ATH",
+            "score": 1287.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "HappyHorse-1.1",
+            "creator": "Alibaba-ATH",
+            "score": 1272.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1259.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Wan2.7-260612",
+            "creator": "Alibaba",
+            "score": 1243.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "grok-imagine-video",
+            "creator": "SpaceXAI",
+            "score": 1235.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-to-video",
+        "label": "이미지 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1369.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1361.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Bach 1.0 Pro",
+            "creator": "Video Rebirth",
+            "score": 1359.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1354.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "PixVerse V6",
+            "creator": "PixVerse",
+            "score": 1337.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1336.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "grok-imagine-video-1.5",
+            "creator": "SpaceXAI",
+            "score": 1329.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "grok-imagine-video",
+            "creator": "SpaceXAI",
+            "score": 1326.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "text-to-image",
+        "label": "텍스트 → 이미지",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1188.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1182.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1171.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok Imagine Image 2.0",
+            "creator": "SpaceXAI",
+            "score": 1154.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": null,
+            "is_new": true
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1147.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "Reve 2.1",
+            "creator": "Reve",
+            "score": 1129.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+            "creator": "Google",
+            "score": 1122.0,
+            "ci": 8,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "Muse Image",
+            "creator": "Meta",
+            "score": 1112.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": -1,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-editing",
+        "label": "이미지 편집",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1176.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1154.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1133.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6-Flash",
+            "creator": "Microsoft AI",
+            "score": 1122.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1120.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Muse Image",
+            "creator": "Meta",
+            "score": 1116.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5",
+            "creator": "Microsoft AI",
+            "score": 1114.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.5-Pro",
+            "creator": "Microsoft AI",
+            "score": 1107.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "language",
+        "label": "언어모델 (지능·가격)",
+        "kind": "language",
+        "rows": [
+          {
+            "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 53.4,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (max)",
+            "creator": "OpenAI",
+            "score": 52.8,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (xhigh)",
+            "creator": "OpenAI",
+            "score": 52.5,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+            "creator": "Anthropic",
+            "score": 49.7,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 49.1,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 47.0,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok 4.6 (medium)",
+            "creator": "SpaceXAI",
+            "score": 43.0,
+            "ci": null,
+            "price": 6.0,
+            "price_unit": "$/1M",
+            "released": "2026-08-12",
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GLM 5.3 Flash",
+            "creator": "Z AI",
+            "score": 41.9,
+            "ci": null,
+            "price": 0.5,
+            "price_unit": "$/1M",
+            "released": "2026-08-26",
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Muse Spark 1.2 (xhigh)",
+            "creator": "Meta",
+            "score": 39.8,
+            "ci": null,
+            "price": 4.25,
+            "price_unit": "$/1M",
+            "released": "2026-08-05",
+            "rank": 9,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+            "creator": "Anthropic",
+            "score": 39.8,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 10,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "tier": "free",
+    "error": ""
+  }
+}
