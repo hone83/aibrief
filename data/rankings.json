@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -22,8 +22,8 @@
       "grok-imagine-video": 8
     },
     "text-to-image": {
-      "GPT Image 2.5 Flare (max)": 1,
-      "GPT Image 2.5 Sunburst (max)": 2,
+      "GPT Image 2.5 Sunburst (max)": 1,
+      "GPT Image 2.5 Flare (max)": 2,
       "GPT Image 2 (high)": 3,
       "Grok Imagine Image 2.0": 4,
       "MAI-Image-2.6": 5,
@@ -39,19 +39,19 @@
       "GPT Image 2 (high)": 5,
       "Muse Image": 6,
       "MAI-Image-2.5": 7,
-      "MAI-Image-2.5-Pro": 8
+      "Seedream 5.0 Pro": 8
     },
     "language": {
-      "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
-      "GPT-6 Astra (max)": 2,
-      "GPT-6 Astra (xhigh)": 3,
-      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 4,
-      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 5,
-      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 6,
-      "MiMo-V2.6-Pro": 7,
-      "Grok 4.7 (high)": 8,
-      "Step 5 Preview": 9,
-      "Grok 4.6 (medium)": 10
+      "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
+      "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 2,
+      "GPT-6 Astra (max)": 3,
+      "GPT-6 Astra (xhigh)": 4,
+      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 5,
+      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 6,
+      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 7,
+      "MiMo-V2.6-Pro": 8,
+      "Grok 4.7 (high)": 9,
+      "Step 5 Preview": 10
     }
   }
 }
