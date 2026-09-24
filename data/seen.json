@@ -181,7 +181,8 @@
   "https://lumalabs.ai/news/text-video-prompts": "2026-09-23T00:40:39.488156+00:00",
   "https://lumalabs.ai/news/ai-photo-prompts-real-estate-listings-staging": "2026-09-23T00:40:39.488156+00:00",
   "https://lumalabs.ai/news/ai-prompts-branding": "2026-09-23T00:40:39.488156+00:00",
-  "https://lumalabs.ai/news/ai-food-photography-prompts": "2026-09-23T00:40:39.488156+00:00"
+  "https://lumalabs.ai/news/ai-food-photography-prompts": "2026-09-23T00:40:39.488156+00:00",
+  "https://lumalabs.ai/news/ai-adoption-creative-work-2026": "2026-09-24T00:33:46.877879+00:00"
  },
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-09-22T00:53:55.938551+00:00",
@@ -250,7 +251,30 @@
   "https://huggingface.co/papers/2609.24115": "2026-09-23T00:40:39.988884+00:00",
   "https://huggingface.co/papers/2609.24788": "2026-09-23T00:40:39.988884+00:00",
   "https://huggingface.co/papers/2609.23169": "2026-09-23T00:40:39.988884+00:00",
-  "https://huggingface.co/papers/2609.20869": "2026-09-23T00:40:39.988884+00:00"
+  "https://huggingface.co/papers/2609.20869": "2026-09-23T00:40:39.988884+00:00",
+  "https://huggingface.co/papers/2609.25804": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25270": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.24981": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.24058": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.24657": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.15987": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26774": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25165": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26550": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25186": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26796": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25199": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26781": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26457": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.24967": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25053": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25636": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.26346": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25247": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.06011": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.25267": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.22319": "2026-09-24T00:33:47.140508+00:00",
+  "https://huggingface.co/papers/2609.22323": "2026-09-24T00:33:47.140508+00:00"
  },
  "bfl-blog": {
   "https://bfl.ai/blog/flux-video-upscale": "2026-09-22T00:53:56.249112+00:00",
