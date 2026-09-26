@@ -224,7 +224,29 @@
   "https://huggingface.co/papers/2609.28470": "2026-09-25T00:36:03.182059+00:00",
   "https://huggingface.co/papers/2609.25187": "2026-09-25T00:36:03.182059+00:00",
   "https://huggingface.co/papers/2609.27657": "2026-09-25T00:36:03.182059+00:00",
-  "https://huggingface.co/papers/2609.24815": "2026-09-25T00:36:03.182059+00:00"
+  "https://huggingface.co/papers/2609.24815": "2026-09-25T00:36:03.182059+00:00",
+  "https://huggingface.co/papers/2609.28654": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29845": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.30221": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.23407": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.28416": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29362": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29892": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29444": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29028": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.30233": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29421": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.23087": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29647": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.28603": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29837": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.30199": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29964": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29816": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.29429": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.28811": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.28923": "2026-09-26T00:40:36.583954+00:00",
+  "https://huggingface.co/papers/2609.30077": "2026-09-26T00:40:36.583954+00:00"
  },
  "bfl-blog": {
   "https://bfl.ai/blog/flux-3-action": "2026-09-25T00:36:03.186543+00:00",
@@ -241,5 +263,8 @@
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-09-25T00:36:04.019178+00:00",
   "https://kling.ai/release-note/release-preview": "2026-09-25T00:36:04.019178+00:00"
+ },
+ "minimax-hailuo": {
+  "https://www.minimax.io/news/minimax-speech-28": "2026-09-26T00:40:36.081846+00:00"
  }
 }
