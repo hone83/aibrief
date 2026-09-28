@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -13,8 +13,8 @@
     },
     "image-to-video": {
       "Gemini Omni Flash": 1,
-      "Wan 3.0": 2,
-      "Bach 1.0 Pro": 3,
+      "Bach 1.0 Pro": 2,
+      "Wan 3.0": 3,
       "MiniMax H3": 4,
       "PixVerse V6": 5,
       "Dreamina Seedance 2.0 720p": 6,
