@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -29,7 +29,7 @@
       "MAI-Image-2.6": 5,
       "Nano Banana 2 (Gemini 3.1 Flash Image)": 6,
       "Muse Image": 7,
-      "MAI-Image-2.6-Flash": 8
+      "GPT Image 1.5 (high)": 8
     },
     "image-editing": {
       "GPT Image 2.5 Sunburst (max)": 1,
@@ -46,12 +46,12 @@
       "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 2,
       "GPT-6 Astra (max)": 3,
       "GPT-6 Astra (xhigh)": 4,
-      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 5,
-      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 6,
-      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 7,
-      "Claude Sonnet 5.5 (Adaptive Reasoning, High Effort, Default Fallback)": 8,
-      "MiMo-V2.6-Pro": 9,
-      "Grok 4.7 (high)": 10
+      "GPT-6.1 Sol (xhigh)": 5,
+      "GPT-6.1 Sol (high)": 6,
+      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 7,
+      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 8,
+      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 9,
+      "Claude Sonnet 5.5 (Adaptive Reasoning, High Effort, Default Fallback)": 10
     }
   }
 }
