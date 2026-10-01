@@ -1,15 +1,15 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "Gemini Omni Flash": 2,
-      "MiniMax H3": 3,
-      "HappyHorse-1.0": 4,
-      "HappyHorse-1.1": 5,
-      "Dreamina Seedance 2.0 720p": 6,
-      "Wan2.7-260612": 7,
-      "grok-imagine-video": 8
+      "MiniMax H3 (768p)": 2,
+      "Dreamina Seedance 2.5": 3,
+      "FLUX 3": 4,
+      "SkyReels V4": 5,
+      "Dreamina Seedance 2.0": 6,
+      "Gemini Omni Flash 1.1": 7,
+      "Agnes-Video-2.5": 8
     },
     "image-to-video": {
       "Gemini Omni Flash": 1,
@@ -44,10 +44,10 @@
     "language": {
       "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
       "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 2,
-      "GPT-6 Astra (max)": 3,
-      "GPT-6 Astra (xhigh)": 4,
-      "GPT-6.1 Sol (xhigh)": 5,
-      "GPT-6.1 Sol (high)": 6,
+      "GPT-6 Astra (Max)": 3,
+      "GPT-6 Astra (Xhigh)": 4,
+      "GPT-6.1 Sol (Xhigh)": 5,
+      "GPT-6.1 Sol (High)": 6,
       "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 7,
       "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 8,
       "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 9,
