@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "MiniMax H3 (768p)": 2,
-      "Dreamina Seedance 2.5": 3,
-      "FLUX 3": 4,
-      "SkyReels V4": 5,
-      "Dreamina Seedance 2.0": 6,
-      "Gemini Omni Flash 1.1": 7,
-      "Agnes-Video-2.5": 8
+      "MiniMax H3 Max (based on MiniMax H3)": 2,
+      "MiniMax H3 (768p)": 3,
+      "Dreamina Seedance 2.5": 4,
+      "FLUX 3": 5,
+      "SkyReels V4": 6,
+      "Dreamina Seedance 2.0": 7,
+      "Gemini Omni Flash 1.1": 8
     },
     "image-to-video": {
       "Gemini Omni Flash": 1,
