@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "MiniMax H3 Max (based on MiniMax H3)": 2,
-      "MiniMax H3 (768p)": 3,
+      "MiniMax H3 (768p)": 2,
+      "MiniMax H3 Max (based on MiniMax H3)": 3,
       "Dreamina Seedance 2.5": 4,
       "FLUX 3": 5,
       "SkyReels V4": 6,
@@ -42,16 +42,16 @@
       "Nano Banana 2 (Gemini 3.1 Flash Image)": 8
     },
     "language": {
-      "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)": 1,
-      "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)": 2,
+      "Claude Opus 5.5 (Max, Default Fallback)": 1,
+      "Claude Fable 5.1 (Max, Default Fallback)": 2,
       "GPT-6 Astra (Max)": 3,
       "GPT-6 Astra (Xhigh)": 4,
       "GPT-6.1 Sol (Xhigh)": 5,
       "GPT-6.1 Sol (High)": 6,
-      "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)": 7,
-      "Claude Fable 5.1 (Adaptive Reasoning, Medium Effort, Default Fallback)": 8,
-      "Claude Fable 5.1 (Adaptive Reasoning, Low Effort, Default Fallback)": 9,
-      "Claude Sonnet 5.5 (Adaptive Reasoning, High Effort, Default Fallback)": 10
+      "Claude Opus 5 (Xhigh)": 7,
+      "Claude Fable 5.1 (Medium, Default Fallback)": 8,
+      "Claude Fable 5.1 (Low, Default Fallback)": 9,
+      "Claude Sonnet 5.5 (High, Default Fallback)": 10
     }
   }
 }

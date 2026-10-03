@@ -5322,5 +5322,135 @@
    "inspire 노드 분할 시 길이 오류 발생",
    "ComfyUI 워크플로우 내 노드 오류 공유"
   ]
+ },
+ "7e7bb2091152": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "Lightricks, LTX-2 v1.4.2 업데이트 출시",
+  "summary_ko": "Lightricks가 LTX-2 v1.4.2 버전을 출시했습니다. 이번 업데이트를 통해 비디오 CFG 1 및 STG를 비활성화한 전체 모델 기반의 1단계 IC-LoRA 파이프라인인 ltx_pipelines.alpha_gen이 추가되었습니다.",
+  "bullets": [
+   "LTX-2 v1.4.2 버전 업데이트",
+   "ltx_pipelines.alpha_gen 추가",
+   "비디오 CFG 1 및 STG 오프 적용"
+  ]
+ },
+ "6b4b7282ec31": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "ByteDance, MiniMax-H3용 4단계 모델 출시",
+  "summary_ko": "ByteDance가 MiniMax-H3를 위한 4단계 모델을 출시했습니다. 이번 릴리스는 적대적 증류를 통한 분포 매칭(DMAD) 기술을 기반으로 하며, 관련 모델 가중치와 논문이 함께 공개되었습니다.",
+  "bullets": [
+   "MiniMax-H3용 4단계 모델 공개",
+   "DMAD 기술 적용 모델 배포",
+   "Hugging Face 및 논문 링크 제공"
+  ]
+ },
+ "7be16f4abb37": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "로컬 이미지·비디오 생성용 윈도우 앱 Vison 공개",
+  "summary_ko": "FLUX, Wan, Z-Image, SDXL 등 다양한 이미지 및 비디오 모델을 로컬에서 실행할 수 있는 오픈소스 윈도우 앱 Vison이 공개되었습니다. 계정 등록 없이 6GB VRAM 환경에서도 작동하며, Hugging Face 링크를 붙여넣어 모델을 바로 불러올 수 있습니다.",
+  "bullets": [
+   "로컬 실행 지원 오픈소스 앱 Vison",
+   "FLUX, Wan, SDXL 등 모델 지원",
+   "Hugging Face 링크 간편 로더 탑재"
+  ]
+ },
+ "cef8e5eaffa7": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "MiniMax H3와 Seedance 2.0 댄스 생성 비교",
+  "summary_ko": "동일한 프롬프트와 워크플로우를 사용해 MiniMax H3와 Seedance 2.0의 댄스 비디오 생성 성능을 비교했습니다. MiniMax H3는 캐릭터 일관성이 뛰어났으나 카메라 움직임이 부족했고, Seedance 2.0은 다양한 앵글과 클로즈업을 포함해 더 나은 품질을 보여주었습니다.",
+  "bullets": [
+   "동일 프롬프트로 두 모델 성능 비교",
+   "MiniMax H3는 뛰어난 일관성 강점",
+   "Seedance 2.0은 다양한 앵글 제공"
+  ]
+ },
+ "8d86c241880b": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "최고의 이미지 생성 및 편집 모델 비교 논의",
+  "summary_ko": "애니메이션, 반실사, 실사 분야에서 최고의 성능을 보이는 이미지 생성 및 편집 모델을 가리는 논의가 진행 중이다. 후보로는 Anima, Qwen, Krea, FLUX.2 dev 등이 거론되고 있다.",
+  "bullets": [
+   "Anima, Qwen, Krea, FLUX.2 dev 비교",
+   "애니메이션·반실사·실사 분야 평가",
+   "최적의 생성 및 편집 모델 논의"
+  ]
+ },
+ "8e206c4d9ed6": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "스타트업을 위한 GPT-6 모델 가이드 공개",
+  "summary_ko": "스타트업이 GPT-6 모델군을 선택하고 활용하는 방법을 담은 가이드가 공개되었다. 추론 노력 조절, 프롬프트 개선, 도구 조율 및 프로덕션 워크플로우 준비 방법 등을 다룬다.",
+  "bullets": [
+   "GPT-6 모델선택 및 추론 조절 안내",
+   "프롬프트 및 기술 향상 방법 제시",
+   "프로덕션 워크플로우 준비 과정 설명"
+  ]
+ },
+ "da0a1d54ccbd": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "만화 특화 실험적 Real-ESRGAN Anime6B 공개",
+  "summary_ko": "기존 Real-ESRGAN Anime6B 가중치를 기반으로 파인튜닝한 실험적 모델이 공개되었다. 실제 만화 페이지의 스크린톤 영역을 학습시켜 얼굴과 상세 표현을 유지하면서 세부 질감 복원과 선 명확도를 향상했다.",
+  "bullets": [
+   "기존 Anime6B 가중치 기반 파인튜닝",
+   "합성 스크린톤 및 실제 만화 학습",
+   "세부 질감 복원 및 선 명확도 향상"
+  ]
+ },
+ "a97398f76ee5": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "채텀, OpenAI 도입으로 거래 검증 시간 단축",
+  "summary_ko": "Chatham Financial이 Codex와 GPT-5.6을 도입하여 기술을 구축하고 워크플로우를 재설계했다. 이를 통해 기존 30분이 걸리던 거래 검증 시간을 4분 미만으로 줄였다.",
+  "bullets": [
+   "Codex 및 GPT-5.6 모델 활용",
+   "기술 구축 및 워크플로우 재설계",
+   "거래 검증 시간 30분에서 4분 미만 단축"
+  ]
+ },
+ "adea9849b615": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "Hugging Face에 QR 코드 일루전 데이터셋 오픈소스 공개",
+  "summary_ko": "Hugging Face에 ControlNet 및 LoRA 학습용 예술적 QR 코드 일루전 데이터셋 30,000쌍이 오픈소스로 공개되었다. 이 데이터셋은 단순 노이즈 합성이 아닌 나뭇잎, 건축물, 조명 등에 QR 코드가 자연스럽게 녹아든 이미지로 구성되었으며 다중 디코더 검증을 거쳤다.",
+  "bullets": [
+   "30,000쌍의 768x768 PNG 이미지 제공",
+   "Parquet 샤드로 패키징되어 빠른 로드 지원",
+   "다중 디코더 검증 및 강건성 점수 계산"
+  ]
+ },
+ "9a381de08486": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "ComfyUI v0.38.2 버전 출시",
+  "summary_ko": "ComfyUI의 새로운 v0.38.2 버전이 출시되었다.",
+  "bullets": [
+   "ComfyUI v0.38.2 버전 업데이트"
+  ]
+ },
+ "eacd6a74a331": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "Lightricks, SDR을 HDR로 변환하는 워크플로우 출시",
+  "summary_ko": "Lightricks가 SDR 영상을 HDR로 변환하는 워크플로우와 LoRA 세트를 출시했다. 이 도구는 기존 영상을 32비트로 변환하고, 어두운 영역의 컬러 밴딩과 블로킹 현상을 정리하며 VAE 아티팩트를 해결한다.",
+  "bullets": [
+   "SDR을 HDR로 변환하는 워크플로우 공개",
+   "컬러 밴딩 및 블로킹 현상 개선",
+   "VAE 아티팩트 문제 해결"
+  ]
+ },
+ "3922b8b1324f": {
+  "engine": "gemini",
+  "ts": "2026-10-03T01:15:07.693933+00:00",
+  "title_ko": "Strata 기반 Qwen3.8-Flash-Next 모델 성능 주목",
+  "summary_ko": "프롬프트 작성 및 이미지 설명 등 로컬 LLM 작업에 적합한 Qwen3.8-Flash-Next 모델이 주목받고 있다. 이 모델은 Strata를 활용하여 고성능 가정용 컴퓨터에서도 원활하게 구동할 수 있다.",
+  "bullets": [
+   "프롬프트 및 이미지 설명에 유용한 모델",
+   "Strata를 통해 가정용 PC에서 구동 가능",
+   "Hugging Face에 검열 해제 양자화 버전 공개"
+  ]
  }
 }
