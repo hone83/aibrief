@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "MiniMax H3 (768p)": 2,
-      "MiniMax H3 Max (based on MiniMax H3)": 3,
+      "MiniMax H3 Max (based on MiniMax H3)": 2,
+      "MiniMax H3 (768p)": 3,
       "Dreamina Seedance 2.5": 4,
       "FLUX 3": 5,
       "SkyReels V4": 6,
@@ -16,8 +16,8 @@
       "Bach 1.0 Pro": 2,
       "Wan 3.0": 3,
       "MiniMax H3": 4,
-      "PixVerse V6": 5,
-      "Dreamina Seedance 2.0 720p": 6,
+      "Dreamina Seedance 2.0 720p": 5,
+      "PixVerse V6": 6,
       "grok-imagine-video-1.5": 7,
       "grok-imagine-video": 8
     },
@@ -39,7 +39,7 @@
       "GPT Image 2 (high)": 5,
       "Muse Image": 6,
       "MAI-Image-2.5": 7,
-      "Nano Banana 2 (Gemini 3.1 Flash Image)": 8
+      "Grok Imagine Image 2.0": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,
