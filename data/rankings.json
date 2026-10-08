@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "MiniMax H3 Max (based on MiniMax H3)": 2,
+      "MiniMax H3 Max": 2,
       "MiniMax H3 (768p)": 3,
       "Dreamina Seedance 2.5": 4,
       "FLUX 3": 5,
@@ -18,28 +18,28 @@
       "MiniMax H3": 4,
       "Dreamina Seedance 2.0 720p": 5,
       "PixVerse V6": 6,
-      "grok-imagine-video-1.5": 7,
+      "Grok Imagine Video 1.5": 7,
       "grok-imagine-video": 8
     },
     "text-to-image": {
       "GPT Image 2.5 Sunburst (max)": 1,
       "GPT Image 2.5 Flare (max)": 2,
       "GPT Image 2 (high)": 3,
-      "Grok Imagine Image 2.0": 4,
-      "MAI-Image-2.6": 5,
-      "Nano Banana 2 (Gemini 3.1 Flash Image)": 6,
-      "Muse Image": 7,
-      "GPT Image 1.5 (high)": 8
+      "Nano Banana 2.1": 4,
+      "Grok Imagine Image 2.0": 5,
+      "MAI-Image-2.6": 6,
+      "Nano Banana 2 (Gemini 3.1 Flash Image)": 7,
+      "Muse Image": 8
     },
     "image-editing": {
       "GPT Image 2.5 Sunburst (max)": 1,
       "GPT Image 2.5 Flare (max)": 2,
       "MAI-Image-2.6": 3,
-      "MAI-Image-2.6-Flash": 4,
-      "GPT Image 2 (high)": 5,
-      "Muse Image": 6,
-      "MAI-Image-2.5": 7,
-      "Grok Imagine Image 2.0": 8
+      "Nano Banana 2.1": 4,
+      "MAI-Image-2.6-Flash": 5,
+      "GPT Image 2 (high)": 6,
+      "Muse Image": 7,
+      "MAI-Image-2.5": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,
