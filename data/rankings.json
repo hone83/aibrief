@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
@@ -16,10 +16,10 @@
       "Bach 1.0 Pro": 2,
       "Wan 3.0": 3,
       "MiniMax H3": 4,
-      "Dreamina Seedance 2.0 720p": 5,
-      "PixVerse V6": 6,
-      "Grok Imagine Video 1.5": 7,
-      "grok-imagine-video": 8
+      "Vimoo 1.0": 5,
+      "Dreamina Seedance 2.0 720p": 6,
+      "PixVerse V6": 7,
+      "Grok Imagine Video 1.5": 8
     },
     "text-to-image": {
       "GPT Image 2.5 Sunburst (max)": 1,
