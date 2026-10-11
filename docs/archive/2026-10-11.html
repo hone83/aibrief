@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0E10">
+<meta name="robots" content="noindex, nofollow">
+<title>2026-10-11 · 비주얼 AI 브리핑</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI 브리핑">
+<link rel="alternate" type="application/rss+xml" title="비주얼 AI 브리핑" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0B0E10; --surface:#14181C; --surface-2:#1B2127; --surface-3:#232B32;
+  --line:#262E35; --line-soft:#1E252B;
+  --ink:#F2F5F7; --ink-2:#B7C2CB; --muted:#7C8A95;
+  --accent:#FFCE4A; --accent-ink:#0B0E10; --accent-soft:#3A2F12;
+  --up:#4ADE80; --down:#F87171;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box;}
+/* display를 지정한 요소에는 hidden 속성이 먹지 않는다(작성자 스타일이 이긴다).
+   달력 팝오버가 닫히지 않던 원인이라 전역으로 못박아 둔다. */
+[hidden]{display:none !important;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  /* 홈 화면 앱에서 더블탭 확대를 막는다. 뉴스를 읽는 화면이라 확대할 일이 없고,
+     확대되면 상단바가 화면 밖으로 밀려 되돌리기가 어렵다. */
+  touch-action:manipulation;
+}
+/* 홈 화면 앱은 상태표시줄(노치)과 홈 인디케이터 아래까지 화면을 차지한다.
+   그대로 두면 상단바가 시계에 가려 눌리지 않는다. 기기가 알려주는 여백을 더해준다. */
+:root{
+  --sa-top:env(safe-area-inset-top, 0px);
+  --sa-bot:env(safe-area-inset-bottom, 0px);
+  --sa-l:env(safe-area-inset-left, 0px);
+  --sa-r:env(safe-area-inset-right, 0px);
+}
+body[data-detail]{overflow:hidden;}
+a{color:inherit;}
+.wrap{max-width:1080px; margin:0 auto;
+      padding:0 calc(18px + var(--sa-r)) calc(72px + var(--sa-bot)) calc(18px + var(--sa-l));}
+
+/* ---------- 상단 바 ---------- */
+.top{
+  position:sticky; top:0; z-index:30; background:rgba(11,14,16,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1080px; margin:0 auto;
+  padding:calc(12px + var(--sa-top)) calc(18px + var(--sa-r)) 12px calc(18px + var(--sa-l));
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; margin-right:auto;}
+.brand .d{font-family:var(--f-mono); font-size:19px; font-weight:600; letter-spacing:.02em;}
+.brand .s{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+          text-transform:uppercase; color:var(--muted);}
+.tabs{display:flex; gap:4px; background:var(--surface-2); padding:3px; border-radius:999px;}
+.tabs button{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink-2);
+  background:none; border:0; padding:6px 16px; border-radius:999px; cursor:pointer;
+}
+.tabs button[aria-selected="true"]{background:var(--accent); color:var(--accent-ink); font-weight:600;}
+/* 검색은 늘 보이게 둔다. 버튼 뒤에 숨기면 "찾아볼 수 있다"는 사실 자체를 잊는다. */
+.find{display:flex; gap:6px; align-items:center; position:relative;}
+#q{
+  width:210px; font:inherit; font-size:14px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:8px 12px;
+}
+#q::placeholder{color:var(--muted);}
+#q:focus{border-color:var(--accent); outline:none; background:var(--surface);}
+.calbtn{
+  font:inherit; font-size:12.5px; font-family:var(--f-mono); letter-spacing:.04em;
+  background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:8px; padding:8px 12px; cursor:pointer;
+  white-space:nowrap;
+}
+.calbtn:hover, .calbtn[aria-expanded="true"]{border-color:var(--accent); color:var(--ink);}
+
+/* 검색은 별도 화면으로 연다. 폰에서는 결과가 목록 위에 겹쳐 뜨면
+   지금 무엇을 보고 있는지가 흐려진다. 뒤로가기로 닫힌다. */
+#results{
+  position:fixed; inset:0; z-index:70; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+#results[data-open]{display:block;}
+#results .res-in{
+  max-width:760px; margin:0 auto;
+  padding:16px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+}
+#q2{
+  width:100%; font:inherit; font-size:16px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; margin-bottom:12px;
+}
+#q2:focus{border-color:var(--accent); outline:none;}
+
+/* 미니 달력은 날짜 버튼 아래에 붙는다 */
+#calpop{
+  position:absolute; right:0; top:calc(100% + 8px); width:296px; z-index:40;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:14px; box-shadow:0 18px 40px rgba(0,0,0,.55);
+  display:flex; flex-direction:column; gap:10px;
+}
+
+/* ---------- 덮어쓰는 화면들(세부·검색·달력) 공통 ---------- */
+.sheet{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.sheet[data-open]{display:block;}
+.s-body{max-width:760px; margin:0 auto;
+        padding:22px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+        display:flex; flex-direction:column; gap:16px;}
+
+/* ---------- 검색 ---------- */
+.q-note{font-family:var(--f-mono); font-size:11.5px; color:var(--muted);}
+.hits{display:flex; flex-direction:column;}
+.hit{
+  display:block; text-decoration:none; color:inherit;
+  padding:13px 2px; border-bottom:1px solid var(--line-soft);
+}
+.hit:hover{background:var(--surface);}
+.hit .hm{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+         display:flex; gap:8px; align-items:center;}
+.hit .ht{font-size:16px; font-weight:600; line-height:1.5; margin:3px 0 2px;
+         word-break:keep-all; overflow-wrap:break-word;}
+.hit .hs{font-size:13.5px; color:var(--ink-2); line-height:1.55;
+         display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+         overflow:hidden;}
+mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-radius:2px;}
+
+/* ---------- 달력 ---------- */
+.cal-head{display:flex; align-items:center; gap:14px;}
+.cal-head .mo{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums;
+              margin-right:auto;}
+.cal-head button{
+  font:inherit; font-size:15px; background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; width:32px; height:28px; cursor:pointer;
+}
+.cal-head button:disabled{opacity:.3; cursor:default;}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:3px;}
+.cal .dow{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+          text-align:center; padding:4px 0;}
+.cal a, .cal span{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:1/1; border-radius:6px; font-family:var(--f-mono); font-size:12.5px;
+  font-variant-numeric:tabular-nums;
+}
+.cal span{color:#3D474F;}
+.cal span.pad{visibility:hidden;}
+.cal a{background:var(--surface); border:1px solid var(--line);
+       color:var(--ink); text-decoration:none;}
+.cal a:hover{border-color:var(--accent); color:var(--accent);}
+.cal a.now{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+           font-weight:600;}
+
+/* ---------- 모델 히스토리 ---------- */
+.mgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:9px;
+       padding-top:22px;}
+.mcard{
+  display:flex; flex-direction:column; gap:7px; text-align:left; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 15px; font:inherit; color:inherit;
+}
+.mcard:hover{border-color:var(--accent);}
+.mcard .top-row{display:flex; align-items:baseline; gap:8px;}
+.mcard b{font-size:16px; font-weight:600; word-break:break-word;}
+.mcard .ver{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em;
+  color:var(--accent); border:1px solid var(--accent); border-radius:4px;
+  padding:1px 6px; white-space:nowrap;
+}
+.mcard .hd{
+  font-size:13.5px; line-height:1.55; color:var(--ink-2);
+  word-break:keep-all; overflow-wrap:break-word;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.mcard .meta{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:auto;}
+.mhead{display:flex; align-items:center; gap:12px; padding:22px 0 6px;}
+.mhead h2{margin:0; font-size:22px; font-weight:700;}
+.mhead .n{font-family:var(--f-mono); font-size:12px; color:var(--muted); margin-right:auto;}
+.timeline{display:flex; flex-direction:column;}
+.tl{display:grid; grid-template-columns:78px 1fr; gap:14px; padding:13px 2px;
+    border-bottom:1px solid var(--line-soft); text-decoration:none; color:inherit;}
+.tl:hover{background:var(--surface);}
+.tl .dt{font-family:var(--f-mono); font-size:11.5px; color:var(--accent);
+        font-variant-numeric:tabular-nums;}
+.tl .tt{font-size:15.5px; font-weight:500; line-height:1.5;
+        word-break:keep-all; overflow-wrap:break-word;}
+.tl .tt, .tl .ts{display:block;}
+.tl .ts{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:4px;}
+
+/* ---------- 오늘: 핵심 덩어리 ---------- */
+.lede{
+  padding:28px 0 22px; border-bottom:1px solid var(--line);
+  display:flex; flex-direction:column; gap:22px;
+}
+.flow{
+  font-weight:700; font-size:clamp(21px,3vw,30px);
+  line-height:1.5; letter-spacing:-.025em;
+  margin:0; max-width:30ch; text-wrap:balance;
+}
+/* 한국어는 기본값이 글자 단위 줄바꿈이라 '몰렸고'가 '몰/렸고'로 끊긴다.
+   keep-all로 어절을 지키고, 긴 영문 모델명만 예외로 쪼갠다. */
+.flow, .head .t, .tile .t, .d-title, .body-text, .bul li, td.nm{
+  word-break:keep-all; overflow-wrap:break-word;
+}
+.flow span{display:block;}
+.flow span+span{color:var(--ink-2); font-size:.82em; margin-top:.35em;}
+.flow.empty{color:var(--muted); font-size:20px;}
+
+.heads{display:flex; flex-direction:column; border-top:1px solid var(--line-soft);}
+.head{
+  display:grid; grid-template-columns:32px 1fr auto; align-items:baseline; gap:12px;
+  padding:13px 6px 13px 0; border-bottom:1px solid var(--line-soft);
+  background:none; border-left:0; border-right:0; border-top:0;
+  width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer;
+}
+.head:last-child{border-bottom:none;}
+.head:hover, .head:focus-visible{background:var(--surface);}
+.head .n{
+  font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.head .t{font-size:clamp(16px,2vw,19px); font-weight:600; line-height:1.45;}
+.head .m{font-family:var(--f-mono); font-size:11px; color:var(--muted); white-space:nowrap;}
+
+/* ---------- 오늘: 카드 타일 ---------- */
+.sec-h{
+  display:flex; align-items:baseline; gap:10px; padding:24px 0 11px;
+}
+.sec-h h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0;
+}
+.sec-h .c{font-family:var(--f-mono); font-size:11px; color:var(--accent);}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:10px;}
+.tile{
+  display:flex; flex-direction:column; gap:9px; text-align:left;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:15px 16px 13px; cursor:pointer; font:inherit; color:inherit;
+  transition:border-color .12s, background .12s;
+}
+.tile:hover, .tile:focus-visible{border-color:var(--accent); background:var(--surface-2);}
+.tile .cat{
+  display:flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+.dot{width:7px; height:7px; border-radius:50%; flex:none;}
+.tile .t{font-size:16px; font-weight:600; line-height:1.5; letter-spacing:-.01em;}
+.tile .m{
+  margin-top:auto; font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+  display:flex; gap:8px; align-items:center;
+}
+.tile .m .st{color:var(--accent); letter-spacing:.1em;}
+
+/* ---------- 세부 화면 ---------- */
+.detail{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.detail[data-open]{display:block;}
+.sheet .d-bar{padding:11px 18px;}
+.d-bar{
+  position:sticky; top:0; background:rgba(11,14,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  padding:calc(11px + var(--sa-top)) calc(18px + var(--sa-r)) 11px calc(18px + var(--sa-l));
+  display:flex; align-items:center; gap:12px;
+}
+.d-bar .back{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:6px 13px; cursor:pointer;
+}
+.d-bar .back:hover{border-color:var(--accent);}
+.d-bar .pos{font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:auto;}
+.d-body{max-width:720px; margin:0 auto;
+        padding:26px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+        display:flex; flex-direction:column; gap:18px;}
+.d-meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+        font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.d-meta .st{color:var(--accent); letter-spacing:.1em;}
+.d-title{
+  font-weight:700; margin:0;
+  font-size:clamp(23px,4vw,33px); line-height:1.38; letter-spacing:-.03em;
+  text-wrap:balance;
+}
+.d-orig{font-size:13.5px; color:var(--muted); line-height:1.55; margin:0;}
+
+.raw-text{font-size:15.5px; color:var(--ink-2);}
+.body-text{font-size:17.5px; line-height:1.78; color:var(--ink); margin:0;}
+.raw .body-text{font-size:15.5px; color:var(--ink-2); line-height:1.7;}
+.bul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px;
+     border-left:2px solid var(--accent); padding-left:16px;}
+.bul li{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+.none{color:var(--muted); font-size:14.5px;}
+
+.go{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background:var(--accent); color:var(--accent-ink); text-decoration:none;
+  font-weight:600; font-size:15px; padding:12px 20px; border-radius:10px;
+}
+.go:hover{filter:brightness(1.08);}
+.rel{border-top:1px solid var(--line); padding-top:16px;
+     display:flex; flex-direction:column; gap:9px;}
+.rel h3{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--muted); margin:0; font-weight:500;}
+.rel a{display:flex; flex-direction:column; gap:3px; font-size:14.5px; color:var(--ink-2);
+       text-decoration:none; line-height:1.5; padding:8px 0;
+       border-bottom:1px solid var(--line-soft);}
+.rel a:hover{color:var(--accent);}
+.rel a .src{font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+
+/* ---------- 순위 ---------- */
+.boards{display:flex; gap:6px; flex-wrap:wrap; padding:26px 0 16px;}
+.boards button{
+  font:inherit; font-size:13px; background:var(--surface); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:999px; padding:7px 15px; cursor:pointer;
+}
+.boards button[aria-selected="true"]{
+  background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600;
+}
+.board{display:none;}
+.board[data-open]{display:block;}
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14px;}
+th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+thead th{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+td.r{font-family:var(--f-mono); color:var(--muted); font-variant-numeric:tabular-nums; width:38px;}
+td.nm{font-weight:600;}
+td.nm small{display:block; font-weight:400; font-size:12px; color:var(--muted);}
+td.num{font-family:var(--f-mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap;}
+td.sc{width:132px;}
+.scwrap{display:flex; align-items:center; gap:9px; justify-content:flex-end;}
+.bar{height:4px; border-radius:2px; background:var(--accent); opacity:.75; flex:none;}
+.barbg{flex:1; height:4px; border-radius:2px; background:var(--surface-3); position:relative;}
+.barbg i{position:absolute; inset:0 auto 0 0; border-radius:2px; background:var(--accent); opacity:.8;}
+td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
+.up{color:var(--up);} .down{color:var(--down);}
+.new{color:var(--accent-ink); background:var(--accent); font-family:var(--f-mono);
+     font-size:9.5px; letter-spacing:.1em; padding:2px 5px; border-radius:3px;}
+.note{color:var(--muted); font-size:14px; padding:18px 0;}
+.credit{font-size:12px; color:var(--muted); padding:14px 2px 0;}
+.credit a{color:var(--ink-2);}
+
+/* 홈 화면 앱에서 어제 것을 보고 있을 때 띄우는 띠.
+   앱은 한 번 연 화면을 그대로 들고 있어서, 새 브리핑이 나온 걸 스스로 알기 어렵다. */
+#fresh{
+  position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom));
+  z-index:80; display:none; align-items:center; gap:12px;
+  background:var(--accent); color:var(--accent-ink);
+  border-radius:12px; padding:12px 14px; box-shadow:0 12px 30px rgba(0,0,0,.5);
+  font-size:14px; font-weight:600;
+}
+#fresh[data-show]{display:flex;}
+#fresh span{flex:1;}
+#fresh button{
+  font:inherit; font-weight:700; font-size:13.5px; cursor:pointer;
+  background:var(--accent-ink); color:var(--accent);
+  border:0; border-radius:8px; padding:8px 14px; white-space:nowrap;
+}
+
+/* ---------- 꼬리말 ---------- */
+.foot{
+  margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  font-family:var(--f-mono); font-size:11px; color:var(--muted);
+}
+.foot button{
+  font:inherit; background:none; border:0; color:var(--muted);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:0;
+}
+.foot button:hover{color:var(--accent);}
+#report{display:none; padding-top:18px;}
+#report[data-open]{display:block;}
+#report table{min-width:560px; font-size:12.5px;}
+.bad{color:var(--down);}
+.drop{margin-top:14px;}
+.drop summary{cursor:pointer; font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.drop ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:12.5px;
+         line-height:1.7; max-height:320px; overflow-y:auto;}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+@media (max-width:560px){
+  /* 폰에서 표가 옆으로 밀려 점수·변동이 안 보이던 것을 고친다.
+     막대는 접고 숫자만 남긴다 — 좁은 화면에서는 숫자가 먼저다. */
+  table{min-width:0; font-size:13px;}
+  th,td{padding:9px 7px;}
+  thead th{font-size:9px; letter-spacing:.06em;}
+  td.r{width:26px;}
+  td.sc{width:auto;}
+  td.d{width:44px;}
+  td.nm small{font-size:11px;}
+  .barbg{display:none;}
+  .find{width:100%;}
+  #q{flex:1; width:auto;}
+  #calpop{right:0; width:min(296px, calc(100vw - 28px));}
+  .boards{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+          margin:0 -14px; padding:22px 14px 14px;}
+  .boards::-webkit-scrollbar{display:none;}
+  .boards button{flex:none; white-space:nowrap;}
+  .top-in{gap:10px;
+          padding:calc(10px + var(--sa-top)) calc(14px + var(--sa-r)) 10px calc(14px + var(--sa-l));}
+  .brand{width:100%; margin-right:0;}
+  .wrap{padding:0 calc(14px + var(--sa-r)) calc(60px + var(--sa-bot)) calc(14px + var(--sa-l));}
+  .lede{padding:24px 0 20px;}
+  .head{grid-template-columns:26px 1fr; gap:10px;}
+  .head .m{grid-column:2; margin-top:2px;}
+}
+</style>
+</head>
+<body data-base="../" data-date="2026-10-11">
+
+<header class="top"><div class="top-in">
+  <div class="brand">
+    <span class="d">2026-10-11</span>
+    <span class="s">Visual AI Brief</span>
+  </div>
+  <div class="tabs">
+    <button type="button" data-go="today" aria-selected="true">오늘</button>
+    <button type="button" data-go="rank" aria-selected="false">순위</button>
+    <button type="button" data-go="models" aria-selected="false">모델</button>
+  </div>
+  <div class="find">
+    <input id="q" type="search" placeholder="검색 (지난 브리핑 포함)"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="calbtn" type="button" aria-expanded="false">날짜</button>
+  </div>
+</div>
+
+
+<div id="calpop" hidden>
+  <div class="cal-head">
+    <span class="mo"></span>
+    <button class="prev" type="button" aria-label="이전 달">‹</button>
+    <button class="next" type="button" aria-label="다음 달">›</button>
+  </div>
+  <div class="cal"></div>
+  <p class="q-note cal-note"></p>
+</div>
+</header>
+
+<main class="wrap">
+
+  <section data-view="today">
+    <div class="lede">
+      <p class="flow"><span>고품질 영상 생성 모델들이 일반 소비자용 하드웨어와 ComfyUI 워크플로우 안으로 빠르게 흡수되고 있습니다.</span><span>개인 환경에서의 세밀한 편집과 경량화 구동에 초점이 맞춰지며 오픈소스 창작 생태계가 실용성을 강화하는 추세입니다.</span></p>
+      <div class="heads"><button class="head" data-uid="67b21cf73610"><span class="n">01</span><span class="t">LTX 2.5 비디오 모델, 빠른 속도와 세밀한 인물 표현 지원</span><span class="m">모델 출시 · r/StableDiffusion</span></button><button class="head" data-uid="4ac42a2761a5"><span class="n">02</span><span class="t">16GB VRAM 환경에서의 영상 생성 모델 사용 모색</span><span class="m">모델 출시 · r/StableDiffusion</span></button><button class="head" data-uid="6ba1e850672a"><span class="n">03</span><span class="t">ComfyUI 기반 영상 편집 도구 Frame Forge 첫 업데이트</span><span class="m">오픈소스·툴 · r/StableDiffusion</span></button><button class="head" data-uid="4a60ab644e45"><span class="n">04</span><span class="t">Qwen-Image-2.1 Turbo 적용 ComfyUI 워크플로우 공개</span><span class="m">모델 출시 · r/StableDiffusion</span></button><button class="head" data-uid="82f2aa0cc311"><span class="n">05</span><span class="t">Iris-3B 전용 ComfyUI 커스텀 노드 공개</span><span class="m">오픈소스·툴 · r/StableDiffusion</span></button></div>
+    </div>
+    <div class="sec-h"><h2>나머지</h2><span class="c">7건</span></div><div class="grid"><button class="tile" data-uid="21c2595235e4"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">Long Shot Studio 0.6.3 업데이트 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.11 01:58</span></span></button><button class="tile" data-uid="18ad8d8c6bb9"><span class="cat"><i class="dot" style="background:#8AB4F8"></i>업데이트</span><span class="t">여성 얼굴 프롬프트 빌더 대규모 업데이트 진행</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.10 11:19</span></span></button><button class="tile" data-uid="ea994a6d6281"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">ComfyUI 기반 MiniMax H3 영상 인물 제거 기능</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.10 11:48</span></span></button><button class="tile" data-uid="b024978cbd8d"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">초보자 위한 ComfyUI·MiniMax 치트 시트 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.10 10:28</span></span></button><button class="tile" data-uid="25ab4f0b4974"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">Magnific 수준의 이미지 업스케일러 탐색 질문 화제</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.11 06:09</span></span></button><button class="tile" data-uid="e41d3724700d"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">Qwen-Image 및 Krea2 터보 모델 설정 공유</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.11 00:07</span></span></button><button class="tile" data-uid="7600c7502678"><span class="cat"><i class="dot" style="background:#E89B72"></i>산업·규제</span><span class="t">디스트로키드, UMG 소송 대응해 음원 비공개 삭제</span><span class="m"><span class="st">●○○</span><span>The Verge AI</span><span>10.11 03:52</span></span></button></div>
+    <div class="foot">
+      <span>12건 · 10-10 07:00 ~ 10-11 07:00 KST</span>
+      <button type="button" id="report-toggle">실행 정보</button>
+    </div>
+    <div id="report"><p class="note">수집 2952 → 시간창 34 → 필터 20 → 병합 후 17 → 카드 12 · 번역 12건(gemini)</p><div class="tblwrap"><table><thead><tr><th>소스</th><th>등급</th><th style="text-align:right">수집</th><th style="text-align:right">채택</th><th>상태</th></tr></thead><tbody><tr><td>Adobe Firefly Blog</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · 404</span></td></tr><tr><td>arXiv cs.CV (필터링)</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ReadTimeout</span></td></tr><tr><td>Banodoco</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>ByteDance Seed (Seedance / Seedream)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>Midjourney</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 403 · Just a moment... &lt;meta http-equiv=&quot;content-security-policy&quot; content=&quot;default-src &amp;#39;none&amp;#39;; script-src &amp;#39;nonce-T7veUsfszyg6VxICTpK6md&amp;#39; &amp;#39;unsafe-eval&amp;#39; https</span></td></tr><tr><td>r/aivideo</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>r/comfyui</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>VentureBeat AI</td><td>T3</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 429 · Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction</span></td></tr><tr><td>Curious Refuge</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Latent Vision (Matteo Spinelli)</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>MattVidPro AI</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Mickmumpitz</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Nerdy Rodent</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Olivio Sarikas</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Scott Detweiler</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Sebastian Kamph</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Theoretically Media</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>r/StableDiffusion</td><td>T2</td><td class="num">25</td><td class="num">11</td><td>정상</td></tr><tr><td>The Verge AI</td><td>T3</td><td class="num">10</td><td class="num">1</td><td>정상</td></tr><tr><td>Ars Technica AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Black Forest Labs (FLUX)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Civitai (신규 모델·LoRA)</td><td>T1</td><td class="num">40</td><td class="num">0</td><td>정상</td></tr><tr><td>ComfyUI Blog</td><td>T1</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>ComfyUI (GitHub Releases)</td><td>T1</td><td class="num">10</td><td class="num">0</td><td>정상</td></tr><tr><td>Google DeepMind Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>fal.ai Blog</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Google Research Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>Hacker News (키워드 필터)</td><td>T2</td><td class="num">237</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Blog</td><td>T1</td><td class="num">876</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Papers (Daily)</td><td>T1</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Tencent HunyuanVideo (GitHub Releases)</td><td>T0</td><td class="num">1</td><td class="num">0</td><td>정상</td></tr><tr><td>Kling AI (Kuaishou)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Lightricks LTX-2 (GitHub Releases)</td><td>T0</td><td class="num">6</td><td class="num">0</td><td>정상</td></tr><tr><td>Luma AI (Ray / Dream Machine)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>MiniMax / Hailuo</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>OpenAI News</td><td>T0</td><td class="num">1287</td><td class="num">0</td><td>정상</td></tr><tr><td>Pika</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Qwen (Alibaba) Blog</td><td>T0</td><td class="num">44</td><td class="num">0</td><td>정상</td></tr><tr><td>Replicate Blog</td><td>T1</td><td class="num">121</td><td class="num">0</td><td>정상</td></tr><tr><td>Runway</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Stability AI</td><td>T0</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>TechCrunch AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Alibaba Wan (GitHub Releases)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr></tbody></table></div><details class="drop"><summary>필터에 걸린 14건 보기</summary><ul><li>[주제 무관] Microsoft’s Satya Nadella says AI models need an ‘emergency brake’</li><li>[주제 무관] Apple discloses deal to hire team and license tech from personalized podcast startup Huxe</li><li>[주제 무관] 3 days to TechCrunch Disrupt 2026: Meet the startups before they hit mainstream</li><li>[주제 무관] Anthropic is cutting off its internal evaluations from the internet</li><li>[주제 무관] Bitwarden Dual License Model</li><li>[내용 없음] Nvidia is now rumored to be ending the 5090 and possibly replacing it with a 24GB 5080.</li><li>[주제 무관] Here are the top AI agents that can live in your text messages</li><li>[주제 무관] AI agent makers are promising privacy — will they deliver?</li><li>[내용 없음] A 3-billion-parameter model that paints every pixel directly without a VAE</li><li>[주제 무관] Lobbying</li><li>[주제 무관] Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet ins</li><li>[주제 무관] 11 of 23 Core Open Source Projects Run on 1 or 2 People</li><li>[주제 무관] Japan&#x27;s most famous tuna buyer says he turned Somali pirates into fishermen</li><li>[주제 무관] Ukraine’s drones knock out AI data center belonging to &quot;Russia’s Google&quot;</li></ul></details></div>
+  </section>
+
+  <section data-view="rank" hidden>
+    <div class="boards"><button type="button" data-board="text-to-video" aria-selected="true">텍스트 → 영상</button><button type="button" data-board="image-to-video" aria-selected="false">이미지 → 영상</button><button type="button" data-board="text-to-image" aria-selected="false">텍스트 → 이미지</button><button type="button" data-board="image-editing" aria-selected="false">이미지 편집</button><button type="button" data-board="language" aria-selected="false">언어모델 (지능·가격)</button></div><section class="board" data-board="text-to-video" data-open><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Wan 3.0<small>Alibaba</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1129.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">MiniMax H3 Max<small>Fal</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:86%"></i></span>1118.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">MiniMax H3 (768p)<small>MiniMax</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:84%"></i></span>1117.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">Dreamina Seedance 2.5<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:68%"></i></span>1105.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">FLUX 3<small>Black Forest Labs</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:50%"></i></span>1091.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">SkyReels V4<small>Skywork AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:41%"></i></span>1084.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Dreamina Seedance 2.0<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:36%"></i></span>1080.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">Gemini Omni Flash 1.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:21%"></i></span>1069.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="image-to-video"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Gemini Omni Flash<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1368.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">Bach 1.0 Pro<small>Video Rebirth</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:89%"></i></span>1362.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">Wan 3.0<small>Alibaba</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:89%"></i></span>1362.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">MiniMax H3<small>MiniMax</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:79%"></i></span>1356.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">Vimoo 1.0<small>Vimoo</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:65%"></i></span>1348.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">Dreamina Seedance 2.0 720p<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:49%"></i></span>1339.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">PixVerse V6<small>PixVerse</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:49%"></i></span>1339.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">Grok Imagine Video 1.5<small>SpaceXAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:35%"></i></span>1331.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="text-to-image"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">GPT Image 2.5 Sunburst (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1198.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">GPT Image 2.5 Flare (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:93%"></i></span>1191.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">GPT Image 2 (high)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:74%"></i></span>1172.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">Nano Banana 2.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:62%"></i></span>1160.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">Grok Imagine Image 2.0<small>SpaceXAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:56%"></i></span>1155.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">MAI-Image-2.6<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:52%"></i></span>1151.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Nano Banana 2 (Gemini 3.1 Flash Image)<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:26%"></i></span>1125.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">FLUX 3 Image<small>Black Forest Labs</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:17%"></i></span>1116.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="image-editing"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">GPT Image 2.5 Sunburst (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1184.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">GPT Image 2.5 Flare (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:78%"></i></span>1165.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">MAI-Image-2.6<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:48%"></i></span>1140.0</span></td><td class="d"><span class="up">▲1</span></td></tr><tr><td class="r">4</td><td class="nm">Nano Banana 2.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:48%"></i></span>1140.0</span></td><td class="d"><span class="down">▼1</span></td></tr><tr><td class="r">5</td><td class="nm">MAI-Image-2.6-Flash<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:34%"></i></span>1128.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">GPT Image 2 (high)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:33%"></i></span>1127.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Muse Image<small>Meta</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:26%"></i></span>1121.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">MAI-Image-2.5<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:20%"></i></span>1116.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="language"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>지능 지수</th><th>변동</th><th style='text-align:right'>$/1M</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Claude Opus 5.5 (Max, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>57.6</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">20.0</td></tr><tr><td class="r">2</td><td class="nm">Claude Fable 5.1 (Max, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:63%"></i></span>53.4</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">3</td><td class="nm">GPT-6 Astra (Max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:57%"></i></span>52.7</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">4</td><td class="nm">GPT-6 Astra (Xhigh)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:55%"></i></span>52.4</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">5</td><td class="nm">GPT-6.1 Sol (Xhigh)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:43%"></i></span>51.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr><tr><td class="r">6</td><td class="nm">GPT-6.1 Sol (High)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:36%"></i></span>50.2</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr><tr><td class="r">7</td><td class="nm">Claude Opus 5 (Xhigh)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:31%"></i></span>49.7</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">25.0</td></tr><tr><td class="r">8</td><td class="nm">Claude Fable 5.1 (Medium, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:24%"></i></span>48.9</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">9</td><td class="nm">Claude Fable 5.1 (Low, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:6%"></i></span>46.8</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">10</td><td class="nm">Claude Sonnet 5.5 (High, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:6%"></i></span>46.8</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr></tbody></table></div></section><p class="credit">순위·점수 출처 <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · 블라인드 선호도 투표 기반 · 받아온 시각 10.11 01:04 UTC · 영상·이미지 가격은 유료 등급에서만 제공됩니다</p>
+  </section>
+
+  <section data-view="models" hidden>
+    <div id="mlist"></div>
+    <div id="mone" hidden></div>
+  </section>
+
+</main>
+
+<div class="detail" id="d-67b21cf73610">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">1/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 06:31</span>
+    </div>
+    <h1 class="d-title">LTX 2.5 비디오 모델, 빠른 속도와 세밀한 인물 표현 지원</h1>
+    <p class="d-orig">원제 · LTX2.5 is impressive - I&#x27;m glad I gave it a chance.</p>
+    <p class="body-text">LTX 2.5 모델을 사용해본 결과 빠른 생성을 확인했습니다. HD급 30초 영상을 7분 만에 생성해 작업 효율을 크게 높여줍니다. 발열이 적고 인물의 감정과 미세한 연기 표현 범위가 뛰어납니다.</p><ul class="bul"><li>7분 만에 HD 30초 영상 생성 가능</li><li>풍부한 감정 및 미세 표정 연기 구현</li><li>컴퓨터 발열 부담을 크게 경감</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2qnyp/ltx25_is_impressive_im_glad_i_gave_it_a_chance" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-4ac42a2761a5">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">2/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 05:51</span>
+    </div>
+    <h1 class="d-title">16GB VRAM 환경에서의 영상 생성 모델 사용 모색</h1>
+    <p class="d-orig">원제 · Help with video gen, 16gb vram</p>
+    <p class="body-text">48GB 시스템 RAM과 16GB VRAM 환경에서 이미지-투-비디오 및 비디오-투-비디오 옵션을 탐색 중입니다. Wan2 및 LTX 2.5 워크플로우 적용 과정에서 속도 저하나 일관성 저하 현상을 경험했습니다. 이에 대체안으로 MiniMax H3 적용을 고려하고 있습니다.</p><ul class="bul"><li>Wan2 관련 워크플로우의 느린 속도 경험</li><li>LTX 2.5 사용 시 일관성 유지의 한계</li><li>대안으로 MiniMax H3 적용을 검토 중</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2pqu6/help_with_video_gen_16gb_vram" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-6ba1e850672a">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">3/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●●○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.10 11:21</span>
+    </div>
+    <h1 class="d-title">ComfyUI 기반 영상 편집 도구 Frame Forge 첫 업데이트</h1>
+    <p class="d-orig">원제 · Frame Forge AI Video Editor for Comfy UI Update 1</p>
+    <p class="body-text">ComfyUI 상단에서 작동하는 Chain Motion AI Video Editor(Frame Forge)의 첫 번째 업데이트가 공개되었습니다. MiniMax H3로 생성한 영상을 손쉽게 이어 붙이고 편집할 수 있도록 돕습니다. 타임라인과 LLM 기반 프롬프트 작성용 Scene Writer 기능을 제공합니다.</p><ul class="bul"><li>MiniMax H3 영상 연결을 용이하게 지원</li><li>타임라인 인터페이스로 빠른 영상 편집</li><li>LLM 활용 Scene Writer 프롬프트 도구 탑재</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x23pah/frame_forge_ai_video_editor_for_comfy_ui_update_1" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-4a60ab644e45">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">4/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.10 20:17</span>
+    </div>
+    <h1 class="d-title">Qwen-Image-2.1 Turbo 적용 ComfyUI 워크플로우 공개</h1>
+    <p class="d-orig">원제 · Some very simple Qwen-Image-2.1 &quot;Turbo&quot; workflows</p>
+    <p class="body-text">Qwen-Image-2.1 Turbo 모델을 적용한 간편한 ComfyUI 워크플로우가 공개되었습니다. 화질 손실을 최소화하면서 작동하며, Hugging Face 공식 리포지토리의 시그마 값을 활용합니다. 다운로드 용량을 줄이기 위해 Turbo LoRA 방식을 채택했습니다.</p><ul class="bul"><li>Turbo 모델 적용으로 화질 손실 최소화</li><li>Hugging Face 공식 시그마 값 활용</li><li>Turbo LoRA 적용으로 다운로드 용량 축소</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2csbl/some_very_simple_qwenimage21_turbo_workflows" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 2건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1x2lm5d/qwen_image_21_turbo_2k_manual_sigmas" target="_blank" rel="noopener">Qwen image 2.1 turbo (2k + manual sigmas)<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x2e4bl/left_qwen_image_21_turbo_lora_right_qwen_image_21" target="_blank" rel="noopener">(Left) Qwen image 2.1 + turbo lora (Right) Qwen image 2.1 turbo<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div><div class="detail" id="d-82f2aa0cc311">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">5/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 02:21</span>
+    </div>
+    <h1 class="d-title">Iris-3B 전용 ComfyUI 커스텀 노드 공개</h1>
+    <p class="d-orig">원제 · I made ComfyUI nodes for Iris-3B that supports - text to image, 4x upscaler, depth and img2img, works on a 16 GB AMD card</p>
+    <p class="body-text">Sperid Labs의 Iris-3B 모델을 활용할 수 있는 ComfyUI 전용 노드 팩이 공개되었다. 텍스트-투-이미지뿐 아니라 4배 업스케일러, 깊이 모델, img2img 기능을 지원하며 16GB AMD 그래픽카드에서도 구동된다. Apache 2.0 라이선스로 배포되어 ComfyUI-Manager를 통해 바로 설치할 수 있다.</p><ul class="bul"><li>VAE 없이 픽셀 단위로 직접 작동</li><li>4배 업스케일러 및 깊이 모델 지원</li><li>16GB AMD 환경 지원 및 무료 배포</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2ksba/i_made_comfyui_nodes_for_iris3b_that_supports" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-21c2595235e4">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">6/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 01:58</span>
+    </div>
+    <h1 class="d-title">Long Shot Studio 0.6.3 업데이트 공개</h1>
+    <p class="d-orig">원제 · Long Shot Studio 0.6.3 (v1.2)</p>
+    <p class="body-text">Long Shot Studio 0.6.3 버전이 공개되며 주요 기능 추가 및 UI 개선이 이루어졌다. 원하는 샷을 먼저 렌더링한 뒤 중간 과정을 연결하는 기능이 도입되었으며, 홀수 번째 샷만 먼저 생성해 빈 부분을 채우는 옵션도 포함되었다. 워크플로우 개발자들의 아이디어를 반영해 제작되었다.</p><ul class="bul"><li>원하는 샷 생성 후 중간 장면 연결 가능</li><li>홀수 번 샷 렌더링 후 공백 채우기 지원</li><li>UI 개선 및 전반적 편의 기능 추가</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2k7jn/long_shot_studio_063_v12" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-18ad8d8c6bb9">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">7/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.10 11:19</span>
+    </div>
+    <h1 class="d-title">여성 얼굴 프롬프트 빌더 대규모 업데이트 진행</h1>
+    <p class="d-orig">원제 · Update: Female Face Prompt Builder</p>
+    <p class="body-text">여성 얼굴 전용 프롬프트 빌더 도구에 민족 관련 섹션 확장 등 대대적인 수정이 적용되었다. 특정 민족이나 조합을 세부적으로 설정하거나 무작위 생성 버튼을 활용해 얼굴을 제작할 수 있다. 각 민족 항목에는 지리적 위치와 실제 거주 지역에 대한 안내 설명이 함께 제공된다.</p><ul class="bul"><li>민족 설정 섹션 대폭 확장 적용</li><li>무작위 버튼을 통한 얼굴 생성 지원</li><li>지리적 거주 정보 안내 설명 추가</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x23of1/update_female_face_prompt_builder" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-ea994a6d6281">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">8/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.10 11:48</span>
+    </div>
+    <h1 class="d-title">ComfyUI 기반 MiniMax H3 영상 인물 제거 기능</h1>
+    <p class="d-orig">원제 · MiniMax H3: Remove People from Videos in ComfyUI</p>
+    <p class="body-text">ComfyUI 환경에서 MiniMax H3를 활용해 영상 내 인물을 제거하는 기술이 소개되었다. 영상 편집 과정에서 특정 대상을 손쉽게 지울 수 있도록 지원한다.</p><ul class="bul"><li>ComfyUI 내 MiniMax H3 활용</li><li>동영상 속 인물 제거 기능 지원</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2481c/minimax_h3_remove_people_from_videos_in_comfyui" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-b024978cbd8d">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">9/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.10 10:28</span>
+    </div>
+    <h1 class="d-title">초보자 위한 ComfyUI·MiniMax 치트 시트 공개</h1>
+    <p class="d-orig">원제 · ComfyUI/Minimax Cheat Sheet for Beginners - now with 83% less slop!</p>
+    <p class="body-text">초보자를 위한 ComfyUI와 MiniMax 활용 치트 시트가 공개되었다. 불필요한 저품질 결과물을 대폭 줄였다는 점을 강조했다.</p><ul class="bul"><li>초보자 대상 치트 시트 배포</li><li>ComfyUI와 MiniMax 환경 지원</li><li>저품질 결과물 대폭 개선 강조</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x22omv/comfyuiminimax_cheat_sheet_for_beginners_now_with" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-25ab4f0b4974">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">10/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 06:09</span>
+    </div>
+    <h1 class="d-title">Magnific 수준의 이미지 업스케일러 탐색 질문 화제</h1>
+    <p class="d-orig">원제 · How do you guys upscale your images? Is anything even close to Magnific?</p>
+    <p class="body-text">한 이용자가 Magnific.ai 수준의 디테일을 구현하는 대체 업스케일러를 찾기 어렵다는 의문을 제기했다. 최신 모델과 워크플로우를 다양하게 시도했으나 타일 분할 방식으로 추정되는 Magnific의 결과물을 재현하지 못했다고 전했다.</p><ul class="bul"><li>Magnific 대체 업스케일러에 대한 질문 제기</li><li>타일 분할 및 SD 1.5 활용 추정 언급</li><li>최신 모델로도 유사한 디테일 재현 한계 토로</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2q643/how_do_you_guys_upscale_your_images_is_anything" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-e41d3724700d">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">11/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.11 00:07</span>
+    </div>
+    <h1 class="d-title">Qwen-Image 및 Krea2 터보 모델 설정 공유</h1>
+    <p class="d-orig">원제 · Qwen image 2.1 turbo / Krea2 turbo</p>
+    <p class="body-text">Qwen-Image와 Krea2 터보 모델의 양자화 및 구동 설정이 공유되었다. krea2와 qwen3vl 모델 조합, VAE 설정, euler 스케줄러를 활용한 8스텝 구동 방식이 포함되었다.</p><ul class="bul"><li>Krea2 및 Qwen-Image 터보 모델 설정 공유</li><li>int8 양자화 모델 및 전용 VAE 조합 제시</li><li>euler 스케줄러 기반 8스텝 설정 안내</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x2hl3q/qwen_image_21_turbo_krea2_turbo" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 1건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1x2hy85/krea2_vs_qwen_image_21" target="_blank" rel="noopener">Krea2 vs Qwen Image 2.1<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div><div class="detail" id="d-7600c7502678">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">12/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#E89B72"></i>산업·규제
+      <span class="st" title="중요도">●○○</span>
+      <span>The Verge AI · 미디어</span>
+      <span>10.11 03:52</span>
+    </div>
+    <h1 class="d-title">디스트로키드, UMG 소송 대응해 음원 비공개 삭제</h1>
+    <p class="d-orig">원제 · DistroKid has been quietly taking down songs in response to UMG lawsuit</p>
+    <p class="body-text">DistroKid가 사전 통보 없이 아티스트들의 음원을 삭제하고 있다는 불만이 소셜 미디어에 제기되었다. DistroKid는 UMG가 제기한 소송에 대응한 조치임을 확인했다. UMG는 9월 소송을 제기하며 DistroKid가 AI 저품질 음원 유통 통로를 만들었다고 주장했다.</p><ul class="bul"><li>DistroKid, 사전 통보 없이 음원 삭제 진행</li><li>UMG가 제기한 소송에 따른 대응 조치 확인</li><li>UMG는 AI 음원 유통 통로 형성 혐의로 제소</li></ul>
+    <a class="go" href="https://theverge.com/entertainment/1009309/distrokid-take-down-songs-umg-lawsuit" target="_blank" rel="noopener">원문 열기 · theverge.com ↗</a>
+    
+  </div>
+</div>
+
+
+<div id="results">
+  <div class="d-bar">
+    <button class="back" type="button">← 닫기</button>
+    <span class="pos">지난 브리핑까지 검색</span>
+  </div>
+  <div class="res-in">
+    <input id="q2" type="search" placeholder="모델 이름, 회사, 키워드…"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <p class="q-note"></p>
+    <div class="hits"></div>
+  </div>
+</div>
+
+<div id="fresh"><span></span><button type="button">열기</button></div>
+
+<script>
+(function(){
+  var body = document.body;
+  var BASE = body.dataset.base || '';       // 지난 브리핑 폴더 안에서는 '../'
+  var TODAY = body.dataset.date || '';
+
+  // 색인 파일은 필요할 때 한 번만 받아서 들고 있는다.
+  // 첫 화면을 여는 속도에 영향을 주지 않으려고 미리 받지 않는다.
+  var cache = {};
+  function load(name){
+    // 시안이나 오프라인 미리보기에서는 색인을 페이지 안에 직접 넣어 쓴다.
+    // 실제 사이트에는 이 값이 없고 아래 fetch로 간다.
+    if(window.__IDX__ && window.__IDX__[name]){ return Promise.resolve(window.__IDX__[name]); }
+    if(cache[name]){ return cache[name]; }
+    cache[name] = fetch(BASE + name + '.json')
+      .then(function(r){ return r.ok ? r.json() : []; })
+      .catch(function(){ return []; });
+    return cache[name];
+  }
+
+  function esc(t){
+    return String(t).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+  function linkTo(date, uid){
+    var page = (date === TODAY && !BASE) ? '' : BASE + 'archive/' + date + '.html';
+    return page + '#i-' + uid;
+  }
+
+  /* ---------------- 화면 전환 ---------------- */
+  function setView(v){
+    document.querySelectorAll('[data-view]').forEach(function(sec){
+      sec.hidden = (sec.dataset.view !== v);
+    });
+    document.querySelectorAll('.tabs button').forEach(function(b){
+      b.setAttribute('aria-selected', String(b.dataset.go === v));
+    });
+    if(v === 'models'){ renderModels(); }
+  }
+  function closeSheets(){
+    document.querySelectorAll('.detail[data-open]').forEach(function(x){
+      x.removeAttribute('data-open');
+    });
+    body.removeAttribute('data-detail');
+  }
+  function openSheet(el){
+    closeSheets();
+    if(!el){ return; }
+    el.setAttribute('data-open','');
+    body.setAttribute('data-detail','');
+    el.scrollTop = 0;
+  }
+  function goBack(){
+    if(history.length > 1){ history.back(); } else { location.hash = ''; }
+  }
+
+  /* ---------------- 검색 ---------------- */
+  var hits = null, qInput = null, qInput2 = null, qNote = null,
+      results = null, timer = null;
+
+  function tokens(q){
+    return q.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
+  }
+  // 검색어를 정규식으로 만들지 않는다. 모델 이름에는 .+-() 같은 기호가 흔해서
+  // (FLUX.2, Gen-5, fal.ai) 이스케이프를 한 번만 틀려도 검색 전체가 죽는다.
+  // 그냥 소문자로 위치를 찾아가며 잘라 붙인다.
+  function hl(text, toks){
+    var src = String(text), low = src.toLowerCase(), out = '', i = 0;
+    while(i < src.length){
+      var at = -1, len = 0;
+      for(var k = 0; k < toks.length; k++){
+        var j = low.indexOf(toks[k], i);
+        if(j !== -1 && (at === -1 || j < at)){ at = j; len = toks[k].length; }
+      }
+      if(at === -1){ out += esc(src.slice(i)); break; }
+      out += esc(src.slice(i, at)) + '<mark>' + esc(src.slice(at, at + len)) + '</mark>';
+      i = at + len;
+    }
+    return out;
+  }
+
+  function openSearch(seed){
+    // 헤더 입력칸은 문을 여는 역할만 한다. 실제 입력은 검색 화면 안에서 받는다.
+    if(seed !== undefined && seed !== null){ qInput2.value = seed; }
+    if(location.hash !== '#search'){ location.hash = 'search'; }
+    else { showSearch(); }
+  }
+  function showSearch(){
+    closeSheets();
+    results.setAttribute('data-open', '');
+    body.setAttribute('data-detail', '');
+    setTimeout(function(){ qInput2.focus(); }, 40);
+    runSearch();
+  }
+  function hideResults(){
+    results.removeAttribute('data-open');
+    if(!document.querySelector('.detail[data-open]')){ body.removeAttribute('data-detail'); }
+  }
+
+  function runSearch(){
+    var q = qInput2.value.trim();
+    if(q.length < 2){
+      hits.innerHTML = '';
+      qNote.textContent = q.length === 0
+        ? '지난 브리핑까지 함께 찾습니다.'
+        : '두 글자 이상 입력하세요.';
+      return;
+    }
+    load('search-index').then(function(rows){
+      if(rows === null){ qNote.textContent = OFFLINE; hits.innerHTML = ''; return; }
+      var toks = tokens(q);
+      var found = rows.filter(function(r){
+        var hay = (r.t + ' ' + r.o + ' ' + r.s + ' ' + r.src).toLowerCase();
+        return toks.every(function(t){ return hay.indexOf(t) !== -1; });
+      });
+      qNote.textContent = found.length
+        ? found.length + '건 (' + rows.length + '건 중)'
+        : '찾은 것이 없습니다. 영문 모델명으로도 찾아보세요.';
+      hits.innerHTML = found.slice(0, 80).map(function(r){
+        return '<a class="hit" href="' + linkTo(r.d, r.u) + '">'
+          + '<span class="hm"><span>' + r.d + '</span><span>' + esc(r.src) + '</span></span>'
+          + '<span class="ht">' + hl(r.t, toks) + '</span>'
+          + '<span class="hs">' + hl(r.s, toks) + '</span></a>';
+      }).join('');
+    });
+  }
+
+  /* ---------------- 달력 ---------------- */
+  var calMonth = null, calPop = null, calBtn = null;
+  function ym(d){ return d.slice(0,7); }
+  function toggleCal(force){
+    var show = (force === undefined) ? calPop.hidden : force;
+    calPop.hidden = !show;
+    calBtn.setAttribute('aria-expanded', String(show));
+    if(show){ load('dates').then(renderCal); }
+  }
+  function renderCal(dates){
+    if(dates === null){
+      calPop.querySelector('.cal-note').textContent = OFFLINE;
+      return [];
+    }
+    var have = {};
+    dates.forEach(function(d){ have[d] = true; });
+    if(!calMonth){ calMonth = dates.length ? ym(dates[0]) : TODAY.slice(0,7); }
+    var y = parseInt(calMonth.slice(0,4), 10), m = parseInt(calMonth.slice(5,7), 10);
+    var first = new Date(Date.UTC(y, m - 1, 1));
+    var days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    var lead = first.getUTCDay();
+
+    var cells = ['일','월','화','수','목','금','토'].map(function(d){
+      return '<span class="dow">' + d + '</span>';
+    });
+    for(var i = 0; i < lead; i++){ cells.push('<span class="pad">.</span>'); }
+    for(var day = 1; day <= days; day++){
+      var iso = calMonth + '-' + String(day).padStart(2,'0');
+      if(have[iso]){
+        var href = (iso === TODAY && !BASE) ? '' : BASE + 'archive/' + iso + '.html';
+        cells.push('<a href="' + (href || '#') + '" class="' + (iso === TODAY ? 'now' : '')
+                   + '">' + day + '</a>');
+      } else {
+        cells.push('<span>' + day + '</span>');
+      }
+    }
+    calPop.querySelector('.cal').innerHTML = cells.join('');
+    calPop.querySelector('.mo').textContent = y + '년 ' + m + '월';
+
+    var months = {};
+    dates.forEach(function(d){ months[ym(d)] = true; });
+    var keys = Object.keys(months).sort();
+    calPop.querySelector('.prev').disabled = (keys.indexOf(calMonth) <= 0);
+    calPop.querySelector('.next').disabled =
+      (keys.indexOf(calMonth) === keys.length - 1 || keys.length === 0);
+    calPop.querySelector('.cal-note').textContent =
+      '브리핑이 있는 날만 누를 수 있습니다 · 전체 ' + dates.length + '일';
+    return keys;
+  }
+  function moveMonth(step){
+    load('dates').then(function(dates){
+      if(dates === null){ return; }
+      var months = {};
+      dates.forEach(function(d){ months[ym(d)] = true; });
+      var keys = Object.keys(months).sort();
+      var i = keys.indexOf(calMonth);
+      if(i + step >= 0 && i + step < keys.length){
+        calMonth = keys[i + step];
+        renderCal(dates);
+      }
+    });
+  }
+
+  /* ---------------- 모델별 히스토리 ---------------- */
+  var modelsDrawn = false;
+  function renderModels(){
+    if(modelsDrawn){ return; }
+    modelsDrawn = true;
+    load('models').then(function(list){
+      var box = document.querySelector('#mlist');
+      if(list === null){
+        modelsDrawn = false;
+        box.innerHTML = '<p class="note">' + OFFLINE + '</p>';
+        return;
+      }
+      if(!list.length){
+        box.innerHTML = '<p class="note">아직 쌓인 기록이 없습니다. '
+          + '며칠 지나면 모델·회사별로 묶여 나타납니다.</p>';
+        return;
+      }
+      box.innerHTML = '<div class="mgrid">' + list.map(function(m){
+        return '<button class="mcard" data-model="' + esc(m.name) + '">'
+          + '<span class="top-row"><b>' + esc(m.name) + '</b>'
+          + (m.ver ? '<span class="ver">' + esc(m.ver) + '</span>' : '') + '</span>'
+          + '<span class="hd">' + esc(m.head || '') + '</span>'
+          + '<span class="meta">' + m.n + '건 · 최근 ' + m.last + '</span></button>';
+      }).join('') + '</div>';
+    });
+  }
+  function showModel(name){
+    load('models').then(function(list){
+      var m = (list || []).filter(function(x){ return x.name === name; })[0];
+      var box = document.querySelector('#mone');
+      if(!m){ location.hash = 'models'; return; }
+      box.innerHTML = '<div class="mhead"><button class="back" type="button">← 목록</button>'
+        + '<h2>' + esc(m.name) + '</h2><span class="n">' + m.n + '건</span></div>'
+        + '<div class="timeline">' + m.items.map(function(it){
+            return '<a class="tl" href="' + linkTo(it.d, it.u) + '">'
+              + '<span class="dt">' + it.d + '</span>'
+              + '<span><span class="tt">' + esc(it.t) + '</span>'
+              + '<span class="ts">' + esc(it.src) + '</span></span></a>';
+          }).join('') + '</div>';
+      document.querySelector('#mlist').hidden = true;
+      box.hidden = false;
+    });
+  }
+
+  /* ---------------- 주소 ↔ 화면 ---------------- */
+  function route(){
+    var h = decodeURIComponent(location.hash.replace(/^#/, ''));
+
+    if(h.indexOf('i-') === 0){ openSheet(document.getElementById('d-' + h.slice(2))); return; }
+    if(h === 'search'){ showSearch(); return; }
+    hideResults();
+    closeSheets();
+    if(h.indexOf('m-') === 0){ setView('models'); showModel(h.slice(2)); return; }
+    document.querySelector('#mone').hidden = true;
+    document.querySelector('#mlist').hidden = false;
+    setView(h === 'rank' ? 'rank' : (h === 'models' ? 'models' : 'today'));
+  }
+
+  /* ---------------- 클릭 한 곳에서 처리 ---------------- */
+  document.addEventListener('click', function(ev){
+    var t = ev.target;
+
+    var mc = t.closest('.mcard');
+    if(mc){ location.hash = 'm-' + encodeURIComponent(mc.dataset.model); return; }
+
+    if(t.closest('.hit')){ return; }   // 링크는 그대로 따라간다
+
+    var el = t.closest('[data-uid]');
+    if(el){ location.hash = 'i-' + el.dataset.uid; return; }
+
+    var tab = t.closest('.tabs button');
+    if(tab){ location.hash = tab.dataset.go === 'today' ? '' : tab.dataset.go; return; }
+
+    if(t.closest('.calbtn')){ toggleCal(); return; }
+    if(t.closest('#calpop .prev')){ moveMonth(-1); return; }
+    if(t.closest('#calpop .next')){ moveMonth(1); return; }
+
+    if(t.closest('.back')){ goBack(); return; }
+
+    // 팝오버 바깥을 누르면 닫는다
+    if(!t.closest('#calpop') && !t.closest('.calbtn')){ toggleCal(false); }
+
+    var bd = t.closest('.boards button');
+    if(bd){
+      document.querySelectorAll('.boards button').forEach(function(b){
+        b.setAttribute('aria-selected', String(b === bd));
+      });
+      document.querySelectorAll('.board').forEach(function(sec){
+        sec.toggleAttribute('data-open', sec.dataset.board === bd.dataset.board);
+      });
+      return;
+    }
+
+    if(t.closest('#report-toggle')){
+      document.getElementById('report').toggleAttribute('data-open');
+    }
+  });
+
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      if(!calPop.hidden){ toggleCal(false); return; }
+      if(body.hasAttribute('data-detail')){ goBack(); }
+      return;
+    }
+    // 어느 화면에서든 / 를 누르면 검색창으로 간다
+    if(ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)){
+      ev.preventDefault();
+      openSearch('');
+    }
+  });
+
+  qInput = document.getElementById('q');
+  qInput2 = document.getElementById('q2');
+  qNote = document.querySelector('#results .q-note');
+  hits = document.querySelector('#results .hits');
+  results = document.getElementById('results');
+  calPop = document.getElementById('calpop');
+  calBtn = document.querySelector('.calbtn');
+
+  // 헤더 칸은 누르는 순간 검색 화면을 연다. 거기서 친 글자를 그대로 넘긴다.
+  qInput.addEventListener('focus', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput.addEventListener('click', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput2.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(runSearch, 140);
+  });
+
+  window.addEventListener('hashchange', route);
+  route();
+
+  // 홈 화면에 추가했을 때 오프라인에서도 열리게 한다.
+  // file://로 열었을 때는 등록이 안 되므로 조용히 건너뛴다.
+  if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    navigator.serviceWorker.register(BASE + 'sw.js').catch(function(){});
+  }
+
+  // 홈 화면 앱은 한 번 연 화면을 그대로 들고 있는다. 그래서 아침에 열면
+  // 어제 것이 그대로 보인다. 열 때마다 "가장 최근 브리핑 날짜"만 캐시를 무시하고
+  // 확인해서, 지금 보는 것보다 새 것이 있으면 띠를 띄운다.
+  function checkFresh(){
+    if(!TODAY || BASE){ return; }              // 지난 브리핑 페이지에서는 띄우지 않는다
+    fetch(BASE + 'dates.json', {cache: 'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(dates){
+        if(!dates || !dates.length || dates[0] <= TODAY){ return; }
+        var bar = document.getElementById('fresh');
+        bar.querySelector('span').textContent = dates[0] + ' 브리핑이 나왔습니다';
+        bar.setAttribute('data-show', '');
+      })
+      .catch(function(){});
+  }
+
+  document.getElementById('fresh').querySelector('button')
+    .addEventListener('click', function(){
+      // 캐시를 비우고 주소에 시각을 붙여 다시 부른다.
+      // 둘 다 해야 확실하다 — 서비스 워커 캐시와 브라우저 캐시는 서로 다른 것이다.
+      var done = function(){ location.replace(BASE + 'index.html?v=' + Date.now()); };
+      if(!('caches' in window)){ done(); return; }
+      caches.keys().then(function(keys){
+        return Promise.all(keys.map(function(k){ return caches.delete(k); }));
+      }).then(done, done);
+    });
+
+  checkFresh();
+  // 앱을 다시 앞으로 가져왔을 때도 확인한다 (폰에서는 이쪽이 훨씬 흔하다)
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'visible'){ checkFresh(); }
+  });
+})();
+</script>
+</body>
+</html>
