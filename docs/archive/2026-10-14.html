@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0E10">
+<meta name="robots" content="noindex, nofollow">
+<title>2026-10-14 · 비주얼 AI 브리핑</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI 브리핑">
+<link rel="alternate" type="application/rss+xml" title="비주얼 AI 브리핑" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#0B0E10; --surface:#14181C; --surface-2:#1B2127; --surface-3:#232B32;
+  --line:#262E35; --line-soft:#1E252B;
+  --ink:#F2F5F7; --ink-2:#B7C2CB; --muted:#7C8A95;
+  --accent:#FFCE4A; --accent-ink:#0B0E10; --accent-soft:#3A2F12;
+  --up:#4ADE80; --down:#F87171;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box;}
+/* display를 지정한 요소에는 hidden 속성이 먹지 않는다(작성자 스타일이 이긴다).
+   달력 팝오버가 닫히지 않던 원인이라 전역으로 못박아 둔다. */
+[hidden]{display:none !important;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  /* 홈 화면 앱에서 더블탭 확대를 막는다. 뉴스를 읽는 화면이라 확대할 일이 없고,
+     확대되면 상단바가 화면 밖으로 밀려 되돌리기가 어렵다. */
+  touch-action:manipulation;
+}
+/* 홈 화면 앱은 상태표시줄(노치)과 홈 인디케이터 아래까지 화면을 차지한다.
+   그대로 두면 상단바가 시계에 가려 눌리지 않는다. 기기가 알려주는 여백을 더해준다. */
+:root{
+  --sa-top:env(safe-area-inset-top, 0px);
+  --sa-bot:env(safe-area-inset-bottom, 0px);
+  --sa-l:env(safe-area-inset-left, 0px);
+  --sa-r:env(safe-area-inset-right, 0px);
+}
+body[data-detail]{overflow:hidden;}
+a{color:inherit;}
+.wrap{max-width:1080px; margin:0 auto;
+      padding:0 calc(18px + var(--sa-r)) calc(72px + var(--sa-bot)) calc(18px + var(--sa-l));}
+
+/* ---------- 상단 바 ---------- */
+.top{
+  position:sticky; top:0; z-index:30; background:rgba(11,14,16,.92);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1080px; margin:0 auto;
+  padding:calc(12px + var(--sa-top)) calc(18px + var(--sa-r)) 12px calc(18px + var(--sa-l));
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.brand{display:flex; flex-direction:column; line-height:1.2; margin-right:auto;}
+.brand .d{font-family:var(--f-mono); font-size:19px; font-weight:600; letter-spacing:.02em;}
+.brand .s{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+          text-transform:uppercase; color:var(--muted);}
+.tabs{display:flex; gap:4px; background:var(--surface-2); padding:3px; border-radius:999px;}
+.tabs button{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink-2);
+  background:none; border:0; padding:6px 16px; border-radius:999px; cursor:pointer;
+}
+.tabs button[aria-selected="true"]{background:var(--accent); color:var(--accent-ink); font-weight:600;}
+/* 검색은 늘 보이게 둔다. 버튼 뒤에 숨기면 "찾아볼 수 있다"는 사실 자체를 잊는다. */
+.find{display:flex; gap:6px; align-items:center; position:relative;}
+#q{
+  width:210px; font:inherit; font-size:14px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:8px 12px;
+}
+#q::placeholder{color:var(--muted);}
+#q:focus{border-color:var(--accent); outline:none; background:var(--surface);}
+.calbtn{
+  font:inherit; font-size:12.5px; font-family:var(--f-mono); letter-spacing:.04em;
+  background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:8px; padding:8px 12px; cursor:pointer;
+  white-space:nowrap;
+}
+.calbtn:hover, .calbtn[aria-expanded="true"]{border-color:var(--accent); color:var(--ink);}
+
+/* 검색은 별도 화면으로 연다. 폰에서는 결과가 목록 위에 겹쳐 뜨면
+   지금 무엇을 보고 있는지가 흐려진다. 뒤로가기로 닫힌다. */
+#results{
+  position:fixed; inset:0; z-index:70; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+#results[data-open]{display:block;}
+#results .res-in{
+  max-width:760px; margin:0 auto;
+  padding:16px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+}
+#q2{
+  width:100%; font:inherit; font-size:16px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; margin-bottom:12px;
+}
+#q2:focus{border-color:var(--accent); outline:none;}
+
+/* 미니 달력은 날짜 버튼 아래에 붙는다 */
+#calpop{
+  position:absolute; right:0; top:calc(100% + 8px); width:296px; z-index:40;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:14px; box-shadow:0 18px 40px rgba(0,0,0,.55);
+  display:flex; flex-direction:column; gap:10px;
+}
+
+/* ---------- 덮어쓰는 화면들(세부·검색·달력) 공통 ---------- */
+.sheet{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.sheet[data-open]{display:block;}
+.s-body{max-width:760px; margin:0 auto;
+        padding:22px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+        display:flex; flex-direction:column; gap:16px;}
+
+/* ---------- 검색 ---------- */
+.q-note{font-family:var(--f-mono); font-size:11.5px; color:var(--muted);}
+.hits{display:flex; flex-direction:column;}
+.hit{
+  display:block; text-decoration:none; color:inherit;
+  padding:13px 2px; border-bottom:1px solid var(--line-soft);
+}
+.hit:hover{background:var(--surface);}
+.hit .hm{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+         display:flex; gap:8px; align-items:center;}
+.hit .ht{font-size:16px; font-weight:600; line-height:1.5; margin:3px 0 2px;
+         word-break:keep-all; overflow-wrap:break-word;}
+.hit .hs{font-size:13.5px; color:var(--ink-2); line-height:1.55;
+         display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+         overflow:hidden;}
+mark{background:var(--accent-soft); color:var(--accent); padding:0 2px; border-radius:2px;}
+
+/* ---------- 달력 ---------- */
+.cal-head{display:flex; align-items:center; gap:14px;}
+.cal-head .mo{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums;
+              margin-right:auto;}
+.cal-head button{
+  font:inherit; font-size:15px; background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; width:32px; height:28px; cursor:pointer;
+}
+.cal-head button:disabled{opacity:.3; cursor:default;}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:3px;}
+.cal .dow{font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+          text-align:center; padding:4px 0;}
+.cal a, .cal span{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:1/1; border-radius:6px; font-family:var(--f-mono); font-size:12.5px;
+  font-variant-numeric:tabular-nums;
+}
+.cal span{color:#3D474F;}
+.cal span.pad{visibility:hidden;}
+.cal a{background:var(--surface); border:1px solid var(--line);
+       color:var(--ink); text-decoration:none;}
+.cal a:hover{border-color:var(--accent); color:var(--accent);}
+.cal a.now{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+           font-weight:600;}
+
+/* ---------- 모델 히스토리 ---------- */
+.mgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:9px;
+       padding-top:22px;}
+.mcard{
+  display:flex; flex-direction:column; gap:7px; text-align:left; cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:14px 15px; font:inherit; color:inherit;
+}
+.mcard:hover{border-color:var(--accent);}
+.mcard .top-row{display:flex; align-items:baseline; gap:8px;}
+.mcard b{font-size:16px; font-weight:600; word-break:break-word;}
+.mcard .ver{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em;
+  color:var(--accent); border:1px solid var(--accent); border-radius:4px;
+  padding:1px 6px; white-space:nowrap;
+}
+.mcard .hd{
+  font-size:13.5px; line-height:1.55; color:var(--ink-2);
+  word-break:keep-all; overflow-wrap:break-word;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.mcard .meta{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:auto;}
+.mhead{display:flex; align-items:center; gap:12px; padding:22px 0 6px;}
+.mhead h2{margin:0; font-size:22px; font-weight:700;}
+.mhead .n{font-family:var(--f-mono); font-size:12px; color:var(--muted); margin-right:auto;}
+.timeline{display:flex; flex-direction:column;}
+.tl{display:grid; grid-template-columns:78px 1fr; gap:14px; padding:13px 2px;
+    border-bottom:1px solid var(--line-soft); text-decoration:none; color:inherit;}
+.tl:hover{background:var(--surface);}
+.tl .dt{font-family:var(--f-mono); font-size:11.5px; color:var(--accent);
+        font-variant-numeric:tabular-nums;}
+.tl .tt{font-size:15.5px; font-weight:500; line-height:1.5;
+        word-break:keep-all; overflow-wrap:break-word;}
+.tl .tt, .tl .ts{display:block;}
+.tl .ts{font-family:var(--f-mono); font-size:10.5px; color:var(--muted); margin-top:4px;}
+
+/* ---------- 오늘: 핵심 덩어리 ---------- */
+.lede{
+  padding:28px 0 22px; border-bottom:1px solid var(--line);
+  display:flex; flex-direction:column; gap:22px;
+}
+.flow{
+  font-weight:700; font-size:clamp(21px,3vw,30px);
+  line-height:1.5; letter-spacing:-.025em;
+  margin:0; max-width:30ch; text-wrap:balance;
+}
+/* 한국어는 기본값이 글자 단위 줄바꿈이라 '몰렸고'가 '몰/렸고'로 끊긴다.
+   keep-all로 어절을 지키고, 긴 영문 모델명만 예외로 쪼갠다. */
+.flow, .head .t, .tile .t, .d-title, .body-text, .bul li, td.nm{
+  word-break:keep-all; overflow-wrap:break-word;
+}
+.flow span{display:block;}
+.flow span+span{color:var(--ink-2); font-size:.82em; margin-top:.35em;}
+.flow.empty{color:var(--muted); font-size:20px;}
+
+.heads{display:flex; flex-direction:column; border-top:1px solid var(--line-soft);}
+.head{
+  display:grid; grid-template-columns:32px 1fr auto; align-items:baseline; gap:12px;
+  padding:13px 6px 13px 0; border-bottom:1px solid var(--line-soft);
+  background:none; border-left:0; border-right:0; border-top:0;
+  width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer;
+}
+.head:last-child{border-bottom:none;}
+.head:hover, .head:focus-visible{background:var(--surface);}
+.head .n{
+  font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.head .t{font-size:clamp(16px,2vw,19px); font-weight:600; line-height:1.45;}
+.head .m{font-family:var(--f-mono); font-size:11px; color:var(--muted); white-space:nowrap;}
+
+/* ---------- 오늘: 카드 타일 ---------- */
+.sec-h{
+  display:flex; align-items:baseline; gap:10px; padding:24px 0 11px;
+}
+.sec-h h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; margin:0;
+}
+.sec-h .c{font-family:var(--f-mono); font-size:11px; color:var(--accent);}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(268px,1fr)); gap:10px;}
+.tile{
+  display:flex; flex-direction:column; gap:9px; text-align:left;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:15px 16px 13px; cursor:pointer; font:inherit; color:inherit;
+  transition:border-color .12s, background .12s;
+}
+.tile:hover, .tile:focus-visible{border-color:var(--accent); background:var(--surface-2);}
+.tile .cat{
+  display:flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+.dot{width:7px; height:7px; border-radius:50%; flex:none;}
+.tile .t{font-size:16px; font-weight:600; line-height:1.5; letter-spacing:-.01em;}
+.tile .m{
+  margin-top:auto; font-family:var(--f-mono); font-size:10.5px; color:var(--muted);
+  display:flex; gap:8px; align-items:center;
+}
+.tile .m .st{color:var(--accent); letter-spacing:.1em;}
+
+/* ---------- 세부 화면 ---------- */
+.detail{
+  position:fixed; inset:0; z-index:60; background:var(--ground);
+  overflow-y:auto; display:none; overscroll-behavior:contain;
+}
+.detail[data-open]{display:block;}
+.sheet .d-bar{padding:11px 18px;}
+.d-bar{
+  position:sticky; top:0; background:rgba(11,14,16,.94); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  padding:calc(11px + var(--sa-top)) calc(18px + var(--sa-r)) 11px calc(18px + var(--sa-l));
+  display:flex; align-items:center; gap:12px;
+}
+.d-bar .back{
+  font:inherit; font-size:13.5px; font-weight:500; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:6px 13px; cursor:pointer;
+}
+.d-bar .back:hover{border-color:var(--accent);}
+.d-bar .pos{font-family:var(--f-mono); font-size:11px; color:var(--muted); margin-left:auto;}
+.d-body{max-width:720px; margin:0 auto;
+        padding:26px calc(18px + var(--sa-r)) calc(80px + var(--sa-bot)) calc(18px + var(--sa-l));
+        display:flex; flex-direction:column; gap:18px;}
+.d-meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+        font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.d-meta .st{color:var(--accent); letter-spacing:.1em;}
+.d-title{
+  font-weight:700; margin:0;
+  font-size:clamp(23px,4vw,33px); line-height:1.38; letter-spacing:-.03em;
+  text-wrap:balance;
+}
+.d-orig{font-size:13.5px; color:var(--muted); line-height:1.55; margin:0;}
+
+.raw-text{font-size:15.5px; color:var(--ink-2);}
+.body-text{font-size:17.5px; line-height:1.78; color:var(--ink); margin:0;}
+.raw .body-text{font-size:15.5px; color:var(--ink-2); line-height:1.7;}
+.bul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px;
+     border-left:2px solid var(--accent); padding-left:16px;}
+.bul li{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+.none{color:var(--muted); font-size:14.5px;}
+
+.go{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background:var(--accent); color:var(--accent-ink); text-decoration:none;
+  font-weight:600; font-size:15px; padding:12px 20px; border-radius:10px;
+}
+.go:hover{filter:brightness(1.08);}
+.rel{border-top:1px solid var(--line); padding-top:16px;
+     display:flex; flex-direction:column; gap:9px;}
+.rel h3{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--muted); margin:0; font-weight:500;}
+.rel a{display:flex; flex-direction:column; gap:3px; font-size:14.5px; color:var(--ink-2);
+       text-decoration:none; line-height:1.5; padding:8px 0;
+       border-bottom:1px solid var(--line-soft);}
+.rel a:hover{color:var(--accent);}
+.rel a .src{font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+
+/* ---------- 순위 ---------- */
+.boards{display:flex; gap:6px; flex-wrap:wrap; padding:26px 0 16px;}
+.boards button{
+  font:inherit; font-size:13px; background:var(--surface); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:999px; padding:7px 15px; cursor:pointer;
+}
+.boards button[aria-selected="true"]{
+  background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600;
+}
+.board{display:none;}
+.board[data-open]{display:block;}
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:520px; font-size:14px;}
+th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line-soft);}
+thead th{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none;}
+td.r{font-family:var(--f-mono); color:var(--muted); font-variant-numeric:tabular-nums; width:38px;}
+td.nm{font-weight:600;}
+td.nm small{display:block; font-weight:400; font-size:12px; color:var(--muted);}
+td.num{font-family:var(--f-mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap;}
+td.sc{width:132px;}
+.scwrap{display:flex; align-items:center; gap:9px; justify-content:flex-end;}
+.bar{height:4px; border-radius:2px; background:var(--accent); opacity:.75; flex:none;}
+.barbg{flex:1; height:4px; border-radius:2px; background:var(--surface-3); position:relative;}
+.barbg i{position:absolute; inset:0 auto 0 0; border-radius:2px; background:var(--accent); opacity:.8;}
+td.d{font-family:var(--f-mono); font-size:12px; white-space:nowrap; width:56px;}
+.up{color:var(--up);} .down{color:var(--down);}
+.new{color:var(--accent-ink); background:var(--accent); font-family:var(--f-mono);
+     font-size:9.5px; letter-spacing:.1em; padding:2px 5px; border-radius:3px;}
+.note{color:var(--muted); font-size:14px; padding:18px 0;}
+.credit{font-size:12px; color:var(--muted); padding:14px 2px 0;}
+.credit a{color:var(--ink-2);}
+
+/* 홈 화면 앱에서 어제 것을 보고 있을 때 띄우는 띠.
+   앱은 한 번 연 화면을 그대로 들고 있어서, 새 브리핑이 나온 걸 스스로 알기 어렵다. */
+#fresh{
+  position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom));
+  z-index:80; display:none; align-items:center; gap:12px;
+  background:var(--accent); color:var(--accent-ink);
+  border-radius:12px; padding:12px 14px; box-shadow:0 12px 30px rgba(0,0,0,.5);
+  font-size:14px; font-weight:600;
+}
+#fresh[data-show]{display:flex;}
+#fresh span{flex:1;}
+#fresh button{
+  font:inherit; font-weight:700; font-size:13.5px; cursor:pointer;
+  background:var(--accent-ink); color:var(--accent);
+  border:0; border-radius:8px; padding:8px 14px; white-space:nowrap;
+}
+
+/* ---------- 꼬리말 ---------- */
+.foot{
+  margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  font-family:var(--f-mono); font-size:11px; color:var(--muted);
+}
+.foot button{
+  font:inherit; background:none; border:0; color:var(--muted);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:0;
+}
+.foot button:hover{color:var(--accent);}
+#report{display:none; padding-top:18px;}
+#report[data-open]{display:block;}
+#report table{min-width:560px; font-size:12.5px;}
+.bad{color:var(--down);}
+.drop{margin-top:14px;}
+.drop summary{cursor:pointer; font-family:var(--f-mono); font-size:11px; color:var(--muted);}
+.drop ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:12.5px;
+         line-height:1.7; max-height:320px; overflow-y:auto;}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+@media (max-width:560px){
+  /* 폰에서 표가 옆으로 밀려 점수·변동이 안 보이던 것을 고친다.
+     막대는 접고 숫자만 남긴다 — 좁은 화면에서는 숫자가 먼저다. */
+  table{min-width:0; font-size:13px;}
+  th,td{padding:9px 7px;}
+  thead th{font-size:9px; letter-spacing:.06em;}
+  td.r{width:26px;}
+  td.sc{width:auto;}
+  td.d{width:44px;}
+  td.nm small{font-size:11px;}
+  .barbg{display:none;}
+  .find{width:100%;}
+  #q{flex:1; width:auto;}
+  #calpop{right:0; width:min(296px, calc(100vw - 28px));}
+  .boards{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+          margin:0 -14px; padding:22px 14px 14px;}
+  .boards::-webkit-scrollbar{display:none;}
+  .boards button{flex:none; white-space:nowrap;}
+  .top-in{gap:10px;
+          padding:calc(10px + var(--sa-top)) calc(14px + var(--sa-r)) 10px calc(14px + var(--sa-l));}
+  .brand{width:100%; margin-right:0;}
+  .wrap{padding:0 calc(14px + var(--sa-r)) calc(60px + var(--sa-bot)) calc(14px + var(--sa-l));}
+  .lede{padding:24px 0 20px;}
+  .head{grid-template-columns:26px 1fr; gap:10px;}
+  .head .m{grid-column:2; margin-top:2px;}
+}
+</style>
+</head>
+<body data-base="../" data-date="2026-10-14">
+
+<header class="top"><div class="top-in">
+  <div class="brand">
+    <span class="d">2026-10-14</span>
+    <span class="s">Visual AI Brief</span>
+  </div>
+  <div class="tabs">
+    <button type="button" data-go="today" aria-selected="true">오늘</button>
+    <button type="button" data-go="rank" aria-selected="false">순위</button>
+    <button type="button" data-go="models" aria-selected="false">모델</button>
+  </div>
+  <div class="find">
+    <input id="q" type="search" placeholder="검색 (지난 브리핑 포함)"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="calbtn" type="button" aria-expanded="false">날짜</button>
+  </div>
+</div>
+
+
+<div id="calpop" hidden>
+  <div class="cal-head">
+    <span class="mo"></span>
+    <button class="prev" type="button" aria-label="이전 달">‹</button>
+    <button class="next" type="button" aria-label="다음 달">›</button>
+  </div>
+  <div class="cal"></div>
+  <p class="q-note cal-note"></p>
+</div>
+</header>
+
+<main class="wrap">
+
+  <section data-view="today">
+    <div class="lede">
+      <p class="flow"><span>구글의 차세대 모델 발표 속에서도 오픈소스 생태계는 3D 변환과 정밀 제어 도구를 빠르게 확장하고 있습니다.</span><span>ComfyUI v0.40.0 배포와 맞물려 MiniMax H3 기반 파이프라인의 실무 적용 논의가 본격화되는 양상입니다.</span></p>
+      <div class="heads"><button class="head" data-uid="42b9e2c37655"><span class="n">01</span><span class="t">가우시파이 오빗 오픈소스 공개, 브라우저 3D 변환 지원</span><span class="m">오픈소스·툴 · r/StableDiffusion</span></button><button class="head" data-uid="29c8998eb8a3"><span class="n">02</span><span class="t">MiniMax H3 타임라인 워크플로우 v0.1.4-007 업데이트</span><span class="m">워크플로우 · r/StableDiffusion</span></button><button class="head" data-uid="db9c11954ed6"><span class="n">03</span><span class="t">H3minimax r2v 작업 시 캐릭터 시트 활용성 논의</span><span class="m">리뷰·벤치마크 · r/StableDiffusion</span></button><button class="head" data-uid="5d0eb8c6eb1c"><span class="n">04</span><span class="t">고전 특촬물 악당 기지 재현 LoRA 모델 공개</span><span class="m">기타 · Civitai (신규 모델·LoRA)</span></button><button class="head" data-uid="d5925b076dd7"><span class="n">05</span><span class="t">ComfyUI v0.40.0 업데이트 배포</span><span class="m">업데이트 · ComfyUI (GitHub Releases)</span></button></div>
+    </div>
+    <div class="sec-h"><h2>나머지</h2><span class="c">7건</span></div><div class="grid"><button class="tile" data-uid="b560d89b69e3"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">3D 포즈·컬러 제어 Anima ControlNet 공개</span><span class="m"><span class="st">●●○</span><span>r/StableDiffusion</span><span>10.13 15:08</span></span></button><button class="tile" data-uid="c1a5ec433a86"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">Mage-Flow W4A8 + ARA 모델 출시</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.14 00:13</span></span></button><button class="tile" data-uid="b6fe9750e91f"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">신규 크리에이티브 모델 공개 및 주의 당부</span><span class="m"><span class="st">●○○</span><span>Civitai (신규 모델·LoRA)</span><span>10.13 08:19</span></span></button><button class="tile" data-uid="85e37809c5c8"><span class="cat"><i class="dot" style="background:#FFCE4A"></i>모델 출시</span><span class="t">구글, 차세대 모델 Gemini 4 Argon 출시</span><span class="m"><span class="st">●○○</span><span>The Verge AI</span><span>10.14 01:00</span></span></button><button class="tile" data-uid="0f6f9450e20e"><span class="cat"><i class="dot" style="background:#7FD16C"></i>오픈소스·툴</span><span class="t">Qwen-Image 2.1용 텍스처 수정 VAE 공개</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.13 11:33</span></span></button><button class="tile" data-uid="90dcf5e9375d"><span class="cat"><i class="dot" style="background:#FFCE4A"></i>모델 출시</span><span class="t">MageTrail V0.4 업데이트 및 VAE 적응 테스트</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.13 11:55</span></span></button><button class="tile" data-uid="c292615a1d4d"><span class="cat"><i class="dot" style="background:#7C8A95"></i>기타</span><span class="t">MiniMax H3 언어 악센트 로라 학습 문의</span><span class="m"><span class="st">●○○</span><span>r/StableDiffusion</span><span>10.13 16:07</span></span></button></div>
+    <div class="foot">
+      <span>12건 · 10-13 07:00 ~ 10-14 07:00 KST</span>
+      <button type="button" id="report-toggle">실행 정보</button>
+    </div>
+    <div id="report"><p class="note">수집 2986 → 시간창 67 → 필터 29 → 병합 후 20 → 카드 12 · 번역 12건(gemini)</p><div class="tblwrap"><table><thead><tr><th>소스</th><th>등급</th><th style="text-align:right">수집</th><th style="text-align:right">채택</th><th>상태</th></tr></thead><tbody><tr><td>Adobe Firefly Blog</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · 404</span></td></tr><tr><td>arXiv cs.CV (필터링)</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">ReadTimeout</span></td></tr><tr><td>Banodoco</td><td>T1</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>ByteDance Seed (Seedance / Seedream)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요</span></td></tr><tr><td>Midjourney</td><td>T0</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 403 · Just a moment... &lt;meta http-equiv=&quot;content-security-policy&quot; content=&quot;default-src &amp;#39;none&amp;#39;; script-src &amp;#39;nonce-ldqOca3DDh7eAJMtC2BLRf&amp;#39; &amp;#39;unsafe-eval&amp;#39; https</span></td></tr><tr><td>r/aivideo</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>r/comfyui</td><td>T2</td><td class="num">0</td><td class="num">0</td><td><span class="bad">레딧 차단(데이터센터 IP) — 건너뜀</span></td></tr><tr><td>VentureBeat AI</td><td>T3</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 429 · Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction</span></td></tr><tr><td>Curious Refuge</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Latent Vision (Matteo Spinelli)</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>MattVidPro AI</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Mickmumpitz</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Nerdy Rodent</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Olivio Sarikas</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Scott Detweiler</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Sebastian Kamph</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>Theoretically Media</td><td>T4</td><td class="num">0</td><td class="num">0</td><td><span class="bad">HTTP 404 · Error 404 (Not Found)!!1 *{margin</span></td></tr><tr><td>r/StableDiffusion</td><td>T2</td><td class="num">25</td><td class="num">8</td><td>정상</td></tr><tr><td>Civitai (신규 모델·LoRA)</td><td>T1</td><td class="num">40</td><td class="num">2</td><td>정상</td></tr><tr><td>ComfyUI (GitHub Releases)</td><td>T1</td><td class="num">10</td><td class="num">1</td><td>정상</td></tr><tr><td>The Verge AI</td><td>T3</td><td class="num">10</td><td class="num">1</td><td>정상</td></tr><tr><td>Ars Technica AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Black Forest Labs (FLUX)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>ComfyUI Blog</td><td>T1</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Google DeepMind Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>fal.ai Blog</td><td>T1</td><td class="num">15</td><td class="num">0</td><td>정상</td></tr><tr><td>Google Research Blog</td><td>T0</td><td class="num">100</td><td class="num">0</td><td>정상</td></tr><tr><td>Hacker News (키워드 필터)</td><td>T2</td><td class="num">251</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Blog</td><td>T1</td><td class="num">876</td><td class="num">0</td><td>정상</td></tr><tr><td>Hugging Face Papers (Daily)</td><td>T1</td><td class="num">19</td><td class="num">0</td><td>정상</td></tr><tr><td>Tencent HunyuanVideo (GitHub Releases)</td><td>T0</td><td class="num">1</td><td class="num">0</td><td>정상</td></tr><tr><td>Kling AI (Kuaishou)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Lightricks LTX-2 (GitHub Releases)</td><td>T0</td><td class="num">6</td><td class="num">0</td><td>정상</td></tr><tr><td>Luma AI (Ray / Dream Machine)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>MiniMax / Hailuo</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>OpenAI News</td><td>T0</td><td class="num">1288</td><td class="num">0</td><td>정상</td></tr><tr><td>Pika</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Qwen (Alibaba) Blog</td><td>T0</td><td class="num">44</td><td class="num">0</td><td>정상</td></tr><tr><td>Replicate Blog</td><td>T1</td><td class="num">121</td><td class="num">0</td><td>정상</td></tr><tr><td>Runway</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr><tr><td>Stability AI</td><td>T0</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>TechCrunch AI</td><td>T3</td><td class="num">20</td><td class="num">0</td><td>정상</td></tr><tr><td>Alibaba Wan (GitHub Releases)</td><td>T0</td><td class="num">0</td><td class="num">0</td><td>정상</td></tr></tbody></table></div><details class="drop"><summary>필터에 걸린 38건 보기</summary><ul><li>[주제 무관] OpenAI employee arrested for allegedly planting a bug in a conference room</li><li>[주제 무관] Judge orders OpenAI to turn over hiring records in Apple trade secrets case</li><li>[주제 무관] Show HN: Parsimony – an open-source benchmark for how much code AI models add</li><li>[주제 무관] Developing Gemini 4 Argon responsibly and safely</li><li>[주제 무관] Shopify opens its catalog up to more AI agents</li><li>[주제 무관] Xbox is officially embracing the chaos of AI-powered game ports</li><li>[주제 무관] Flox Intelligence is building AI to keep wildlife away from trains, airports, and roads</li><li>[주제 무관] Disney offers $20M for Character.AI’s scandal-plagued chatbot tech</li><li>[주제 무관] Facebook is giving users more control over their algorithm</li><li>[주제 무관] I don’t miss the camera on the Ray-Ban Meta Audio glasses</li><li>[주제 무관] Laplace Intelligence red-teams robots and self-driving cars before they hit the real world</li><li>[주제 무관] Pluto Security raises $42M as AI gives enterprise security teams a new headache</li><li>[주제 무관] Run fast, private agents on-device with LFM2.5-24B-A2B</li><li>[주제 무관] Facebook will let you customize your feed algorithm using AI</li><li>[주제 무관] Google wants to host your personal vibe-coded apps in the Play Store</li><li>[주제 무관] Google Play now lets anyone build private, vibe-coded apps that run on Android</li><li>[주제 무관] Google makes it easier to launch your vibe-coded apps</li><li>[주제 무관] It’s ‘incomprehensible’ that Instagram allowed an AI image of Mia Goth to spread, say her reps</li><li>[주제 무관] SpaceX and Google both said no. Now his software is riding a SpaceX rocket next to Google’s</li><li>[주제 무관] Scientists wonder: Is my AI stealing my ideas?</li><li>[주제 무관] Gemini 4 Argon for Robotics</li><li>[주제 무관] Gemini 4 Argon: Built to solve your hardest problems</li><li>[주제 무관] Gemini 4 Argon begins rolling out in Gemini app and Antigravity, but only if you pay</li><li>[주제 무관] Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data</li><li>[주제 무관] They war-gamed dimming the Sun. It went even worse than you think.</li><li>[주제 무관] Epic shifts to &amp;#8216;AI-accelerated development&amp;#8217; for upcoming Disney game</li><li>[주제 무관] The United Kingdom generates less electricity per person than in the 1970s</li><li>[주제 무관] TechCrunch Disrupt 2026: Day 1</li><li>[주제 무관] DLSS 5 gets toned down for its Hogwarts Legacy debut next month</li><li>[주제 무관] SpaceXSI bundles X Premium, Grok, and Cursor into one subscription</li><li>[주제 무관] The final Disrupt Stage lineup: Three days of conversations you won’t hear anywhere outside of TechCrunch Disr</li><li>[주제 무관] Amex introduces a framework to prevent AI agents from making unauthorized purchases</li><li>[주제 무관] Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy</li><li>[주제 무관] Worlds more habitable than Earth?</li><li>[주제 무관] Higgsfield takes AI video from 1 minute to over 10</li><li>[주제 무관] 10 Years of the SRE book: Announcing the second edition</li><li>[주제 무관] Character.ai has initiated voluntary Chapter 11 bankruptcy</li><li>[주제 무관] The CEO&#x27;s of Broadcom and Intel Say the Quiet Part Out Loud about AI and ROI</li></ul></details></div>
+  </section>
+
+  <section data-view="rank" hidden>
+    <div class="boards"><button type="button" data-board="text-to-video" aria-selected="true">텍스트 → 영상</button><button type="button" data-board="image-to-video" aria-selected="false">이미지 → 영상</button><button type="button" data-board="text-to-image" aria-selected="false">텍스트 → 이미지</button><button type="button" data-board="image-editing" aria-selected="false">이미지 편집</button><button type="button" data-board="language" aria-selected="false">언어모델 (지능·가격)</button></div><section class="board" data-board="text-to-video" data-open><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Wan 3.0<small>Alibaba</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1129.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">MiniMax H3 Max<small>Fal</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:88%"></i></span>1120.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">MiniMax H3 (768p)<small>MiniMax</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:84%"></i></span>1117.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">Dreamina Seedance 2.5<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:68%"></i></span>1105.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">FLUX 3<small>Black Forest Labs</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:49%"></i></span>1091.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">SkyReels V4<small>Skywork AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:39%"></i></span>1084.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Dreamina Seedance 2.0<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:34%"></i></span>1080.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">Gemini Omni Flash 1.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:22%"></i></span>1071.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="image-to-video"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Gemini Omni Flash<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1368.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">Bach 1.0 Pro<small>Video Rebirth</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:89%"></i></span>1362.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">Wan 3.0<small>Alibaba</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:89%"></i></span>1362.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">MiniMax H3<small>MiniMax</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:79%"></i></span>1356.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">Vimoo 1.0<small>Vimoo</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:65%"></i></span>1348.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">Dreamina Seedance 2.0 720p<small>ByteDance Seed</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:49%"></i></span>1339.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">PixVerse V6<small>PixVerse</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:49%"></i></span>1339.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">Grok Imagine Video 1.5<small>SpaceXAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:35%"></i></span>1331.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="text-to-image"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">GPT Image 2.5 Sunburst (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1199.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">GPT Image 2.5 Flare (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:93%"></i></span>1192.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">GPT Image 2 (high)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:73%"></i></span>1172.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">Nano Banana 2.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:60%"></i></span>1159.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">Grok Imagine Image 2.0<small>SpaceXAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:56%"></i></span>1155.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">MAI-Image-2.6<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:53%"></i></span>1152.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Nano Banana 2 (Gemini 3.1 Flash Image)<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:27%"></i></span>1125.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">Muse Image<small>Meta</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:17%"></i></span>1115.0</span></td><td class="d"><span class="new">NEW</span></td></tr></tbody></table></div></section><section class="board" data-board="image-editing"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>Elo</th><th>변동</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">GPT Image 2.5 Sunburst (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>1186.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">2</td><td class="nm">GPT Image 2.5 Flare (max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:78%"></i></span>1167.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">3</td><td class="nm">MAI-Image-2.6<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:50%"></i></span>1143.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">4</td><td class="nm">Nano Banana 2.1<small>Google</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:48%"></i></span>1141.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">5</td><td class="nm">MAI-Image-2.6-Flash<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:35%"></i></span>1130.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">6</td><td class="nm">GPT Image 2 (high)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:34%"></i></span>1129.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">7</td><td class="nm">Muse Image<small>Meta</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:27%"></i></span>1123.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr><tr><td class="r">8</td><td class="nm">MAI-Image-2.5<small>Microsoft AI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:19%"></i></span>1116.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td></tr></tbody></table></div></section><section class="board" data-board="language"><div class="tblwrap"><table><thead><tr><th></th><th>모델</th><th style='text-align:right'>지능 지수</th><th>변동</th><th style='text-align:right'>$/1M</th></tr></thead><tbody><tr><td class="r">1</td><td class="nm">Claude Opus 5.5 (Max, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:100%"></i></span>57.6</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">20.0</td></tr><tr><td class="r">2</td><td class="nm">Claude Fable 5.1 (Max, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:63%"></i></span>53.4</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">3</td><td class="nm">GPT-6 Astra (Max)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:57%"></i></span>52.7</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">4</td><td class="nm">GPT-6 Astra (Xhigh)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:55%"></i></span>52.4</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">5</td><td class="nm">GPT-6.1 Sol (Xhigh)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:43%"></i></span>51.0</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr><tr><td class="r">6</td><td class="nm">GPT-6.1 Sol (High)<small>OpenAI</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:36%"></i></span>50.2</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr><tr><td class="r">7</td><td class="nm">Claude Opus 5 (Xhigh)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:31%"></i></span>49.7</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">25.0</td></tr><tr><td class="r">8</td><td class="nm">Claude Fable 5.1 (Medium, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:24%"></i></span>48.9</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">9</td><td class="nm">Claude Fable 5.1 (Low, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:6%"></i></span>46.8</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">50.0</td></tr><tr><td class="r">10</td><td class="nm">Claude Sonnet 5.5 (High, Default Fallback)<small>Anthropic</small></td><td class="num sc"><span class="scwrap"><span class="barbg"><i style="width:6%"></i></span>46.8</span></td><td class="d"><span style="color:var(--muted)">–</span></td><td class="num">10.0</td></tr></tbody></table></div></section><p class="credit">순위·점수 출처 <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · 블라인드 선호도 투표 기반 · 받아온 시각 10.14 01:18 UTC · 영상·이미지 가격은 유료 등급에서만 제공됩니다</p>
+  </section>
+
+  <section data-view="models" hidden>
+    <div id="mlist"></div>
+    <div id="mone" hidden></div>
+  </section>
+
+</main>
+
+<div class="detail" id="d-42b9e2c37655">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">1/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.14 02:21</span>
+    </div>
+    <h1 class="d-title">가우시파이 오빗 오픈소스 공개, 브라우저 3D 변환 지원</h1>
+    <p class="d-orig">원제 · Gausify Orbit is now open source: turn AI-generated 360 orbit videos into Gaussian Splats, entirely in your browser</p>
+    <p class="body-text">AI 생성 360도 회전 영상 등을 3D 가우시안 스플래팅으로 변환하는 가우시파이 오빗이 오픈소스로 공개되었다. MIT 라이선스로 배포되었으며 비디오 모델 생성 클립이나 일반 영상, 이미지 폴더를 입력받아 브라우저 내에서 직접 변환 작업을 처리한다. 사용자는 생성된 3D 가우시안 스플랫을 바로 확인하고 내보내거나 공유할 수 있다.</p><ul class="bul"><li>MIT 라이선스 오픈소스로 정식 출시</li><li>360도 회전 영상을 3D 가우시안 스플랫 변환</li><li>웹 브라우저 환경에서 전 과정 직접 구동</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x52s15/gausify_orbit_is_now_open_source_turn_aigenerated" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-29c8998eb8a3">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">2/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#6FD3B8"></i>워크플로우
+      <span class="st" title="중요도">●●●</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.14 00:05</span>
+    </div>
+    <h1 class="d-title">MiniMax H3 타임라인 워크플로우 v0.1.4-007 업데이트</h1>
+    <p class="d-orig">원제 · Updated OBVPM Timeline Workflow v0.1.4-007</p>
+    <p class="body-text">MiniMax H3 타임라인 워크플로우 v0.1.4-007 버전이 공개되었다. 이번 업데이트에서는 단일 연속 생성이 아닌 클립이 포함된 타임라인에서도 업스케일링이 정상 작동하도록 오류를 수정했다. 세부 변경 사항과 사용 팁은 영상으로 함께 제공되며 GitHub에서 노드를 내려받을 수 있다.</p><ul class="bul"><li>불연속 클립 타임라인 업스케일링 오류 해결</li><li>주요 버그 수정 및 워크플로우 성능 개선</li><li>GitHub 통해 관련 노드 및 자료 제공</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4z41u/updated_obvpm_timeline_workflow_v014007" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-db9c11954ed6">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">3/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#C4A0F0"></i>리뷰·벤치마크
+      <span class="st" title="중요도">●●○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.13 12:52</span>
+    </div>
+    <h1 class="d-title">H3minimax r2v 작업 시 캐릭터 시트 활용성 논의</h1>
+    <p class="d-orig">원제 · H3mini R2V - Character Sheet vs Reference Image</p>
+    <p class="body-text">H3minimax 모델 기반 r2v 작업 중 피사체 교체의 일관성 편차를 해결하기 위한 논의가 제기되었다. 단일 참조 이미지를 사용하는 기존 방식에서 결과물 품질이 불안정하게 나타나 개선 방안이 모색되고 있다. 이에 다중 참조 이미지나 캐릭터 시트 도입이 일관성을 높일 수 있는지에 대한 사용자 경험이 공유되었다.</p><ul class="bul"><li>H3minimax r2v 피사체 교체 일관성 편차 발생</li><li>단일 참조 이미지 대비 품질 저하 문제 확인</li><li>추가 참조 이미지 및 캐릭터 시트 효과 논의</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4mm4o/h3mini_r2v_character_sheet_vs_reference_image" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-5d0eb8c6eb1c">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">4/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●●○</span>
+      <span>Civitai (신규 모델·LoRA) · 연구</span>
+      <span>10.14 05:21</span>
+    </div>
+    <h1 class="d-title">고전 특촬물 악당 기지 재현 LoRA 모델 공개</h1>
+    <p class="d-orig">원제 · sentai base</p>
+    <p class="body-text">1980~1990년대 TV 특촬물 슈퍼빌런의 기지를 재현하는 53nt41 b4s3 모델이 공개되었다. 가짜 암석, 녹색과 보라색 조명, 깜빡이는 레트로 장비 등 실사 세트 스타일을 사실적인 그래픽으로 구현했다. 45장의 배경 데이터셋을 기반으로 알현실, 괴수 실험실, 제어실 등 11개 공간을 재현한다.</p><ul class="bul"><li>80-90년대 특촬물 악당 기지 배경 생성</li><li>암석과 레트로 조명 등 무대 연출 효과 반영</li><li>45장 데이터셋 기반 11개 주요 공간 표현</li></ul>
+    <a class="go" href="https://civitai.com/models/3000446" target="_blank" rel="noopener">원문 열기 · civitai.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-d5925b076dd7">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">5/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#8AB4F8"></i>업데이트
+      <span class="st" title="중요도">●●○</span>
+      <span>ComfyUI (GitHub Releases) · 연구</span>
+      <span>10.14 06:29</span>
+    </div>
+    <h1 class="d-title">ComfyUI v0.40.0 업데이트 배포</h1>
+    <p class="d-orig">원제 · ComfyUI v0.40.0</p>
+    <p class="body-text">ComfyUI가 v0.40.0 버전을 통해 새로운 서버 기능과 에셋 내보내기 API를 추가했다. 3D 모델 출력 지원과 카메라 정보 노드가 도입되었다.</p><ul class="bul"><li>서버 CSP 업데이트 및 어텐션 모델 지원 추가</li><li>로컬 에셋 내보내기 API 및 3D 모델 출력 구현</li><li>비디오 메타데이터 추출 및 카메라 정보 노드 신설</li></ul>
+    <a class="go" href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.40.0" target="_blank" rel="noopener">원문 열기 · github.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-b560d89b69e3">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">6/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●●○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.13 15:08</span>
+    </div>
+    <h1 class="d-title">3D 포즈·컬러 제어 Anima ControlNet 공개</h1>
+    <p class="d-orig">원제 · I trained two Anima ControlNet-LLLite models using 3D body poses and color regions</p>
+    <p class="body-text">3D 신체 포즈와 컬러 영역을 활용하는 Anima ControlNet-LLLite 모델 2종이 공개됐다. 캐릭터 포즈 제어와 다중 피사체 구분이 가능하다.</p><ul class="bul"><li>3D 바디 포즈 및 컬러 영역 제어 모델 2종 학습</li><li>ComfyUI 커스텀 노드를 통한 효율적인 제어 지원</li><li>두 모델을 조합하여 활용도 극대화 가능</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4ozt5/i_trained_two_anima_controlnetlllite_models_using" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 4건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1x57e98/modern_ps2_style_playstation_2_graphic_lora_for" target="_blank" rel="noopener">Modern PS2 Style (Playstation 2 Graphic lora for minimax h3)<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x52j87/aziib_pixel_style_lora_pixel_art_lora_for_krea2" target="_blank" rel="noopener">Aziib Pixel Style Lora (pixel art lora for krea2 and anima)<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x4s1l0/portable_char_consistent_characterssame_face_body" target="_blank" rel="noopener">Portable .char consistent characters(same face, body, cloths &amp; voice) - MinimaxH3, Flux2 &amp; Krea2<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x4p3ot/free_krea2_character_style_catalog_v09_3919" target="_blank" rel="noopener">Free Krea2 Character &amp; Style Catalog v0.9 — 3,919 samples, reusable prompts, and ComfyUI workflows<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div><div class="detail" id="d-c1a5ec433a86">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">7/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.14 00:13</span>
+    </div>
+    <h1 class="d-title">Mage-Flow W4A8 + ARA 모델 출시</h1>
+    <p class="d-orig">원제 · I released Mage-Flow W4A8 + ARA with TE INT 8 / 8.9 GB VRAM</p>
+    <p class="body-text">ComfyUI 네이티브 양자화 커널 기반의 4비트 Mage-Flow 모델이 공개되었다. 정확도 복구 어댑터를 적용하여 VRAM 사용량을 크게 절감했다.</p><ul class="bul"><li>4비트 빌드 및 정확도 복구 어댑터 적용</li><li>INT8 텍스트 인코더로 VRAM 추가 절감</li><li>저사양 환경에서의 원활한 추론 지원</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4zar9/i_released_mageflow_w4a8_ara_with_te_int_8_89_gb" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-b6fe9750e91f">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">8/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>Civitai (신규 모델·LoRA) · 연구</span>
+      <span>10.13 08:19</span>
+    </div>
+    <h1 class="d-title">신규 크리에이티브 모델 공개 및 주의 당부</h1>
+    <p class="d-orig">원제 · JKフーゾク学園祭JK Fuuzoku Gakuensai - Madoka</p>
+    <p class="body-text">새로운 콘텐츠 모델이 공개되었으며, 제작자는 무료로 배포되는 모델에 대한 유료 결제 피해 주의를 당부했다. 무단 전재는 허용하나 사칭 및 유료 판매에는 주의가 필요하다.</p><ul class="bul"><li>신규 창작 콘텐츠 및 모델 공개</li><li>모든 공개 모델은 무료로 배포됨</li><li>무단 전재 시 유료 판매 사칭 주의 당부</li></ul>
+    <a class="go" href="https://civitai.com/models/2998604" target="_blank" rel="noopener">원문 열기 · civitai.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-85e37809c5c8">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">9/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●○○</span>
+      <span>The Verge AI · 미디어</span>
+      <span>10.14 01:00</span>
+    </div>
+    <h1 class="d-title">구글, 차세대 모델 Gemini 4 Argon 출시</h1>
+    <p class="d-orig">원제 · Google finally releases Gemini 4 Argon</p>
+    <p class="body-text">구글이 장기간의 공백을 깨고 업계 최고 수준과 경쟁할 수 있는 차세대 모델 Gemini 4 Argon을 출시했다. 구글은 이 모델이 복잡한 워크플로우 전반에서 향상된 추론 성능을 제공하며, 불필요한 반복과 상투적 표현을 줄였다고 밝혔다.</p><ul class="bul"><li>구글, 신형 Gemini 4 Argon 모델 정식 출시</li><li>복잡한 워크플로우에서 향상된 추론 성능 제공</li><li>반복 표현 및 상투적 문구 대폭 감소</li></ul>
+    <a class="go" href="https://theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon" target="_blank" rel="noopener">원문 열기 · theverge.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-0f6f9450e20e">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">10/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7FD16C"></i>오픈소스·툴
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.13 11:33</span>
+    </div>
+    <h1 class="d-title">Qwen-Image 2.1용 텍스처 수정 VAE 공개</h1>
+    <p class="d-orig">원제 · madebyollin/texture-fix-vae-for-qwen-image-2.1 · Hugging Face</p>
+    <p class="body-text">Qwen-Image 2.1 모델에서 발생하는 체스판 아티팩트를 제거하기 위해 학습된 새로운 VAE가 Hugging Face에 공개됐다. 해당 VAE는 왜곡된 이미지를 개선하는 데 탁월한 효과를 보인다.</p><ul class="bul"><li>Qwen-Image 2.1 전용 체스판 아티팩트 제거 VAE</li><li>별도의 스케줄러와 조합하여 화질 개선 가능</li><li>손상된 이미지를 효과적으로 복구</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4l2nk/madebyollintexturefixvaeforqwenimage21_hugging" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 3건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1x549i3/vigenflow_flux1schnell_flux2klein4b_and" target="_blank" rel="noopener">VigenFlow: FLUX.1-schnell, FLUX.2-klein-4B and Z-Image-Turbo running locally on the AMD Ryzen AI NPU, no discrete GPU needed (Windows + Ubuntu)<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x52tz3/testing_texturefixvaeforqwenimage21" target="_blank" rel="noopener">Testing (texture-fix-vae-for-qwen-image-2.1)<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x51znr/lightx2vqwenimage21lightning_4_step_turbo_lora" target="_blank" rel="noopener">lightx2v/Qwen-Image-2.1-Lightning - 4 Step Turbo LoRA<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div><div class="detail" id="d-90dcf5e9375d">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">11/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#FFCE4A"></i>모델 출시
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.13 11:55</span>
+    </div>
+    <h1 class="d-title">MageTrail V0.4 업데이트 및 VAE 적응 테스트</h1>
+    <p class="d-orig">원제 · MageTrail - V0.4 Update: Small 100 artist tune to test learning and Flux2VAE adaptation</p>
+    <p class="body-text">MageTrail 프로젝트가 V0.4로 업데이트되며 소규모 아티스트 데이터셋을 활용한 파인튜닝과 FLUX VAE 적응 테스트를 진행했다. 이번 업데이트는 프로젝트의 향후 큰 변화를 예고하는 내부 테스트 결과물이다.</p><ul class="bul"><li>MageTrail V0.4 업데이트 버전 공개</li><li>100명의 아티스트 데이터로 6천 장 이미지 학습</li><li>FLUX VAE 적응 및 태깅 시스템 테스트</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4licv/magetrail_v04_update_small_100_artist_tune_to" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    
+  </div>
+</div><div class="detail" id="d-c292615a1d4d">
+  <div class="d-bar">
+    <button class="back" type="button">← 목록</button>
+    <span class="pos">12/12</span>
+  </div>
+  <div class="d-body">
+    <div class="d-meta">
+      <i class="dot" style="background:#7C8A95"></i>기타
+      <span class="st" title="중요도">●○○</span>
+      <span>r/StableDiffusion · 커뮤니티</span>
+      <span>10.13 16:07</span>
+    </div>
+    <h1 class="d-title">MiniMax H3 언어 악센트 로라 학습 문의</h1>
+    <p class="d-orig">원제 · Is there a way to train MiniMax H3 lora for new Language Accent ?</p>
+    <p class="body-text">새로운 언어 악센트를 적용하기 위해 MiniMax H3 로라를 학습시키는 방법에 대한 사용자 문의가 제기됐다. 관련 커뮤니티를 중심으로 구체적인 학습 방법론에 대한 논의가 이루어지고 있다.</p><ul class="bul"><li>MiniMax H3용 신규 언어 악센트 로라 학습</li><li>관련 커뮤니티 내 구현 방안 질의</li></ul>
+    <a class="go" href="https://reddit.com/r/StableDiffusion/comments/1x4pxv6/is_there_a_way_to_train_minimax_h3_lora_for_new" target="_blank" rel="noopener">원문 열기 · reddit.com ↗</a>
+    <div class="rel"><h3>같은 사건을 다룬 다른 기사 2건</h3><a href="https://reddit.com/r/StableDiffusion/comments/1x55doi/minimax_h3_seedhunter_nodes" target="_blank" rel="noopener">Minimax H3 SeedHunter Nodes<span class="src">r/StableDiffusion</span></a><a href="https://reddit.com/r/StableDiffusion/comments/1x4txte/did_a_quick_animetorealism_test_in_minimax_h3" target="_blank" rel="noopener">Did a quick anime-to-realism test in MiniMax H3 with just a video reference + lora<span class="src">r/StableDiffusion</span></a></div>
+  </div>
+</div>
+
+
+<div id="results">
+  <div class="d-bar">
+    <button class="back" type="button">← 닫기</button>
+    <span class="pos">지난 브리핑까지 검색</span>
+  </div>
+  <div class="res-in">
+    <input id="q2" type="search" placeholder="모델 이름, 회사, 키워드…"
+           autocomplete="off" autocapitalize="off" spellcheck="false">
+    <p class="q-note"></p>
+    <div class="hits"></div>
+  </div>
+</div>
+
+<div id="fresh"><span></span><button type="button">열기</button></div>
+
+<script>
+(function(){
+  var body = document.body;
+  var BASE = body.dataset.base || '';       // 지난 브리핑 폴더 안에서는 '../'
+  var TODAY = body.dataset.date || '';
+
+  // 색인 파일은 필요할 때 한 번만 받아서 들고 있는다.
+  // 첫 화면을 여는 속도에 영향을 주지 않으려고 미리 받지 않는다.
+  var cache = {};
+  function load(name){
+    // 시안이나 오프라인 미리보기에서는 색인을 페이지 안에 직접 넣어 쓴다.
+    // 실제 사이트에는 이 값이 없고 아래 fetch로 간다.
+    if(window.__IDX__ && window.__IDX__[name]){ return Promise.resolve(window.__IDX__[name]); }
+    if(cache[name]){ return cache[name]; }
+    cache[name] = fetch(BASE + name + '.json')
+      .then(function(r){ return r.ok ? r.json() : []; })
+      .catch(function(){ return []; });
+    return cache[name];
+  }
+
+  function esc(t){
+    return String(t).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+  function linkTo(date, uid){
+    var page = (date === TODAY && !BASE) ? '' : BASE + 'archive/' + date + '.html';
+    return page + '#i-' + uid;
+  }
+
+  /* ---------------- 화면 전환 ---------------- */
+  function setView(v){
+    document.querySelectorAll('[data-view]').forEach(function(sec){
+      sec.hidden = (sec.dataset.view !== v);
+    });
+    document.querySelectorAll('.tabs button').forEach(function(b){
+      b.setAttribute('aria-selected', String(b.dataset.go === v));
+    });
+    if(v === 'models'){ renderModels(); }
+  }
+  function closeSheets(){
+    document.querySelectorAll('.detail[data-open]').forEach(function(x){
+      x.removeAttribute('data-open');
+    });
+    body.removeAttribute('data-detail');
+  }
+  function openSheet(el){
+    closeSheets();
+    if(!el){ return; }
+    el.setAttribute('data-open','');
+    body.setAttribute('data-detail','');
+    el.scrollTop = 0;
+  }
+  function goBack(){
+    if(history.length > 1){ history.back(); } else { location.hash = ''; }
+  }
+
+  /* ---------------- 검색 ---------------- */
+  var hits = null, qInput = null, qInput2 = null, qNote = null,
+      results = null, timer = null;
+
+  function tokens(q){
+    return q.toLowerCase().split(/\s+/).filter(function(t){ return t.length > 0; });
+  }
+  // 검색어를 정규식으로 만들지 않는다. 모델 이름에는 .+-() 같은 기호가 흔해서
+  // (FLUX.2, Gen-5, fal.ai) 이스케이프를 한 번만 틀려도 검색 전체가 죽는다.
+  // 그냥 소문자로 위치를 찾아가며 잘라 붙인다.
+  function hl(text, toks){
+    var src = String(text), low = src.toLowerCase(), out = '', i = 0;
+    while(i < src.length){
+      var at = -1, len = 0;
+      for(var k = 0; k < toks.length; k++){
+        var j = low.indexOf(toks[k], i);
+        if(j !== -1 && (at === -1 || j < at)){ at = j; len = toks[k].length; }
+      }
+      if(at === -1){ out += esc(src.slice(i)); break; }
+      out += esc(src.slice(i, at)) + '<mark>' + esc(src.slice(at, at + len)) + '</mark>';
+      i = at + len;
+    }
+    return out;
+  }
+
+  function openSearch(seed){
+    // 헤더 입력칸은 문을 여는 역할만 한다. 실제 입력은 검색 화면 안에서 받는다.
+    if(seed !== undefined && seed !== null){ qInput2.value = seed; }
+    if(location.hash !== '#search'){ location.hash = 'search'; }
+    else { showSearch(); }
+  }
+  function showSearch(){
+    closeSheets();
+    results.setAttribute('data-open', '');
+    body.setAttribute('data-detail', '');
+    setTimeout(function(){ qInput2.focus(); }, 40);
+    runSearch();
+  }
+  function hideResults(){
+    results.removeAttribute('data-open');
+    if(!document.querySelector('.detail[data-open]')){ body.removeAttribute('data-detail'); }
+  }
+
+  function runSearch(){
+    var q = qInput2.value.trim();
+    if(q.length < 2){
+      hits.innerHTML = '';
+      qNote.textContent = q.length === 0
+        ? '지난 브리핑까지 함께 찾습니다.'
+        : '두 글자 이상 입력하세요.';
+      return;
+    }
+    load('search-index').then(function(rows){
+      if(rows === null){ qNote.textContent = OFFLINE; hits.innerHTML = ''; return; }
+      var toks = tokens(q);
+      var found = rows.filter(function(r){
+        var hay = (r.t + ' ' + r.o + ' ' + r.s + ' ' + r.src).toLowerCase();
+        return toks.every(function(t){ return hay.indexOf(t) !== -1; });
+      });
+      qNote.textContent = found.length
+        ? found.length + '건 (' + rows.length + '건 중)'
+        : '찾은 것이 없습니다. 영문 모델명으로도 찾아보세요.';
+      hits.innerHTML = found.slice(0, 80).map(function(r){
+        return '<a class="hit" href="' + linkTo(r.d, r.u) + '">'
+          + '<span class="hm"><span>' + r.d + '</span><span>' + esc(r.src) + '</span></span>'
+          + '<span class="ht">' + hl(r.t, toks) + '</span>'
+          + '<span class="hs">' + hl(r.s, toks) + '</span></a>';
+      }).join('');
+    });
+  }
+
+  /* ---------------- 달력 ---------------- */
+  var calMonth = null, calPop = null, calBtn = null;
+  function ym(d){ return d.slice(0,7); }
+  function toggleCal(force){
+    var show = (force === undefined) ? calPop.hidden : force;
+    calPop.hidden = !show;
+    calBtn.setAttribute('aria-expanded', String(show));
+    if(show){ load('dates').then(renderCal); }
+  }
+  function renderCal(dates){
+    if(dates === null){
+      calPop.querySelector('.cal-note').textContent = OFFLINE;
+      return [];
+    }
+    var have = {};
+    dates.forEach(function(d){ have[d] = true; });
+    if(!calMonth){ calMonth = dates.length ? ym(dates[0]) : TODAY.slice(0,7); }
+    var y = parseInt(calMonth.slice(0,4), 10), m = parseInt(calMonth.slice(5,7), 10);
+    var first = new Date(Date.UTC(y, m - 1, 1));
+    var days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    var lead = first.getUTCDay();
+
+    var cells = ['일','월','화','수','목','금','토'].map(function(d){
+      return '<span class="dow">' + d + '</span>';
+    });
+    for(var i = 0; i < lead; i++){ cells.push('<span class="pad">.</span>'); }
+    for(var day = 1; day <= days; day++){
+      var iso = calMonth + '-' + String(day).padStart(2,'0');
+      if(have[iso]){
+        var href = (iso === TODAY && !BASE) ? '' : BASE + 'archive/' + iso + '.html';
+        cells.push('<a href="' + (href || '#') + '" class="' + (iso === TODAY ? 'now' : '')
+                   + '">' + day + '</a>');
+      } else {
+        cells.push('<span>' + day + '</span>');
+      }
+    }
+    calPop.querySelector('.cal').innerHTML = cells.join('');
+    calPop.querySelector('.mo').textContent = y + '년 ' + m + '월';
+
+    var months = {};
+    dates.forEach(function(d){ months[ym(d)] = true; });
+    var keys = Object.keys(months).sort();
+    calPop.querySelector('.prev').disabled = (keys.indexOf(calMonth) <= 0);
+    calPop.querySelector('.next').disabled =
+      (keys.indexOf(calMonth) === keys.length - 1 || keys.length === 0);
+    calPop.querySelector('.cal-note').textContent =
+      '브리핑이 있는 날만 누를 수 있습니다 · 전체 ' + dates.length + '일';
+    return keys;
+  }
+  function moveMonth(step){
+    load('dates').then(function(dates){
+      if(dates === null){ return; }
+      var months = {};
+      dates.forEach(function(d){ months[ym(d)] = true; });
+      var keys = Object.keys(months).sort();
+      var i = keys.indexOf(calMonth);
+      if(i + step >= 0 && i + step < keys.length){
+        calMonth = keys[i + step];
+        renderCal(dates);
+      }
+    });
+  }
+
+  /* ---------------- 모델별 히스토리 ---------------- */
+  var modelsDrawn = false;
+  function renderModels(){
+    if(modelsDrawn){ return; }
+    modelsDrawn = true;
+    load('models').then(function(list){
+      var box = document.querySelector('#mlist');
+      if(list === null){
+        modelsDrawn = false;
+        box.innerHTML = '<p class="note">' + OFFLINE + '</p>';
+        return;
+      }
+      if(!list.length){
+        box.innerHTML = '<p class="note">아직 쌓인 기록이 없습니다. '
+          + '며칠 지나면 모델·회사별로 묶여 나타납니다.</p>';
+        return;
+      }
+      box.innerHTML = '<div class="mgrid">' + list.map(function(m){
+        return '<button class="mcard" data-model="' + esc(m.name) + '">'
+          + '<span class="top-row"><b>' + esc(m.name) + '</b>'
+          + (m.ver ? '<span class="ver">' + esc(m.ver) + '</span>' : '') + '</span>'
+          + '<span class="hd">' + esc(m.head || '') + '</span>'
+          + '<span class="meta">' + m.n + '건 · 최근 ' + m.last + '</span></button>';
+      }).join('') + '</div>';
+    });
+  }
+  function showModel(name){
+    load('models').then(function(list){
+      var m = (list || []).filter(function(x){ return x.name === name; })[0];
+      var box = document.querySelector('#mone');
+      if(!m){ location.hash = 'models'; return; }
+      box.innerHTML = '<div class="mhead"><button class="back" type="button">← 목록</button>'
+        + '<h2>' + esc(m.name) + '</h2><span class="n">' + m.n + '건</span></div>'
+        + '<div class="timeline">' + m.items.map(function(it){
+            return '<a class="tl" href="' + linkTo(it.d, it.u) + '">'
+              + '<span class="dt">' + it.d + '</span>'
+              + '<span><span class="tt">' + esc(it.t) + '</span>'
+              + '<span class="ts">' + esc(it.src) + '</span></span></a>';
+          }).join('') + '</div>';
+      document.querySelector('#mlist').hidden = true;
+      box.hidden = false;
+    });
+  }
+
+  /* ---------------- 주소 ↔ 화면 ---------------- */
+  function route(){
+    var h = decodeURIComponent(location.hash.replace(/^#/, ''));
+
+    if(h.indexOf('i-') === 0){ openSheet(document.getElementById('d-' + h.slice(2))); return; }
+    if(h === 'search'){ showSearch(); return; }
+    hideResults();
+    closeSheets();
+    if(h.indexOf('m-') === 0){ setView('models'); showModel(h.slice(2)); return; }
+    document.querySelector('#mone').hidden = true;
+    document.querySelector('#mlist').hidden = false;
+    setView(h === 'rank' ? 'rank' : (h === 'models' ? 'models' : 'today'));
+  }
+
+  /* ---------------- 클릭 한 곳에서 처리 ---------------- */
+  document.addEventListener('click', function(ev){
+    var t = ev.target;
+
+    var mc = t.closest('.mcard');
+    if(mc){ location.hash = 'm-' + encodeURIComponent(mc.dataset.model); return; }
+
+    if(t.closest('.hit')){ return; }   // 링크는 그대로 따라간다
+
+    var el = t.closest('[data-uid]');
+    if(el){ location.hash = 'i-' + el.dataset.uid; return; }
+
+    var tab = t.closest('.tabs button');
+    if(tab){ location.hash = tab.dataset.go === 'today' ? '' : tab.dataset.go; return; }
+
+    if(t.closest('.calbtn')){ toggleCal(); return; }
+    if(t.closest('#calpop .prev')){ moveMonth(-1); return; }
+    if(t.closest('#calpop .next')){ moveMonth(1); return; }
+
+    if(t.closest('.back')){ goBack(); return; }
+
+    // 팝오버 바깥을 누르면 닫는다
+    if(!t.closest('#calpop') && !t.closest('.calbtn')){ toggleCal(false); }
+
+    var bd = t.closest('.boards button');
+    if(bd){
+      document.querySelectorAll('.boards button').forEach(function(b){
+        b.setAttribute('aria-selected', String(b === bd));
+      });
+      document.querySelectorAll('.board').forEach(function(sec){
+        sec.toggleAttribute('data-open', sec.dataset.board === bd.dataset.board);
+      });
+      return;
+    }
+
+    if(t.closest('#report-toggle')){
+      document.getElementById('report').toggleAttribute('data-open');
+    }
+  });
+
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      if(!calPop.hidden){ toggleCal(false); return; }
+      if(body.hasAttribute('data-detail')){ goBack(); }
+      return;
+    }
+    // 어느 화면에서든 / 를 누르면 검색창으로 간다
+    if(ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)){
+      ev.preventDefault();
+      openSearch('');
+    }
+  });
+
+  qInput = document.getElementById('q');
+  qInput2 = document.getElementById('q2');
+  qNote = document.querySelector('#results .q-note');
+  hits = document.querySelector('#results .hits');
+  results = document.getElementById('results');
+  calPop = document.getElementById('calpop');
+  calBtn = document.querySelector('.calbtn');
+
+  // 헤더 칸은 누르는 순간 검색 화면을 연다. 거기서 친 글자를 그대로 넘긴다.
+  qInput.addEventListener('focus', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput.addEventListener('click', function(){ openSearch(qInput.value); qInput.blur(); });
+  qInput2.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(runSearch, 140);
+  });
+
+  window.addEventListener('hashchange', route);
+  route();
+
+  // 홈 화면에 추가했을 때 오프라인에서도 열리게 한다.
+  // file://로 열었을 때는 등록이 안 되므로 조용히 건너뛴다.
+  if('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    navigator.serviceWorker.register(BASE + 'sw.js').catch(function(){});
+  }
+
+  // 홈 화면 앱은 한 번 연 화면을 그대로 들고 있는다. 그래서 아침에 열면
+  // 어제 것이 그대로 보인다. 열 때마다 "가장 최근 브리핑 날짜"만 캐시를 무시하고
+  // 확인해서, 지금 보는 것보다 새 것이 있으면 띠를 띄운다.
+  function checkFresh(){
+    if(!TODAY || BASE){ return; }              // 지난 브리핑 페이지에서는 띄우지 않는다
+    fetch(BASE + 'dates.json', {cache: 'no-store'})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(dates){
+        if(!dates || !dates.length || dates[0] <= TODAY){ return; }
+        var bar = document.getElementById('fresh');
+        bar.querySelector('span').textContent = dates[0] + ' 브리핑이 나왔습니다';
+        bar.setAttribute('data-show', '');
+      })
+      .catch(function(){});
+  }
+
+  document.getElementById('fresh').querySelector('button')
+    .addEventListener('click', function(){
+      // 캐시를 비우고 주소에 시각을 붙여 다시 부른다.
+      // 둘 다 해야 확실하다 — 서비스 워커 캐시와 브라우저 캐시는 서로 다른 것이다.
+      var done = function(){ location.replace(BASE + 'index.html?v=' + Date.now()); };
+      if(!('caches' in window)){ done(); return; }
+      caches.keys().then(function(keys){
+        return Promise.all(keys.map(function(k){ return caches.delete(k); }));
+      }).then(done, done);
+    });
+
+  checkFresh();
+  // 앱을 다시 앞으로 가져왔을 때도 확인한다 (폰에서는 이쪽이 훨씬 흔하다)
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'visible'){ checkFresh(); }
+  });
+})();
+</script>
+</body>
+</html>
