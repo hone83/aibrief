@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "ranks": {
     "text-to-video": {
       "Wan 3.0": 1,
-      "MiniMax H3 Max": 2,
-      "MiniMax H3 (768p)": 3,
+      "MiniMax H3 (768p)": 2,
+      "MiniMax H3 Max": 3,
       "Dreamina Seedance 2.5": 4,
       "FLUX 3": 5,
-      "SkyReels V4": 6,
-      "Dreamina Seedance 2.0": 7,
-      "Gemini Omni Flash 1.1": 8
+      "Dreamina Seedance 2.0": 6,
+      "Gemini Omni Flash 1.1": 7,
+      "Agnes-Video-2.5": 8
     },
     "image-to-video": {
       "Gemini Omni Flash": 1,
@@ -39,7 +39,7 @@
       "MAI-Image-2.6-Flash": 5,
       "GPT Image 2 (high)": 6,
       "Muse Image": 7,
-      "MAI-Image-2.5": 8
+      "Seedream 5.0 Pro": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,
