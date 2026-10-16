@@ -6970,5 +6970,134 @@
    "30만 장에서 300만 장까지는 수익의 20% 배분",
    "300만 장 초과 시 연간 50만 달러 및 15% 부과"
   ]
+ },
+ "7df987fc61f9": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "Flux-3 Klein 등 신규 AI 모델 연이어 공개",
+  "summary_ko": "Flux-3 Klein이 출시되었으며 Krea-3 Edit은 이미 Civitai 생성기에 추가되었습니다. 이용자들은 Qwen Edit 2.1, MiniMax-H3, LTX-2.5, YuE2, Wan-2.2 Prism 등 쏟아지는 신규 모델에 대응하고 있습니다.",
+  "bullets": [
+   "Flux-3 Klein 신규 출시",
+   "Krea-3 Edit, Civitai에 탑재",
+   "다수의 신규 AI 모델 연속 공개"
+  ]
+ },
+ "719baecdde87": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "ComfyUI 내 MiniMax 기반 캐릭터 교체 기술 활용",
+  "summary_ko": "ComfyUI 환경에서 MiniMax를 활용해 바이럴 틱톡 댄스 영상의 인물을 동물이나 다른 캐릭터로 교체하는 실험이 진행되었습니다. 전용 LoRA를 추가한 결과 기존 방식보다 더 정확하게 동작을 전달하는 것으로 확인되었습니다.",
+  "bullets": [
+   "ComfyUI에서 MiniMax 활용",
+   "캐릭터 교체 전용 LoRA 적용",
+   "기존 방식 대비 정확한 동작 전달"
+  ]
+ },
+ "dbd490275911": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "바이트댄스 월드 모델 공개 및 Krea 3 베타 출시",
+  "summary_ko": "바이트댄스가 카메라 경로를 따라 영화 장면을 새로운 각도로 재촬영하는 월드 모델을 선보였습니다. 이와 함께 Krea 3 베타, OmniHuman 2.0, LTX-2.5의 신규 포스트 툴 등이 함께 발표되었습니다.",
+  "bullets": [
+   "바이트댄스 신규 월드 모델 시연",
+   "Krea 3 베타 버전 공개",
+   "OmniHuman 2.0 API 출시"
+  ]
+ },
+ "4dde7a06e11b": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "FLUX 3 Image Klein, ComfyUI 지원 발표",
+  "summary_ko": "56억 개의 파라미터를 갖춘 FLUX 3 Image Klein의 오픈 웨이트가 공개되었습니다. 해당 모델은 바운딩 박스 및 다중 참조 편집을 지원하며 ComfyUI에서 네이티브로 실행됩니다.",
+  "bullets": [
+   "56억 파라미터 오픈 웨이트 제공",
+   "바운딩 박스 및 다중 참조 편집",
+   "ComfyUI 네이티브 실행 지원"
+  ]
+ },
+ "31f6d11f80c5": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "MiniMax H3 활용 비디오 제작 및 후처리 워크플로우",
+  "summary_ko": "MiniMax H3로 제작한 세로형 비디오 결과물이 공유되었다. 제작자는 워크플로우를 개선하고 KDEnlive를 활용해 실사 장면에 가우시안 블러와 필름 그레인을 추가했다. 이를 통해 일반적인 AI 비디오 특유의 번들거리는 피부 질감을 줄였다고 밝혔다.",
+  "bullets": [
+   "MiniMax H3 기반 세로 영상 제작",
+   "KDEnlive로 블러와 그레인 적용",
+   "AI 특유의 번들거리는 피부 질감 개선"
+  ]
+ },
+ "21694604ae25": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "Krea 3 모델 ComfyUI 파트너 노드로 출시",
+  "summary_ko": "Krea의 레퍼런스 기반 이미지 모델인 Krea 3가 ComfyUI의 파트너 노드로 추가되었다. 다중 레퍼런스 입력과 지정한 디테일을 유지하는 타깃 편집, 빠른 반복 작업을 지원한다. 사용자는 ComfyUI 환경에서 해당 모델을 직접 활용할 수 있다.",
+  "bullets": [
+   "Krea 3가 ComfyUI 파트너 노드로 합류",
+   "다중 레퍼런스 입력 및 타깃 편집 기능",
+   "디테일 유지와 신속한 반복 작업 지원"
+  ]
+ },
+ "dce82e85e619": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "ComfyUI v0.41.1 버전 공개",
+  "summary_ko": "오픈소스 생성 도구 ComfyUI의 v0.41.1 버전이 릴리스되었다. 세부적인 업데이트 내용은 별도로 명시되지 않았다.",
+  "bullets": [
+   "ComfyUI v0.41.1 버전 릴리스"
+  ]
+ },
+ "3733c75a28bf": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "diffusers에 FLUX.3 Image Klein 추가",
+  "summary_ko": "Hugging Face의 diffusers 라이브러리에 FLUX.3 Image Klein이 도입되었다. 상세한 지원 기능에 대한 추가 설명은 본문에 기재되지 않았다.",
+  "bullets": [
+   "diffusers 라이브러리 지원 추가",
+   "FLUX.3 Image Klein 도입"
+  ]
+ },
+ "ecebd45f6eaa": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "FLUX.3 Klein 모델 Hugging Face 출시",
+  "summary_ko": "Black Forest Labs가 FLUX.3 모델을 Hugging Face Hub에 오픈소스로 공개했다. 해당 모델은 Diffusers에서 출시 당일부터 바로 지원된다.",
+  "bullets": [
+   "FLUX.3 모델 오픈소스 공개",
+   "Hugging Face Hub에서 이용 가능",
+   "Diffusers 당일 지원 포함"
+  ]
+ },
+ "a74fadf88b5d": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "H3 전용 리터칭 스튜디오 구축 성과 공개",
+  "summary_ko": "기존 기술과 자체 개선 기법을 결합하여 H3 전용 리터칭 스튜디오를 구축했다. 이미지 참조 요소 추가, 성능 및 배경 변경, 카메라 각도 조정, 캐릭터 삭제 등 다양한 편집 기능을 제공한다.",
+  "bullets": [
+   "H3 기반 리터칭 스튜디오 개발",
+   "이미지 참조 및 텍스트 기반 편집",
+   "픽셀 트래킹 기반 요소 변경 지원"
+  ]
+ },
+ "1563ffaa74a7": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "Krea 3·Qwen 2.1·ZIT 성능 비교 결과",
+  "summary_ko": "텍스트-투-이미지 모델인 Krea 3, Qwen 2.1, ZIT를 임의로 비교한 결과가 공개되었다. Krea 3는 입술을 깨무는 등 미세한 표정 변화를 잘 구현하지만, 단순 프롬프트에서도 기괴하고 사실적인 이미지를 생성하는 경향이 있다.",
+  "bullets": [
+   "3개 T2I 모델 임의 비교 진행",
+   "Krea 3의 미세한 표정 표현 우수",
+   "단순 프롬프트에서 기괴한 이미지 생성"
+  ]
+ },
+ "cc07996f6bad": {
+  "engine": "gemini",
+  "ts": "2026-10-16T00:28:56.542376+00:00",
+  "title_ko": "아마존 Bee, 개인용 AI 기기 2종 출시",
+  "summary_ko": "아마존이 인수한 Bee가 피인수 이후 첫 개인용 AI 기기 2종을 출시했다. 업데이트된 웨어러블과 스마트폰 부착형 레코더로 구성되며 대화 요약과 Alexa 연동 기능을 제공한다.",
+  "bullets": [
+   "아마존 Bee 신규 AI 기기 2종 출시",
+   "대화 요약 및 할 일 목록 생성",
+   "시작 가격은 74.99달러"
+  ]
  }
 }
