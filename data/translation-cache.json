@@ -7099,5 +7099,134 @@
    "대화 요약 및 할 일 목록 생성",
    "시작 가격은 74.99달러"
   ]
+ },
+ "f930bda97616": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "ComfyUI v0.41.0 신규 업데이트 공개",
+  "summary_ko": "ComfyUI v0.41.0 릴리스가 공개되었다. 이번 버전에는 ImageSDRToHDR 및 ReferenceMultiLatent 노드가 추가되었으며 MiniMax-H3 LightVAE를 지원한다. 또한 기본 워크플로우를 위한 코어 경로 추가 및 잠재 지오메트리 획득 노드 등이 포함되었다.",
+  "bullets": [
+   "ImageSDRToHDR 노드 추가",
+   "MiniMax-H3 LightVAE 지원",
+   "ReferenceMultiLatent 노드 도입"
+  ]
+ },
+ "50a2eac25acf": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "FLUX.3 Klein 성능 퇴보 논란 제기",
+  "summary_ko": "한 사용자가 Black Forest Labs의 FLUX.3 Klein 성능이 이전 버전 대비 크게 퇴보했다고 비판했다. 업스케일링, 텍스트-투-이미지, 텍스처 개선, 애니메이션 등 다양한 작업에서 성능이 낮다고 주장했다. 글 작성자는 이전 버전인 F2K 9B 모델이 더 우수하다고 평가했다.",
+  "bullets": [
+   "업스케일링 및 텍스트-투-이미지 전반 부진",
+   "이전 버전인 F2K 9B가 더 우수하다고 주장",
+   "Black Forest Labs 모델 성능 퇴보 비판"
+  ]
+ },
+ "fb8b4eeecaa3": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "FLUX.3 Klein, 사진 편집 일관성에서 강점 보여",
+  "summary_ko": "FLUX.3 Klein이 이미지 생성에서는 실망스럽지만 사진 편집에서는 뛰어난 일관성을 보인다는 평가가 나왔다. 고해상도 환경에서도 인체 자세와 카메라 앵글, 사실적인 피부 질감과 세부 묘사를 그대로 유지하며 수정이 가능하다. 전문 사진 작업 환경에서 실질적으로 활용 가능한 수준에 도달했다는 분석이다.",
+  "bullets": [
+   "자세·카메라 앵글 유지 편집 우수",
+   "고해상도에서 피부 질감과 디테일 유지",
+   "전문가용 사진 편집 활용 가능성 제시"
+  ]
+ },
+ "9fa64e367c82": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "FLUX.3 Klein distil, 인체 묘사 지적 이어져",
+  "summary_ko": "커뮤니티에서 FLUX.3 Klein distil 모델 사용 후기가 공유되었다. 인체 기형 문제로 논란이 되었던 SD3가 연상된다는 지적이 제기되었다. 다만 인체 표현 외의 다른 요소들은 괜찮아 보여 추가 테스트가 필요하다고 덧붙였다.",
+  "bullets": [
+   "SD3 인체 기형 연상 반응 제기",
+   "인체 외 요소는 양호한 결과 보여",
+   "정확한 평가를 위한 추가 테스트 필요"
+  ]
+ },
+ "927ede58afa1": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "Krea2 Realism 전체 체크포인트 공개",
+  "summary_ko": "Krea2 Realism이 자체 제작 Realism 체크포인트와 V3 LoRA를 병합한 전체 체크포인트 형태로 공개되었습니다. 과도하게 매끄러운 질감을 배제하고 자연스러운 피부 결 표현과 폭넓은 피부 톤 구현에 집중했습니다. 프롬프트 작성 시 자연어를 활용해 장면과 의상을 구체적으로 묘사하는 방식이 권장됩니다.",
+  "bullets": [
+   "커스텀 모델과 LoRA 병합",
+   "자연스러운 피부 질감 및 톤 구현",
+   "의상 및 장면의 구체적 묘사 권장"
+  ]
+ },
+ "1adbf9ead7c6": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "ComfyUI, 오픈소스 개발 공모전 진행",
+  "summary_ko": "Comfy Developer Platform 기반의 우수 오픈소스 프로젝트를 선정하는 공모전이 시작되었습니다. 향후 2주 동안 총 2만 5,000달러 규모의 상금을 걸고 참여작을 모집합니다. 플랫폼을 완전히 오픈소스화하겠다는 약속을 지키지 않은 Higgsfield를 지원한다는 취지를 내세웠습니다.",
+  "bullets": [
+   "Comfy 플랫폼 기반 빌드 대상",
+   "2주간 총 2만 5,000달러 상금",
+   "오픈소스 프로젝트 활성화 목적"
+  ]
+ },
+ "0d3cbcae9866": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "RTX 3060서 MOSS-Image 구동 테스트",
+  "summary_ko": "오픈소스 모델 MOSS-Image(5B)를 12GB 사양의 RTX 3060 환경에서 구동한 벤치마크 결과가 공개되었습니다. INT8 양자화와 lodestones의 8단계 DMD turbo 기법을 적용해 ComfyUI에서 테스트를 진행했습니다. 선별 과정 없이 단일 시드로 다국어 텍스트와 공간 관계 등 35가지 고난도 프롬프트를 수행했습니다.",
+  "bullets": [
+   "RTX 3060 환경 구동 테스트",
+   "INT8 양자화 및 ComfyUI 활용",
+   "단일 시드로 35개 고난도 프롬프트 시험"
+  ]
+ },
+ "7ca25895ab85": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "Flux2 Klein9 RefMod, Flux3 Klein 호환",
+  "summary_ko": "Flux2 Klein9 RefMods가 Flux3 Klein과 호환되는 것으로 확인되었습니다. 세부적인 추가 정보는 본문에 공개되지 않았습니다.",
+  "bullets": [
+   "Flux2 Klein9 RefMods 호환",
+   "Flux3 Klein 환경 적용 가능"
+  ]
+ },
+ "1eb9e915ef52": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "새 오픈소스 모델 MOSS-Image 공개",
+  "summary_ko": "오픈소스 기반 모델 MOSS-Image가 공개되었다. 32억 장의 이미지로 학습된 50억 매개변수 규모의 모델로 Apache 2.0 라이선스가 적용된다. JSON 및 바운딩 박스 제어와 자연어, 태그 기반 프롬프트를 모두 지원한다.",
+  "bullets": [
+   "32억 장 이미지로 학습된 5B 모델",
+   "Apache 2.0 라이선스로 배포",
+   "JSON 및 태그 기반 프롬프트 지원"
+  ]
+ },
+ "1ebd687b3470": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "최신 이미지 생성 AI 4종 벤치마크 비교",
+  "summary_ko": "FLUX 3 Klein, Krea 2 Turbo, Z-Image Turbo, Qwen-Image 2.1을 비교한 결과 전반적인 성능이 유사한 수준으로 나타났다. 사실적 묘사는 Z-Image Turbo가 가장 우수했으며 일러스트 분야는 Krea 2 Turbo가 앞섰다. 비교 테스트에 사용된 텍스트-투-이미지 및 이미지-투-이미지 워크플로우는 Civitai와 GitHub에 공개되었다.",
+  "bullets": [
+   "사실적 표현은 Z-Image Turbo 우세",
+   "일러스트는 Krea 2 Turbo 우세",
+   "비교 워크플로우 Civitai 등에 공유"
+  ]
+ },
+ "f96563ec96ad": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "Black Forest Labs, ComfyUI 워크플로우 버그 수정 중",
+  "summary_ko": "Black Forest Labs의 Stephen Batifol이 ComfyUI 워크플로우 내부 버그 발생 사실을 알렸다. 현재 해당 문제에 대한 수정 작업을 진행하고 있다.",
+  "bullets": [
+   "ComfyUI 워크플로우 내 버그 발견",
+   "Black Forest Labs 수정 작업 진행"
+  ]
+ },
+ "3c203c9854b8": {
+  "engine": "gemini",
+  "ts": "2026-10-17T00:34:35.532162+00:00",
+  "title_ko": "Meta 새 약관 공개, AI 라이선스 비용 회피 논란",
+  "summary_ko": "Meta가 상업용 서비스 약관을 간소화하여 새롭게 개정했다. 법률 전문가들은 이번 개정이 막대한 AI 라이선스 비용을 회피하기 위한 권한 확대 조치라고 경고했다.",
+  "bullets": [
+   "Meta 상업용 서비스 약관 개정",
+   "전문가, AI 라이선스 비용 회피 지적"
+  ]
  }
 }
