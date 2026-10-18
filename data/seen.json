@@ -240,6 +240,7 @@
   "https://lumalabs.ai/news/ai-product-video-generators-amazon-listings": "2026-10-15T00:35:07.597518+00:00"
  },
  "huggingface-papers": {
+  "https://huggingface.co/papers/2610.21185": "2026-10-18T00:05:57.361971+00:00",
   "https://huggingface.co/papers/2610.18829": "2026-10-17T00:34:17.326837+00:00",
   "https://huggingface.co/papers/2610.21601": "2026-10-17T00:34:17.326837+00:00",
   "https://huggingface.co/papers/2610.22200": "2026-10-17T00:34:17.326837+00:00",
@@ -638,8 +639,7 @@
   "https://huggingface.co/papers/2609.39420": "2026-10-07T01:38:24.075816+00:00",
   "https://huggingface.co/papers/2610.06851": "2026-10-07T01:38:24.075816+00:00",
   "https://huggingface.co/papers/2610.04318": "2026-10-07T01:38:24.075816+00:00",
-  "https://huggingface.co/papers/2610.04109": "2026-10-07T01:38:24.075816+00:00",
-  "https://huggingface.co/papers/2610.04137": "2026-10-07T01:38:24.075816+00:00"
+  "https://huggingface.co/papers/2610.04109": "2026-10-07T01:38:24.075816+00:00"
  },
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-10-02T01:43:06.784878+00:00",
