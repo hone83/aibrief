@@ -1,0 +1,1704 @@
+{
+  "date_kst": "2026-10-19",
+  "generated_at": "2026-10-19T09:14:47.866744+09:00",
+  "window_start": "2026-10-18T07:00:00+09:00",
+  "window_end": "2026-10-19T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "[Anima & Pony & Illustrious] Female Au ra Face 4 - FFXIV | FF14 | Final Fantasy XIV",
+      "url": "https://civitai.com/models/1190802",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:55:01.967000+00:00",
+      "summary_raw": "*实际上就是我的游戏角色，总感觉7.0更新之后龙4变丑了 *Actually, it's just my game character, also I feel like face 4 got uglier after the 7.0 update 更新，添加了Anima版本 Updated, added Anima version 角色(Character)： aura4FF14, au ra, horns, dragon horns, scales, red eyes, white hair, short hair, bangs, headphones, jacket, gloves, pants, dragon tail, sneakers, 建议搭配 adetailer 使用 https://github.com/Bing-su/adetailer.git",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 561,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "파이널판타지14 아우라 4번 얼굴 LoRA 출시",
+      "summary_ko": "파이널판타지14의 아우라 여성 4번 얼굴 캐릭터를 구현한 LoRA가 공개되었습니다. 7.0 업데이트 이후 변화된 외형을 반영하여 Anima 버전이 추가되었습니다.",
+      "bullets": [
+        "파이널판타지14 아우라 여성 캐릭터 구현",
+        "Anima 버전 업데이트 추가",
+        "자연스러운 작화를 위해 ADetailer 사용 권장"
+      ],
+      "category": "major_update",
+      "score": 2.0468,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:55:01.967000+09:00",
+      "uid": "b70714120f5d",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "LTX-2 v1.5.0",
+      "url": "https://github.com/Lightricks/LTX-2/releases/tag/v1.5.0",
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-18T17:41:36+00:00",
+      "summary_raw": "Added ImageConditioningInput supports explicit latent-replacement and keyframe-guide bindings. On video CLIs, pass --image PATH FRAME_IDX STRENGTH replace|guide [CRF] ; omit the binding keyword for the prior automatic binding (frame 0 replaces, later frames guide). Replacement frame indices are expressed in pixel space and must be 0 or a causal latent boundary ( 1 + 8 * k ). TI2VidTwoStagesPipeline supports keyframe interpolation through ImageConditioningInput.guide() bindings, or --image … guide on the CLI. Set refine_audio=True or pass --refine-audio to preserve the former dedicated pipeline",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "Lightricks/LTX-2",
+        "kind": "release"
+      },
+      "title_ko": "Lightricks, LTX-2 v1.5.0 업데이트 발표",
+      "summary_ko": "Lightricks가 비디오 생성 모델 LTX-2 v1.5.0 버전을 출시했습니다. 명시적 잠재 공간 교체 및 키프레임 가이드를 지원하는 이미지 조건 입력 기능이 추가되었습니다.",
+      "bullets": [
+        "이미지 조건 입력 및 키프레임 보간 기능 추가",
+        "비디오 CLI 명령어 및 바인딩 옵션 확장",
+        "오디오 정제 설정을 위한 옵션 지원"
+      ],
+      "category": "model_release",
+      "score": 1.7189,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T02:41:36+09:00",
+      "uid": "4dce30129a03",
+      "domain": "github.com"
+    },
+    {
+      "title": "Texi - Yitexity",
+      "url": "https://civitai.com/models/1602547",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:55:34.128000+00:00",
+      "summary_raw": "I forgot I made this a while ago using Google collaboration. Might make a new one later Please support the original artist https://x.com/yitexity?t=28feZTyCkx26rj6WlbYGXw&amp;s=09",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 462,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "Yitexity 화풍의 신규 Texi LoRA 공개",
+      "summary_ko": "원작 아티스트 Yitexity의 스타일을 반영한 신규 Texi LoRA 모델이 공개되었습니다. 해당 모델은 구글 코랩 환경을 통해 제작되었습니다.",
+      "bullets": [
+        "Yitexity 아티스트 화풍 구현",
+        "구글 코랩 환경에서 제작 및 학습",
+        "향후 신규 버전 제작 계획 명시"
+      ],
+      "category": "minor",
+      "score": 0.7677,
+      "cluster_id": 1,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:55:34.128000+09:00",
+      "uid": "24f6b4cc8d57",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "[STYLE] gutalalaman",
+      "url": "https://civitai.com/models/3009040",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-18T21:36:48.255000+00:00",
+      "summary_raw": "THIS IS MY FIRST STYLE LORA! Feel free to suggest improvements ^^ COMMISSIONS OPEN ON &gt;&gt; KO-FI &lt;&lt; Recommended Checkpoint: ILLUSTRIOUS: 25-30stps 4-6cfg WAI-illustrious-SDXL - v17.0 | Illustrious Checkpoint | Civitai ANIMA: 20-30stps 4-5cfg: WAI-ANIMA - v1.0(base 1.0) | Anima Checkpoint | Civitai",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 49,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "gutalalaman 스타일 신규 스타일 LoRA 출시",
+      "summary_ko": "gutalalaman 스타일을 담은 첫 번째 스타일 LoRA가 신규 출시되었습니다. Illustrious 및 Anima 체크포인트에 최적화된 설정값이 함께 제공됩니다.",
+      "bullets": [
+        "gutalalaman 작가 스타일 최초 LoRA 출시",
+        "Illustrious 체크포인트 권장 설정 공유",
+        "Anima 체크포인트 권장 설정 공유"
+      ],
+      "category": "major_update",
+      "score": 0.7123,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:36:48.255000+09:00",
+      "uid": "c5a8f74cba22",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "HLTS OC: Mia-M",
+      "url": "https://civitai.com/models/3008891",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:54:24.340000+00:00",
+      "summary_raw": "Original Character, Mia M, an Afghan woman living abroad TW: Mia-M",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 31,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "해외 거주 아프가니스탄 여성 오리지널 캐릭터 Mia-M LoRA 출시",
+      "summary_ko": "해외에 거주하는 아프가니스탄 여성 오리지널 캐릭터 Mia-M을 구현한 신규 LoRA 모델이 Civitai에 공개되었다.",
+      "bullets": [
+        "아프가니스탄 여성 캐릭터 구현",
+        "Civitai 통해 신규 LoRA 공개"
+      ],
+      "category": "minor",
+      "score": 0.63,
+      "cluster_id": 3,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:54:24.340000+09:00",
+      "uid": "fc001462a62b",
+      "domain": "civitai.com"
+    }
+  ],
+  "cards": [
+    {
+      "title": "[Anima & Pony & Illustrious] Female Au ra Face 4 - FFXIV | FF14 | Final Fantasy XIV",
+      "url": "https://civitai.com/models/1190802",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:55:01.967000+00:00",
+      "summary_raw": "*实际上就是我的游戏角色，总感觉7.0更新之后龙4变丑了 *Actually, it's just my game character, also I feel like face 4 got uglier after the 7.0 update 更新，添加了Anima版本 Updated, added Anima version 角色(Character)： aura4FF14, au ra, horns, dragon horns, scales, red eyes, white hair, short hair, bangs, headphones, jacket, gloves, pants, dragon tail, sneakers, 建议搭配 adetailer 使用 https://github.com/Bing-su/adetailer.git",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 561,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "파이널판타지14 아우라 4번 얼굴 LoRA 출시",
+      "summary_ko": "파이널판타지14의 아우라 여성 4번 얼굴 캐릭터를 구현한 LoRA가 공개되었습니다. 7.0 업데이트 이후 변화된 외형을 반영하여 Anima 버전이 추가되었습니다.",
+      "bullets": [
+        "파이널판타지14 아우라 여성 캐릭터 구현",
+        "Anima 버전 업데이트 추가",
+        "자연스러운 작화를 위해 ADetailer 사용 권장"
+      ],
+      "category": "major_update",
+      "score": 2.0468,
+      "cluster_id": 2,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:55:01.967000+09:00",
+      "uid": "b70714120f5d",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "LTX-2 v1.5.0",
+      "url": "https://github.com/Lightricks/LTX-2/releases/tag/v1.5.0",
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-18T17:41:36+00:00",
+      "summary_raw": "Added ImageConditioningInput supports explicit latent-replacement and keyframe-guide bindings. On video CLIs, pass --image PATH FRAME_IDX STRENGTH replace|guide [CRF] ; omit the binding keyword for the prior automatic binding (frame 0 replaces, later frames guide). Replacement frame indices are expressed in pixel space and must be 0 or a causal latent boundary ( 1 + 8 * k ). TI2VidTwoStagesPipeline supports keyframe interpolation through ImageConditioningInput.guide() bindings, or --image … guide on the CLI. Set refine_audio=True or pass --refine-audio to preserve the former dedicated pipeline",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "Lightricks/LTX-2",
+        "kind": "release"
+      },
+      "title_ko": "Lightricks, LTX-2 v1.5.0 업데이트 발표",
+      "summary_ko": "Lightricks가 비디오 생성 모델 LTX-2 v1.5.0 버전을 출시했습니다. 명시적 잠재 공간 교체 및 키프레임 가이드를 지원하는 이미지 조건 입력 기능이 추가되었습니다.",
+      "bullets": [
+        "이미지 조건 입력 및 키프레임 보간 기능 추가",
+        "비디오 CLI 명령어 및 바인딩 옵션 확장",
+        "오디오 정제 설정을 위한 옵션 지원"
+      ],
+      "category": "model_release",
+      "score": 1.7189,
+      "cluster_id": 12,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T02:41:36+09:00",
+      "uid": "4dce30129a03",
+      "domain": "github.com"
+    },
+    {
+      "title": "Texi - Yitexity",
+      "url": "https://civitai.com/models/1602547",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:55:34.128000+00:00",
+      "summary_raw": "I forgot I made this a while ago using Google collaboration. Might make a new one later Please support the original artist https://x.com/yitexity?t=28feZTyCkx26rj6WlbYGXw&amp;s=09",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 462,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "Yitexity 화풍의 신규 Texi LoRA 공개",
+      "summary_ko": "원작 아티스트 Yitexity의 스타일을 반영한 신규 Texi LoRA 모델이 공개되었습니다. 해당 모델은 구글 코랩 환경을 통해 제작되었습니다.",
+      "bullets": [
+        "Yitexity 아티스트 화풍 구현",
+        "구글 코랩 환경에서 제작 및 학습",
+        "향후 신규 버전 제작 계획 명시"
+      ],
+      "category": "minor",
+      "score": 0.7677,
+      "cluster_id": 1,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:55:34.128000+09:00",
+      "uid": "24f6b4cc8d57",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "[STYLE] gutalalaman",
+      "url": "https://civitai.com/models/3009040",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-18T21:36:48.255000+00:00",
+      "summary_raw": "THIS IS MY FIRST STYLE LORA! Feel free to suggest improvements ^^ COMMISSIONS OPEN ON &gt;&gt; KO-FI &lt;&lt; Recommended Checkpoint: ILLUSTRIOUS: 25-30stps 4-6cfg WAI-illustrious-SDXL - v17.0 | Illustrious Checkpoint | Civitai ANIMA: 20-30stps 4-5cfg: WAI-ANIMA - v1.0(base 1.0) | Anima Checkpoint | Civitai",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 49,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "gutalalaman 스타일 신규 스타일 LoRA 출시",
+      "summary_ko": "gutalalaman 스타일을 담은 첫 번째 스타일 LoRA가 신규 출시되었습니다. Illustrious 및 Anima 체크포인트에 최적화된 설정값이 함께 제공됩니다.",
+      "bullets": [
+        "gutalalaman 작가 스타일 최초 LoRA 출시",
+        "Illustrious 체크포인트 권장 설정 공유",
+        "Anima 체크포인트 권장 설정 공유"
+      ],
+      "category": "major_update",
+      "score": 0.7123,
+      "cluster_id": 10,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:36:48.255000+09:00",
+      "uid": "c5a8f74cba22",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "HLTS OC: Mia-M",
+      "url": "https://civitai.com/models/3008891",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:54:24.340000+00:00",
+      "summary_raw": "Original Character, Mia M, an Afghan woman living abroad TW: Mia-M",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 31,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "해외 거주 아프가니스탄 여성 오리지널 캐릭터 Mia-M LoRA 출시",
+      "summary_ko": "해외에 거주하는 아프가니스탄 여성 오리지널 캐릭터 Mia-M을 구현한 신규 LoRA 모델이 Civitai에 공개되었다.",
+      "bullets": [
+        "아프가니스탄 여성 캐릭터 구현",
+        "Civitai 통해 신규 LoRA 공개"
+      ],
+      "category": "minor",
+      "score": 0.63,
+      "cluster_id": 3,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:54:24.340000+09:00",
+      "uid": "fc001462a62b",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "Pham - Tensei Kizoku, Kantei Skill de Nariagaru",
+      "url": "https://civitai.com/models/3008831",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:35:47.457000+00:00",
+      "summary_raw": "Base clothing: phamKizoku, long hair, black hair, hair between eyes, very long hair, bangs, green eyes, high ponytail, sidelocks, male focus, femboy, otoko no ko, bow, shirt, shorts, red bowtie, vest, short shorts, bare legs, black shorts, androgynous, waistcoat, black loafers, For dress: phamKizoku, long hair, green eyes, bangs, black hair, hair ornament, hairclip, hair between eyes, very long hair, male focus, femboy, otoko no ko, gloves, dress, bare shoulders, collarbone, choker, black gloves, elbow gloves, off shoulder, black choker, purple dress, off-shoulder dress,",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 20,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "환생귀족 감정 스킬 캐릭터 팜 생성 LoRA 공개",
+      "summary_ko": "웹소설 및 애니메이션 '환생귀족, 감정 스킬로 출세하다'의 캐릭터 팜을 생성할 수 있는 LoRA가 출시되었다. 기본 의상과 드레스 차림 등 상세 프롬프트 설정을 지원한다.",
+      "bullets": [
+        "환생귀족 캐릭터 팜 생성 지원",
+        "기본 의상 및 드레스 설정 가능",
+        "상세 프롬프트 키워드 제공"
+      ],
+      "category": "minor",
+      "score": 0.593,
+      "cluster_id": 11,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:35:47.457000+09:00",
+      "uid": "c903aae7bd5a",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "Rock Pop Art style",
+      "url": "https://civitai.com/models/2982327",
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-18T21:40:14.215000+00:00",
+      "summary_raw": "Pop Art Illustration Style. Flat color, stylized shapes. If you like the result, please leave some feedback and post your image on the model page. Thank you!",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "downloads": 19,
+        "rating": 0,
+        "pre_filtered": true
+      },
+      "title_ko": "록 팝아트 스타일 일러스트 생성 LoRA 공개",
+      "summary_ko": "단색과 양식화된 형상을 특징으로 하는 록 팝아트 스타일 일러스트 생성 LoRA가 Civitai에 공개되었다. 제작자는 사용 후 피드백과 이미지 공유를 요청했다.",
+      "bullets": [
+        "팝아트 일러스트 스타일 구현",
+        "단색 및 양식화된 형상 표현",
+        "Civitai 모델 페이지에 피드백 요청"
+      ],
+      "category": "minor",
+      "score": 0.5907,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T06:40:14.215000+09:00",
+      "uid": "6e75f1958949",
+      "domain": "civitai.com"
+    },
+    {
+      "title": "FastSDCPU release v1.0.0-beta.600 with pixel space image generation (OpenVINO)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1x92ldm/fastsdcpu_release_v100beta600_with_pixel_space",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image"
+      ],
+      "published": "2026-10-18T12:57:54+00:00",
+      "summary_raw": "",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "FastSDCPU v1.0.0-beta.600 버전 릴리스",
+      "summary_ko": "FastSDCPU의 v1.0.0-beta.600 버전이 릴리스되었다. OpenVINO 기반의 픽셀 공간 이미지 생성 기능이 포함되었다.",
+      "bullets": [
+        "FastSDCPU 베타 버전 업데이트",
+        "OpenVINO 픽셀 공간 생성 지원"
+      ],
+      "category": "model_release",
+      "score": 0.4315,
+      "cluster_id": 16,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-18T21:57:54+09:00",
+      "uid": "f637de48e7f1",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Krea2: Have the censorship removals disappeared?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1x96zcb/krea2_have_the_censorship_removals_disappeared",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-18T16:08:23+00:00",
+      "summary_raw": "Strange. The github repository for the Node ComfyUI Krea2T Enhancer I use is down ( https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer ), the developer’s account ( u/Capitan01R ) is banned on Reddit, and even the TextFusion Refusal LoRAs on Civitas have disappeared. ( https://civitai.com/models/2775340/krea2-textfusion-refusal-reduction-lora-updated ) It looks as if the Krea2 uncensoring methods have been censored. Okay, maybe capitan01R has just thrown in the towel. I'm curious, does anyone know any more details?",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Krea2 검열 해제 관련 개발자 계정 및 모델 돌연 삭제",
+      "summary_ko": "ComfyUI Krea2T Enhancer 깃허브 저장소와 개발자의 Reddit 계정이 정지되었습니다. Civitai에 올려져 있던 TextFusion Refusal LoRA 모델도 함께 사라진 것으로 확인되었습니다. Krea2의 검열 해제 방식들이 삭제되면서 개발자가 작업을 중단했는지에 대한 의문이 제기되고 있습니다.",
+      "bullets": [
+        "Krea2T Enhancer 저장소 다운",
+        "개발자 Reddit 계정 정지 처리",
+        "Civitai 내 관련 LoRA 삭제"
+      ],
+      "category": "opensource",
+      "score": 0.3947,
+      "cluster_id": 13,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T01:08:23+09:00",
+      "uid": "ea1347b245b2",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "MOSS SFT model- can do Girl on Grass, Grass on Girl, and Dark photos",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1x95czk/moss_sft_model_can_do_girl_on_grass_grass_on_girl",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-10-18T15:01:57+00:00",
+      "summary_raw": "MOSS can actually do dark images, too , it appears. Using the Bounding Box workflow in ComfyUI.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI 바운딩 박스로 MOSS SFT 어두운 사진 생성 가능",
+      "summary_ko": "MOSS SFT 모델이 어두운 이미지도 생성할 수 있는 것으로 나타났습니다. ComfyUI의 바운딩 박스 워크플로우를 활용해 구현되었습니다. 다양한 구도와 어두운 분위기의 사진을 생성할 수 있습니다.",
+      "bullets": [
+        "MOSS SFT 어두운 이미지 생성 가능",
+        "ComfyUI 바운딩 박스 활용",
+        "다양한 구도 연출 지원"
+      ],
+      "category": "workflow",
+      "score": 0.2942,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-19T00:01:57+09:00",
+      "uid": "6d621b29de61",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Same prompt, 3 models: SDXL (WAI-Illustrious v17) vs Krea 2 turbo vs MOSS-Image-SFT (anime scenes, no LoRA)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1x8zogd/same_prompt_3_models_sdxl_waiillustrious_v17_vs",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-18T10:14:48+00:00",
+      "summary_raw": "https://preview.redd.it/52smrdfua7wh1.png?width=2400&amp;format=png&amp;auto=webp&amp;s=dc1dd989d95378b8a8269cbd20b09486c414d894 Tested the three side by side using the exact same text prompt (booru tags only, no style prefix, no quality tags, no negative prompt), 4 scenes × 2 seeds, 1024×1024. No LoRAs. Prompts 1girl, solo, long silver hair, blue eyes, school uniform, standing, cherry blossoms, upper body, looking at viewer, soft light, spring 1boy, solo, short black hair, hoodie, standing, rooftop, night, from behind, city lights, skyline, looking away 1girl, 1boy, sitting, table, cafe, cups",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "SDXL·Krea 2 turbo·MOSS 모델 애니 장면 비교 테스트",
+      "summary_ko": "동일한 텍스트 프롬프트를 사용해 SDXL, Krea 2 turbo, MOSS-Image-SFT 3개 모델을 비교했습니다. 별도의 LoRA나 스타일 프리픽스 없이 부루 태그 기반의 프롬프트로만 진행되었습니다. 1024×1024 해상도에서 4개 장면과 2개 시드로 테스트를 실시했습니다.",
+      "bullets": [
+        "동일 프롬프트로 3개 모델 비교",
+        "LoRA 및 품질 태그 미사용",
+        "1024×1024 해상도 테스트"
+      ],
+      "category": "benchmark",
+      "score": 0.2837,
+      "cluster_id": 19,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-18T19:14:48+09:00",
+      "uid": "9b757010cec1",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
+      "url": "https://sphinx-six-theta.vercel.app/",
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-10-18T04:33:49+00:00",
+      "summary_raw": "FOSS, Basically it plugs into your existing coding agent workflow and every time you push to prod it&#x27;ll throw up a questionnaire that checks if you understand how the code you&#x27;re pushing works.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "points": 240,
+        "comments": 83,
+        "hn_id": "50137950"
+      },
+      "title_ko": "AI 코드 이해도 검증 오픈소스 도구 Sphinx 공개",
+      "summary_ko": "AI 코딩 에이전트 워크플로우에 결합하여 작동하는 오픈소스 도구 Sphinx가 공개되었습니다. 운영 환경에 코드를 배포할 때마다 개발자가 해당 코드의 작동 방식을 이해했는지 퀴즈로 확인합니다. 코드 이해도를 사전 검증하여 배포 안정성을 높입니다.",
+      "bullets": [
+        "코딩 에이전트 워크플로우 연동",
+        "배포 전 코드 이해도 퀴즈 출제",
+        "오픈소스 기반 검증 도구"
+      ],
+      "category": "workflow",
+      "score": 0.2807,
+      "cluster_id": 26,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-18T13:33:49+09:00",
+      "uid": "d3c35db34ec3",
+      "domain": "sphinx-six-theta.vercel.app"
+    }
+  ],
+  "tldr": [
+    "커뮤니티 중심의 특정 화풍 및 캐릭터 맞춤형 LoRA 모델이 잇따라 공개되며 오픈소스 기반 이미지 생성 생태계의 다양성이 확대되고 있습니다.",
+    "동시에 생성 성능 최적화 도구 출시와 모델 검열 이슈가 교차하며 사용자 중심 작업 환경을 둘러싼 기술적·정책적 논의도 이어집니다."
+  ],
+  "dropped": [
+    {
+      "title": "Pop Art",
+      "url": "https://civitai.com/models/3009066",
+      "source": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "reason": "제목 너무 짧음"
+    },
+    {
+      "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+      "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "A woman was arrested in Philly for blocking a delivery robot",
+      "url": "https://theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+      "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Anthropic gives outside AI watchdog “employee-like” access",
+      "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Which MOSS image should I get? The 5GB or 9GB one?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1x96c4z/which_moss_image_should_i_get_the_5gb_or_9gb_one",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "macOS 15.8.2 Breaks OpenGL",
+      "url": "https://developer.apple.com/forums/verify-human/verify.html?next=%2Fforums%2Fthread%2F850550",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Websites are closing their doors to AI agents",
+      "url": "https://theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
+      "url": "https://legendofhyrule.com/",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
+      "url": "https://niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Matthew Prince on why Cloudflare offers a free version and always will (2016)",
+      "url": "https://webmasters.stackexchange.com/questions/88659/how-can-cloudflare-offer-a-free-cdn-with-unlimited-bandwidth/88685",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "A Mole Infiltrated the Highest Ranks of American Militias (2025)",
+      "url": "https://propublica.org/article/ap3-oath-keepers-militia-mole",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Show HN: 500 clocks in one 6.3 MB HTML file by Opus 5.5",
+      "url": "https://tkgally.github.io/500-clocks",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Zuckerberg's Meta Takes Down No Kings Instagram During Protest Day",
+      "url": "https://meidasnews.com/news/zuckerbergs-meta-takes-down-no-kings-instagram-during-massive-protest-day",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · 404",
+      "elapsed_ms": 254
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 315
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 1077
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 432
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 459
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 126
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 2건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 795
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 7,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 203
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 612
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-Ryyizxe2z0PqG9xqgGmrqf&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 79
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 417
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1299,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 400
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 362
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 58
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 432
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 689
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 81
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 380
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 401
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 40,
+      "kept": 6,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 237
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 318
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 482
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 307
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 880,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 166
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 182
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 121,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 77
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 241,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 3039
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 70
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 74
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 4,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 418
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 295
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 34
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 192
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 429 · Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{t",
+      "elapsed_ms": 139
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 24
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 138
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 115
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 221
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 160
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 155
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 114
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 224
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 247
+    }
+  ],
+  "stats": {
+    "collected": 3123,
+    "in_window": 52,
+    "screened": 38,
+    "clustered": 37,
+    "merged": 1,
+    "sources_total": 43,
+    "sources_ok": 35,
+    "translate_engine": "gemini",
+    "translate_status": "번역 12/12건 · 캐시 0건",
+    "tldr_status": "2줄",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 12,
+      "제목 너무 짧음": 1,
+      "내용 없음": 1
+    }
+  },
+  "rankings": {
+    "fetched_at": "2026-10-19T00:16:56.921408+00:00",
+    "attribution": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/",
+    "boards": [
+      {
+        "id": "text-to-video",
+        "label": "텍스트 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1135.0,
+            "ci": 19,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3 (768p)",
+            "creator": "MiniMax",
+            "score": 1121.0,
+            "ci": 18,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3 Max",
+            "creator": "Fal",
+            "score": 1119.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.5",
+            "creator": "ByteDance Seed",
+            "score": 1105.0,
+            "ci": 18,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "FLUX 3",
+            "creator": "Black Forest Labs",
+            "score": 1094.0,
+            "ci": 19,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0",
+            "creator": "ByteDance Seed",
+            "score": 1085.0,
+            "ci": 19,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Gemini Omni Flash 1.1",
+            "creator": "Google",
+            "score": 1073.0,
+            "ci": 18,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Agnes-Video-2.5",
+            "creator": "Sapiens AI",
+            "score": 1054.0,
+            "ci": 18,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-to-video",
+        "label": "이미지 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1368.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Bach 1.0 Pro",
+            "creator": "Video Rebirth",
+            "score": 1362.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1362.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1356.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Vimoo 1.0",
+            "creator": "Vimoo",
+            "score": 1348.0,
+            "ci": 14,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1339.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "PixVerse V6",
+            "creator": "PixVerse",
+            "score": 1339.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok Imagine Video 1.5",
+            "creator": "SpaceXAI",
+            "score": 1331.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "text-to-image",
+        "label": "텍스트 → 이미지",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1220.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1207.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1186.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2.1",
+            "creator": "Google",
+            "score": 1174.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok Imagine Image 2.0",
+            "creator": "SpaceXAI",
+            "score": 1167.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1166.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+            "creator": "Google",
+            "score": 1140.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Muse Image",
+            "creator": "Meta",
+            "score": 1127.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-editing",
+        "label": "이미지 편집",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1199.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1182.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2.1",
+            "creator": "Google",
+            "score": 1152.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1152.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6-Flash",
+            "creator": "Microsoft AI",
+            "score": 1144.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1138.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Seedream 5.0 Pro",
+            "creator": "ByteDance Seed",
+            "score": 1133.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Muse Image",
+            "creator": "Meta",
+            "score": 1131.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "language",
+        "label": "언어모델 (지능·가격)",
+        "kind": "language",
+        "rows": [
+          {
+            "name": "Claude Opus 5.5 (Max, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 57.6,
+            "ci": null,
+            "price": 20.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-22",
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Max, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 53.4,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (Max)",
+            "creator": "OpenAI",
+            "score": 52.7,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (Xhigh)",
+            "creator": "OpenAI",
+            "score": 52.4,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6.1 Sol (Xhigh)",
+            "creator": "OpenAI",
+            "score": 51.0,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-29",
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6.1 Sol (High)",
+            "creator": "OpenAI",
+            "score": 50.2,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-29",
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Opus 5 (Xhigh)",
+            "creator": "Anthropic",
+            "score": 49.7,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Medium, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 48.9,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Low, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 46.8,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 9,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Sonnet 5.5 (High, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 46.8,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-28",
+            "rank": 10,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "tier": "free",
+    "error": ""
+  }
+}
