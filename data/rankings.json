@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "ranks": {
     "text-to-video": {
-      "HeyGen Video 1 (ultraquality)": 1,
+      "HeyGen Video 1": 1,
       "Wan 3.0": 2,
       "MiniMax H3 (768p)": 3,
       "MiniMax H3 Max": 4,
@@ -35,8 +35,8 @@
       "GPT Image 2.5 Sunburst (max)": 1,
       "GPT Image 2.5 Flare (max)": 2,
       "MAI-Image-2.6": 3,
-      "Nano Banana 2.1": 4,
-      "Krea 3 (Ultra)": 5,
+      "Krea 3 (Ultra)": 4,
+      "Nano Banana 2.1": 5,
       "MAI-Image-2.6-Flash": 6,
       "GPT Image 2 (high)": 7,
       "Seedream 5.0 Pro": 8
