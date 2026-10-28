@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -33,13 +33,13 @@
     },
     "image-editing": {
       "GPT Image 2.5 Sunburst (max)": 1,
-      "GPT Image 2.5 Flare (max)": 2,
-      "MAI-Image-2.6": 3,
-      "Krea 3 (Ultra)": 4,
-      "Nano Banana 2.1": 5,
-      "MAI-Image-2.6-Flash": 6,
-      "GPT Image 2 (high)": 7,
-      "Seedream 5.0 Pro": 8
+      "MAI-Image-2.7-Preview": 2,
+      "GPT Image 2.5 Flare (max)": 3,
+      "MAI-Image-2.6": 4,
+      "Krea 3 (Ultra)": 5,
+      "Nano Banana 2.1": 6,
+      "MAI-Image-2.6-Flash": 7,
+      "GPT Image 2 (high)": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,

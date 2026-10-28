@@ -1,0 +1,1897 @@
+{
+  "date_kst": "2026-10-28",
+  "generated_at": "2026-10-28T10:27:27.827426+09:00",
+  "window_start": "2026-10-27T07:00:00+09:00",
+  "window_end": "2026-10-28T07:00:00+09:00",
+  "headlines": [
+    {
+      "title": "Genie 4: A new generation of world simulation",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-27T16:01:38+00:00",
+      "summary_raw": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "구글 딥마인드, 실시간 세계 모델 Genie 4 공개",
+      "summary_ko": "Google DeepMind가 신형 세계 모델 Genie 4를 발표했다. 해당 모델은 실시간 시뮬레이션에서 전례 없는 사실감을 구현한다.",
+      "bullets": [
+        "실시간 시뮬레이션 사실감 강화",
+        "Google DeepMind의 신형 세계 모델"
+      ],
+      "category": "major_update",
+      "score": 1.4926,
+      "cluster_id": 7,
+      "related": [
+        {
+          "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+          "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering",
+          "source": "TechCrunch AI",
+          "tier": "T3"
+        },
+        {
+          "title": "DeepMind unveils Genie 4 world model promising more realistic physics and humans",
+          "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations",
+          "source": "Ars Technica AI",
+          "tier": "T3"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T01:01:38+09:00",
+      "uid": "5ef94984dce4",
+      "domain": "deepmind.google"
+    },
+    {
+      "title": "Here is my submission for ComfyUI’s Open Source Higgsfield challenge: Openjutsu, one-click character swap for videos, fully local using Minimax H3 only",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-27T13:50:05+00:00",
+      "summary_raw": "I mostly used claude to build Openjutsu, a free, local version of Higgsfield’s Genjutsu character swap, for Comfy’s Open Source Higgsfield challenge. Repo (MIT): https://github.com/D3voz/openjutsu What it does Upload a video and a picture of the person you want in it, then press Run. It finds the person, swaps them in clip by clip and keeps the original audio. There are also modes for: Object swap (change or remove an object, or change the background) From picture (put a person and a setting from one image into a video) Fix faces and Fix colours as post-processing How it’s built A Next.js web ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "비디오 인물 교체 도구 Openjutsu 공개",
+      "summary_ko": "ComfyUI 챌린지 응모작으로 비디오 내 인물을 클릭 한 번으로 바꾸는 로컬 도구 Openjutsu가 공개되었다. 비디오와 사진을 입력하면 클립별로 인물을 교체하며 기존 오디오를 유지하고, 객체 변경 및 배경 수정 기능도 제공한다.",
+      "bullets": [
+        "MIT 라이선스로 GitHub에 공개",
+        "MiniMax H3 및 Claude 활용",
+        "로컬 환경에서 비디오 인물 교체"
+      ],
+      "category": "opensource",
+      "score": 0.9825,
+      "cluster_id": 1,
+      "related": [
+        {
+          "title": "AI Promo Video Made Mostly with Open-Source Models",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1xh4vud/ai_promo_video_made_mostly_with_opensource_models",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T22:50:05+09:00",
+      "uid": "b44c410106d0",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Google’s next Genie AI model generates more realistic experiences",
+      "url": "https://theverge.com/tech/1019076/google-genie-4-ai-model",
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-27T16:00:00+00:00",
+      "summary_raw": "Google announced today its Genie 4 world model for generating interactive experiences using AI. The company says the model has four main updates: It allows for more realistic worlds, lets users update an experience in real time with a natural language prompt, can generate audio, and uses Gemini 3.8 Flash under the hood to help [&#8230;]",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "구글, 대화형 경험 생성 모델 Genie 4 발표",
+      "summary_ko": "Google이 대화형 경험을 생성하는 세계 모델 Genie 4를 발표했다. 자연어 프롬프트를 통한 실시간 경험 수정, 오디오 생성 기능이 추가되었으며 하위 모델로 Gemini 3.8 Flash를 사용한다.",
+      "bullets": [
+        "자연어 프롬프트로 실시간 수정",
+        "오디오 생성 기능 새롭게 지원",
+        "Gemini 3.8 Flash 모델 기반 작동"
+      ],
+      "category": "model_release",
+      "score": 0.8841,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T01:00:00+09:00",
+      "uid": "7de7788a86fe",
+      "domain": "theverge.com"
+    },
+    {
+      "title": "Minimax workflow for absolute highest quality output?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgwamv/minimax_workflow_for_absolute_highest_quality",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-27T15:54:06+00:00",
+      "summary_raw": "There are a thousand minimax workflow, and while each serve their purpose, I’ve yet to find one that produces the same near-lossless or cinematic quality output I’ve seen others post here. Almost every workflow uses 8 steps and/or Patch Sage Attention, Model Attention Backend, H3 Memory Optimization, etc, which ultimately hurt the output. I have tried 20, 25, 30 steps — and while they’re good, they’re not great. I have used LM Studio to build my prompts, which has drastically improved the adherence and flow, but the quality still isn’t there. I have tried resolution ranging from .5 - 1.5, marg",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax 최고 화질 출력을 위한 워크플로우 논의",
+      "summary_ko": "r/StableDiffusion 커뮤니티에서 MiniMax 모델의 시네마틱 화질을 얻기 위한 워크플로우 설정에 대한 논의가 진행 중이다. 일평균 사용되는 최적화 패치나 스텝 수 설정이 오히려 화질을 저해할 수 있다는 의견이 제기되었다.",
+      "bullets": [
+        "8스텝 및 최적화 패치 화질 저해 지적",
+        "프롬프트 작성에 LM Studio 활용",
+        "다양한 해상도 및 스텝 수 테스트 진행"
+      ],
+      "category": "workflow",
+      "score": 0.7297,
+      "cluster_id": 9,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T00:54:06+09:00",
+      "uid": "f33d42e3b2d3",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "High speed speed combat",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgp5cg/high_speed_speed_combat",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-27T10:44:18+00:00",
+      "summary_raw": "Claude code + r2v MINIMAX H3 and some loras + casual prompt like &quot;this shit is not good make it better&quot; My goal is make a 2-5 fucking dinamic anime, but i dont like anime For anyone interested, here's the current workflow I'm using to make this AI anime. Hardware &amp; Setup RunPod with an RTX 4090 (24GB VRAM) ComfyUI 0.42.0 Custom Python automation script ( h3_ctrl.py ) 1. Character Design &amp; Keyframes Model: Krea 2 Turbo (INT8) Text Encoder: Qwen3VL 4B LoRA: Kegant V5 (1.0) for that dark, mystical anime aesthetic 8–10 steps, CFG 1, Euler/Simple Around 12 seconds per image I gene",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI 기반 동적 애니메이션 생성 워크플로우 공개",
+      "summary_ko": "한 사용자가 ComfyUI와 Krea 2 Turbo 모델 등을 조합해 역동적인 애니메이션을 제작하는 워크플로우를 공유했다. RunPod의 RTX 4090 환경에서 자체 파이썬 자동화 스크립트를 함께 활용했다. 연출 향상을 위해 특정 LoRA와 텍스트 인코더를 구성했다.",
+      "bullets": [
+        "RTX 4090 환경에서 ComfyUI 활용",
+        "Krea 2 Turbo 모델 기반 이미지 생성",
+        "파이썬 자동화 스크립트로 작업 수행"
+      ],
+      "category": "workflow",
+      "score": 0.6476,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T19:44:18+09:00",
+      "uid": "634ab68a187b",
+      "domain": "reddit.com"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Genie 4: A new generation of world simulation",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-27T16:01:38+00:00",
+      "summary_raw": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "구글 딥마인드, 실시간 세계 모델 Genie 4 공개",
+      "summary_ko": "Google DeepMind가 신형 세계 모델 Genie 4를 발표했다. 해당 모델은 실시간 시뮬레이션에서 전례 없는 사실감을 구현한다.",
+      "bullets": [
+        "실시간 시뮬레이션 사실감 강화",
+        "Google DeepMind의 신형 세계 모델"
+      ],
+      "category": "major_update",
+      "score": 1.4926,
+      "cluster_id": 7,
+      "related": [
+        {
+          "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+          "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering",
+          "source": "TechCrunch AI",
+          "tier": "T3"
+        },
+        {
+          "title": "DeepMind unveils Genie 4 world model promising more realistic physics and humans",
+          "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations",
+          "source": "Ars Technica AI",
+          "tier": "T3"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T01:01:38+09:00",
+      "uid": "5ef94984dce4",
+      "domain": "deepmind.google"
+    },
+    {
+      "title": "Here is my submission for ComfyUI’s Open Source Higgsfield challenge: Openjutsu, one-click character swap for videos, fully local using Minimax H3 only",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-27T13:50:05+00:00",
+      "summary_raw": "I mostly used claude to build Openjutsu, a free, local version of Higgsfield’s Genjutsu character swap, for Comfy’s Open Source Higgsfield challenge. Repo (MIT): https://github.com/D3voz/openjutsu What it does Upload a video and a picture of the person you want in it, then press Run. It finds the person, swaps them in clip by clip and keeps the original audio. There are also modes for: Object swap (change or remove an object, or change the background) From picture (put a person and a setting from one image into a video) Fix faces and Fix colours as post-processing How it’s built A Next.js web ",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "비디오 인물 교체 도구 Openjutsu 공개",
+      "summary_ko": "ComfyUI 챌린지 응모작으로 비디오 내 인물을 클릭 한 번으로 바꾸는 로컬 도구 Openjutsu가 공개되었다. 비디오와 사진을 입력하면 클립별로 인물을 교체하며 기존 오디오를 유지하고, 객체 변경 및 배경 수정 기능도 제공한다.",
+      "bullets": [
+        "MIT 라이선스로 GitHub에 공개",
+        "MiniMax H3 및 Claude 활용",
+        "로컬 환경에서 비디오 인물 교체"
+      ],
+      "category": "opensource",
+      "score": 0.9825,
+      "cluster_id": 1,
+      "related": [
+        {
+          "title": "AI Promo Video Made Mostly with Open-Source Models",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1xh4vud/ai_promo_video_made_mostly_with_opensource_models",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T22:50:05+09:00",
+      "uid": "b44c410106d0",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Google’s next Genie AI model generates more realistic experiences",
+      "url": "https://theverge.com/tech/1019076/google-genie-4-ai-model",
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "topics": [
+        "video"
+      ],
+      "published": "2026-10-27T16:00:00+00:00",
+      "summary_raw": "Google announced today its Genie 4 world model for generating interactive experiences using AI. The company says the model has four main updates: It allows for more realistic worlds, lets users update an experience in real time with a natural language prompt, can generate audio, and uses Gemini 3.8 Flash under the hood to help [&#8230;]",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "구글, 대화형 경험 생성 모델 Genie 4 발표",
+      "summary_ko": "Google이 대화형 경험을 생성하는 세계 모델 Genie 4를 발표했다. 자연어 프롬프트를 통한 실시간 경험 수정, 오디오 생성 기능이 추가되었으며 하위 모델로 Gemini 3.8 Flash를 사용한다.",
+      "bullets": [
+        "자연어 프롬프트로 실시간 수정",
+        "오디오 생성 기능 새롭게 지원",
+        "Gemini 3.8 Flash 모델 기반 작동"
+      ],
+      "category": "model_release",
+      "score": 0.8841,
+      "cluster_id": 8,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T01:00:00+09:00",
+      "uid": "7de7788a86fe",
+      "domain": "theverge.com"
+    },
+    {
+      "title": "Minimax workflow for absolute highest quality output?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgwamv/minimax_workflow_for_absolute_highest_quality",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "tools"
+      ],
+      "published": "2026-10-27T15:54:06+00:00",
+      "summary_raw": "There are a thousand minimax workflow, and while each serve their purpose, I’ve yet to find one that produces the same near-lossless or cinematic quality output I’ve seen others post here. Almost every workflow uses 8 steps and/or Patch Sage Attention, Model Attention Backend, H3 Memory Optimization, etc, which ultimately hurt the output. I have tried 20, 25, 30 steps — and while they’re good, they’re not great. I have used LM Studio to build my prompts, which has drastically improved the adherence and flow, but the quality still isn’t there. I have tried resolution ranging from .5 - 1.5, marg",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MiniMax 최고 화질 출력을 위한 워크플로우 논의",
+      "summary_ko": "r/StableDiffusion 커뮤니티에서 MiniMax 모델의 시네마틱 화질을 얻기 위한 워크플로우 설정에 대한 논의가 진행 중이다. 일평균 사용되는 최적화 패치나 스텝 수 설정이 오히려 화질을 저해할 수 있다는 의견이 제기되었다.",
+      "bullets": [
+        "8스텝 및 최적화 패치 화질 저해 지적",
+        "프롬프트 작성에 LM Studio 활용",
+        "다양한 해상도 및 스텝 수 테스트 진행"
+      ],
+      "category": "workflow",
+      "score": 0.7297,
+      "cluster_id": 9,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T00:54:06+09:00",
+      "uid": "f33d42e3b2d3",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "High speed speed combat",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgp5cg/high_speed_speed_combat",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "video",
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-27T10:44:18+00:00",
+      "summary_raw": "Claude code + r2v MINIMAX H3 and some loras + casual prompt like &quot;this shit is not good make it better&quot; My goal is make a 2-5 fucking dinamic anime, but i dont like anime For anyone interested, here's the current workflow I'm using to make this AI anime. Hardware &amp; Setup RunPod with an RTX 4090 (24GB VRAM) ComfyUI 0.42.0 Custom Python automation script ( h3_ctrl.py ) 1. Character Design &amp; Keyframes Model: Krea 2 Turbo (INT8) Text Encoder: Qwen3VL 4B LoRA: Kegant V5 (1.0) for that dark, mystical anime aesthetic 8–10 steps, CFG 1, Euler/Simple Around 12 seconds per image I gene",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "ComfyUI 기반 동적 애니메이션 생성 워크플로우 공개",
+      "summary_ko": "한 사용자가 ComfyUI와 Krea 2 Turbo 모델 등을 조합해 역동적인 애니메이션을 제작하는 워크플로우를 공유했다. RunPod의 RTX 4090 환경에서 자체 파이썬 자동화 스크립트를 함께 활용했다. 연출 향상을 위해 특정 LoRA와 텍스트 인코더를 구성했다.",
+      "bullets": [
+        "RTX 4090 환경에서 ComfyUI 활용",
+        "Krea 2 Turbo 모델 기반 이미지 생성",
+        "파이썬 자동화 스크립트로 작업 수행"
+      ],
+      "category": "workflow",
+      "score": 0.6476,
+      "cluster_id": 14,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T19:44:18+09:00",
+      "uid": "634ab68a187b",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Flux2 Klein: cut the Qwen3 text encoder’s VRAM from 5.5 to 3.2 GB with identical output (new node)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgzujz/flux2_klein_cut_the_qwen3_text_encoders_vram_from",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-27T18:02:48+00:00",
+      "summary_raw": "Flux2 Klein only reads three hidden layers from its Qwen3 text encoder (9, 18 and 27), but the standard loaders build and run the full 36-layer model, plus the final norm and the LM head. On top of that, ComfyUI-GGUF dequantizes the whole token embedding table to fp16 when it loads the GGUF. I made a small loader that only builds what Klein actually uses: 27 layers instead of 36 , no final norm, no LM head GGUF token embeddings stay quantized : only the rows of your prompt are dequantized Same conditioning, bit for bit (compared against CLIPLoader (GGUF), max abs diff 0.0) Numbers (Qwen3-8B Q4",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Flux2 Klein용 Qwen3 VRAM 사용량 절감 커스텀 노드 개발",
+      "summary_ko": "Flux2 Klein 작업 시 Qwen3 텍스트 인코더의 VRAM 사용량을 5.5GB에서 3.2GB로 줄여주는 노드가 공개되었다. 불필요한 레이어 생성을 배제하고 토큰 임베딩 양자화를 유지하는 방식을 적용했다. 기존 출력 결과와 완벽히 동일한 조건화를 제공한다.",
+      "bullets": [
+        "VRAM 사용량 5.5GB에서 3.2GB로 감소",
+        "필요한 27개 레이어만선택적 로드",
+        "기존 로더와 완전히 동일한 출력 유지"
+      ],
+      "category": "model_release",
+      "score": 0.4719,
+      "cluster_id": 5,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T03:02:48+09:00",
+      "uid": "d7cd70334ea3",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Eurodisco LoRA for YuE2",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xh1aor/eurodisco_lora_for_yue2",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-10-27T18:55:20+00:00",
+      "summary_raw": "Here is an NAR LoRA for YuE2 that I generated yesterday, CC0 if anyone is interested in using it: https://huggingface.co/jamespetts/yue2-1980s-eurodisco-lora",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "YuE2 전용 1980년대 유로디스코 LoRA 공개",
+      "summary_ko": "YuE2 모델에서 사용할 수 있는 1980년대 유로디스코 스타일의 LoRA가 Hugging Face에 공개되었다. 해당 라이센스는 CC0로 누구나 자유롭게 이용할 수 있다.",
+      "bullets": [
+        "YuE2 모델용 유로디스코 LoRA 공개",
+        "Hugging Face 통해 무료 배포",
+        "CC0 라이센스 적용"
+      ],
+      "category": "opensource",
+      "score": 0.442,
+      "cluster_id": 0,
+      "related": [
+        {
+          "title": "[1980s Eurodisco] Sequin Ball | YuE2",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1xh5w3e/1980s_eurodisco_sequin_ball_yue2",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T03:55:20+09:00",
+      "uid": "1b5edfb27b3f",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "VitronEdit: A new unified model for image, video, and 3D editing. Code and weights available",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgzw22/vitronedit_a_new_unified_model_for_image_video",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image"
+      ],
+      "published": "2026-10-27T18:04:13+00:00",
+      "summary_raw": "I randomly came across this project on Lemmy's Stable Diffusion community and thought it was worth sharing here. Just to be clear, I'm not affiliated with the developers or the project in any way. I simply stumbled upon it, and I couldn't find any discussion about it on Reddit. The model is called VitronEdit, and its paper was published on October 19, 2026. What caught my attention is that it attempts to bring image editing, video editing, and 3D scene editing into a single unified framework, rather than treating them as completely separate tasks. According to the researchers, VitronEdit suppo",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "이미지·비디오·3D 통합 편집 모델 VitronEdit 공개",
+      "summary_ko": "이미지와 비디오, 3D 편집을 하나의 프레임워크로 통합한 신규 모델 VitronEdit의 코드와 가중치가 공개되었다. 단일 프레임워크 내에서 여러 미디어 형식의 편집을 지원하는 것이 특징이다.",
+      "bullets": [
+        "이미지·비디오·3D 편집 프레임워크 통합",
+        "VitronEdit 오픈소스 코드 및 가중치 공개",
+        "다양한 미디어 형식 편집 지원"
+      ],
+      "category": "opensource",
+      "score": 0.4013,
+      "cluster_id": 4,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T03:04:13+09:00",
+      "uid": "56af6d73bf77",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "ComfyUI v0.43.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-27T02:40:46+00:00",
+      "summary_raw": "What's Changed model_prefetch: syncrhonize all graph cleanups by @rattus128 in #17178 Add rope scaling support to MOSS-image by @kijai in #17172 [Partner Nodes] Renew partner-node sign-in tokens in API nodes by @dante01yoon in #16943 [Partner Nodes] feat(HeyGen): add HeyGen Voice instant clone and text-to-speech by @bigcat88 in #17043 [Partner Nodes] feat(ClarityAI): add Crystal Video Upscaler node by @bigcat88 in #17192 [Partner Nodes] feat(BFL): add 2K/4K resolutions to FLUX 3 Video nodes by @bigcat88 in #17200 Support MOSS-image color-depth control by @kijai in #17206 Add to Readme that MOS",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true,
+        "repo": "comfyanonymous/ComfyUI",
+        "kind": "release"
+      },
+      "title_ko": "ComfyUI v0.43.0 업데이트 출시",
+      "summary_ko": "ComfyUI가 v0.43.0 버전을 출시하며 신규 파트너 노드와 모델 제어 기능을 추가했다. HeyGen의 음성 복제, ClarityAI의 비디오 업스케일러, BFL의 FLUX 3 비디오 2K/4K 해상도 지원 등이 포함됐다. MOSS-image 모델의 RoPE 스케일링 및 색상 깊이 제어 기능도 함께 도입됐다.",
+      "bullets": [
+        "HeyGen 음성 복제 및 TTS 추가",
+        "ClarityAI 및 BFL 파트너 노드 확장",
+        "MOSS-image 제어 기능 지원"
+      ],
+      "category": "major_update",
+      "score": 0.3947,
+      "cluster_id": 3,
+      "related": [
+        {
+          "title": "ComfyUI v0.43.0 released",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1xh0m0c/comfyui_v0430_released",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        },
+        {
+          "title": "ComfyUI v0.43.0",
+          "url": "https://reddit.com/r/StableDiffusion/comments/1xgiqxl/comfyui_v0430",
+          "source": "r/StableDiffusion",
+          "tier": "T2"
+        }
+      ],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T11:40:46+09:00",
+      "uid": "168226f8555a",
+      "domain": "github.com"
+    },
+    {
+      "title": "New 6-step LoRA adapters for Qwen-Image-2.1, no upsampling step, ~5x faster",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgyg7b/new_6step_lora_adapters_for_qwenimage21_no",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image",
+        "tools"
+      ],
+      "published": "2026-10-27T17:11:31+00:00",
+      "summary_raw": "Hey! We published a set of 6-step LoRAs, one without the upsampling step: https://huggingface.co/PrunaAI/P-Q-Image-2.1 - Generate or edit images in just 6 steps instead of 40. Use 6-steps for preserving inputs when editing and 6-steps-upsampled for improved visual quality and shorter end-to-end generation. - 6-step distillation provides improved quality with few generation steps.6-steps-upsampled is the first distillation that removes the need for a separate prompt-upsampling step. This means 41 to 80 seconds saved, depending on your prompt style. - The LoRA adapters load directly on top of Qw",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "Qwen-Image-2.1용 6단계 LoRA 공개",
+      "summary_ko": "Qwen-Image-2.1 모델을 위한 새로운 6단계 LoRA 어댑터 세트가 공개되었다. 기존 40단계 대신 6단계만으로 이미지를 생성하거나 편집할 수 있다. 별도의 프롬프트 업샘플링 단계를 제거해 생성 시간을 최대 80초까지 단축한다.",
+      "bullets": [
+        "40단계 작업을 6단계로 단축",
+        "별도 업샘플링 단계 제거",
+        "기존 모델에 직접 로드하여 사용"
+      ],
+      "category": "opensource",
+      "score": 0.3932,
+      "cluster_id": 6,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-28T02:11:31+09:00",
+      "uid": "57981a23ef8e",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "Moss Quality vs Krea 2 Quality?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgmzas/moss_quality_vs_krea_2_quality",
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "topics": [
+        "image"
+      ],
+      "published": "2026-10-27T08:31:10+00:00",
+      "summary_raw": "So ive been testing moss the last few days, curious about how easy it is to prompt, but somehow i did not even get close to the level of detail and quality krea 2 can dish out. Like an image done with a krea 2 turbo model with 2 passes on 8 steps has so much more finer details like skin pores, detailed eyes, cloth textures etc. than a 50 step raw model gen with a qwen 2.1 upscale afterwards. I mean moss images look fine as thumbnails and such but in my testing so far to use them as full on wallpapers moss just struggles with quality. Do you think this is something that will be &quot;fixed&quot",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {
+        "pre_filtered": true
+      },
+      "title_ko": "MOSS와 Krea 2 화질 비교 논란",
+      "summary_ko": "커뮤니티 이용자들이 MOSS와 Krea 2의 세부 화질을 비교 분석했다. 테스트 결과 Krea 2 터보 모델이 피부 구멍, 눈동자, 옷감 질감 등 미세한 표현에서 더 우수한 성능을 보였다. MOSS는 썸네일 크기에서는 우수하나 배경화면급 화질에서는 한계를 드러냈다.",
+      "bullets": [
+        "Krea 2가 미세 디테일 표현에 우수",
+        "MOSS는 대형 화면 화질에서 한계",
+        "생성 모델 간 화질 성능 차이 확인"
+      ],
+      "category": "benchmark",
+      "score": 0.265,
+      "cluster_id": 16,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T17:31:10+09:00",
+      "uid": "872f49f7e0cf",
+      "domain": "reddit.com"
+    },
+    {
+      "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
+      "url": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "topics": [
+        "tools"
+      ],
+      "published": "2026-10-27T13:00:00+00:00",
+      "summary_raw": "General Compute is betting on inference chips from outside the Nvidia ecosystem.",
+      "signal": "normal",
+      "ad_filter": "normal",
+      "extra": {},
+      "title_ko": "제너럴 컴퓨트, 1억 달러 투자 유치",
+      "summary_ko": "제너럴 컴퓨트가 시리즈 A 라운드에서 1억 달러의 투자를 유치했다. 이번 투자는 엔비디아 생태계 외부의 추론용 칩에 집중하는 전략으로 진행됐다. 제너럴 컴퓨트는 네오클라우드 시장의 위기설에 대응하여 입지를 넓히고 있다.",
+      "bullets": [
+        "1억 달러 규모 시리즈 A 투자 유치",
+        "비엔비디아계 추론용 칩 개발 집중",
+        "네오클라우드 시장 위기론에 대응"
+      ],
+      "category": "industry",
+      "score": 0.1815,
+      "cluster_id": 11,
+      "related": [],
+      "drop_reason": "",
+      "published_kst": "2026-10-27T22:00:00+09:00",
+      "uid": "e4dd73cec05d",
+      "domain": "techcrunch.com"
+    }
+  ],
+  "tldr": [
+    "구글이 실시간 세계 모델 Genie 4를 선보이며 차세대 인터랙티브 AI의 기준을 제시했습니다.",
+    "오픈소스 커뮤니티 역시 비디오 편집과 ComfyUI 워크플로우 고도화에 화력을 집중하며 이미지·영상 생성 생태계를 빠르게 확장하고 있습니다."
+  ],
+  "dropped": [
+    {
+      "title": "\"No human at the helm\": Delaware plan would let AI agents run entire businesses",
+      "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Bank of America kindly asks that you don’t share your banking password with your AI assistant",
+      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Who’s really in charge at Anthropic after the IPO?",
+      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Anthropic IPO warns its AI could blackmail people, become sentient, end humanity",
+      "url": "https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
+      "url": "https://theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Disruptive raises $10B fund to make big bets on at least 10 companies",
+      "url": "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Vibe genes? Natural(ish) language comes to protein, genome design software",
+      "url": "https://arstechnica.com/science/2026/10/vibe-genes-naturalish-language-comes-to-protein-genome-design-software",
+      "source": "Ars Technica AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Police Are Pulling People over Because AI Deems Their Driving \"Suspicious\"",
+      "url": "https://aclu.org/news/privacy-technology/ai-driven-police-stops",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning",
+      "source": "Google Research Blog",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "VisionQuest is what happens when AI really goes rogue",
+      "url": "https://theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
+      "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Anthropic’s elaborate plan to keep Wall Street at bay",
+      "url": "https://theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Firefox’s Smart Window adds AI form filling and webpage monitoring",
+      "url": "https://theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source": "Hugging Face Blog",
+      "tier": "T1",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Data Recovery CEO Indicted for Allegedly Scamming Ransomware Victims",
+      "url": "https://propublica.org/article/zohar-pinhasi-monstercloud-ransomware-indictment",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "url": "https://openai.com/index/retell-ai",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
+      "url": "https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Apple is adding an AI chatbot to Pages, Keynote, and Numbers",
+      "url": "https://theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Japan internet giant GMO says hackers posted stolen customer data",
+      "url": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs",
+      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Data center backlash is uniting America",
+      "url": "https://theverge.com/policy/1019152/data-centers-midterm-elections",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Moss Serenity v6 (210k steps now)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgo9hf/moss_serenity_v6_210k_steps_now",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "Why almost all major Open weight models come from china ?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1xgo2eh/why_almost_all_major_open_weight_models_come_from",
+      "source": "r/StableDiffusion",
+      "tier": "T2",
+      "reason": "내용 없음"
+    },
+    {
+      "title": "TAPESTRY: A Single Backbone for Video Generation and Robot Control",
+      "url": "https://arxiv.org/abs/2610.36823v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
+      "url": "https://arxiv.org/abs/2610.36729v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "SWIM: Learning What Matters from Behaviors for JEPA World Models",
+      "url": "https://arxiv.org/abs/2610.36662v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Image Modeling: From Handcrafted Priors to Foundation Image Models",
+      "url": "https://arxiv.org/abs/2610.36646v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Adapting Video Models for Robot Control via Motion-guided Asymmetric Prediction",
+      "url": "https://arxiv.org/abs/2610.36624v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation",
+      "url": "https://arxiv.org/abs/2610.36545v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+      "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "The 'Buy, Borrow and Die' Wealth Strategy Has Become a $5T Market",
+      "url": "https://wsj.com/finance/the-buy-borrow-and-die-wealth-strategy-has-become-a-5-trillion-market-d9149a9d",
+      "source": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "Nemotron-Labs-Diffusion-Uni: Elastic Self-Refining Unified Diffusion LLM with Cross-Paradigm On-Policy Distillation",
+      "url": "https://arxiv.org/abs/2610.36466v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    },
+    {
+      "title": "Cohere says Alibaba’s Qwen model tried to send a file to Beijing",
+      "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing",
+      "source": "TechCrunch AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "How Check Point accelerates vulnerability research with Daybreak",
+      "url": "https://openai.com/index/check-point-daybreak",
+      "source": "OpenAI News",
+      "tier": "T0",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "OpenAI announces three big science discoveries and a new way to work with academics",
+      "url": "https://theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+      "source": "The Verge AI",
+      "tier": "T3",
+      "reason": "주제 무관"
+    },
+    {
+      "title": "BoxWorld: Let World Engines Control and Video Generators Render",
+      "url": "https://arxiv.org/abs/2610.36371v1",
+      "source": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "reason": "논문 · 코드 미공개"
+    }
+  ],
+  "reports": [
+    {
+      "source_id": "adobe-firefly-blog",
+      "source_name": "Adobe Firefly Blog",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · 404",
+      "elapsed_ms": 181
+    },
+    {
+      "source_id": "bfl-blog",
+      "source_name": "Black Forest Labs (FLUX)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 10건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 609
+    },
+    {
+      "source_id": "bytedance-seed",
+      "source_name": "ByteDance Seed (Seedance / Seedream)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 835
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 593
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "tier": "T0",
+      "collected": 100,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 706
+    },
+    {
+      "source_id": "hunyuan-video-releases",
+      "source_name": "Tencent HunyuanVideo (GitHub Releases)",
+      "tier": "T0",
+      "collected": 1,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 280
+    },
+    {
+      "source_id": "kling-updates",
+      "source_name": "Kling AI (Kuaishou)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 2건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 937
+    },
+    {
+      "source_id": "lightricks-ltx-releases",
+      "source_name": "Lightricks LTX-2 (GitHub Releases)",
+      "tier": "T0",
+      "collected": 7,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 425
+    },
+    {
+      "source_id": "luma-news",
+      "source_name": "Luma AI (Ray / Dream Machine)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 258건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 719
+    },
+    {
+      "source_id": "midjourney-updates",
+      "source_name": "Midjourney",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 403 · Just a moment... <meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-JuoUSVNdkPoaInjDLkDieO&#39; &#39;unsafe-eval&#39; https://cha",
+      "elapsed_ms": 113
+    },
+    {
+      "source_id": "minimax-hailuo",
+      "source_name": "MiniMax / Hailuo",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 1건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 402
+    },
+    {
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "tier": "T0",
+      "collected": 1331,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 662
+    },
+    {
+      "source_id": "pika-blog",
+      "source_name": "Pika",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 13건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 402
+    },
+    {
+      "source_id": "qwen-blog",
+      "source_name": "Qwen (Alibaba) Blog",
+      "tier": "T0",
+      "collected": 44,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 37
+    },
+    {
+      "source_id": "runway-news",
+      "source_name": "Runway",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 1건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 576
+    },
+    {
+      "source_id": "stability-news",
+      "source_name": "Stability AI",
+      "tier": "T0",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 1079
+    },
+    {
+      "source_id": "wan-releases",
+      "source_name": "Alibaba Wan (GitHub Releases)",
+      "tier": "T0",
+      "collected": 0,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 256
+    },
+    {
+      "source_id": "arxiv-cv",
+      "source_name": "arXiv cs.CV (필터링)",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 469
+    },
+    {
+      "source_id": "banodoco",
+      "source_name": "Banodoco",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "목록에서 글 링크를 찾지 못함 · link_pattern 확인 필요",
+      "elapsed_ms": 466
+    },
+    {
+      "source_id": "civitai-models",
+      "source_name": "Civitai (신규 모델·LoRA)",
+      "tier": "T1",
+      "collected": 39,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 227
+    },
+    {
+      "source_id": "comfyui-blog",
+      "source_name": "ComfyUI Blog",
+      "tier": "T1",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 436
+    },
+    {
+      "source_id": "comfyui-releases",
+      "source_name": "ComfyUI (GitHub Releases)",
+      "tier": "T1",
+      "collected": 10,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 631
+    },
+    {
+      "source_id": "fal-blog",
+      "source_name": "fal.ai Blog",
+      "tier": "T1",
+      "collected": 15,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 269
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "tier": "T1",
+      "collected": 891,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 313
+    },
+    {
+      "source_id": "huggingface-papers",
+      "source_name": "Hugging Face Papers (Daily)",
+      "tier": "T1",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "첫 실행 · 링크 63건 기록 (다음 실행부터 새 글만)",
+      "elapsed_ms": 331
+    },
+    {
+      "source_id": "replicate-blog",
+      "source_name": "Replicate Blog",
+      "tier": "T1",
+      "collected": 121,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 546
+    },
+    {
+      "source_id": "hn-visual-ai",
+      "source_name": "Hacker News (키워드 필터)",
+      "tier": "T2",
+      "collected": 241,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 3391
+    },
+    {
+      "source_id": "reddit-aivideo",
+      "source_name": "r/aivideo",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 104
+    },
+    {
+      "source_id": "reddit-comfyui",
+      "source_name": "r/comfyui",
+      "tier": "T2",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "레딧 차단(데이터센터 IP) — 건너뜀",
+      "elapsed_ms": 85
+    },
+    {
+      "source_id": "reddit-stablediffusion",
+      "source_name": "r/StableDiffusion",
+      "tier": "T2",
+      "collected": 25,
+      "kept": 8,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 667
+    },
+    {
+      "source_id": "arstechnica-ai",
+      "source_name": "Ars Technica AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 0,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 577
+    },
+    {
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "tier": "T3",
+      "collected": 20,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 58
+    },
+    {
+      "source_id": "theverge-ai",
+      "source_name": "The Verge AI",
+      "tier": "T3",
+      "collected": 10,
+      "kept": 1,
+      "ok": true,
+      "error": "",
+      "elapsed_ms": 141
+    },
+    {
+      "source_id": "venturebeat-ai",
+      "source_name": "VentureBeat AI",
+      "tier": "T3",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 429 · Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{t",
+      "elapsed_ms": 66
+    },
+    {
+      "source_id": "yt-curious-refuge",
+      "source_name": "Curious Refuge",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 126
+    },
+    {
+      "source_id": "yt-latent-vision",
+      "source_name": "Latent Vision (Matteo Spinelli)",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 154
+    },
+    {
+      "source_id": "yt-mattvidpro",
+      "source_name": "MattVidPro AI",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 99
+    },
+    {
+      "source_id": "yt-mickmumpitz",
+      "source_name": "Mickmumpitz",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 219
+    },
+    {
+      "source_id": "yt-nerdy-rodent",
+      "source_name": "Nerdy Rodent",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 177
+    },
+    {
+      "source_id": "yt-olivio-sarikas",
+      "source_name": "Olivio Sarikas",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 277
+    },
+    {
+      "source_id": "yt-scott-detweiler",
+      "source_name": "Scott Detweiler",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 138
+    },
+    {
+      "source_id": "yt-sebastian-kamph",
+      "source_name": "Sebastian Kamph",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 500 · Error 500 (Server Error)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-he",
+      "elapsed_ms": 296
+    },
+    {
+      "source_id": "yt-theoretically-media",
+      "source_name": "Theoretically Media",
+      "tier": "T4",
+      "collected": 0,
+      "kept": 0,
+      "ok": false,
+      "error": "HTTP 404 · Error 404 (Not Found)!!1 *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-heigh",
+      "elapsed_ms": 193
+    }
+  ],
+  "stats": {
+    "collected": 3030,
+    "in_window": 65,
+    "screened": 26,
+    "clustered": 20,
+    "merged": 6,
+    "sources_total": 43,
+    "sources_ok": 20,
+    "translate_engine": "gemini",
+    "translate_status": "번역 12/12건 · 캐시 0건",
+    "tldr_status": "2줄",
+    "translated": 12,
+    "dropped_reasons": {
+      "주제 무관": 29,
+      "논문 · 코드 미공개": 8,
+      "내용 없음": 2
+    }
+  },
+  "rankings": {
+    "fetched_at": "2026-10-28T01:29:36.265642+00:00",
+    "attribution": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/",
+    "boards": [
+      {
+        "id": "text-to-video",
+        "label": "텍스트 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "HeyGen Video 1",
+            "creator": "HeyGen",
+            "score": 1143.0,
+            "ci": 16,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1133.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3 (768p)",
+            "creator": "MiniMax",
+            "score": 1120.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3 Max",
+            "creator": "Fal",
+            "score": 1118.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.5",
+            "creator": "ByteDance Seed",
+            "score": 1104.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "FLUX 3",
+            "creator": "Black Forest Labs",
+            "score": 1091.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0",
+            "creator": "ByteDance Seed",
+            "score": 1082.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Gemini Omni Flash 1.1",
+            "creator": "Google",
+            "score": 1067.0,
+            "ci": 17,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-to-video",
+        "label": "이미지 → 영상",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "Gemini Omni Flash",
+            "creator": "Google",
+            "score": 1368.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Bach 1.0 Pro",
+            "creator": "Video Rebirth",
+            "score": 1362.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Wan 3.0",
+            "creator": "Alibaba",
+            "score": 1362.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MiniMax H3",
+            "creator": "MiniMax",
+            "score": 1356.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Vimoo 1.0",
+            "creator": "Vimoo",
+            "score": 1348.0,
+            "ci": 14,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Dreamina Seedance 2.0 720p",
+            "creator": "ByteDance Seed",
+            "score": 1339.0,
+            "ci": 9,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "PixVerse V6",
+            "creator": "PixVerse",
+            "score": 1339.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok Imagine Video 1.5",
+            "creator": "SpaceXAI",
+            "score": 1331.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "text-to-image",
+        "label": "텍스트 → 이미지",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1222.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1207.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1186.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2.1",
+            "creator": "Google",
+            "score": 1176.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1166.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Grok Imagine Image 2.0",
+            "creator": "SpaceXAI",
+            "score": 1166.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+            "creator": "Google",
+            "score": 1140.0,
+            "ci": 10,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Muse Image",
+            "creator": "Meta",
+            "score": 1127.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "image-editing",
+        "label": "이미지 편집",
+        "kind": "media",
+        "rows": [
+          {
+            "name": "GPT Image 2.5 Sunburst (max)",
+            "creator": "OpenAI",
+            "score": 1199.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.7-Preview",
+            "creator": "Microsoft AI",
+            "score": 1193.0,
+            "ci": 15,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 2,
+            "delta": null,
+            "is_new": true
+          },
+          {
+            "name": "GPT Image 2.5 Flare (max)",
+            "creator": "OpenAI",
+            "score": 1182.0,
+            "ci": 11,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 3,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6",
+            "creator": "Microsoft AI",
+            "score": 1151.0,
+            "ci": 12,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 4,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "Krea 3 (Ultra)",
+            "creator": "Krea",
+            "score": 1151.0,
+            "ci": 14,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 5,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "Nano Banana 2.1",
+            "creator": "Google",
+            "score": 1151.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 6,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "MAI-Image-2.6-Flash",
+            "creator": "Microsoft AI",
+            "score": 1144.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 7,
+            "delta": -1,
+            "is_new": false
+          },
+          {
+            "name": "GPT Image 2 (high)",
+            "creator": "OpenAI",
+            "score": 1136.0,
+            "ci": 13,
+            "price": null,
+            "price_unit": "",
+            "released": null,
+            "rank": 8,
+            "delta": -1,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      },
+      {
+        "id": "language",
+        "label": "언어모델 (지능·가격)",
+        "kind": "language",
+        "rows": [
+          {
+            "name": "Claude Opus 5.5 (Max, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 57.6,
+            "ci": null,
+            "price": 20.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-22",
+            "rank": 1,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Max, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 53.4,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 2,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (Max)",
+            "creator": "OpenAI",
+            "score": 52.7,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 3,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6 Astra (Xhigh)",
+            "creator": "OpenAI",
+            "score": 52.4,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-03",
+            "rank": 4,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6.1 Sol (Xhigh)",
+            "creator": "OpenAI",
+            "score": 51.0,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-29",
+            "rank": 5,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "GPT-6.1 Sol (High)",
+            "creator": "OpenAI",
+            "score": 50.2,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-29",
+            "rank": 6,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Opus 5 (Xhigh)",
+            "creator": "Anthropic",
+            "score": 49.7,
+            "ci": null,
+            "price": 25.0,
+            "price_unit": "$/1M",
+            "released": "2026-07-24",
+            "rank": 7,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Medium, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 48.9,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 8,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Fable 5.1 (Low, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 46.8,
+            "ci": null,
+            "price": 50.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-01",
+            "rank": 9,
+            "delta": 0,
+            "is_new": false
+          },
+          {
+            "name": "Claude Sonnet 5.5 (High, Default Fallback)",
+            "creator": "Anthropic",
+            "score": 46.8,
+            "ci": null,
+            "price": 10.0,
+            "price_unit": "$/1M",
+            "released": "2026-09-28",
+            "rank": 10,
+            "delta": 0,
+            "is_new": false
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "tier": "free",
+    "error": ""
+  }
+}
