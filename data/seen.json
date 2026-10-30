@@ -322,10 +322,50 @@
   "https://huggingface.co/papers/2610.34921": "2026-10-29T01:51:28.761229+00:00",
   "https://huggingface.co/papers/2610.26185": "2026-10-29T01:51:28.761229+00:00",
   "https://huggingface.co/papers/2610.33245": "2026-10-29T01:51:28.761229+00:00",
-  "https://huggingface.co/papers/2610.36184": "2026-10-29T01:51:28.761229+00:00"
+  "https://huggingface.co/papers/2610.36184": "2026-10-29T01:51:28.761229+00:00",
+  "https://huggingface.co/papers/2610.32749": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.35684": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.31670": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.37230": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.22507": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.30161": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.22990": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.20832": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.30132": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.29702": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.35671": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.33645": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.36095": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.34186": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2601.15351": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.27100": "2026-10-30T02:00:09.548466+00:00",
+  "https://huggingface.co/papers/2610.37626": "2026-10-30T02:00:09.548466+00:00"
  },
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-10-29T01:51:28.974633+00:00",
   "https://kling.ai/release-note/release-preview": "2026-10-29T01:51:28.974633+00:00"
+ },
+ "pika-blog": {
+  "https://pika.art/blog/pika-h3-flex": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-h3-flex-research": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-chatgpt-plugin": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/api-member-spotlights": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/welcome-to-the-new-pika": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-soundtrack": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-music": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-sfx": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-speech": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-audio-models": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-api-club": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/founder-starter-kit": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/pika-experiments": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/your-ai-self-just-got-a-job": "2026-10-30T02:00:08.991297+00:00",
+  "https://pika.art/blog/introducing-real-time-video-chat": "2026-10-30T02:00:08.991297+00:00"
+ },
+ "runway-news": {
+  "https://runway.com/news/research/introducing-solaris": "2026-10-30T02:00:09.018255+00:00"
+ },
+ "minimax-hailuo": {
+  "https://www.minimax.io/news/minimax-speech-28": "2026-10-30T02:00:09.237266+00:00"
  }
 }
