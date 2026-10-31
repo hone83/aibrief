@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -12,14 +12,14 @@
       "P-Video-2-Pro": 8
     },
     "image-to-video": {
-      "Dreamina Seedance 2.5": 1,
-      "MiniMax H3 Max": 2,
-      "Bach 1.0 Pro": 3,
-      "Hyperflow H3": 4,
-      "Agnes-Video-2.5": 5,
-      "MiniMax H3 (768p)": 6,
-      "HeyGen Video 1": 7,
-      "P-Video-2-Pro": 8
+      "Utopai X": 1,
+      "Dreamina Seedance 2.5": 2,
+      "MiniMax H3 Max": 3,
+      "Bach 1.0 Pro": 4,
+      "Hyperflow H3": 5,
+      "Agnes-Video-2.5": 6,
+      "MiniMax H3 (768p)": 7,
+      "HeyGen Video 1": 8
     },
     "text-to-image": {
       "GPT Image 2.5 Sunburst (max)": 1,
