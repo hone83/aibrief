@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -9,7 +9,7 @@
       "Wan 3.0": 5,
       "MiniMax H3 (768p)": 6,
       "Bach 1.0 Pro": 7,
-      "P-Video-2-Pro": 8
+      "Dreamina Seedance 2.5": 8
     },
     "image-to-video": {
       "Utopai X": 1,
@@ -36,8 +36,8 @@
       "MAI-Image-2.7-Preview": 2,
       "GPT Image 2.5 Flare (max)": 3,
       "Krea 3 (Ultra)": 4,
-      "MAI-Image-2.6": 5,
-      "Nano Banana 2.1": 6,
+      "Nano Banana 2.1": 5,
+      "MAI-Image-2.6": 6,
       "MAI-Image-2.6-Flash": 7,
       "GPT Image 2 (high)": 8
     },
