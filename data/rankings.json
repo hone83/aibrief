@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -19,15 +19,15 @@
       "Hyperflow H3": 5,
       "Agnes-Video-2.5": 6,
       "MiniMax H3 (768p)": 7,
-      "HeyGen Video 1": 8
+      "P-Video-2-Pro": 8
     },
     "text-to-image": {
       "GPT Image 2.5 Sunburst (max)": 1,
       "GPT Image 2.5 Flare (max)": 2,
       "GPT Image 2 (high)": 3,
       "Nano Banana 2.1": 4,
-      "Grok Imagine Image 2.0": 5,
-      "MAI-Image-2.6": 6,
+      "MAI-Image-2.6": 5,
+      "Grok Imagine Image 2.0": 6,
       "Nano Banana 2 (Gemini 3.1 Flash Image)": 7,
       "Muse Image": 8
     },
@@ -35,8 +35,8 @@
       "GPT Image 2.5 Sunburst (max)": 1,
       "MAI-Image-2.7-Preview": 2,
       "GPT Image 2.5 Flare (max)": 3,
-      "Krea 3 (Ultra)": 4,
-      "Nano Banana 2.1": 5,
+      "Nano Banana 2.1": 4,
+      "Krea 3 (Ultra)": 5,
       "MAI-Image-2.6": 6,
       "MAI-Image-2.6-Flash": 7,
       "GPT Image 2 (high)": 8
