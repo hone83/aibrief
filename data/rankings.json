@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -51,7 +51,7 @@
       "Claude Fable 5.1 (Max, Default Fallback)": 7,
       "Claude Fable 5.1 (Medium, Default Fallback)": 8,
       "Claude Sonnet 5.5 (High, Default Fallback)": 9,
-      "Claude Fable 5.1 (Low, Default Fallback)": 10
+      "Muse Wonder (High)": 10
     }
   }
 }
