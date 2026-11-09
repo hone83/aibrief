@@ -9983,5 +9983,137 @@
    "기업가치 1조 2,500억 달러 기록",
    "경쟁사인 Anthropic은 IPO 추진 중"
   ]
+ },
+ "9de9b5500b21": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "ComfyUI와 Claude Code로 제작한 10분 셜록 홈즈 애니메이션 공개",
+  "summary_ko": "한 제작자가 ComfyUI와 오픈소스 툴 konte, Claude Code를 결합해 '세 명의 개리뎁' 오프닝을 애니메이션 영상으로 제작했다. 캐릭터와 배경에는 Krea 2 Turbo를, 키프레임과 대사 및 모션에는 MiniMax H3를 활용했으며 사운드는 Zonos2와 Stable Audio 3을 사용했다. 일본어 음성에 영어 자막이 포함되어 있으며 소설을 영상으로 각색하는 작업이 한결 수월해졌다고 전했다.",
+  "bullets": [
+   "ComfyUI와 Claude Code 활용한 10분 영상",
+   "Krea 2 Turbo 및 MiniMax H3 등 사용",
+   "오픈소스 툴 konte로 소설 각색 작업 진행"
+  ]
+ },
+ "6efcaed80999": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "RTX 3090·RTX Spark·M5 Max 비디오 워크플로우 벤치마크",
+  "summary_ko": "RTX 3090 기본형 및 텐서 레이트 해제 버전, ASUS RTX Spark 128GB, M5 Max 128GB를 비교한 벤치마크가 공개되었다. 이번 테스트는 동일한 MiniMax H3 ComfyUI 비디오 워크플로우와 시드를 기반으로 총 11개 항목에 걸쳐 진행되었다.",
+  "bullets": [
+   "RTX 3090과 Spark, M5 Max 성능 비교",
+   "MiniMax H3 ComfyUI 워크플로우 적용",
+   "동일 시드 기반 총 11개 항목 테스트 진행"
+  ]
+ },
+ "d91a9ad3a416": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "KENT 포스트, Nuke 연동 등 ComfyUI 전용 제작 툴 공개",
+  "summary_ko": "KENT Post Production이 사내 VFX 파이프라인에서 사용하는 ComfyUI 전용 도구들을 오픈소스로 공개했다. 공개된 툴에는 워크스페이스인 Director's Console, FLUX 및 Kling 등 주요 모델을 지원하는 Prompt Engineer, 개별 컷 렌더링을 돕는 Storyboard 등이 포함된다. CorridorKey 2.0 노드와 Nuke 및 After Effects 브릿지, 3D 카메라 앵글 피커 등도 함께 제공된다.",
+  "bullets": [
+   "KENT 사내 VFX 파이프라인 툴 GitHub 공개",
+   "Nuke·After Effects 브릿지 및 노드 지원",
+   "FLUX 등 주요 모델 맞춤형 프롬프트 기능 제공"
+  ]
+ },
+ "d2b77116c4e7": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "ComfyUI 환경 RelayVSR 2배 비디오 업스케일링 비교 공개",
+  "summary_ko": "한 사용자가 ComfyUI 환경에서 8초 분량의 MiniMax H3 영상에 RelayVSR 2배 업스케일링을 적용한 비교 결과를 공개했다. 원본과 DLSS 5 마감 처리를 거친 업스케일 버전을 나란히 배치해 SDR 화질에서 사슬 갑옷과 투구 등 움직임에 따른 디테일을 확인할 수 있도록 했다. 제작자는 ComfyUI용 RelayVSR 관련 노드와 모델 가중치를 활용한 워크플로우도 함께 공유할 예정이다.",
+  "bullets": [
+   "MiniMax H3 영상에 RelayVSR 2배 적용",
+   "DLSS 5 후처리를 거친 세부 디테일 비교",
+   "ComfyUI 워크플로우 및 모델 가중치 공유"
+  ]
+ },
+ "d7784c792cdb": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "이미지에 영향 주지 않는 프롬프트 메모 추가 방법 질의",
+  "summary_ko": "프롬프트 작성 시 특정 부분에 라벨이나 메모를 남기면서 생성 이미지에는 영향을 주지 않는 방법이 있는지 묻는 질문이 올라왔습니다. 작성자는 발 상태나 카메라 각도 등 프롬프트의 구성을 라벨로 구분하여 정리하고 싶어 합니다.",
+  "bullets": [
+   "프롬프트 내 메모 추가 방법 질의",
+   "생성 이미지 영향 없는 라벨 원함",
+   "카메라 각도 등 항목별 정리 목적"
+  ]
+ },
+ "8a41d7eaacf7": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "ComfyUI 기반 MiniMax 비디오 편집 워크플로우 튜토리얼",
+  "summary_ko": "ComfyUI 환경에서 MiniMax 기술을 활용해 단 한 프레임만 수정하여 비디오 전체를 변경하는 워크플로우 튜토리얼이 공개되었습니다. 해당 튜토리얼은 Pika Flex 및 Singularity V2와 연동하여 동작합니다.",
+  "bullets": [
+   "MiniMax 프레임 편집 워크플로우",
+   "단일 프레임 수정으로 영상 전환",
+   "Pika Flex 연동 튜토리얼"
+  ]
+ },
+ "1f958b7d48f0": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "ComfyUI용 MiniMax H3 캐릭터 교체 및 모션 전달 워크플로우",
+  "summary_ko": "ComfyUI 기반의 MiniMax H3 캐릭터 교체 및 모션 전달 워크플로우와 프롬프트 작성·일괄 실행을 돕는 에이전트 스킬이 공개되었습니다. 긴 비디오 생성 시 참조 손실 문제와 느린 비디오 참조 속도를 개선하도록 설계되었습니다. H3 규격에 맞춘 프레임 정렬을 지원하며 최종 24 fps 출력을 제공합니다.",
+  "bullets": [
+   "MiniMax H3 캐릭터 교체 구현",
+   "프롬프트 자동화 에이전트 포함",
+   "17n+5 프레임 정렬 및 24 fps 출력"
+  ]
+ },
+ "c2bb0cdc27be": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "가죽 재킷 남성 이미지 관련 게시글",
+  "summary_ko": "ComfyUI 커뮤니티에 가죽 재킷을 입은 남성 이미지 링크를 포함한 게시글이 올려졌습니다. 상세한 설명이나 추가 정보는 제공되지 않았습니다.",
+  "bullets": [
+   "가죽 재킷 남성 이미지 공유",
+   "ComfyUI 커뮤니티 게시글",
+   "세부 정보 미포함"
+  ]
+ },
+ "58ee6167d0b1": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "SeedVR2와 Krea 2를 활용한 지하철 모델 음악 반응형 프로젝트",
+  "summary_ko": "기존 NYC 2016 지하철 모델을 활용하여 음악 반응형 프로젝트가 제작되었습니다. SeedVR2를 통해 모든 텍스처를 4k로 업스케일링하고 Krea 2로 세부 요소를 추가했으며, 조명 반응 구현에는 Touch Designer가 사용되었습니다.",
+  "bullets": [
+   "SeedVR2로 텍스처 4k 업스케일링",
+   "Krea 2를 사용해 세부 디테일 추가",
+   "Touch Designer 기반 조명 반응 구현"
+  ]
+ },
+ "990dabdc2b8b": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "GPU 발열 관리 및 환경 변경을 통한 추론 시간 단축",
+  "summary_ko": "RTX 6000 96GB 환경에서 FLUX.1 [dev] fp8 기반 이미지 생성 시간이 16초에서 11초로 단축되었습니다. CUDA 및 PyTorch 버전 변경과 함께 MSI Afterburner로 팬 커브를 조절해 GPU 온도를 낮춘 결과입니다.",
+  "bullets": [
+   "FLUX.1 [dev] fp8 생성 시간 단축",
+   "MSI Afterburner로 GPU 온도 제어",
+   "CUDA 및 PyTorch 버전 변경 적용"
+  ]
+ },
+ "114f8ac59189": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "Mac mini M5 Pro 환경의 로컬 AI 활용 방안 문의",
+  "summary_ko": "48GB 통합 메모리를 갖춘 Mac mini M5 Pro 환경에서 구동 가능한 로컬 AI 설정에 대한 질문이 공유되었습니다. 사용자 정의 LoRA를 활용한 이미지 생성에 적합한 모델, 양자화 수준 및 ComfyUI 등 최적 툴셋 선정을 위한 실사용 경험을 모집 중입니다.",
+  "bullets": [
+   "Mac mini M5 Pro 48GB 환경 기준",
+   "LoRA 활용 이미지 생성 최적화 문의",
+   "구동 도구 및 모델 양자화 적정성 확인"
+  ]
+ },
+ "99188864e258": {
+  "engine": "gemini",
+  "ts": "2026-11-09T01:50:11.455127+00:00",
+  "title_ko": "영화 장면 내 캐릭터 교체 작업용 AI 모델 추천 요청",
+  "summary_ko": "영화 장면의 캐릭터를 반려동물로 교체하는 작업을 위한 생성형 모델 추천 요청이 제안되었습니다. 기존에 시도한 모델들은 저작권 문제로 차단되거나 생성 품질이 낮아 대안을 찾고 있습니다.",
+  "bullets": [
+   "영화 장면 캐릭터 교체 작업 목적",
+   "기존 모델의 저작권 차단 문제 발생",
+   "품질이 보장되는 대체 모델 검색 중"
+  ]
  }
 }

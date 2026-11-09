@@ -174,21 +174,21 @@
   "https://www.minimax.io/news/minimax-speech-28": "2026-11-05T02:33:39.629225+00:00"
  },
  "pika-blog": {
-  "https://pika.art/blog/pika-h3-flex": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-h3-flex-research": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-chatgpt-plugin": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/api-member-spotlights": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/welcome-to-the-new-pika": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-music": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-sfx": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-soundtrack": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-speech": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-audio-models": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-api-club": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/founder-starter-kit": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/pika-experiments": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/your-ai-self-just-got-a-job": "2026-11-05T02:33:39.673619+00:00",
-  "https://pika.art/blog/introducing-real-time-video-chat": "2026-11-05T02:33:39.673619+00:00"
+  "https://pika.art/blog/pika-h3-flex": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-h3-flex-research": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-chatgpt-plugin": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/api-member-spotlights": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/welcome-to-the-new-pika": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-music": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-sfx": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-soundtrack": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-speech": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-audio-models": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-api-club": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/founder-starter-kit": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/pika-experiments": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/your-ai-self-just-got-a-job": "2026-11-09T01:46:04.567152+00:00",
+  "https://pika.art/blog/introducing-real-time-video-chat": "2026-11-09T01:46:04.567152+00:00"
  },
  "runway-news": {
   "https://runway.com/news/research/introducing-solaris": "2026-11-05T02:33:39.730885+00:00"
@@ -491,6 +491,15 @@
   "https://lumalabs.ai/news/veo-3.1-alternatives": "2026-11-06T02:33:14.618604+00:00",
   "https://lumalabs.ai/news/kling-3.0-alternatives": "2026-11-06T02:33:14.618604+00:00",
   "https://lumalabs.ai/news/runway-gen-4.5-alternatives": "2026-11-06T02:33:14.618604+00:00",
-  "https://lumalabs.ai/news/seedance-2.5-alternatives": "2026-11-06T02:33:14.618604+00:00"
+  "https://lumalabs.ai/news/seedance-2.5-alternatives": "2026-11-06T02:33:14.618604+00:00",
+  "https://lumalabs.ai/news/invideo-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/midjourney-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/synthesia-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/pika-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/heygen-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/higgsfield-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/runway-limitations": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/ai-video-image-tools-linkedin": "2026-11-09T01:46:04.778494+00:00",
+  "https://lumalabs.ai/news/ai-image-video-generators-commercial-rights-brands": "2026-11-09T01:46:04.778494+00:00"
  }
 }
