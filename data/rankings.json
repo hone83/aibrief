@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
       "MiniMax H3 Max": 2,
-      "Utopai X": 3,
-      "FLUX 3 Max": 4,
-      "Wan 3.0": 5,
+      "FLUX 3 Max": 3,
+      "Wan 3.0": 4,
+      "Utopai X": 5,
       "MiniMax H3 (768p)": 6,
       "Bach 1.0 Pro": 7,
       "Dreamina Seedance 2.5": 8
@@ -37,21 +37,21 @@
       "GPT Image 2.5 Sunburst (max)": 3,
       "MAI-Image-2.7-Preview": 4,
       "GPT Image 2.5 Flare (max)": 5,
-      "Krea 3 (Ultra)": 6,
-      "Nano Banana 2.1": 7,
+      "Nano Banana 2.1": 6,
+      "Krea 3 (Ultra)": 7,
       "MAI-Image-2.6": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,
       "Gemini 4 Carbon (Medium)": 2,
       "GPT-6 Astra (Max)": 3,
-      "GPT-6 Astra (Xhigh)": 4,
-      "GPT-6.1 Sol (Xhigh)": 5,
-      "GPT-6.1 Sol (High)": 6,
-      "Claude Fable 5.1 (Max, Default Fallback)": 7,
-      "Claude Fable 5.1 (Medium, Default Fallback)": 8,
-      "Claude Sonnet 5.5 (High, Default Fallback)": 9,
-      "Muse Wonder (High)": 10
+      "Claude Fable 5.2 (Medium, Default Fallback)": 4,
+      "GPT-6 Astra (Xhigh)": 5,
+      "GPT-6.1 Sol (Xhigh)": 6,
+      "GPT-6.1 Sol (High)": 7,
+      "Claude Fable 5.1 (Max, Default Fallback)": 8,
+      "Claude Fable 5.1 (Medium, Default Fallback)": 9,
+      "Claude Sonnet 5.5 (High, Default Fallback)": 10
     }
   }
 }
