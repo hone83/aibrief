@@ -10375,5 +10375,134 @@
    "Photoshop 등에 자동 개체 제거 기능 추가",
    "디자인 및 편집 작업을 빠르고 간소화 지원"
   ]
+ },
+ "3a4f05bd26ab": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "Fizgig 9.6 출시, MiniMax H3 Image 기반 LoRA 학습 지원",
+  "summary_ko": "MiniMax H3 Image 모델을 지원하는 Fizgig 9.6이 출시되었다. 텍스트-투-이미지 및 최대 16장의 참조 이미지를 활용한 편집이 가능하며, LoRA, LoKR, 슬라이더 LoRA 등 다양한 학습 기능을 제공한다.",
+  "bullets": [
+   "MiniMax H3 Image 모델 학습 기능 추가",
+   "최대 16장 참조 이미지 기반 편집 및 6스텝 지원",
+   "LoRA, LoKR, 슬라이더 LoRA 학습 가능"
+  ]
+ },
+ "bee423aa0e17": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "MiniMax H3 Image 20MP 지원 ComfyUI 워크플로우 공개",
+  "summary_ko": "MiniMax H3 Image의 성능을 개선한 ComfyUI 워크플로우가 공개되었다. 텍스트-투-이미지 및 편집 모드를 모두 제공하며 샘플러와 스케줄러 설정을 최적화했다.",
+  "bullets": [
+   "ComfyUI용 MiniMax H3 Image 워크플로우 공개",
+   "텍스트-투-이미지 및 이미지 편집 모드 지원",
+   "SamplerLCM 노드 기반 6스텝 설정 적용"
+  ]
+ },
+ "9bfcc7969e67": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "MiniMax H3 Image 4MP 텍스트-투-이미지 테스트 결과 공개",
+  "summary_ko": "MiniMax H3 Image 모델의 양자화 가중치 파일과 VAE를 활용한 테스트 결과가 공유되었다. 프롬프트 향상 스킬 파일과 함께 euler, simple 스케줄러의 6스텝 설정이 사용되었다.",
+  "bullets": [
+   "MiniMax H3 Image 양자화 가중치 파일 공유",
+   "프롬프트 작성 가이드 및 스킬 파일 제공",
+   "euler, simple 설정의 6스텝 추론 적용"
+  ]
+ },
+ "ac6a11875d4d": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "Seedream 5.5, ComfyUI 파트너 노드로 공식 출시",
+  "summary_ko": "Seedream 5.5가 ComfyUI의 파트너 노드로 출시되었다. 다중 턴 편집, 자체 RGBA 출력, 이미지 내 텍스트 생성 및 정교한 사진 디테일 표현을 지원한다.",
+  "bullets": [
+   "ComfyUI 파트너 노드로 Seedream 5.5 탑재",
+   "다중 턴 편집 및 자체 RGBA 출력 지원",
+   "포스터용 텍스트 생성 및 디테일 표현 강화"
+  ]
+ },
+ "30dd72895bb0": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "ComfyUI v0.45.2 업데이트 발표",
+  "summary_ko": "ComfyUI v0.45.2 버전이 신규 게시되었습니다.",
+  "bullets": [
+   "ComfyUI v0.45.2 버전 출시"
+  ]
+ },
+ "1f79289864ed": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "RTX 3050 기반 MiniMax H3로 AI 비디오 제작",
+  "summary_ko": "6GB VRAM의 RTX 3050 환경에서 ComfyUI와 int8 양자화 모델을 활용해 60초 분량의 AI 비디오를 로컬로 생성했습니다. 캐릭터 일관성을 위해 두 장의 인물 이미지를 참조하고 공식 프롬프트 형식을 적용해 10초 분량의 샷 6개를 작업했습니다.",
+  "bullets": [
+   "RTX 3050 6GB 환경 로컬 생성",
+   "MiniMax H3 및 int8 양자화 활용",
+   "캐릭터 일관성 유지를 위한 참조 적용"
+  ]
+ },
+ "7d8249311da3": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "MiniMax 이미지 모델 검열 여부 논의",
+  "summary_ko": "MiniMax 이미지 모델의 검열 시스템 적용 여부에 대한 사용자 문의가 제기되었습니다. 현재 관련 정보를 찾기 어렵다는 의견이 공유되고 있습니다.",
+  "bullets": [
+   "MiniMax 이미지 검열 적용 여부 문의",
+   "관련 정보 미비에 관한 내용 공유"
+  ]
+ },
+ "2d34419955df": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "3D 생성 및 애니메이션 툴 TRELLIS Studio 공개",
+  "summary_ko": "3D 자산 제작 파이프라인을 통합한 로컬 인터페이스 TRELLIS Studio가 공개되었습니다. TRELLIS.2를 통한 이미지-투-3D 생성과 UniRig를 통한 자동 리깅 기능을 유료 서비스 없이 로컬 환경에서 지원합니다.",
+  "bullets": [
+   "TRELLIS.2 기반 이미지-투-3D 생성",
+   "UniRig 기반 자동 리깅 및 모션 적용",
+   "크레딧 없이 로컬에서 계산 수행"
+  ]
+ },
+ "ee76e68a0e79": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "LakonLab, VAE 디코더 없는 초고속 비디오 모델 pi-H3 공개 예정",
+  "summary_ko": "LakonLab이 MiniMax H3 기반의 초고속 비디오 생성 모델 pi-H3를 발표했습니다. 비디오 VAE 디코더를 거치지 않고 2~4 단계의 샘플링만으로 픽셀을 직접 예측하여 생성 속도를 대폭 향상시켰습니다.",
+  "bullets": [
+   "B200 1대로 5초 HD 비디오를 3.8초 만에 생성",
+   "Sol-H3 대비 생성 속도가 2배 이상 향상",
+   "Hugging Face 데모에 이어 오픈소스로 가중치 공개"
+  ]
+ },
+ "42828a795b06": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "새로운 MiniMax 이미지 모델, MOSS 성능 비교 관심",
+  "summary_ko": "새롭게 언급된 MiniMax 이미지 모델의 성능을 MOSS와 비교하는 질문이 올랐습니다. 해당 질문은 텍스트-투-이미지 및 이미지-투-이미지 기능 전반을 다룹니다.",
+  "bullets": [
+   "MiniMax의 새로운 이미지 생성 모델 성능 언급",
+   "MOSS 모델 대비 성능 우위 여부에 관심 집중",
+   "텍스트-투-이미지 및 이미지-투-이미지 기능 포함"
+  ]
+ },
+ "24d6a415d972": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "Adobe Creator Playbook, Firefly 활용 스튜디오급 튜토리얼 공개",
+  "summary_ko": "Curious Refuge가 Adobe 팀과 협업하여 Creator Playbook 에피소드를 제작했습니다. 휴대폰 촬영 영상을 Adobe Firefly를 활용해 전문 스튜디오 품질 영상으로 변환하는 튜토리얼을 선보입니다.",
+  "bullets": [
+   "Adobe Creator Playbook 협업 에피소드 공개",
+   "휴대폰 영상으로 전문 스튜디오 품질 연출",
+   "Adobe Firefly를 활용한 영상 변환 튜토리얼"
+  ]
+ },
+ "7d9ca88b6afc": {
+  "engine": "gemini",
+  "ts": "2026-11-12T03:53:09.123904+00:00",
+  "title_ko": "ComfyUI, 로컬 GPU 환경서 LLM 토큰 처리 속도 2배 향상",
+  "summary_ko": "ComfyUI가 로컬 AMD 및 NVIDIA GPU 환경에서 대규모 언어 모델의 토큰 처리 속도를 2배 높였습니다. 프롬프트 보강, 이미지 설명 생성, 스토리 작성 등의 작업 효율이 향상됩니다.",
+  "bullets": [
+   "AMD 및 NVIDIA GPU에서 토큰 속도 2배 향상",
+   "프롬프트 확장 및 이미지 설명 작성 속도 개선",
+   "ComfyUI 기반 LLM 워크플로우 성능 향상"
+  ]
  }
 }

@@ -4,7 +4,8 @@
   "https://kling.ai/release-note/release-preview": "2026-11-10T04:10:26.355045+00:00"
  },
  "runway-news": {
-  "https://runway.com/news/research/introducing-solaris": "2026-11-11T01:58:48.336198+00:00"
+  "https://runway.com/news/research/introducing-solaris": "2026-11-11T01:58:48.336198+00:00",
+  "https://runway.com/news/company-news/praxis-1-is-now-available": "2026-11-12T03:45:26.302724+00:00"
  },
  "pika-blog": {
   "https://pika.art/blog/pika-h3-flex": "2026-11-11T01:58:48.400902+00:00",
@@ -369,6 +370,7 @@
   "https://huggingface.co/papers/2611.12875": "2026-11-11T01:58:49.505860+00:00",
   "https://huggingface.co/papers/2501.08686": "2026-11-11T01:58:49.505860+00:00",
   "https://huggingface.co/papers/2512.23818": "2026-11-11T01:58:49.505860+00:00",
-  "https://huggingface.co/papers/2611.10987": "2026-11-11T01:58:49.505860+00:00"
+  "https://huggingface.co/papers/2611.10987": "2026-11-11T01:58:49.505860+00:00",
+  "https://huggingface.co/papers/2611.13028": "2026-11-12T03:45:26.854752+00:00"
  }
 }
