@@ -1,6 +1,16 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "ranks": {
+    "text-to-video": {
+      "HeyGen Video 1": 1,
+      "MiniMax H3 Max": 2,
+      "FLUX 3 Max": 3,
+      "Utopai X": 4,
+      "Wan 3.0": 5,
+      "MiniMax H3 (768p)": 6,
+      "Gemini Omni Flash 1.2": 7,
+      "Bach 1.0 Pro": 8
+    },
     "image-to-video": {
       "Utopai X": 1,
       "Dreamina Seedance 2.5": 2,
