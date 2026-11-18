@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
       "MiniMax H3 Max": 2,
       "FLUX 3 Max": 3,
-      "Utopai X": 4,
-      "Wan 3.0": 5,
-      "MiniMax H3 (768p)": 6,
-      "Gemini Omni Flash 1.2": 7,
-      "Bach 1.0 Pro": 8
+      "Hyperflow H3": 4,
+      "Utopai X": 5,
+      "Wan 3.0": 6,
+      "MiniMax H3 (768p)": 7,
+      "Gemini Omni Flash 1.2": 8
     },
     "image-to-video": {
       "Utopai X": 1,
@@ -25,33 +25,33 @@
       "GPT Image 2.6 Sunburst (max)": 1,
       "GPT Image 2.5 Sunburst (max)": 2,
       "GPT Image 2.6 Flare (max)": 3,
-      "GPT Image 2.5 Flare (max)": 4,
-      "GPT Image 2 (high)": 5,
-      "Kling Image 4.0 (preview)": 6,
-      "Nano Banana 2.1": 7,
-      "MAI-Image-2.6": 8
+      "MAI-Image-2.7": 4,
+      "GPT Image 2.5 Flare (max)": 5,
+      "GPT Image 2 (high)": 6,
+      "Kling Image 4.0": 7,
+      "Nano Banana 2.1": 8
     },
     "image-editing": {
-      "GPT Image 2.6 Sunburst (max)": 1,
-      "GPT Image 2.6 Flare (max)": 2,
-      "GPT Image 2.5 Sunburst (max)": 3,
-      "MAI-Image-2.7-Preview": 4,
+      "MAI-Image-2.7": 1,
+      "GPT Image 2.6 Sunburst (max)": 2,
+      "GPT Image 2.6 Flare (max)": 3,
+      "GPT Image 2.5 Sunburst (max)": 4,
       "GPT Image 2.5 Flare (max)": 5,
-      "Kling Image 4.0 (preview)": 6,
-      "Seedream 5.5": 7,
-      "Krea 3 (Ultra)": 8
+      "Kling Image 4.0": 6,
+      "MAI-Image-2.7-Flash": 7,
+      "Seedream 5.5": 8
     },
     "language": {
       "Claude Opus 5.5 (Max, Default Fallback)": 1,
       "Gemini 4 Carbon (Medium)": 2,
       "GPT-6 Astra (Max)": 3,
       "Claude Fable 5.2 (Medium, Default Fallback)": 4,
-      "GPT-6 Astra (Xhigh)": 5,
-      "GPT-6.1 Sol (Xhigh)": 6,
-      "GPT-6.1 Sol (High)": 7,
-      "Claude Fable 5.1 (Max, Default Fallback)": 8,
-      "Claude Fable 5.1 (Medium, Default Fallback)": 9,
-      "Claude Sonnet 5.5 (High, Default Fallback)": 10
+      "GPT-6.2 Sol (Xhigh)": 5,
+      "GPT-6 Astra (Xhigh)": 6,
+      "GPT-6.1 Sol (Xhigh)": 7,
+      "GPT-6.1 Sol (High)": 8,
+      "Claude Fable 5.1 (Max, Default Fallback)": 9,
+      "Claude Fable 5.1 (Medium, Default Fallback)": 10
     }
   }
 }
