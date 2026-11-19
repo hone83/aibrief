@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -48,10 +48,10 @@
       "Claude Fable 5.2 (Medium, Default Fallback)": 4,
       "GPT-6.2 Sol (Xhigh)": 5,
       "GPT-6 Astra (Xhigh)": 6,
-      "GPT-6.1 Sol (Xhigh)": 7,
-      "GPT-6.1 Sol (High)": 8,
-      "Claude Fable 5.1 (Max, Default Fallback)": 9,
-      "Claude Fable 5.1 (Medium, Default Fallback)": 10
+      "Gemini 4 Neon (Medium)": 7,
+      "GPT-6.1 Sol (Xhigh)": 8,
+      "GPT-6.1 Sol (High)": 9,
+      "Claude Fable 5.1 (Max, Default Fallback)": 10
     }
   }
 }

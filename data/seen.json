@@ -430,7 +430,17 @@
   "https://huggingface.co/papers/2611.22055": "2026-11-18T03:44:03.832399+00:00",
   "https://huggingface.co/papers/2611.20992": "2026-11-18T03:44:03.832399+00:00",
   "https://huggingface.co/papers/2611.19559": "2026-11-18T03:44:03.832399+00:00",
-  "https://huggingface.co/papers/2611.15348": "2026-11-18T03:44:03.832399+00:00"
+  "https://huggingface.co/papers/2611.15348": "2026-11-18T03:44:03.832399+00:00",
+  "https://huggingface.co/papers/2611.11318": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.23068": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.21366": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.22925": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.23388": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.22668": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.17767": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.22287": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.24075": "2026-11-19T03:39:35.869511+00:00",
+  "https://huggingface.co/papers/2611.24102": "2026-11-19T03:39:35.869511+00:00"
  },
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-11-13T02:40:48.718690+00:00",
@@ -452,6 +462,7 @@
   "https://pika.art/blog/pika-experiments": "2026-11-14T02:29:47.596746+00:00",
   "https://pika.art/blog/your-ai-self-just-got-a-job": "2026-11-14T02:29:47.596746+00:00",
   "https://pika.art/blog/introducing-real-time-video-chat": "2026-11-14T02:29:47.596746+00:00",
-  "https://pika.art/blog/pika-vs-runway": "2026-11-18T03:44:03.168654+00:00"
+  "https://pika.art/blog/pika-vs-runway": "2026-11-18T03:44:03.168654+00:00",
+  "https://pika.art/blog/pika-enact": "2026-11-19T03:39:35.428181+00:00"
  }
 }
