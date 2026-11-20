@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -17,9 +17,9 @@
       "MiniMax H3 Max": 3,
       "Bach 1.0 Pro": 4,
       "Hyperflow H3": 5,
-      "SkyReels V4": 6,
-      "Agnes-Video-2.5": 7,
-      "MiniMax H3 (768p)": 8
+      "Boreal-H3": 6,
+      "SkyReels V4": 7,
+      "Agnes-Video-2.5": 8
     },
     "text-to-image": {
       "GPT Image 2.6 Sunburst (max)": 1,
