@@ -11281,5 +11281,58 @@
    "학교 시스템 AI 경보 99% 이상 오경보",
    "학교와 경찰 상대로 피해 보상 요구"
   ]
+ },
+ "651d2e703ffd": {
+  "engine": "gemini",
+  "ts": "2026-11-21T03:16:56.338593+00:00",
+  "title_ko": "low VRAM용 AI 모델 MOSS Image 출시 및 가이드",
+  "summary_ko": "6GB 미만의 VRAM에서 작동하는 새로운 로컬 AI 이미지 모델 MOSS Image가 공개되었습니다. 매우 빠른 생성 속도와 뛰어난 텍스트 렌더링 성능을 갖추고 있으며 검열이 적용되지 않습니다. ComfyUI 설치법과 Ultimate SD Upscaler를 활용한 고해상도 업스케일링 과정이 함께 제공됩니다.",
+  "bullets": [
+   "6GB 미만 VRAM에서 고품질 이미지 생성",
+   "ComfyUI 설치 및 업스케일링 가이드 포함",
+   "검열 없는 빠른 속도의 FLUX 대안 모델"
+  ]
+ },
+ "7429ad9963d8": {
+  "engine": "gemini",
+  "ts": "2026-11-21T03:16:56.338593+00:00",
+  "title_ko": "ComfyUI v0.46.2 신규 버전 업데이트",
+  "summary_ko": "ComfyUI의 v0.46.2 버전 배포가 시작되었습니다. 해당 버전의 릴리스 정보가 공개되었습니다.",
+  "bullets": [
+   "ComfyUI v0.46.2 신규 버전 릴리스"
+  ]
+ },
+ "eb73ab45f2c1": {
+  "engine": "gemini",
+  "ts": "2026-11-21T03:16:56.338593+00:00",
+  "title_ko": "AI 프레임 생성 도구 Veyra로 GTA 6 60 FPS 구동",
+  "summary_ko": "GTA 6 출시 후 프레임을 생성해 60 FPS로 올려주는 무료 오픈소스 도구 Veyra가 주목받고 있습니다. PC로 송출되는 비디오 피드에 추가 프레임을 생성하는 방식으로, 캡처 카드나 Remote Play 및 고성능 GPU가 필요합니다. 이 외에도 실제 GTA 6 내에 적용된 머신러닝 기술과 유저들의 관련 프로젝트가 언급되었습니다.",
+  "bullets": [
+   "오픈소스 도구 Veyra로 60 FPS 구현",
+   "캡처 카드 및 RTX 40/50 시리즈 GPU 필요",
+   "GTA 6 내부 머신러닝 적용 사실 확인"
+  ]
+ },
+ "c1058ada9b43": {
+  "engine": "gemini",
+  "ts": "2026-11-21T03:16:56.338593+00:00",
+  "title_ko": "Topview T1, Seedance 2.5 재스킨 의혹 제기",
+  "summary_ko": "새로운 AI 비디오 생성기 Topview T1이 Seedance 2.5보다 뛰어나다는 평가를 받으며 주목받았으나 생성 결과물에 대한 의혹이 제기되었습니다. 검증 결과 Topview T1이 Seedance 2.5의 720p 영상에 스킨만 바꾼 것인지 다른 모델들과 비교 분석을 진행했습니다.",
+  "bullets": [
+   "신규 AI 비디오 생성기 Topview T1 검증",
+   "Seedance 2.5 단순 업스케일링 의혹 제기",
+   "타 모델과의 상세 비교 분석 내용 공개"
+  ]
+ },
+ "80d31a6dee29": {
+  "engine": "gemini",
+  "ts": "2026-11-21T03:16:56.338593+00:00",
+  "title_ko": "로컬 환경을 위한 고성능 AI 모델 Inkling 2 Mini 공개",
+  "summary_ko": "Inkling 2 Mini가 공개되어 로컬 환경에서도 최첨단 성능을 활용할 수 있게 되었다. Hugging Face Blog를 통해 발표된 이번 모델은 개인 컴퓨팅 환경에 최적화된 것이 특징이다.",
+  "bullets": [
+   "로컬 환경 최적화 성능 제공",
+   "Inkling 2 Mini 모델 공개",
+   "Hugging Face 블로그 발표"
+  ]
  }
 }
