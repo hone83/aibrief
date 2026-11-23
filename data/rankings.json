@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
       "FLUX 3 Max": 2,
-      "MiniMax H3 Max": 3,
+      "Utopai X": 3,
       "Hyperflow H3": 4,
-      "Utopai X": 5,
+      "MiniMax H3 Max": 5,
       "Wan 3.0": 6,
       "MiniMax H3 (768p)": 7,
       "Bach 1.0 Pro": 8
@@ -15,8 +15,8 @@
       "Utopai X": 1,
       "Dreamina Seedance 2.5": 2,
       "MiniMax H3 Max": 3,
-      "Bach 1.0 Pro": 4,
-      "Hyperflow H3": 5,
+      "Hyperflow H3": 4,
+      "Bach 1.0 Pro": 5,
       "SkyReels V4": 6,
       "Agnes-Video-2.5": 7,
       "Boreal-H3": 8
