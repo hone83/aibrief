@@ -11356,5 +11356,92 @@
    "파트리온 구독자 대상 워크플로우 제공",
    "디스코드 및 페이스북 커뮤니티 운영"
   ]
+ },
+ "5b29e06b7e3b": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "Lightricks, LTX-2 v1.6.3 출시… CUDA 그래프 성능 개선",
+  "summary_ko": "Lightricks가 LTX-2 v1.6.3 버전을 공개했습니다. 활성 가중치를 공유하는 DiffusionStage 복사 기능을 추가하여 단일 GPU에서 CUDA 그래프 캡처를 효율적으로 처리할 수 있도록 개선했습니다.",
+  "bullets": [
+   "DiffusionStage 가중치 공유 기능 추가",
+   "단일 GPU 기반 CUDA 그래프 캡처 지원",
+   "CUDA 장치 내 무권한 검사 방식 수정"
+  ]
+ },
+ "16565a3f5dc0": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "Isaac Lab과 Newton을 활용한 Microduck 장애물 회피 워크플로우",
+  "summary_ko": "Isaac Lab과 Newton을 활용한 Microduck 장애물 회피 Sim2Real 워크플로우가 공개되었습니다. 시뮬레이션 환경에서 학습한 모델을 실제 환경에 적용하는 방법을 다룹니다.",
+  "bullets": [
+   "Isaac Lab과 Newton 연동 시뮬레이션",
+   "장애물 회피를 위한 Sim2Real 구현",
+   "로보틱스 가상 학습 워크플로우 제시"
+  ]
+ },
+ "5b10668f7ad6": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "ComfyUI v0.46.3 업데이트 버전 배포",
+  "summary_ko": "ComfyUI의 v0.46.3 버전 배포가 시작되었습니다. 기존 기능의 오류 수정 및 오픈소스 기반 기능 개선이 포함되었습니다.",
+  "bullets": [
+   "ComfyUI v0.46.3 릴리스",
+   "기능 안정성 및 오픈소스 코드 개선"
+  ]
+ },
+ "071a866bf7c6": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "ComfyUI용 MOSS TURBO 4단계 고속 생성을 위한 설치 가이드",
+  "summary_ko": "ComfyUI에서 MOSS-Image 4단계 Turbo LoRA를 활용하여 고품질 이미지 생성을 신속하게 진행하는 방법이 공개되었습니다. Civitai에서 LoRA를 다운로드하고 워크플로우를 최적화하는 설정법을 소개합니다.",
+  "bullets": [
+   "4~8단계만의 빠른 이미지 생성 가이드",
+   "Civitai 연동 LoRA Manager 설치",
+   "CFG 및 샘플러 최적 설정값 비교"
+  ]
+ },
+ "071d69ff1096": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "Civitai, 가상 인물 'Halima Von Vergin' LoRA 공개",
+  "summary_ko": "Civitai에 가상 인물인 Halima Von Vergin을 구현한 신규 LoRA가 공개되었습니다. 해당 모델은 옥스퍼드 풍의 고전적인 분위기와 보석 톤의 벨벳 스타일 의상 표현에 특화되어 있습니다.",
+  "bullets": [
+   "실제 인물이 아닌 가상의 캐릭터 구현",
+   "옥스퍼드풍 고전 스타일 의상 특화",
+   "Civitai 통해 신규 LoRA 모델 출시"
+  ]
+ },
+ "5845ed4863b4": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "아마존, 75억 달러에 Decart 인수… 칩 효율성 강화",
+  "summary_ko": "아마존이 소프트웨어를 통해 엔비디아와의 반도체 격차를 줄이기 위해 Decart를 75억 달러에 인수합니다. 이번 인수를 통해 자체 AI 칩인 Trainium의 효율성을 향상시킬 계획입니다.",
+  "bullets": [
+   "75억 달러 규모 Decart 인수 추진",
+   "소프트웨어 활용해 엔비디아 추격",
+   "자체 AI 칩 Trainium 효율성 개선"
+  ]
+ },
+ "2ae1df34b003": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "Comfy Desktop 1.2 업데이트… 전용 플랫폼으로 진화",
+  "summary_ko": "Comfy Desktop이 1.2 버전으로 업데이트되며 세련된 다크 모드 디자인을 적용했습니다. 단순한 실행 프로그램을 넘어 ComfyUI의 모든 기능에 접근할 수 있는 통합 플랫폼으로 확장되었습니다.",
+  "bullets": [
+   "1.2 버전 업데이트로 다크 모드 적용",
+   "실행기에서 통합 플랫폼으로 확장",
+   "ComfyUI 생태계 접근성 강화"
+  ]
+ },
+ "349af2b07ff2": {
+  "engine": "gemini",
+  "ts": "2026-11-25T04:59:35.922413+00:00",
+  "title_ko": "Sebastian Kamph, 에이전트용 MCP 가이드 공개",
+  "summary_ko": "Sebastian Kamph가 Floyo를 활용한 에이전트용 MCP 관련 가이드 콘텐츠를 공개했습니다. 독점 가이드는 패트리온에서 확인 가능하며 디스코드 커뮤니티도 함께 운영합니다.",
+  "bullets": [
+   "Floyo 기반 에이전트용 MCP 안내",
+   "패트리온 통해 독점 가이드 제공",
+   "디스코드 커뮤니티 채널 운영"
+  ]
  }
 }

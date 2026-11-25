@@ -1,25 +1,25 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
-      "Hyperflow H3": 2,
-      "Utopai X": 3,
-      "FLUX 3 Max": 4,
+      "MAGI-2": 2,
+      "Hyperflow H3": 3,
+      "Utopai X": 4,
       "Wan 3.0": 5,
-      "MiniMax H3 Max": 6,
-      "MiniMax H3 (768p)": 7,
-      "Bach 1.0 Pro": 8
+      "FLUX 3 Max": 6,
+      "MiniMax H3 Max": 7,
+      "MiniMax H3 (768p)": 8
     },
     "image-to-video": {
-      "Utopai X": 1,
-      "Dreamina Seedance 2.5": 2,
-      "Hyperflow H3": 3,
-      "MiniMax H3 Max": 4,
-      "Bach 1.0 Pro": 5,
-      "Boreal-H3": 6,
-      "SkyReels V4": 7,
-      "Agnes-Video-2.5": 8
+      "MAGI-2": 1,
+      "Utopai X": 2,
+      "Dreamina Seedance 2.5": 3,
+      "Hyperflow H3": 4,
+      "MiniMax H3 Max": 5,
+      "Bach 1.0 Pro": 6,
+      "Boreal-H3": 7,
+      "SkyReels V4": 8
     },
     "text-to-image": {
       "GPT Image 2.6 Sunburst (max)": 1,
