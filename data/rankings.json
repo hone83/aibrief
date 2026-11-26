@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "ranks": {
     "text-to-video": {
       "HeyGen Video 1": 1,
@@ -14,12 +14,12 @@
     "image-to-video": {
       "MAGI-2": 1,
       "Utopai X": 2,
-      "Dreamina Seedance 2.5": 3,
-      "Hyperflow H3": 4,
-      "MiniMax H3 Max": 5,
-      "Bach 1.0 Pro": 6,
-      "Boreal-H3": 7,
-      "SkyReels V4": 8
+      "Kling 4.0": 3,
+      "Dreamina Seedance 2.5": 4,
+      "Hyperflow H3": 5,
+      "MiniMax H3 Max": 6,
+      "Bach 1.0 Pro": 7,
+      "Boreal-H3": 8
     },
     "text-to-image": {
       "GPT Image 2.6 Sunburst (max)": 1,
