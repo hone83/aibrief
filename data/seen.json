@@ -330,7 +330,8 @@
   "https://lumalabs.ai/news/seedream-5.0-vs-nano-banana-2.1": "2026-11-23T02:54:03.556639+00:00",
   "https://lumalabs.ai/news/ray-3.2-vs-veo-3.1": "2026-11-23T02:54:03.556639+00:00",
   "https://lumalabs.ai/news/nano-banana-2-vs-nano-banana-pro": "2026-11-23T02:54:03.556639+00:00",
-  "https://lumalabs.ai/news/brand-kit-character-library": "2026-11-26T04:12:15.068607+00:00"
+  "https://lumalabs.ai/news/brand-kit-character-library": "2026-11-26T04:12:15.068607+00:00",
+  "https://lumalabs.ai/news/what-is-brand-kit": "2026-11-28T03:58:49.089841+00:00"
  },
  "bfl-blog": {
   "https://bfl.ai/blog/flux-3-image-klein": "2026-11-13T02:40:48.392101+00:00",
@@ -601,7 +602,19 @@
   "https://huggingface.co/papers/2611.32238": "2026-11-27T04:19:18.741062+00:00",
   "https://huggingface.co/papers/2611.34813": "2026-11-27T04:19:18.741062+00:00",
   "https://huggingface.co/papers/2611.34719": "2026-11-27T04:19:18.741062+00:00",
-  "https://huggingface.co/papers/2611.32993": "2026-11-27T04:19:18.741062+00:00"
+  "https://huggingface.co/papers/2611.32993": "2026-11-27T04:19:18.741062+00:00",
+  "https://huggingface.co/papers/2611.31619": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.30494": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.30483": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.28849": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.34782": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.30025": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.30723": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.31491": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.33885": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.27112": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.31516": "2026-11-28T03:58:49.356057+00:00",
+  "https://huggingface.co/papers/2611.31155": "2026-11-28T03:58:49.356057+00:00"
  },
  "kling-updates": {
   "https://kling.ai/release-note/release-history": "2026-11-13T02:40:48.718690+00:00",

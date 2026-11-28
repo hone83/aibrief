@@ -11540,5 +11540,38 @@
    "오픈 데이터 활용 및 파인튜닝 절차 안내",
    "추론 속도 향상을 위한 최적화 기법 소개"
   ]
+ },
+ "2d7f8b4f8454": {
+  "engine": "gemini",
+  "ts": "2026-11-28T03:58:58.327513+00:00",
+  "title_ko": "Trainium3 기반 LTX-2.5 비디오 생성 실증",
+  "summary_ko": "Hugging Face가 Trainium3 칩셋을 활용해 LTX-2.5 모델로 비디오를 생성하는 과정을 공개했습니다. 신규 하드웨어 환경에서 고성능 영상 생성 모델을 구동하고 효율성을 검증하는 내용이 담겼습니다.",
+  "bullets": [
+   "Trainium3 하드웨어 기반 영상 생성",
+   "LTX-2.5 모델 추론 프로세스 적용",
+   "새로운 컴퓨팅 환경의 비디오 생성 검증"
+  ]
+ },
+ "69c9b4b1b27c": {
+  "engine": "gemini",
+  "ts": "2026-11-28T03:58:58.327513+00:00",
+  "title_ko": "Seedance 2.0 활용 프로급 2D AI 애니메이션 제작 가이드",
+  "summary_ko": "Albert Bozesan이 Seedance 2.0을 사용해 일관성 있는 2D AI 애니메이션을 제작하는 워크플로우를 공개했습니다. 재사용 가능한 캐릭터 자산 구축부터 Photoshop 키프레임 작업, 음성 기반 표정 제어 기법을 설명합니다.",
+  "bullets": [
+   "Seedance 2.0 기반 대화 씬 생성",
+   "컷 간 캐릭터 일관성 유지 기법 제공",
+   "Photoshop 및 음성 데이터 연동 제어"
+  ]
+ },
+ "3dbdc825058f": {
+  "engine": "gemini",
+  "ts": "2026-11-28T03:58:58.327513+00:00",
+  "title_ko": "MiniMax H3 기반 무상 AI VFX 파이프라인 업그레이드",
+  "summary_ko": "Mickmumpitz가 MiniMax H3로 구동되는 개선된 무료 AI VFX 파이프라인을 발표했습니다. ComfyUI 내에서 ControlNet, 녹음된 오디오, Blender 3D 씬을 연동해 시각효과 제어 성능을 강화했습니다.",
+  "bullets": [
+   "MiniMax H3 로컬 생성 환경 구축",
+   "ComfyUI 기반 7가지 VFX 제어 기법",
+   "Blender 3D 씬 및 ControlNet 연동"
+  ]
  }
 }
